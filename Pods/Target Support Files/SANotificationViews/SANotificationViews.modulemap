@@ -1,0 +1,6 @@
+framework module SANotificationViews {
+  umbrella header "SANotificationViews-umbrella.h"
+
+  export *
+  module * { export * }
+}

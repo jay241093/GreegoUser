@@ -1,0 +1,6 @@
+framework module Pods_greegotaxiapp {
+  umbrella header "Pods-greegotaxiapp-umbrella.h"
+
+  export *
+  module * { export * }
+}
