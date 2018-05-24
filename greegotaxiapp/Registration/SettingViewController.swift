@@ -138,6 +138,8 @@ class SettingViewController: UIViewController {
     }
     else
     {
+        WebServiceClass().nointernetconnection()
+
         NSLog("No Internet Connection")
     }
     

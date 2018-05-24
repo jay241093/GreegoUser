@@ -192,6 +192,8 @@ else
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         
@@ -287,6 +289,8 @@ else
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         

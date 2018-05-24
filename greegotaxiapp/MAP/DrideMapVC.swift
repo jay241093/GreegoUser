@@ -508,6 +508,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
         else
         {
             WebServiceClass().dismissprogress()
+            WebServiceClass().nointernetconnection()
 
             NSLog("No Internet Connection")
         }
@@ -653,6 +654,8 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
     }
     else
     {
+        WebServiceClass().nointernetconnection()
+
         NSLog("No Internet Connection")
     }
     
@@ -723,6 +726,8 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
     }
@@ -856,6 +861,8 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
     }

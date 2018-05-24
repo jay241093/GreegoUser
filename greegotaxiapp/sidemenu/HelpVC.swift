@@ -82,6 +82,8 @@ class HelpVC: UIViewController {
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         

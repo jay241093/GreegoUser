@@ -272,6 +272,8 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         
@@ -349,6 +351,8 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         
@@ -438,7 +442,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
             var  image1 = UIImageJPEGRepresentation(self.imgstr, 0.5)
             MultipartFormData.append(image1!, withName: "image", fileName: "swift_file.jpg", mimeType: "image/jpeg")
             
-        },   usingThreshold: UInt64.init(), to:"https://www.kroslinkstech.in/greego/public/api/user/add/profile_pic", method: .post, headers: headers)  { (result) in
+        },   usingThreshold: UInt64.init(), to:WebServiceClass().BaseURL + "user/add/profile_pic", method: .post, headers: headers)  { (result) in
             switch result{
             case .success(let upload, _, _):
                 upload.responseJSON { response in
@@ -574,6 +578,8 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         

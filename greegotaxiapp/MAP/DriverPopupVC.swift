@@ -152,6 +152,8 @@ class DriverPopupVC: UIViewController {
     }
     else
     {
+        WebServiceClass().nointernetconnection()
+
         NSLog("No Internet Connection")
     }
     
@@ -220,6 +222,8 @@ class DriverPopupVC: UIViewController {
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         

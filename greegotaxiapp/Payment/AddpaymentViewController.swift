@@ -326,6 +326,8 @@ class AddpaymentViewController: UIViewController,UITextFieldDelegate {
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         
@@ -396,6 +398,8 @@ class AddpaymentViewController: UIViewController,UITextFieldDelegate {
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
 

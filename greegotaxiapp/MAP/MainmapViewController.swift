@@ -569,6 +569,8 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
     }
@@ -639,6 +641,8 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
     }

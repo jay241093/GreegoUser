@@ -84,6 +84,14 @@ class WebServiceClass: NSObject
         SVProgressHUD.show(UIImage(named:"189792")!, status: "Searching")
     }
     
+    func nointernetconnection()
+    {
+        let alert = UIAlertController(title: "Alert", message: "No internet Connection", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+         present(alert, animated: true, completion: nil)
+        
+        
+    }
     
 
 }

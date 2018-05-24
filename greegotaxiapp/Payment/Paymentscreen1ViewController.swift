@@ -288,6 +288,8 @@ func checkpayment() {
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         
@@ -344,6 +346,8 @@ func checkpayment() {
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         

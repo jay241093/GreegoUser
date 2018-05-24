@@ -120,6 +120,8 @@ ratingnew = String(format: "%.2f", rating)
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         
@@ -181,6 +183,8 @@ ratingnew = String(format: "%.2f", rating)
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         

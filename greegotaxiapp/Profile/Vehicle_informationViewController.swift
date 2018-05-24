@@ -267,6 +267,8 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
             }
             else
             {
+                WebServiceClass().nointernetconnection()
+
                 NSLog("No Internet Connection")
             }
             
@@ -325,6 +327,8 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         
@@ -369,6 +373,8 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         
@@ -414,6 +420,8 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         

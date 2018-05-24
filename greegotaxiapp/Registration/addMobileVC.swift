@@ -135,6 +135,7 @@ func checkmobile()
     }
     else
     {
+        WebServiceClass().nointernetconnection()
     NSLog("No Internet Connection")
     }
     

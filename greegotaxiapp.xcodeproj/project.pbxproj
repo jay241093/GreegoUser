@@ -18,6 +18,7 @@
 		045F556A2078028100E75EB6 /* GoogleMap.json in Resources */ = {isa = PBXBuildFile; fileRef = 045F55692078028100E75EB6 /* GoogleMap.json */; };
 		045F556C2078092F00E75EB6 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 045F556B2078092F00E75EB6 /* style.json */; };
 		21062DAE20A00E6C003CB36B /* paymentcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21062DAD20A00E6C003CB36B /* paymentcell.swift */; };
+		212E2EDC20B2839C0062CDF7 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */; };
 		215B896D20ADA1400064B8EB /* LoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215B896C20ADA13F0064B8EB /* LoaderVC.swift */; };
 		215B896F20AE853E0064B8EB /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 215B896E20AE853E0064B8EB /* giphy.gif */; };
 		21692A6020A2CAE8005FF526 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21692A5F20A2CAE8005FF526 /* HelpVC.swift */; };
@@ -94,6 +95,7 @@
 		0909EA2F762FC0B6F84B13A0 /* Pods_greegotaxiappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_greegotaxiappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3A397F82F7B2A3D65BA816 /* Pods_greegotaxiappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_greegotaxiappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21062DAD20A00E6C003CB36B /* paymentcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = paymentcell.swift; path = "../../../../Downloads/Greego-master 4/greegotaxiapp/TableViewCells/paymentcell.swift"; sourceTree = "<group>"; };
+		212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 		215B896C20ADA13F0064B8EB /* LoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderVC.swift; sourceTree = "<group>"; };
 		215B896E20AE853E0064B8EB /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		21692A5F20A2CAE8005FF526 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		045F55642077E8D900E75EB6 /* HelperClass */ = {
 			isa = PBXGroup;
 			children = (
+				212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */,
 				3B2345CC20853B1C006B1796 /* customTextField.swift */,
 				215B896C20ADA13F0064B8EB /* LoaderVC.swift */,
 				734F550B2077408200512886 /* HADropDown.swift */,
@@ -652,6 +655,7 @@
 				3BFBCEE0208F1BCA00924F04 /* FreeridesVC.swift in Sources */,
 				041CF18B20777EB700464B5D /* MainmapViewController.swift in Sources */,
 				730AF66820735A3E00AD8993 /* SWRevealViewController.m in Sources */,
+				212E2EDC20B2839C0062CDF7 /* iOSDevCenters+GIF.swift in Sources */,
 				73051D932074A14900C42207 /* MaintableViewController.swift in Sources */,
 				040A0B552078A97F00CBA6D2 /* ChooseDestinatioVC.swift in Sources */,
 				215B896D20ADA1400064B8EB /* LoaderVC.swift in Sources */,

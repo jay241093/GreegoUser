@@ -147,6 +147,8 @@ func gettermscondition()
     }
     else
     {
+        WebServiceClass().nointernetconnection()
+
         NSLog("No Internet Connection")
     }
     
@@ -224,6 +226,8 @@ func getuserprofile()
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         

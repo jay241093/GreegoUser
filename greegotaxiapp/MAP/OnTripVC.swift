@@ -253,6 +253,8 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
         
@@ -329,6 +331,8 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
         }
         else
         {
+            WebServiceClass().nointernetconnection()
+
             NSLog("No Internet Connection")
         }
     }
