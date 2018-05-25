@@ -9,6 +9,8 @@
 import UIKit
 import ImageIO
 class LoaderVC: UIViewController {
+    var count = 60
+    var timer : Timer?
 
     @IBOutlet weak var imgview: UIImageView!
     override func viewDidLoad() {
@@ -18,14 +20,38 @@ class LoaderVC: UIViewController {
    
 //WebServiceClass().showwithimage()
         NotificationCenter.default.addObserver(self, selector:  #selector(AcceptRequest), name: NSNotification.Name(rawValue: "Acceptnotification"), object: nil)
-        let imageData = try? Data(contentsOf: Bundle.main.url(forResource: "giphy", withExtension: "gif")!)
+      let jeremyGif = UIImage.gifImageWithName("loader")
+        imgview.image = jeremyGif
         
         
-        imgview.image = UIImage(data: imageData!)
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+
         // Do any additional setup after loading the view.
+    }
+    @objc func update() {
+        if(count > 0){
+            let minutes = String(count / 60)
+            let seconds = String(count % 60)
+            count -= 1
+            if count == 0 {
+                timer?.invalidate()
+                let alert = UIAlertController(title: "Greego", message: "Non of drivers accepted your request", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title:"Ok", style:.default, handler: { (Alert) in
+                    
+                    self.removeAnimate()
+                }))
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+        }else{
+            timer?.invalidate()
+        }
     }
     
     @objc func AcceptRequest(notification: NSNotification) {
+        timer?.invalidate()
+
        // WebServiceClass().dismissprogress()
        removeAnimate()
     }

@@ -38,7 +38,8 @@ class AddpaymentViewController: UIViewController,UITextFieldDelegate {
       
         txtCardNumber.delegate = self
         txtCardNumber.tag = 2
-        
+        txtzipcode.tag = 5
+txtzipcode.delegate = self
         self.navigationController?.navigationBar.isHidden = true
         
      
@@ -162,11 +163,18 @@ class AddpaymentViewController: UIViewController,UITextFieldDelegate {
             }
             break
         case 4:
-            if newString?.characters.count == 4 {
+            if newString?.characters.count == 5 {
                 return false
                 
             }
             break
+        case 5:
+            if textField.text?.characters.count == 5 {
+                return false
+                
+            }
+            break
+            
         default:
             break
         }
@@ -199,7 +207,13 @@ class AddpaymentViewController: UIViewController,UITextFieldDelegate {
     
     var token1: STPToken?
     @IBAction func btnsavepayment(_ sender: Any) {
-       
+        var card = self.txtCardNumber.text! as! String
+        var str = card.replacingOccurrences(of: " ", with: "")
+        var fullName: String = self.txtdate.text!
+        let fullNameArr = fullName.components(separatedBy: "/")
+        
+        var firstName: String = fullNameArr[0]
+        var lastName: String = fullNameArr[1]
         if(txtCardNumber.text == "")
         {
             let alert = UIAlertController(title: "Greego", message: "Please enter Card Number", preferredStyle: UIAlertControllerStyle.alert)
@@ -228,8 +242,17 @@ class AddpaymentViewController: UIViewController,UITextFieldDelegate {
             self.present(alert, animated: true, completion: nil)
             
         }
+        else if(Int(lastName)! < 18)
+        {
+            let alert = UIAlertController(title: "Greego", message: "Please enter valid year", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        
        else{
-     
+            WebServiceClass().showprogress()
+
         var card = self.txtCardNumber.text! as! String
         var str = card.replacingOccurrences(of: " ", with: "")
         var fullName: String = self.txtdate.text!
@@ -283,7 +306,6 @@ class AddpaymentViewController: UIViewController,UITextFieldDelegate {
     func CreateUser(token:String){
         if AppDelegate.hasConnectivity() == true
         {
-            WebServiceClass().showprogress()
             let token1 = UserDefaults.standard.value(forKey: "devicetoken") as! String
             let headers = ["Accept": "application/json","Authorization": "Bearer "+token1]
           
@@ -370,7 +392,7 @@ class AddpaymentViewController: UIViewController,UITextFieldDelegate {
                         {
                            
                             let alert = UIAlertController(title: "Greego", message:
-                                "Payment Method added successfully", preferredStyle: UIAlertControllerStyle.alert)
+                                "Payment method added successfully", preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (Greego) in
                                 
                                self.navigationController?.popViewController(animated: true)
@@ -404,6 +426,9 @@ class AddpaymentViewController: UIViewController,UITextFieldDelegate {
         }
 
     }
+    
+    
+    
 }
 
 

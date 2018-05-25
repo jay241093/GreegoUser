@@ -192,7 +192,7 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
         }
         else if(yearpicker.text == "")
         {
-            let alert = UIAlertController(title: "Greego", message: "Please required all feild", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Greego", message: "Please Enter year", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
@@ -456,6 +456,23 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
             pickerview.tag = 2
         }
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if(textField == yearpicker)
+        {
+            let maxLength = 4
+            let currentString: NSString = yearpicker.text as! NSString
+            let newString: NSString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            return newString.length <= maxLength
+        }
+        else{
+            
+            return true
+        }
+        
+    }
+    
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
     {

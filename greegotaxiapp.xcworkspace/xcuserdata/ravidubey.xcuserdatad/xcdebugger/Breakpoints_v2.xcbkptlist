@@ -54,91 +54,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/MAP/ChooseDestinatioVC.swift"
-            timestampString = "548317557.169085"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/MAP/DriverRatingVC.swift"
-            timestampString = "548309457.657748"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "RateDriver()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/MAP/DriverRatingVC.swift"
-            timestampString = "548309457.657801"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "RateDriver()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in greegotaxiapp.DriverRatingVC.RateDriver() -&gt; ()"
-                  moduleName = "greegotaxiapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ravidubey/Desktop/Greego-master%202/greegotaxiapp/MAP/DriverRatingVC.swift"
-                  timestampString = "548330473.073889"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "2403">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.UIAlertAction) -&gt; () in closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in greegotaxiapp.DriverRatingVC.RateDriver() -&gt; ()"
-                  moduleName = "greegotaxiapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ravidubey/Desktop/Greego-master%202/greegotaxiapp/MAP/DriverRatingVC.swift"
-                  timestampString = "548330473.076689"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "21">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "greegotaxiapp/Registration/TermandconditionVC.swift"
-            timestampString = "548316845.484297"
+            timestampString = "548836037.953422"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
@@ -154,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "greegotaxiapp/Registration/TermandconditionVC.swift"
-            timestampString = "548316845.4843481"
+            timestampString = "548836037.9535789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "getuserprofile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "greegotaxiapp/Registration/TermandconditionVC.swift"
-            timestampString = "548316845.484395"
+            timestampString = "548836037.953629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "getuserprofile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -185,13 +105,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/Profile/Vehicle_informationViewController.swift"
-            timestampString = "548317557.169417"
+            filePath = "greegotaxiapp/MAP/DrideMapVC.swift"
+            timestampString = "548941747.052528"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "savebtnaction(_:)"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "AcceptRequest(notification:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -201,44 +121,76 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/Registration/addMobileVC.swift"
-            timestampString = "548332041.831907"
+            filePath = "greegotaxiapp/MAP/DrideMapVC.swift"
+            timestampString = "548941747.053185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "checkmobile()"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "AcceptRequest(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "greegotaxiapp/MAP/DrideMapVC.swift"
+            timestampString = "548941747.053642"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "AcceptRequest(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "greegotaxiapp/MAP/DrideMapVC.swift"
+            timestampString = "548941747.054125"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "AcceptRequest(notification:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "greegotaxiapp.addMobileVC.checkmobile() -&gt; ()"
+                  symbolName = "greegotaxiapp.DrideMapVC.AcceptRequest(notification: __ObjC.NSNotification) -&gt; ()"
                   moduleName = "greegotaxiapp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ravidubey/Desktop/Greego-master%202/greegotaxiapp/Registration/addMobileVC.swift"
-                  timestampString = "548330473.1262029"
+                  urlString = "file:///Users/ravidubey/Desktop/final%20greego/Greego-master%202/greegotaxiapp/MAP/DrideMapVC.swift"
+                  timestampString = "548941747.1312439"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "2663">
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "1776">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in greegotaxiapp.addMobileVC.checkmobile() -&gt; ()"
+                  symbolName = "greegotaxiapp.DrideMapVC.AcceptRequest(notification: __ObjC.NSNotification) -&gt; ()"
                   moduleName = "greegotaxiapp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ravidubey/Desktop/Greego-master%202/greegotaxiapp/Registration/addMobileVC.swift"
-                  timestampString = "548330473.129905"
+                  urlString = "file:///Users/ravidubey/Desktop/final%20greego/Greego-master%202/greegotaxiapp/MAP/DrideMapVC.swift"
+                  timestampString = "548941747.133494"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "26">
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "18076">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -249,61 +201,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/Registration/addMobileVC.swift"
-            timestampString = "548332041.8327301"
+            filePath = "greegotaxiapp/MAP/DrideMapVC.swift"
+            timestampString = "548941747.054548"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "checkmobile()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/Registration/addMobileVC.swift"
-            timestampString = "548332041.8332959"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "checkmobile()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/Registration/addMobileVC.swift"
-            timestampString = "548332041.833789"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "checkmobile()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/MAP/MainmapViewController.swift"
-            timestampString = "548332041.8343641"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "585"
-            endingLineNumber = "585"
-            landmarkName = "getDrivers()"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "AcceptRequest(notification:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

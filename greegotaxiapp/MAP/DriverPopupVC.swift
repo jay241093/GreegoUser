@@ -189,7 +189,7 @@ class DriverPopupVC: UIViewController {
                     if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                     {
                         let alert = UIAlertController(title: "Greego", message:"You have cancelled your trip", preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title:"Yes", style:.default, handler: { (Greego) in
+                        alert.addAction(UIAlertAction(title:"Ok", style:.default, handler: { (Greego) in
                             self.removeAnimate()
 
                             self.navigationController?.popViewController(animated: true)
@@ -203,7 +203,7 @@ class DriverPopupVC: UIViewController {
                         
                     }else{
                         
-                        let alert = UIAlertController(title: "Greego", message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                        let alert = UIAlertController(title: "Greego", message: "Something went wrong with to cancel trip", preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
                         

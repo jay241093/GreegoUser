@@ -418,7 +418,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 120
         
-        var url = NSURL(string: "https://www.kroslinkstech.in/greego/public/api/user/add/profile_pic")
+        
         let token = UserDefaults.standard.value(forKey: "devicetoken") as! String
         let headers = ["Accept": "application/json","Authorization": "Bearer "+token]
         let URL = try! URLRequest(url: "https://www.kroslinkstech.in/greego/public/api/user/add/profile_pic", method: .post, headers: headers)
@@ -439,7 +439,8 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
             }
             
             
-            var  image1 = UIImageJPEGRepresentation(self.imgstr, 0.5)
+            var newimg = self.imgstr.fixOrientation()
+            var  image1 = UIImageJPEGRepresentation(newimg, 0.5)
             MultipartFormData.append(image1!, withName: "image", fileName: "swift_file.jpg", mimeType: "image/jpeg")
             
         },   usingThreshold: UInt64.init(), to:WebServiceClass().BaseURL + "user/add/profile_pic", method: .post, headers: headers)  { (result) in
@@ -588,5 +589,21 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
     
     
     
+}
+
+extension UIImage {
+    func fixOrientation() -> UIImage {
+        if self.imageOrientation == UIImageOrientation.up {
+            return self
+        }
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        if let normalizedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext() {
+            UIGraphicsEndImageContext()
+            return normalizedImage
+        } else {
+            return self
+        }
+    }
 }
 

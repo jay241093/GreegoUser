@@ -42,11 +42,13 @@ class DriverRatingVC: UIViewController,FloatRatingViewDelegate{
         innerview.layer.cornerRadius = 8.0
         
         btnsubmit.layer.cornerRadius = 8.0
-lblamount.text = "US $" + amount
+        
+       
+    lblamount.text = "US " +  amount
         
     ratingView.delegate = self
         
-    ratingnew = "0.0"
+    ratingnew = "5.0"
     }
     
     
@@ -87,8 +89,8 @@ ratingnew = String(format: "%.2f", rating)
                         
                         let driverdic = newdic.value(forKey: "driver") as! NSDictionary
                         
-                        let first = driverdic.value(forKey: "legal_firstname") as! String
-                        let last = driverdic.value(forKey: "legal_firstname") as! String
+                        let first = driverdic.value(forKey: "name") as! String
+                        let last = driverdic.value(forKey: "lastname") as! String
                         
                         self.lbldrivername.text = "How was your trip with " + first + " " + last + "?"
                         
@@ -157,7 +159,7 @@ ratingnew = String(format: "%.2f", rating)
                     if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                     {
                         let alert = UIAlertController(title: "Greego", message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "Greego", style:.default, handler: { (Greego) in
+                        alert.addAction(UIAlertAction(title: "Ok", style:.default, handler: { (Greego) in
                             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                             
                             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController

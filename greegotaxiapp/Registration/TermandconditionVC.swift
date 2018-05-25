@@ -66,7 +66,7 @@ class TermandconditionVC: UIViewController,UIScrollViewDelegate{
         if(ischecked == "0")
         
         {
-            let alert = UIAlertController(title: "Greego", message: "Please Accept Term and condition", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Greego", message: "Please Accept Terms and condition", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }

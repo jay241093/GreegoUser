@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
+import Alamofire
 class FreetripsViewController: UIViewController {
 
+    var invitecode : String = ""
+    
     @IBAction func backaction(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
@@ -27,6 +29,7 @@ class FreetripsViewController: UIViewController {
         backgroundImage.image = UIImage(named: "rateimg")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
+        getData()
         // Do any additional setup after loading the view.
     }
 
@@ -37,17 +40,68 @@ class FreetripsViewController: UIViewController {
     
 
     @IBAction func sharebtnaction(_ sender: Any) {
-        if(txtinvitecode.text != ""){
-            let text = txtinvitecode.text as! String
+      
+            let text = "Please join Greego by this code" + invitecode
             
             let shareAll = [text]
             let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController, animated: true, completion: nil)
-        }
+     
     }
     
-    
+    func getData()
+    {
+      
+        if AppDelegate.hasConnectivity() == true
+        {
+            WebServiceClass().showprogress()
+            
+            let token = UserDefaults.standard.value(forKey: "devicetoken") as! String
+            let headers = ["Accept": "application/json","Authorization": "Bearer "+token]
+            
+            
+            
+            Alamofire.request(WebServiceClass().BaseURL+"user/me", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response:DataResponse<Any>) in
+                
+                switch(response.result) {
+                case .success(_):
+                    if response.result.value != nil{
+                        print(response.result.value!)
+                        
+                        let dic: NSDictionary =  response.result.value! as! NSDictionary
+                        
+                        if(dic.value(forKey: "error_code") as! NSNumber  == 0)
+                        {
+                            
+                            
+                            let dataDic: NSDictionary = dic.value(forKey: "data") as! NSDictionary
+                            
+                            self.invitecode =  dataDic.value(forKey: "invitecode") as! String
+                            
+                            self.txtinvitecode.text = dataDic.value(forKey: "invitecode") as! String
+                        }
+                        WebServiceClass().dismissprogress()
+                        
+                    }
+                    break
+                    
+                case .failure(_):
+                    WebServiceClass().dismissprogress()
+                    
+                    print(response.result.error)
+                    break
+                    
+                }
+            }
+        }
+        else
+        {
+            WebServiceClass().nointernetconnection()
+            
+            NSLog("No Internet Connection")
+        }
+    }
     
     /*
     // MARK: - Navigation

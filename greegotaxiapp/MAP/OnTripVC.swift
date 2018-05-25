@@ -214,8 +214,8 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                         self.driverid = newdic.value(forKey: "driver_id") as! NSNumber
                         let driverlocationdic : NSDictionary = newdic.value(forKey:"driver_location") as! NSDictionary
 
-                        let first = driverdic.value(forKey: "legal_firstname") as! String
-                        let last = driverdic.value(forKey: "legal_firstname") as! String
+                        let first = driverdic.value(forKey: "name") as! String
+                        let last = driverdic.value(forKey: "lastname") as! String
                         
                         self.lblname.text = first + " " + last
                         self.lblpromocode.setTitle(driverdic.value(forKey:"promocode") as! String, for: .normal)

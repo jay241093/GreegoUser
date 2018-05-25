@@ -36,6 +36,14 @@ class SettingViewController: UIViewController {
         lbljoin.text = "Created On " + str!
         
         thirdview.isUserInteractionEnabled = true
+        secondview.isUserInteractionEnabled = true
+
+        let tap1 = UITapGestureRecognizer()
+        
+        tap1.addTarget(self, action: #selector(updateprofile))
+        secondview.addGestureRecognizer(tap1)
+        
+        
         let tap = UITapGestureRecognizer()
         
         tap.addTarget(self, action: #selector(Verifyemail))
@@ -77,7 +85,14 @@ class SettingViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    @objc func updateprofile()
+    {
+        
+     
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "UpdateprofileViewController") as! UpdateprofileViewController
+        self.navigationController?.pushViewController(vc, animated: true)
 
+    }
     @objc func Verifyemail()
   {
         if AppDelegate.hasConnectivity() == true
@@ -109,7 +124,7 @@ class SettingViewController: UIViewController {
                     {
                    
                         
-                        let dialogMessage = UIAlertController(title: "Greego", message:dic.value(forKey: "message") as? String, preferredStyle: .alert)
+                        let dialogMessage = UIAlertController(title: "Greego", message:"Email Sent Successfully", preferredStyle: .alert)
                         
                       
                         // Create Cancel button with action handlder

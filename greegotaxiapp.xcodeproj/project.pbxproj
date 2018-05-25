@@ -17,10 +17,10 @@
 		04352C6A20800F1A00A7E6D9 /* setLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04352C6920800F1A00A7E6D9 /* setLocationCell.swift */; };
 		045F556A2078028100E75EB6 /* GoogleMap.json in Resources */ = {isa = PBXBuildFile; fileRef = 045F55692078028100E75EB6 /* GoogleMap.json */; };
 		045F556C2078092F00E75EB6 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 045F556B2078092F00E75EB6 /* style.json */; };
-		21062DAE20A00E6C003CB36B /* paymentcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21062DAD20A00E6C003CB36B /* paymentcell.swift */; };
+		2129844120B5899100087499 /* paymentcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2129844020B5899100087499 /* paymentcell.swift */; };
 		212E2EDC20B2839C0062CDF7 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */; };
+		212E2EDE20B2885C0062CDF7 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 212E2EDD20B2885C0062CDF7 /* loader.gif */; };
 		215B896D20ADA1400064B8EB /* LoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215B896C20ADA13F0064B8EB /* LoaderVC.swift */; };
-		215B896F20AE853E0064B8EB /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 215B896E20AE853E0064B8EB /* giphy.gif */; };
 		21692A6020A2CAE8005FF526 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21692A5F20A2CAE8005FF526 /* HelpVC.swift */; };
 		2173C2A6209D8A1800CE7096 /* OnTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173C2A5209D8A1800CE7096 /* OnTripVC.swift */; };
 		2173C2A8209D8CCE00CE7096 /* DriverRatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173C2A7209D8CCE00CE7096 /* DriverRatingVC.swift */; };
@@ -94,10 +94,10 @@
 		045F556B2078092F00E75EB6 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		0909EA2F762FC0B6F84B13A0 /* Pods_greegotaxiappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_greegotaxiappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3A397F82F7B2A3D65BA816 /* Pods_greegotaxiappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_greegotaxiappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		21062DAD20A00E6C003CB36B /* paymentcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = paymentcell.swift; path = "../../../../Downloads/Greego-master 4/greegotaxiapp/TableViewCells/paymentcell.swift"; sourceTree = "<group>"; };
+		2129844020B5899100087499 /* paymentcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paymentcell.swift; sourceTree = "<group>"; };
 		212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		212E2EDD20B2885C0062CDF7 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
 		215B896C20ADA13F0064B8EB /* LoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderVC.swift; sourceTree = "<group>"; };
-		215B896E20AE853E0064B8EB /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		21692A5F20A2CAE8005FF526 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		2173C2A5209D8A1800CE7096 /* OnTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTripVC.swift; sourceTree = "<group>"; };
 		2173C2A7209D8CCE00CE7096 /* DriverRatingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverRatingVC.swift; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 		045F55672077E91B00E75EB6 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				21062DAD20A00E6C003CB36B /* paymentcell.swift */,
+				2129844020B5899100087499 /* paymentcell.swift */,
 				3B9246512092B3980011D839 /* VehicleTableViewCell.swift */,
 				73051D942074A1B300C42207 /* MainTableViewCell.swift */,
 				04352C6920800F1A00A7E6D9 /* setLocationCell.swift */,
@@ -311,7 +311,7 @@
 			children = (
 				3BDBCE5120909BAB0078D8E4 /* greegotaxiapp.entitlements */,
 				3BFBCF18208F608400924F04 /* GoogleService-Info.plist */,
-				215B896E20AE853E0064B8EB /* giphy.gif */,
+				212E2EDD20B2885C0062CDF7 /* loader.gif */,
 				739807D5209AE10200D0BE3F /* Registration */,
 				3B2F591E208763C6000DD298 /* Payment */,
 				045F55632077E8A200E75EB6 /* StoryBoards */,
@@ -510,8 +510,8 @@
 				041CF18920777DCC00464B5D /* Info.plist in Resources */,
 				041CF17F20777D9C00464B5D /* Main.storyboard in Resources */,
 				045F556C2078092F00E75EB6 /* style.json in Resources */,
+				212E2EDE20B2885C0062CDF7 /* loader.gif in Resources */,
 				696A619B207212990015C77E /* LaunchScreen.storyboard in Resources */,
-				215B896F20AE853E0064B8EB /* giphy.gif in Resources */,
 				696A6198207212990015C77E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,7 +643,6 @@
 				040A0B502078A30300CBA6D2 /* Reachability.m in Sources */,
 				3B2F5925208763C7000DD298 /* AfteraddpromocodeViewController.swift in Sources */,
 				3B9246522092B3980011D839 /* VehicleTableViewCell.swift in Sources */,
-				21062DAE20A00E6C003CB36B /* paymentcell.swift in Sources */,
 				3BDEF7B72085F6CB00447600 /* HelpViewController.swift in Sources */,
 				739807DE209AE10F00D0BE3F /* mobilenumberViewController.swift in Sources */,
 				040A0B4B2078977500CBA6D2 /* SharedClass.swift in Sources */,
@@ -658,6 +657,7 @@
 				212E2EDC20B2839C0062CDF7 /* iOSDevCenters+GIF.swift in Sources */,
 				73051D932074A14900C42207 /* MaintableViewController.swift in Sources */,
 				040A0B552078A97F00CBA6D2 /* ChooseDestinatioVC.swift in Sources */,
+				2129844120B5899100087499 /* paymentcell.swift in Sources */,
 				215B896D20ADA1400064B8EB /* LoaderVC.swift in Sources */,
 				739807DF209AE10F00D0BE3F /* SettingViewController.swift in Sources */,
 				739807E3209AE10F00D0BE3F /* TermandconditionVC.swift in Sources */,
@@ -826,6 +826,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = greegotaxiapp/greegotaxiapp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5W64V38EUB;
@@ -850,6 +851,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = greegotaxiapp/greegotaxiapp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5W64V38EUB;

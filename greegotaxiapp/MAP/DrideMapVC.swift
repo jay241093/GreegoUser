@@ -55,45 +55,20 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-        
+      
         do {
             // Set the map style by passing the URL of the local file. Make sure style.json is present in your project
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json")
             {
-                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                self.mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
             } else {
                 print("Unable to find style.json")
             }
         } catch {
             print("The style definition could not be loaded: \(error)")
         }
-      
-        let geocoder = GMSGeocoder()
-        geocoder.reverseGeocodeCoordinate(sourceCord) { response , error in
-            
-            //Add this line
-            if let address = response!.firstResult() {
-                
-                
-                self.source = (address.lines?.first)!
-            }
-            
-            
-        }
-        geocoder.reverseGeocodeCoordinate(destCord) { response , error in
-            
-            //Add this line
-            if let address = response!.firstResult() {
-                
-                
-                self.destination = (address.lines?.first)!
-            }
-            
-            
-        }
         
-        
-        
+     
         let tap = UITapGestureRecognizer()
         tap.addTarget(self, action: #selector(Cardaction))
         debitCardView.addGestureRecognizer(tap)
@@ -138,13 +113,15 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
         if(object.value(forKey: "payment_status") as! String == "1")
         {
      
-            AudioServicesPlayAlertSound(SystemSoundID(1016))
+            AudioServicesPlayAlertSound(SystemSoundID(1322))
 
             self.debitCardView.isHidden = true
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "DriverRatingVC") as! DriverRatingVC
             
             let tripid : String = (object.value(forKey:"trip_id") as? String)!
             let fees = object.value(forKey: "total_amount") as! String
+            
+            print(fees)
             vc.amount = fees
             vc.tripid =  tripid
             self.navigationController?.pushViewController(vc, animated: true)
@@ -167,11 +144,12 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
         if(num == "2")
         {
             
-            AudioServicesPlayAlertSound(SystemSoundID(1016))
+            AudioServicesPlayAlertSound(SystemSoundID(1322))
 
             var imageview = UIImageView()
             
-            imageview.sd_setImage(with: URL(string: UserDefaults.standard.value(forKey:"DriverImg") as! String), completed: nil)
+            imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
+
             if(imageview.image != nil)
             {
                 SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver Ongoing", image: imageview.image!,  showTime: 5)
@@ -194,9 +172,9 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
         {
             
             var imageview = UIImageView()
-            AudioServicesPlayAlertSound(SystemSoundID(1016))
+            AudioServicesPlayAlertSound(SystemSoundID(1322))
 
-            imageview.sd_setImage(with: URL(string: UserDefaults.standard.value(forKey:"DriverImg") as! String), completed: nil)
+            imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
             if(imageview.image != nil)
             {
                 SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver On trip", image: imageview.image!,  showTime: 5)
@@ -213,11 +191,11 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
         
         else if(num == "4")
         {
-            AudioServicesPlayAlertSound(SystemSoundID(1016))
+            AudioServicesPlayAlertSound(SystemSoundID(1322))
 
             var imageview = UIImageView()
             
-            imageview.sd_setImage(with: URL(string: UserDefaults.standard.value(forKey:"DriverImg") as! String), completed: nil)
+            imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
             if(imageview.image != nil)
             {
                 SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver has drop off you", image: imageview.image!,  showTime: 5)
@@ -228,8 +206,9 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
         else if(num == "5")
         {
 
-            AudioServicesPlayAlertSound(SystemSoundID(1016))
+            AudioServicesPlayAlertSound(SystemSoundID(1322))
 
+            
             let newdic: String = ((object.value(forKey:"aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! String
             
             
@@ -599,8 +578,8 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
             "to_address" : self.destPlace,
             "to_lat" : strDestLat,
             "to_lng" : strDestLng,
-            "total_estimated_travel_time" : distance!,
-            "total_estimated_trip_cost" : duration!
+            "total_estimated_travel_time" : self.strDuration,
+            "total_estimated_trip_cost" : tripprice
             ] as [String : Any]
         
         Alamofire.request(WebServiceClass().BaseURL+"user/add/request", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response:DataResponse<Any>) in
@@ -623,14 +602,14 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                     let req = newdic.value(forKey:"id") as! NSNumber
                     
                     self.reqid = req.stringValue
-//
-//                    let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "LoaderVC") as! LoaderVC
-//                    self.addChildViewController(popOverConfirmVC)
-//                    popOverConfirmVC.view.frame = self.view.frame
-//                    self.view.center = popOverConfirmVC.view.center
-//                    self.view.addSubview(popOverConfirmVC.view)
-//                    popOverConfirmVC.didMove(toParentViewController: self)
-                 WebServiceClass().showwithimage()
+
+                    let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "LoaderVC") as! LoaderVC
+                    self.addChildViewController(popOverConfirmVC)
+                    popOverConfirmVC.view.frame = self.view.frame
+                    self.view.center = popOverConfirmVC.view.center
+                    self.view.addSubview(popOverConfirmVC.view)
+                    popOverConfirmVC.didMove(toParentViewController: self)
+                 //WebServiceClass().showwithimage()
                     
                     
                 }else{
@@ -755,6 +734,33 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                         
                         if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                         {
+                            
+                         
+                            let geocoder = GMSGeocoder()
+                            geocoder.reverseGeocodeCoordinate(self.sourceCord) { response , error in
+                                
+                                //Add this line
+                                if let address = response!.firstResult() {
+                                    
+                                    
+                                    self.source = (address.lines?.first)!
+                                }
+                                
+                                
+                            }
+                            geocoder.reverseGeocodeCoordinate(self.destCord) { response , error in
+                                
+                                //Add this line
+                                if let address = response!.firstResult() {
+                                    
+                                    
+                                    self.destination = (address.lines?.first)!
+                                }
+                                
+                                
+                            }
+                            
+                            
                             
                             
                             let dataDic: NSDictionary = dic.value(forKey: "data") as! NSDictionary

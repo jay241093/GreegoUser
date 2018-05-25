@@ -10,7 +10,7 @@ import UIKit
 import SVProgressHUD
 class WebServiceClass: NSObject
 {
-    let BaseURL = "http://54.144.110.21/public/api/"
+    let BaseURL = "http://54.144.110.21/api/"
 
    // let BaseURL = "http://kroslinkstech.in/greego/public/api/"
 
@@ -86,9 +86,8 @@ class WebServiceClass: NSObject
     
     func nointernetconnection()
     {
-        let alert = UIAlertController(title: "Alert", message: "No internet Connection", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-         present(alert, animated: true, completion: nil)
+        let button2Alert: UIAlertView = UIAlertView(title: "Alert", message: "Please Check your internet connection",delegate: nil, cancelButtonTitle: "OK")
+        button2Alert.show()
         
         
     }
