@@ -179,34 +179,34 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
         
         if(makepicker.text == "")
         {
-            let alert = UIAlertController(title: "Greego", message: "Please required all feild", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please required all feild", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         else if(modelpicker.text == "")
         {
-            let alert = UIAlertController(title: "Greego", message: "Please required all feild", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please required all feild", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
         }
         else if(yearpicker.text == "")
         {
-            let alert = UIAlertController(title: "Greego", message: "Please Enter year", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please Enter year", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
         }
         else if(nameOfMonth! > date)
         {
-            let alert = UIAlertController(title: "Greego", message: "Please Enter correct year", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please Enter correct year", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
         }
         else if(colorpicker.text == "")
         {
-            let alert = UIAlertController(title: "Greego", message: "Please required all feild", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please required all feild", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
@@ -247,7 +247,7 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
                             }
                             else{
                                 
-                                let alert = UIAlertController(title: "Greego", message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                                let alert = UIAlertController(title: nil, message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                                 self.present(alert, animated: true, completion: nil)
                             }
@@ -299,7 +299,7 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)
                         {
-                            let alert = UIAlertController(title: "Greego", message:"Vehicle Added Successfully.", preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message:"Vehicle Added Successfully.", preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (Greego) in
                                 
                                 self.navigationController?.popViewController(animated: true)
@@ -310,7 +310,7 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
                             
                         }
                         else{
-                            let alert = UIAlertController(title: "Greego", message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                         }
@@ -446,7 +446,7 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
             
             pickerview.reloadAllComponents()
             if(makepicker.text == ""){
-                let alert = UIAlertController(title: "Greego", message: "Please choose make vehicle", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: nil, message: "Please choose make vehicle", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }

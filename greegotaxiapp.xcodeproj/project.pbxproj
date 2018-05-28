@@ -17,6 +17,9 @@
 		04352C6A20800F1A00A7E6D9 /* setLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04352C6920800F1A00A7E6D9 /* setLocationCell.swift */; };
 		045F556A2078028100E75EB6 /* GoogleMap.json in Resources */ = {isa = PBXBuildFile; fileRef = 045F55692078028100E75EB6 /* GoogleMap.json */; };
 		045F556C2078092F00E75EB6 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 045F556B2078092F00E75EB6 /* style.json */; };
+		21113CFA20B930BB0019A776 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21113CF920B930B00019A776 /* Segoe UI.ttf */; };
+		21113CFE20B938600019A776 /* seguisb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21113CFD20B938540019A776 /* seguisb.ttf */; };
+		21113D0020B940110019A776 /* segoe-ui-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21113CFF20B940030019A776 /* segoe-ui-bold.ttf */; };
 		2129844120B5899100087499 /* paymentcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2129844020B5899100087499 /* paymentcell.swift */; };
 		212E2EDC20B2839C0062CDF7 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */; };
 		212E2EDE20B2885C0062CDF7 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 212E2EDD20B2885C0062CDF7 /* loader.gif */; };
@@ -94,6 +97,9 @@
 		045F556B2078092F00E75EB6 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		0909EA2F762FC0B6F84B13A0 /* Pods_greegotaxiappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_greegotaxiappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3A397F82F7B2A3D65BA816 /* Pods_greegotaxiappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_greegotaxiappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21113CF920B930B00019A776 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
+		21113CFD20B938540019A776 /* seguisb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seguisb.ttf; sourceTree = "<group>"; };
+		21113CFF20B940030019A776 /* segoe-ui-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "segoe-ui-bold.ttf"; sourceTree = "<group>"; };
 		2129844020B5899100087499 /* paymentcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paymentcell.swift; sourceTree = "<group>"; };
 		212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 		212E2EDD20B2885C0062CDF7 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
@@ -309,6 +315,9 @@
 		696A618F207212990015C77E /* greegotaxiapp */ = {
 			isa = PBXGroup;
 			children = (
+				21113CFD20B938540019A776 /* seguisb.ttf */,
+				21113CFF20B940030019A776 /* segoe-ui-bold.ttf */,
+				21113CF920B930B00019A776 /* Segoe UI.ttf */,
 				3BDBCE5120909BAB0078D8E4 /* greegotaxiapp.entitlements */,
 				3BFBCF18208F608400924F04 /* GoogleService-Info.plist */,
 				212E2EDD20B2885C0062CDF7 /* loader.gif */,
@@ -505,6 +514,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21113D0020B940110019A776 /* segoe-ui-bold.ttf in Resources */,
+				21113CFE20B938600019A776 /* seguisb.ttf in Resources */,
+				21113CFA20B930BB0019A776 /* Segoe UI.ttf in Resources */,
 				3BFBCF19208F608400924F04 /* GoogleService-Info.plist in Resources */,
 				045F556A2078028100E75EB6 /* GoogleMap.json in Resources */,
 				041CF18920777DCC00464B5D /* Info.plist in Resources */,

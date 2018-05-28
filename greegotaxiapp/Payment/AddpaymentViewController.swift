@@ -216,20 +216,20 @@ txtzipcode.delegate = self
         var lastName: String = fullNameArr[1]
         if(txtCardNumber.text == "")
         {
-            let alert = UIAlertController(title: "Greego", message: "Please enter Card Number", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter Card Number", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         else if(txtdate.text == "")
         {
-            let alert = UIAlertController(title: "Greego", message: "Please enter Expiry Date", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter Expiry Date", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
         }
         else if(txtcvv.text == "")
         {
-            let alert = UIAlertController(title: "Greego", message: "Please enter CVV", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter CVV", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
@@ -237,14 +237,14 @@ txtzipcode.delegate = self
         
         else if(txtzipcode.text == "")
         {
-            let alert = UIAlertController(title: "Greego", message: "Please enter Zipcode", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter Zipcode", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
         }
         else if(Int(lastName)! < 18)
         {
-            let alert = UIAlertController(title: "Greego", message: "Please enter valid year", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter valid year", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
@@ -275,7 +275,7 @@ txtzipcode.delegate = self
         
         STPAPIClient.shared().createToken(withCard: cardParams) { (token: STPToken?, error: Error?) in
             guard var token = token, error == nil else {
-                let alert = UIAlertController(title: "Greego", message:"Your card number is Invalid", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: nil, message:"Your card number is Invalid", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 return
@@ -331,7 +331,7 @@ txtzipcode.delegate = self
                             self.validpayment(cusid: self.cust_id)
                         }
                         else{
-                            let alert = UIAlertController(title: "Greego", message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                         }
@@ -391,7 +391,7 @@ txtzipcode.delegate = self
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)
                         {
                            
-                            let alert = UIAlertController(title: "Greego", message:
+                            let alert = UIAlertController(title: nil, message:
                                 "Payment method added successfully", preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (Greego) in
                                 
@@ -403,7 +403,7 @@ txtzipcode.delegate = self
                             
                         }
                         else{
-                            let alert = UIAlertController(title: "Greego", message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                         }

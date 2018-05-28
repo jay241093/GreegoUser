@@ -75,7 +75,7 @@ class otpVC: UIViewController {
         {
            
            
-            let alert = UIAlertController(title: "Greego", message: "OTP expired", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "OTP expired", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
@@ -92,7 +92,7 @@ class otpVC: UIViewController {
         else
         {
             
-            let alert = UIAlertController(title: "Greego", message: "Please Enter Correct OTP", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please Enter Correct OTP", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
@@ -105,7 +105,7 @@ else
         
      {
         
-        let alert = UIAlertController(title: "Greego", message: "Please enter OTP", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: nil, message: "Please Enter OTP code", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         }
@@ -142,7 +142,7 @@ else
             WebServiceClass().showprogress()
 
             let parameters = [
-                "contact_number":"+91" + strmobileno!,
+                "contact_number":"+1" + strmobileno!,
                 "is_iphone": "0",
                 "device_id": UserDefaults.standard.value(forKey: "Token") as! String
 
@@ -269,7 +269,7 @@ else
                         }
                         else
                         {
-                            let alert = UIAlertController(title: "Greego", message:dic.value(forKey:"message") as? String, preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message:dic.value(forKey:"message") as? String, preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                             

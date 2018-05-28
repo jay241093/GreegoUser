@@ -234,7 +234,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                         
                     }else{
                         
-                        let alert = UIAlertController(title: "Greego", message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                        let alert = UIAlertController(title: nil, message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
                         
@@ -310,7 +310,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                             }
                            
                         }else{
-                            let alert = UIAlertController(title: "Greego", message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                         }

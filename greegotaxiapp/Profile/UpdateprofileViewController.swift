@@ -249,7 +249,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)
                         {
-                            let alert = UIAlertController(title: "Greego", message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                             self.checkvehicle()
@@ -257,7 +257,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
                             
                         }
                         else{
-                            let alert = UIAlertController(title: "Greego", message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                         }
@@ -334,7 +334,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
                           
                         }
                         else{
-                            let alert = UIAlertController(title: "Greego", message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                         }
@@ -553,7 +553,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
                     WebServiceClass().dismissprogress()
                     if let data = response.result.value{
                         print(response.result.value!)
-                        let alert = UIAlertController(title: "Greego", message: "Suceessfully Updated.", preferredStyle: UIAlertControllerStyle.alert)
+                        let alert = UIAlertController(title: nil, message: "Suceessfully Updated.", preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
                         

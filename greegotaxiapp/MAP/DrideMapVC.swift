@@ -158,7 +158,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
 //            let newdic: String = ((object.value(forKey:"aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! String
 //
 //
-//            let alert = UIAlertController(title: "Greego", message:newdic, preferredStyle: UIAlertControllerStyle.alert)
+//            let alert = UIAlertController(title: nil, message:newdic, preferredStyle: UIAlertControllerStyle.alert)
 //
 //            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (Greego) in
 //
@@ -212,7 +212,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
             let newdic: String = ((object.value(forKey:"aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! String
             
             
-            let alert = UIAlertController(title: "Greego", message:newdic, preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message:newdic, preferredStyle: UIAlertControllerStyle.alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (Greego) in
                 
@@ -375,22 +375,30 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                     self.sourceMarker.map = self.mapView
                     var fullNameArr = self.strDuration.components(separatedBy:" ")
                     
-                    var firstName: String = fullNameArr[0]
+                    var firstName: NSString = fullNameArr[0] as NSString
                     var lastName: String? = fullNameArr[1]
                     
-                    
-                    let time:Int? = Int(firstName) // firstText is UITextField
-
-                    let calendar = Calendar.current
                     let date1 = Date()
-                    
-                    let date = calendar.date(byAdding: .minute, value:time!, to: date1)
+
+                   // let date = date1.addingTimeInterval(firstName.doubleValue)
+                    let finaldate  = Calendar.current.date(byAdding: .minute, value: Int(firstName as String)!, to: date1)
                     let format = DateFormatter()
                     format.dateStyle = .none
-                    format.timeStyle = .short
-                    print(format.string(from: date!))
+                    format.timeStyle = .medium
+                    print(format.string(from: finaldate!))
                     
-                    self.destMarker.icon = self.drawText(text:format.string(from: date!) as NSString, inImage: #imageLiteral(resourceName: "est time bubble"))
+//                    let time:Int? = Int(firstName) // firstText is UITextField
+//
+//                    let calendar = Calendar.current
+//                    let date1 = Date()
+//
+//                    let date = calendar.date(byAdding: .minute, value:time!, to: date1)
+//                    let format = DateFormatter()
+//                    format.dateStyle = .none
+//                    format.timeStyle = .short
+//                    print(format.string(from: date!))
+                    
+                    self.destMarker.icon = self.drawText(text:format.string(from: finaldate!) as NSString, inImage: #imageLiteral(resourceName: "Union 3"))
                     
                     self.destMarker.position = CLLocationCoordinate2D(latitude: self.destCord.latitude, longitude: self.destCord.longitude)
                     self.destMarker.map = self.mapView
@@ -530,7 +538,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
     @IBAction func btnRequestClicked(_ sender: Any)
     {
         
-        let refreshAlert = UIAlertController(title: "Greego", message: "Are you sure you want to go from " + source + " to " + destination , preferredStyle: UIAlertControllerStyle.alert)
+        let refreshAlert = UIAlertController(title: nil, message: "Are you sure you want to go from " + source + " to " + destination , preferredStyle: UIAlertControllerStyle.alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
             self.requestclick()
@@ -614,7 +622,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                     
                 }else{
                     
-                    let alert = UIAlertController(title: "Greego", message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController(title: nil, message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                     
@@ -684,7 +692,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                             print(dic)
                         }
                         }else{
-                            let alert = UIAlertController(title: "Greego", message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                         }
@@ -790,7 +798,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                             }
                            if(self.selectecard.count == 0)
                            {
-                            let refreshAlert = UIAlertController(title: "Greego", message: "You have not Slelected any card please select any card to continue.", preferredStyle: UIAlertControllerStyle.alert)
+                            let refreshAlert = UIAlertController(title: nil, message: "You have not Slelected any card please select any card to continue.", preferredStyle: UIAlertControllerStyle.alert)
                             
                             refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
                                 

@@ -46,7 +46,7 @@ class addMobileVC: UIViewController,UITextFieldDelegate
        
         if(txtMobileNum.text == "")
       {
-        let alert = UIAlertController(title: "Greego", message: "Please enter correct mobile number", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: nil, message: "Please enter correct mobile number", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         }
@@ -71,7 +71,7 @@ func checkmobile()
         WebServiceClass().showprogress()
         print( UserDefaults.standard.value(forKey: "Token") as! String)
         let parameters = [
-            "contact_number":"+91" + txtMobileNum.text!,
+            "contact_number":"+1" + txtMobileNum.text!,
             "is_iphone": "1",
             "device_id": UserDefaults.standard.value(forKey: "Token") as! String
         ]
@@ -114,7 +114,7 @@ func checkmobile()
                     }
                     else
                    {
-                    let alert = UIAlertController(title: "Greego", message: "Please enter correct mobile number.", preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController(title: nil, message: "Please enter correct mobile number.", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                     

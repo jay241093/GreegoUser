@@ -133,7 +133,7 @@ class DriverPopupVC: UIViewController {
 
                 }else{
                     
-                    let alert = UIAlertController(title: "Greego", message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController(title: nil, message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                     
@@ -188,7 +188,7 @@ class DriverPopupVC: UIViewController {
                     
                     if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                     {
-                        let alert = UIAlertController(title: "Greego", message:"You have cancelled your trip", preferredStyle: UIAlertControllerStyle.alert)
+                        let alert = UIAlertController(title: nil, message:"You have cancelled your trip", preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title:"Ok", style:.default, handler: { (Greego) in
                             self.removeAnimate()
 
@@ -203,7 +203,7 @@ class DriverPopupVC: UIViewController {
                         
                     }else{
                         
-                        let alert = UIAlertController(title: "Greego", message: "Something went wrong with to cancel trip", preferredStyle: UIAlertControllerStyle.alert)
+                        let alert = UIAlertController(title: nil, message: "Something went wrong with to cancel trip", preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
                         
@@ -249,7 +249,7 @@ class DriverPopupVC: UIViewController {
     
     @IBAction func canceltrip(_ sender: Any) {
         
-        let refreshAlert = UIAlertController(title: "Greego", message: "Are you Sure you wanto cancel Trip?", preferredStyle: UIAlertControllerStyle.alert)
+        let refreshAlert = UIAlertController(title: nil, message: "Are you Sure you wanto cancel Trip?", preferredStyle: UIAlertControllerStyle.alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
             self.caceltrip()

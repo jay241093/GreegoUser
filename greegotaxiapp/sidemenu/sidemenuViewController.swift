@@ -82,6 +82,8 @@ class sidemenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let str = reuseid.object(at: indexPath.row) as! String
         let dvc:UITableViewCell = tableView.dequeueReusableCell(withIdentifier:str, for: indexPath)
         var nameary = ["Home","Payment","Your Trips","Free Rides","Help","Settings"]
+        dvc.textLabel?.font = UIFont(name: "seguisb", size: 15)
+        
         dvc.textLabel?.text = nameary[indexPath.row]
         
         

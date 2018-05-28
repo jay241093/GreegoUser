@@ -14,6 +14,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Segoe UI.ttf">
+            <string>SegoeUI</string>
+        </array>
+        <array key="segoe-ui-bold.ttf">
+            <string>SegoeUI-Bold</string>
+        </array>
+        <array key="seguisb.ttf">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Mobilenumber View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -31,7 +42,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="ijF-yU-D3f"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="19"/>
                                 <color key="textColor" red="0.026607530191540718" green="0.24217844009399414" blue="0.31317031383514404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,7 +56,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please enter your mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hh9-e0-VBA">
                                 <rect key="frame" x="88" y="418" width="216" height="40"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Cpi-SL-JqY"/>
@@ -118,7 +129,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This number will be used to contact with driver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBs-cs-4b0">
                                 <rect key="frame" x="0.0" y="172.5" width="320" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -136,7 +147,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JbB-yK-C7X" customClass="customTextField" customModule="greegotaxiapp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="285.5" width="320" height="38.5"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="inset">
@@ -156,7 +167,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6ym-vh-msY" secondAttribute="height" multiplier="151:18" id="Ehb-vr-6Dd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -228,7 +239,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="k37-yM-tvK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -253,13 +264,13 @@
                                     <action selector="nextaction:" destination="btk-dc-suy" eventType="touchUpInside" id="9vI-bW-k6J"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nYt-0E-oyr">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nYt-0E-oyr">
                                 <rect key="frame" x="12" y="217" width="295" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="b2Z-e2-KgP"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="btk-dc-suy" id="8eq-v5-lXN"/>
@@ -270,7 +281,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="DRG-xq-Ze6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.24313725490196078" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -319,7 +330,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Rkd-Wb-I6E"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -339,13 +350,13 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOQ-gT-sFU">
                                         <rect key="frame" x="0.0" y="0.0" width="146" height="40"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CkZ-ae-vhf">
                                         <rect key="frame" x="156" y="0.0" width="146" height="40"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -426,8 +437,8 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="11" id="eTw-du-VQN"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="10"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$32.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44q-bT-vVu">
@@ -435,7 +446,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="63" id="FGJ-oZ-vd0"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -444,7 +455,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="VZ4-tF-S6o"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -512,8 +523,7 @@
                                     <constraint firstAttribute="height" constant="99" id="3CN-vE-KuR"/>
                                     <constraint firstAttribute="width" constant="257" id="eeW-z4-RtL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBk-4f-r71">
@@ -532,7 +542,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="22S-5Q-bh9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -596,7 +606,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="37" id="tNB-Os-E1c"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -617,7 +627,7 @@
                                                     <constraint firstAttribute="width" constant="136" id="Mfb-6y-pFO"/>
                                                     <constraint firstAttribute="height" constant="27" id="PUY-TS-670"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -627,7 +637,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="CVF-iR-tif"/>
                                                     <constraint firstAttribute="width" constant="64" id="xov-so-q1k"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -636,7 +646,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="dSq-kd-9rB"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -645,17 +655,17 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfc-gc-jql">
-                                                <rect key="frame" x="0.0" y="440" width="320" height="121"/>
+                                                <rect key="frame" x="0.0" y="440" width="320" height="120.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKU-50-4tm">
-                                                        <rect key="frame" x="21" y="8" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <rect key="frame" x="21" y="8" width="42" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB8-6S-GHh">
-                                                        <rect key="frame" x="21" y="68" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <rect key="frame" x="21" y="67.5" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -667,32 +677,32 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:43 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLn-ru-Hdh">
-                                                        <rect key="frame" x="79" y="10" width="127" height="16"/>
+                                                        <rect key="frame" x="79" y="9" width="127" height="17.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="127" id="52m-Zw-lq2"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3rd Avenue, New York,NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4v-Fi-RxK">
-                                                        <rect key="frame" x="79" y="29" width="187" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <rect key="frame" x="79" y="29.5" width="187" height="20"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:48 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoM-p6-hJI">
-                                                        <rect key="frame" x="79" y="69" width="127" height="18"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <rect key="frame" x="79" y="68.5" width="127" height="18"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2nd Avenue,New York,NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3on-T5-av3">
-                                                        <rect key="frame" x="80" y="90" width="186" height="17"/>
+                                                        <rect key="frame" x="80" y="89.5" width="186" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="P8E-oQ-VK2"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -728,14 +738,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFk-Dd-Xbo">
-                                                <rect key="frame" x="0.0" y="580" width="320" height="147"/>
+                                                <rect key="frame" x="0.0" y="579.5" width="320" height="147.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greego fare(1.41 mi , 6m 49s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vD3-Vu-BRo">
                                                         <rect key="frame" x="20" y="6" width="177" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="gwg-Oe-kea"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -744,24 +754,24 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="42" id="YYN-Ds-5pf"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promotion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opC-sQ-W6F">
-                                                        <rect key="frame" x="20" y="46" width="177" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <rect key="frame" x="20" y="46" width="177" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg9-Ez-MsK">
-                                                        <rect key="frame" x="253" y="46" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <rect key="frame" x="253" y="46" width="42" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwb-zR-pMD">
-                                                        <rect key="frame" x="20" y="83" width="278" height="1"/>
+                                                        <rect key="frame" x="20" y="83.5" width="278" height="1"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="gG7-Vj-lNZ"/>
@@ -771,18 +781,18 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbQ-pm-UxP">
-                                                        <rect key="frame" x="20" y="99" width="42" height="21"/>
+                                                        <rect key="frame" x="20" y="99.5" width="42" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="84A-Bx-cNe"/>
                                                             <constraint firstAttribute="width" constant="42" id="Dos-Q5-nP4"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$32.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha2-1W-n7W">
-                                                        <rect key="frame" x="253" y="99" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <rect key="frame" x="253" y="99.5" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -821,7 +831,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="Wsv-09-cng"/>
                                                     <constraint firstAttribute="width" constant="153" id="Zro-IH-4yc"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
                                                 <state key="normal" title="Get a help from a Greego">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -1307,16 +1317,16 @@
                                             <constraint firstAttribute="width" constant="150" id="ADI-I9-ndG"/>
                                             <constraint firstAttribute="height" constant="50" id="wKc-Gx-G6G"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFE-dR-PEv">
-                                        <rect key="frame" x="181" y="39" width="100" height="50"/>
+                                        <rect key="frame" x="181" y="42" width="100" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="D2s-Un-k44"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1327,7 +1337,7 @@
                                     <constraint firstItem="qFE-dR-PEv" firstAttribute="height" secondItem="mit-ei-3zB" secondAttribute="height" id="6Kd-Dh-1jG"/>
                                     <constraint firstItem="mit-ei-3zB" firstAttribute="centerY" secondItem="ubz-5y-5ai" secondAttribute="centerY" id="848-hM-jMY"/>
                                     <constraint firstAttribute="trailing" secondItem="tnz-P4-MSR" secondAttribute="trailing" id="Xcl-Ge-M0O"/>
-                                    <constraint firstItem="qFE-dR-PEv" firstAttribute="centerY" secondItem="mit-ei-3zB" secondAttribute="centerY" id="YFK-kk-A2p"/>
+                                    <constraint firstItem="qFE-dR-PEv" firstAttribute="centerY" secondItem="mit-ei-3zB" secondAttribute="centerY" constant="3" id="YFK-kk-A2p"/>
                                     <constraint firstAttribute="trailing" secondItem="qFE-dR-PEv" secondAttribute="trailing" constant="39" id="axh-40-4TX"/>
                                     <constraint firstItem="mit-ei-3zB" firstAttribute="leading" secondItem="ubz-5y-5ai" secondAttribute="leading" constant="46" id="bg3-C7-6vc"/>
                                     <constraint firstAttribute="bottom" secondItem="tnz-P4-MSR" secondAttribute="bottom" id="fOI-QH-4bF"/>
@@ -1347,7 +1357,7 @@
                                             <constraint firstAttribute="height" constant="30" id="0c6-r4-hKp"/>
                                             <constraint firstAttribute="width" constant="172" id="9A6-eG-LvZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                         <color key="textColor" red="0.37719675944876796" green="0.37719675944876796" blue="0.37719675944876796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1357,14 +1367,14 @@
                                             <constraint firstAttribute="width" constant="205" id="4hk-ek-aUg"/>
                                             <constraint firstAttribute="height" constant="40" id="V1M-4f-2CZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="30"/>
                                         <color key="textColor" red="0.46375274658203125" green="0.67164260149002075" blue="0.65207111835479736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7N-IO-M6u">
                                         <rect key="frame" x="58" y="98" width="205" height="40"/>
                                         <color key="backgroundColor" red="0.46391838788986206" green="0.66770994663238525" blue="0.64811736345291138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="20"/>
                                         <state key="normal" title="ABC123">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1616,7 +1626,7 @@ you have to update your information.</string>
                                         <rect key="frame" x="83" y="3" width="152" height="50"/>
                                         <string key="text">What vehicle do you want 
 Greego to drive?</string>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1642,7 +1652,7 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="4tq-dz-GfU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="60" maxY="0.0"/>
                                         <state key="normal" title="Edit your vehicle" image="setup">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1685,39 +1695,39 @@ Greego to drive?</string>
                                             <constraint firstAttribute="height" constant="27" id="9bd-4H-ncg"/>
                                             <constraint firstAttribute="width" constant="123" id="xeY-ku-tcz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Before you use greego, please complete the remaining set up" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpZ-w3-8QI">
-                                        <rect key="frame" x="5" y="45" width="170" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <rect key="frame" x="5" y="45" width="170" height="37.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.047974132001399994" blue="0.22386789321899414" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKl-fU-2bU">
-                                        <rect key="frame" x="10" y="95.5" width="140" height="21"/>
+                                        <rect key="frame" x="10" y="99.5" width="140" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="YLg-O1-pjX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDH-8Q-qes">
-                                        <rect key="frame" x="10" y="124.5" width="140" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <rect key="frame" x="10" y="128.5" width="140" height="21"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZF-fG-0vA">
-                                        <rect key="frame" x="10" y="153.5" width="140" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <rect key="frame" x="10" y="157.5" width="140" height="21"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbN-TZ-pv1">
-                                        <rect key="frame" x="15" y="116.5" width="135" height="1"/>
+                                        <rect key="frame" x="15" y="120.5" width="135" height="1"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="EBD-mD-n5i"/>
@@ -1727,7 +1737,7 @@ Greego to drive?</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYs-eH-csY">
-                                        <rect key="frame" x="15" y="145.5" width="135" height="1"/>
+                                        <rect key="frame" x="15" y="149.5" width="135" height="1"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Cho-8X-Nbe"/>
@@ -1737,7 +1747,7 @@ Greego to drive?</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soe-C6-H6b">
-                                        <rect key="frame" x="15" y="174.5" width="135" height="1"/>
+                                        <rect key="frame" x="15" y="178.5" width="135" height="1"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="XtR-i1-rIX"/>
@@ -1801,7 +1811,7 @@ Greego to drive?</string>
                                     <constraint firstAttribute="height" constant="46" id="5Ch-cC-jhZ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="camera"/>
@@ -2078,7 +2088,7 @@ Greego to drive?</string>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pickup Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXd-Xt-C8m">
                                         <rect key="frame" x="74" y="53" width="230" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="textDidChange:" destination="HWR-gZ-bBH" eventType="editingChanged" id="5uR-3j-u4g"/>
@@ -2087,7 +2097,7 @@ Greego to drive?</string>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where Do you want to go?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qFP-Xa-nZy">
                                         <rect key="frame" x="74" y="120.5" width="231" height="42"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="destTextDidChange:" destination="HWR-gZ-bBH" eventType="editingChanged" id="aax-EP-91u"/>
@@ -2176,19 +2186,19 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="N5r-7Z-jTx" secondAttribute="height" multiplier="7:2" id="If4-ai-Wzj"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US $32.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htf-Qh-BIg">
                                         <rect key="frame" x="20" y="32.5" width="113" height="32"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-7d-93M">
                                         <rect key="frame" x="20" y="64.5" width="113" height="32"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2198,6 +2208,7 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JoQ-lx-uvS" secondAttribute="height" multiplier="9:5" id="t6D-Xk-WMG"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
                                         <state key="normal" title="Request" backgroundImage="Rectangle 64">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -2229,7 +2240,7 @@ Greego to drive?</string>
                                                     <constraint firstAttribute="width" constant="36.5" id="qN6-0C-wJ3"/>
                                                     <constraint firstAttribute="width" secondItem="YNT-g9-T1h" secondAttribute="height" multiplier="49:32" id="toW-GA-d41"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2330,7 +2341,7 @@ Greego to drive?</string>
                                             <constraint firstAttribute="width" constant="102" id="SZG-At-Jp4"/>
                                             <constraint firstAttribute="height" constant="21" id="cFk-y7-sWF"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.37719675940000003" green="0.37719675940000003" blue="0.37719675940000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2342,20 +2353,21 @@ Greego to drive?</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABC123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czI-Qe-vPL">
-                                        <rect key="frame" x="135" y="57" width="145" height="31"/>
+                                        <rect key="frame" x="135" y="57" width="145" height="29"/>
                                         <color key="backgroundColor" red="0.46375274659999999" green="0.67164260149999999" blue="0.65207111839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whF-aB-qUd">
-                                        <rect key="frame" x="135" y="88" width="145" height="50"/>
+                                        <rect key="frame" x="135" y="86" width="145" height="52"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42U-3c-cZc">
-                                                <rect key="frame" x="0.0" y="10" width="70" height="30"/>
+                                                <rect key="frame" x="0.0" y="10" width="70" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="iU9-1J-gie"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                                 <state key="normal" title="Contact"/>
                                                 <connections>
                                                     <action selector="callaction:" destination="DET-KT-E2W" eventType="touchUpInside" id="Hxb-Hq-xPY"/>
@@ -2363,8 +2375,8 @@ Greego to drive?</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn9-pf-dz3">
-                                                <rect key="frame" x="75" y="10" width="70" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <rect key="frame" x="75" y="10" width="70" height="32"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" red="0.99961632489999996" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -2374,7 +2386,7 @@ Greego to drive?</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAy-g9-wJD">
-                                                <rect key="frame" x="72" y="10" width="1" height="30"/>
+                                                <rect key="frame" x="72" y="10" width="1" height="32"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="1" id="5IU-b7-SUI"/>
@@ -2405,7 +2417,7 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="nlz-c5-kzS"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                         <state key="normal" title="Share your Trip" image="share">
@@ -2454,13 +2466,13 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="147" id="uMO-iK-FAp"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                         <color key="textColor" red="0.46375274659999999" green="0.67164260149999999" blue="0.65207111839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlj-XS-iFi">
                                         <rect key="frame" x="17" y="42" width="171" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="13"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                         <state key="normal" title="Destination Address" image="location ico">
@@ -2468,11 +2480,11 @@ Greego to drive?</string>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdK-yJ-9Rh">
-                                        <rect key="frame" x="196" y="42" width="75" height="28"/>
+                                        <rect key="frame" x="196" y="42" width="75" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="oRP-ro-7El"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="13"/>
                                         <state key="normal" title="Change">
                                             <color key="titleColor" red="0.25360742559999999" green="0.3697621552" blue="0.67164260149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -2506,13 +2518,16 @@ Greego to drive?</string>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US$32.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVY-Qc-cc1">
                                         <rect key="frame" x="83" y="25" width="130" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="p8o-X4-wkM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ending in 4930" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0M-gc-qOt">
                                         <rect key="frame" x="83" y="45" width="130" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2577,7 +2592,7 @@ Greego to drive?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="jPU-Wk-DiL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2614,7 +2629,7 @@ Greego to drive?</string>
                                     <constraint firstAttribute="height" constant="38" id="34C-Sc-N0c"/>
                                     <constraint firstAttribute="width" constant="67" id="Qyy-ef-hzy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2631,7 +2646,7 @@ Greego to drive?</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGi-cC-MQK">
                                 <rect key="frame" x="109" y="405" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                 <color key="textColor" red="0.027450980390000001" green="0.21176470589999999" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2640,7 +2655,7 @@ Greego to drive?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="dvs-5s-H2a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2708,12 +2723,12 @@ Greego to drive?</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you agree with Greego ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nC-u2-QeE">
-                                <rect key="frame" x="38" y="84" width="244" height="20"/>
+                                <rect key="frame" x="38" y="78" width="244" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="eQx-NC-b0f"/>
+                                    <constraint firstAttribute="height" constant="26" id="eQx-NC-b0f"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="vn4-ZJ-LS8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47417285479999999" blue="0.47962507589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2722,7 +2737,7 @@ Greego to drive?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="qXh-Di-0rT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.47417285479999999" blue="0.47962507589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2732,7 +2747,7 @@ Greego to drive?</string>
                                     <constraint firstAttribute="height" constant="22" id="cVS-uq-Iq3"/>
                                     <constraint firstAttribute="width" constant="199" id="r06-5b-2GF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2763,7 +2778,7 @@ Greego to drive?</string>
                                     <constraint firstAttribute="height" constant="192" id="xOj-oA-Mx9"/>
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.47417285479999999" blue="0.47962507589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="delegate" destination="plE-Gt-DJs" id="oGH-k1-8vp"/>
@@ -2790,7 +2805,7 @@ Greego to drive?</string>
                             <constraint firstAttribute="trailing" secondItem="oZd-xo-e9h" secondAttribute="trailing" constant="22" id="vXq-yb-Llo"/>
                             <constraint firstItem="rZZ-4q-HXn" firstAttribute="top" secondItem="3w8-cr-ueM" secondAttribute="bottom" constant="41" id="xrO-wR-KdD"/>
                             <constraint firstItem="9nC-u2-QeE" firstAttribute="centerX" secondItem="WMP-jt-tCv" secondAttribute="centerX" id="yuH-oP-TNT"/>
-                            <constraint firstItem="9nC-u2-QeE" firstAttribute="top" secondItem="f7T-gF-sbI" secondAttribute="bottom" constant="64" id="zfV-Im-zLj"/>
+                            <constraint firstItem="9nC-u2-QeE" firstAttribute="top" secondItem="f7T-gF-sbI" secondAttribute="bottom" constant="58" id="zfV-Im-zLj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EEq-Eh-YVV"/>
                     </view>
@@ -2802,7 +2817,7 @@ Greego to drive?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9c-Oe-780" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1358" y="12"/>
+            <point key="canvasLocation" x="1357.5" y="11.619718309859156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mdj-nI-R9m">
@@ -2836,7 +2851,7 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="9gt-O5-rqE"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2954,16 +2969,16 @@ Greego to drive?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="JmQ-Mu-G17"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOn-Y4-u3s">
-                                <rect key="frame" x="16" y="541" width="155" height="21"/>
+                                <rect key="frame" x="16" y="539" width="155" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="kaD-pI-KYC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2987,8 +3002,8 @@ Greego to drive?</string>
                             <constraint firstAttribute="trailing" secondItem="Ylt-yz-pAi" secondAttribute="trailing" id="C3F-kF-1e8"/>
                             <constraint firstItem="0UC-3f-2P2" firstAttribute="top" secondItem="Ylt-yz-pAi" secondAttribute="top" constant="20" id="FX8-0u-OfZ"/>
                             <constraint firstItem="0L5-fl-DAT" firstAttribute="leading" secondItem="mdu-qd-EE7" secondAttribute="leading" id="KLj-9l-Kio"/>
-                            <constraint firstItem="0UC-3f-2P2" firstAttribute="bottom" secondItem="WOn-Y4-u3s" secondAttribute="bottom" constant="6" id="MWg-VH-lar"/>
-                            <constraint firstItem="WOn-Y4-u3s" firstAttribute="top" secondItem="051-Xr-ytN" secondAttribute="bottom" constant="8" symbolic="YES" id="OdR-aW-2hl"/>
+                            <constraint firstItem="0UC-3f-2P2" firstAttribute="bottom" secondItem="WOn-Y4-u3s" secondAttribute="bottom" constant="8" id="MWg-VH-lar"/>
+                            <constraint firstItem="WOn-Y4-u3s" firstAttribute="top" secondItem="051-Xr-ytN" secondAttribute="bottom" constant="6" id="OdR-aW-2hl"/>
                             <constraint firstItem="Ylt-yz-pAi" firstAttribute="leading" secondItem="mdu-qd-EE7" secondAttribute="leading" id="SGT-QN-m4w"/>
                             <constraint firstItem="0L5-fl-DAT" firstAttribute="trailing" secondItem="mdu-qd-EE7" secondAttribute="trailing" id="Tdh-hj-s1T"/>
                             <constraint firstItem="051-Xr-ytN" firstAttribute="top" secondItem="dcF-El-64z" secondAttribute="bottom" constant="6" id="UwA-xw-PE6"/>
@@ -3051,7 +3066,7 @@ Greego to drive?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="9Id-pf-1Ye"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -3060,7 +3075,7 @@ Greego to drive?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="DaN-ys-cHC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -3089,7 +3104,7 @@ Greego to drive?</string>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Invite code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXT-WZ-qcO">
                                 <rect key="frame" x="36" y="460" width="208" height="32"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD1-8T-nzu">
@@ -3169,7 +3184,7 @@ Greego to drive?</string>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28P-hA-wOH">
                                         <rect key="frame" x="95" y="8" width="128" height="25.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3199,7 +3214,7 @@ Greego to drive?</string>
                                             <constraint firstAttribute="height" constant="18" id="6hf-9R-2WT"/>
                                             <constraint firstAttribute="width" constant="219" id="qrs-zv-fQ8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3208,7 +3223,7 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="226" id="5l3-gp-jFO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="11"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3240,7 +3255,7 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="Es6-DF-GM2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3277,7 +3292,7 @@ Greego to drive?</string>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1 123 1231 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJr-zG-629">
                                         <rect key="frame" x="85" y="17" width="208" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3312,11 +3327,11 @@ Greego to drive?</string>
                                         <state key="normal" backgroundImage="Logout"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dab-Bm-dvx">
-                                        <rect key="frame" x="55" y="17" width="115" height="33"/>
+                                        <rect key="frame" x="55" y="15.5" width="115" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="115" id="xKs-42-uiH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="18"/>
                                         <state key="normal" title="Log out">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -3374,7 +3389,7 @@ Greego to drive?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLa-rs-l8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093.125" y="1363.7323943661972"/>
+            <point key="canvasLocation" x="816" y="1462"/>
         </scene>
         <!--FreeridesVC-->
         <scene sceneID="1yv-rM-lN4">
@@ -3541,7 +3556,7 @@ Greego to drive?</string>
                                                 <rect key="frame" x="8" y="20" width="291" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -3564,7 +3579,7 @@ Greego to drive?</string>
                                                 <rect key="frame" x="8" y="21" width="304" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -3619,20 +3634,20 @@ Greego to drive?</string>
                                                 <rect key="frame" x="8" y="8" width="67" height="50"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFq-Fb-f6C">
-                                                <rect key="frame" x="91" y="22" width="104" height="24"/>
+                                                <rect key="frame" x="91" y="22" width="104" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="104" id="GTg-7D-USS"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yt0-04-Rfs">
-                                                <rect key="frame" x="235" y="17" width="59" height="29"/>
+                                                <rect key="frame" x="235" y="17" width="59" height="32"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlK-zK-O5o">
-                                                        <rect key="frame" x="8" y="-1" width="41" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <rect key="frame" x="8" y="-1" width="41" height="33"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="13"/>
                                                         <state key="normal" title="+  Add">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -3686,7 +3701,7 @@ Greego to drive?</string>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="22" id="Z4L-do-x6u"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -3815,7 +3830,7 @@ Greego to drive?</string>
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="870"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6I-0J-8m9">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="884"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="887"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scf-4q-bMZ">
                                                 <rect key="frame" x="18" y="20" width="36" height="30"/>
@@ -3833,7 +3848,7 @@ Greego to drive?</string>
                                                     <constraint firstAttribute="width" constant="270" id="QTP-0h-b3H"/>
                                                     <constraint firstAttribute="height" constant="24" id="dM0-Rv-zii"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.47417285479999999" blue="0.47962507589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -3843,7 +3858,7 @@ Greego to drive?</string>
                                                     <constraint firstAttribute="height" constant="27" id="3tF-DE-ldI"/>
                                                     <constraint firstAttribute="width" constant="185" id="drc-tU-g0p"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.47417285479999999" blue="0.47962507589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -3854,9 +3869,9 @@ Greego to drive?</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2x-Yy-224">
-                                                <rect key="frame" x="0.0" y="775" width="320" height="44"/>
+                                                <rect key="frame" x="0.0" y="775" width="320" height="47"/>
                                                 <color key="backgroundColor" red="0.0" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="26"/>
                                                 <state key="normal" title="Save Vehicle">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -3879,7 +3894,7 @@ Greego to drive?</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="BlN-fa-Xh8"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
                                                 <state key="normal" title="Automatic">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -3892,7 +3907,7 @@ Greego to drive?</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="xla-zX-Qve"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
                                                 <state key="normal" title="Manual">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -3906,17 +3921,17 @@ Greego to drive?</string>
                                                     <constraint firstAttribute="height" constant="21" id="C1I-ai-uml"/>
                                                     <constraint firstAttribute="width" constant="81" id="rc5-oh-aGz"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="CHOOSE VEHICLE MAKE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XFf-Cr-Jp9">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CHOOSE VEHICLE MAKE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XFf-Cr-Jp9">
                                                 <rect key="frame" x="29" y="153" width="252" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="iOE-bj-3aC"/>
                                                 </constraints>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="AKH-Ak-u5s" id="IjA-Zr-3eh"/>
@@ -3927,17 +3942,17 @@ Greego to drive?</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="pZR-IZ-h9h"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="CHOOSE VEHICLE MODEL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pO-VB-ceC">
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CHOOSE VEHICLE MODEL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pO-VB-ceC">
                                                 <rect key="frame" x="29" y="238" width="252" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="X5r-19-LTu"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="AKH-Ak-u5s" id="BRl-zq-8TA"/>
@@ -3949,17 +3964,17 @@ Greego to drive?</string>
                                                     <constraint firstAttribute="width" constant="107" id="AdF-Fq-aBB"/>
                                                     <constraint firstAttribute="height" constant="21" id="BLF-aI-exz"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="CHOOSE VEHICLE YEAR" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4tz-bi-YWH">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CHOOSE VEHICLE YEAR" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4tz-bi-YWH">
                                                 <rect key="frame" x="29" y="317" width="252" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="dzm-bu-PS7"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="AKH-Ak-u5s" id="wkX-Rm-Hvp"/>
@@ -3971,17 +3986,17 @@ Greego to drive?</string>
                                                     <constraint firstAttribute="width" constant="137" id="W9J-v3-qPi"/>
                                                     <constraint firstAttribute="height" constant="21" id="f7J-X0-7JA"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="CHOOSE VEHICLE COLOR" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8M-x1-Dov">
+                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CHOOSE VEHICLE COLOR" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8M-x1-Dov">
                                                 <rect key="frame" x="30" y="392" width="251" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="mNu-3h-5A9"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="AKH-Ak-u5s" id="Nga-Rf-i5O"/>
@@ -3992,17 +4007,17 @@ Greego to drive?</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="XhK-ge-hEf"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="CHOOSE VEHICLE TYPE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xW-aB-75S">
+                                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CHOOSE VEHICLE TYPE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xW-aB-75S">
                                                 <rect key="frame" x="29" y="469" width="252" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="0Lm-S3-A69"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="AKH-Ak-u5s" id="iRB-bH-oF9"/>
@@ -4173,7 +4188,7 @@ Greego to drive?</string>
                                             <constraint firstAttribute="height" constant="43" id="Eq1-si-SM5"/>
                                             <constraint firstAttribute="width" constant="179" id="NVO-Hr-7XD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -4182,7 +4197,7 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="u9w-83-WwD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -4191,7 +4206,7 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="MKC-Oh-Pne"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -4200,7 +4215,7 @@ Greego to drive?</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="KBO-gx-yG1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -4258,7 +4273,7 @@ Greego to drive?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="U33-qm-da9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="21"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -4328,7 +4343,7 @@ Greego to drive?</string>
                                     <constraint firstAttribute="width" constant="223" id="Hp0-ks-UPn"/>
                                     <constraint firstAttribute="height" constant="52" id="VNQ-cT-E3s"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -4365,12 +4380,12 @@ Greego to drive?</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj3-Rt-NSL">
-                                <rect key="frame" x="0.0" y="436" width="320" height="49"/>
+                                <rect key="frame" x="0.0" y="438.5" width="320" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="oeV-nz-3g2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="18"/>
                                 <state key="normal" title="Add Promo/Gift Code">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -4391,8 +4406,8 @@ Greego to drive?</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is your payment setting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbF-vH-pH6">
-                                <rect key="frame" x="0.0" y="55" width="320" height="23"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <rect key="frame" x="0.0" y="55" width="320" height="25.5"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -4407,7 +4422,7 @@ Greego to drive?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-zU-WkE">
-                                <rect key="frame" x="0.0" y="100" width="320" height="194"/>
+                                <rect key="frame" x="0.0" y="102.5" width="320" height="194"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="194" id="1P2-V7-ffG"/>
@@ -4425,7 +4440,7 @@ Greego to drive?</string>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJM-az-RBN">
                                                             <rect key="frame" x="51" y="8" width="210" height="31"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -4489,13 +4504,13 @@ Greego to drive?</string>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWt-yO-n7f">
-                                <rect key="frame" x="0.0" y="302" width="320" height="49"/>
+                                <rect key="frame" x="0.0" y="304.5" width="320" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="1pU-CJ-Cbp"/>
                                     <constraint firstAttribute="height" constant="49" id="ypJ-wi-Jet"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="18"/>
                                 <state key="normal" title="Add Payment Method">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -4504,7 +4519,7 @@ Greego to drive?</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="api-ZA-Ac3">
-                                <rect key="frame" x="9" y="387" width="302" height="2"/>
+                                <rect key="frame" x="9" y="389.5" width="302" height="2"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="MDr-ZY-jg4"/>
@@ -4514,7 +4529,7 @@ Greego to drive?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promotions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbX-Pr-l9A">
-                                <rect key="frame" x="10" y="410" width="124" height="21"/>
+                                <rect key="frame" x="10" y="412.5" width="124" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0vS-9o-0Nb"/>
                                 </constraints>
@@ -4523,7 +4538,7 @@ Greego to drive?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWd-fi-orR">
-                                <rect key="frame" x="11" y="302" width="299" height="142"/>
+                                <rect key="frame" x="11" y="304.5" width="299" height="142"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please enter a promo /Gift code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-Nn-gCD">
                                         <rect key="frame" x="12" y="21" width="277" height="42"/>
@@ -4644,7 +4659,7 @@ Greego to drive?</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GjF-pa-TbV">
                                 <rect key="frame" x="0.0" y="68" width="320" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -4699,13 +4714,13 @@ Greego to drive?</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your new payment ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3f-1l-bhV">
-                                <rect key="frame" x="41" y="79" width="240" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <rect key="frame" x="41" y="79" width="240" height="25.5"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Yx-6C-ZeZ">
-                                <rect key="frame" x="0.0" y="146" width="320" height="209"/>
+                                <rect key="frame" x="0.0" y="148.5" width="320" height="209"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6Yx-6C-ZeZ" secondAttribute="height" multiplier="320:209" id="Tju-RI-J52"/>
@@ -4713,13 +4728,13 @@ Greego to drive?</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9af-4j-rV3">
-                                <rect key="frame" x="45" y="161" width="103" height="21"/>
+                                <rect key="frame" x="45" y="163.5" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-N3-xHP">
-                                <rect key="frame" x="45" y="221" width="236" height="1"/>
+                                <rect key="frame" x="45" y="223.5" width="236" height="1"/>
                                 <color key="backgroundColor" red="0.0" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="iKz-iw-bvY"/>
@@ -4729,26 +4744,26 @@ Greego to drive?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Onu-f0-u6h">
-                                <rect key="frame" x="95" y="190" width="186" height="30"/>
+                                <rect key="frame" x="95" y="192.5" width="186" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WO6-z3-MFQ"/>
                                     <constraint firstAttribute="width" constant="186" id="mwW-7y-cFX"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="22X-X6-h1H" id="enO-KP-XOK"/>
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invalidcard" translatesAutoresizingMaskIntoConstraints="NO" id="my8-at-Rrj">
-                                <rect key="frame" x="45" y="190" width="34" height="30"/>
+                                <rect key="frame" x="45" y="192.5" width="34" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="nxx-R2-1st"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vib-LE-kAD">
-                                <rect key="frame" x="45" y="277" width="103" height="1"/>
+                                <rect key="frame" x="45" y="279.5" width="103" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ot0-Vg-NFg"/>
@@ -4758,38 +4773,38 @@ Greego to drive?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1r2-h2-SmN">
-                                <rect key="frame" x="175" y="277" width="106" height="1"/>
+                                <rect key="frame" x="175" y="279.5" width="106" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exp. Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Kf-5d-koQ">
-                                <rect key="frame" x="45" y="246" width="103" height="30"/>
+                                <rect key="frame" x="45" y="248.5" width="103" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="tlz-R9-j2O"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="22X-X6-h1H" id="LDG-oY-vgW"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLD-db-PBL">
-                                <rect key="frame" x="175" y="246" width="106" height="30"/>
+                                <rect key="frame" x="175" y="248.5" width="106" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="SsB-ea-2SZ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="22X-X6-h1H" id="nuI-SD-iHo"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1B-hA-C7L">
-                                <rect key="frame" x="45" y="335" width="236" height="1"/>
+                                <rect key="frame" x="45" y="337.5" width="236" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Z7V-Rg-fla"/>
@@ -4799,16 +4814,16 @@ Greego to drive?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nq8-Qy-pIa">
-                                <rect key="frame" x="45" y="303" width="236" height="30"/>
+                                <rect key="frame" x="45" y="305.5" width="236" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KNP-xK-NsP"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFZ-i0-MVp">
-                                <rect key="frame" x="0.0" y="429" width="320" height="49"/>
+                                <rect key="frame" x="0.0" y="431.5" width="320" height="49"/>
                                 <color key="backgroundColor" red="0.0" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="xym-9U-GF7"/>
@@ -4944,6 +4959,6 @@ Greego to drive?</string>
         <image name="taxi-app-background_23-2147561164" width="626" height="626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mqa-2h-RUf"/>
+        <segue reference="e8B-7U-Syi"/>
     </inferredMetricsTieBreakers>
 </document>

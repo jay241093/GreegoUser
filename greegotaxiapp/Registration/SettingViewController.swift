@@ -124,7 +124,7 @@ class SettingViewController: UIViewController {
                     {
                    
                         
-                        let dialogMessage = UIAlertController(title: "Greego", message:"Email Sent Successfully", preferredStyle: .alert)
+                        let dialogMessage = UIAlertController(title: nil, message:"Email Sent Successfully", preferredStyle: .alert)
                         
                       
                         // Create Cancel button with action handlder

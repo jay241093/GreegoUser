@@ -36,7 +36,7 @@ class LoaderVC: UIViewController {
             count -= 1
             if count == 0 {
                 timer?.invalidate()
-                let alert = UIAlertController(title: "Greego", message: "Non of drivers accepted your request", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: nil, message: "Non of drivers accepted your request", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title:"Ok", style:.default, handler: { (Alert) in
                     
                     self.removeAnimate()

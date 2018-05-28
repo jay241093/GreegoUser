@@ -50,7 +50,7 @@ else
      {
      
         
-        let alert = UIAlertController(title: "Greego", message: "Please enter correct Email Address", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: nil, message: "Please enter correct Email Address", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
