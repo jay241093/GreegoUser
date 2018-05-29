@@ -137,7 +137,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                     
                     bounds = bounds.includingCoordinate(sourceCord)
                     bounds = bounds.includingCoordinate(destCord)
-                    let update = GMSCameraUpdate.fit(bounds, withPadding: 100)
+                    let update = GMSCameraUpdate.fit(bounds, withPadding: 50)
                     self.usemap.animate(with: update)
                     
                     self.sourceMarker.icon = UIImage(named:"user1")
@@ -175,7 +175,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
     }
     func scheduledTimerWithTimeInterval(){
         // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
-        timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector:#selector(getDrivers), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector:#selector(getDrivers), userInfo: nil, repeats: true)
     }
     
   

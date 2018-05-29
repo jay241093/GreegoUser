@@ -21,6 +21,10 @@ class MaintableViewController: UIViewController,UITableViewDelegate,UITableViewD
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "baqckground")
+        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
        
     }
     

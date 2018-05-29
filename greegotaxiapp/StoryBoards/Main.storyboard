@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pyA-vk-LAR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pyA-vk-LAR">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,6 +30,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="mobilenumberViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="mobilenumberViewController" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cN4-4J-oHp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wg4-mm-2uL"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +88,7 @@
                         <constraints>
                             <constraint firstItem="Bh9-0k-1Lk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2I8-DO-4HE"/>
                             <constraint firstItem="AAc-sC-tA1" firstAttribute="bottom" secondItem="hh9-e0-VBA" secondAttribute="bottom" id="BDm-Ua-g6x"/>
-                            <constraint firstItem="YRQ-3c-oHe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Hkb-Nz-IPk"/>
+                            <constraint firstItem="YRQ-3c-oHe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="Hkb-Nz-IPk"/>
                             <constraint firstItem="RGa-MN-p2o" firstAttribute="top" secondItem="AAc-sC-tA1" secondAttribute="bottom" constant="19" id="MlZ-E8-dN0"/>
                             <constraint firstItem="hh9-e0-VBA" firstAttribute="leading" secondItem="AAc-sC-tA1" secondAttribute="trailing" constant="23" id="NUe-3c-XqQ"/>
                             <constraint firstItem="hh9-e0-VBA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="O6A-DH-rrT"/>
@@ -93,15 +97,14 @@
                             <constraint firstItem="iwW-qG-vZD" firstAttribute="centerY" secondItem="Bh9-0k-1Lk" secondAttribute="centerY" constant="12" id="Ptb-jt-6eW"/>
                             <constraint firstItem="AAc-sC-tA1" firstAttribute="top" secondItem="hh9-e0-VBA" secondAttribute="top" id="Rm1-AC-YfI"/>
                             <constraint firstItem="AAc-sC-tA1" firstAttribute="top" secondItem="YRQ-3c-oHe" secondAttribute="bottom" constant="48" id="RpW-ij-L3E"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YRQ-3c-oHe" secondAttribute="trailing" constant="9" id="S7c-cd-gxf"/>
+                            <constraint firstAttribute="trailing" secondItem="YRQ-3c-oHe" secondAttribute="trailing" constant="9" id="S7c-cd-gxf"/>
                             <constraint firstItem="Bh9-0k-1Lk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SUu-G7-99f"/>
                             <constraint firstItem="YRQ-3c-oHe" firstAttribute="top" secondItem="Bh9-0k-1Lk" secondAttribute="bottom" constant="29" id="ezB-ai-02e"/>
                             <constraint firstItem="AAc-sC-tA1" firstAttribute="leading" secondItem="RGa-MN-p2o" secondAttribute="leading" id="hJw-Yp-cni"/>
                             <constraint firstItem="YRQ-3c-oHe" firstAttribute="leading" secondItem="AAc-sC-tA1" secondAttribute="leading" id="iHt-xj-4Et"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RGa-MN-p2o" secondAttribute="bottom" constant="90" id="vD1-fH-CkU"/>
+                            <constraint firstItem="Wg4-mm-2uL" firstAttribute="top" secondItem="RGa-MN-p2o" secondAttribute="bottom" constant="90" id="vD1-fH-CkU"/>
                             <constraint firstItem="iwW-qG-vZD" firstAttribute="centerX" secondItem="Bh9-0k-1Lk" secondAttribute="centerX" id="xjb-7N-Lsz"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="eBb-dG-J08"/>
                 </viewController>
@@ -113,6 +116,10 @@
         <scene sceneID="NlS-zb-5Ca">
             <objects>
                 <viewController storyboardIdentifier="addMobileVC" id="zTv-GL-h6H" customClass="addMobileVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EM5-xw-l5u"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ott-ve-jlm"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZKB-Sn-mcP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,13 +135,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This number will be used to contact with driver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBs-cs-4b0">
-                                <rect key="frame" x="0.0" y="172.5" width="320" height="39"/>
+                                <rect key="frame" x="0.0" y="172.5" width="320" height="38.5"/>
                                 <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mL-WY-QL1">
-                                <rect key="frame" x="250" y="399" width="50" height="50"/>
+                                <rect key="frame" x="250" y="398" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1mL-WY-QL1" secondAttribute="height" multiplier="1:1" id="YDa-4Q-UBo"/>
                                 </constraints>
@@ -145,7 +152,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JbB-yK-C7X" customClass="customTextField" customModule="greegotaxiapp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="285.5" width="320" height="38.5"/>
+                                <rect key="frame" x="0.0" y="285" width="320" height="38"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert"/>
@@ -172,7 +179,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y77-eJ-kpi">
-                                <rect key="frame" x="0.0" y="324" width="320" height="1"/>
+                                <rect key="frame" x="0.0" y="323" width="320" height="1"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="yMT-bR-Kmo"/>
@@ -184,19 +191,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DJg-hM-e4J" firstAttribute="top" secondItem="0qz-g7-jt1" secondAttribute="top" id="3Xz-bH-kox"/>
+                            <constraint firstItem="EM5-xw-l5u" firstAttribute="bottom" secondItem="0qz-g7-jt1" secondAttribute="top" id="3Xz-bH-kox"/>
                             <constraint firstItem="gBs-cs-4b0" firstAttribute="width" secondItem="6ym-vh-msY" secondAttribute="width" id="4uc-Yy-be8"/>
                             <constraint firstItem="6ym-vh-msY" firstAttribute="width" secondItem="ZKB-Sn-mcP" secondAttribute="height" multiplier="160:284" id="IlQ-Lq-jFz"/>
                             <constraint firstItem="Y77-eJ-kpi" firstAttribute="centerX" secondItem="JbB-yK-C7X" secondAttribute="centerX" id="Ml5-xi-vJ1"/>
                             <constraint firstItem="gBs-cs-4b0" firstAttribute="centerX" secondItem="6ym-vh-msY" secondAttribute="centerX" id="QWl-sd-3kv"/>
-                            <constraint firstItem="DJg-hM-e4J" firstAttribute="trailing" secondItem="1mL-WY-QL1" secondAttribute="trailing" constant="20" id="R8o-1U-qxm"/>
+                            <constraint firstAttribute="trailing" secondItem="1mL-WY-QL1" secondAttribute="trailing" constant="20" id="R8o-1U-qxm"/>
                             <constraint firstItem="Y77-eJ-kpi" firstAttribute="top" secondItem="JbB-yK-C7X" secondAttribute="bottom" id="Unl-Ll-XKm"/>
                             <constraint firstItem="JbB-yK-C7X" firstAttribute="width" secondItem="gBs-cs-4b0" secondAttribute="width" id="Y8j-lp-gW1"/>
                             <constraint firstItem="0qz-g7-jt1" firstAttribute="width" secondItem="ZKB-Sn-mcP" secondAttribute="height" multiplier="49:568" constant="-19" id="cGJ-vU-1kK"/>
                             <constraint firstItem="JbB-yK-C7X" firstAttribute="height" secondItem="gBs-cs-4b0" secondAttribute="height" id="eTQ-cd-UpJ"/>
-                            <constraint firstItem="0qz-g7-jt1" firstAttribute="leading" secondItem="DJg-hM-e4J" secondAttribute="leading" constant="14" id="ed7-h7-j5U"/>
+                            <constraint firstItem="0qz-g7-jt1" firstAttribute="leading" secondItem="ZKB-Sn-mcP" secondAttribute="leading" constant="14" id="ed7-h7-j5U"/>
                             <constraint firstItem="6ym-vh-msY" firstAttribute="top" secondItem="0qz-g7-jt1" secondAttribute="bottom" constant="59.5" id="gdO-jG-cNi"/>
-                            <constraint firstItem="6ym-vh-msY" firstAttribute="centerX" secondItem="DJg-hM-e4J" secondAttribute="centerX" id="iJn-zF-gUy"/>
+                            <constraint firstItem="6ym-vh-msY" firstAttribute="centerX" secondItem="ZKB-Sn-mcP" secondAttribute="centerX" id="iJn-zF-gUy"/>
                             <constraint firstItem="gBs-cs-4b0" firstAttribute="height" secondItem="6ym-vh-msY" secondAttribute="height" id="iW7-61-6Bv"/>
                             <constraint firstItem="Y77-eJ-kpi" firstAttribute="width" secondItem="JbB-yK-C7X" secondAttribute="width" id="ioO-Fw-erA"/>
                             <constraint firstItem="1mL-WY-QL1" firstAttribute="width" secondItem="ZKB-Sn-mcP" secondAttribute="height" multiplier="25:284" id="on1-gr-VXg"/>
@@ -205,7 +212,6 @@
                             <constraint firstItem="JbB-yK-C7X" firstAttribute="centerX" secondItem="gBs-cs-4b0" secondAttribute="centerX" id="vRj-Lb-Og3"/>
                             <constraint firstItem="1mL-WY-QL1" firstAttribute="top" secondItem="JbB-yK-C7X" secondAttribute="bottom" constant="75" id="xn6-jk-zfY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="DJg-hM-e4J"/>
                     </view>
                     <connections>
                         <outlet property="txtMobileNum" destination="JbB-yK-C7X" id="Yta-vf-QZP"/>
@@ -219,6 +225,10 @@
         <scene sceneID="2DC-DR-Edu">
             <objects>
                 <viewController storyboardIdentifier="EmailVC" id="btk-dc-suy" customClass="EmailVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NqI-gk-bPO"/>
+                        <viewControllerLayoutGuide type="bottom" id="V96-BO-GO3"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QQA-3n-7DL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,25 +298,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="RwY-gc-bjR" firstAttribute="top" secondItem="hKS-uT-kzb" secondAttribute="bottom" constant="-35" id="2Oh-bD-BvI"/>
+                            <constraint firstItem="NqI-gk-bPO" firstAttribute="bottom" secondItem="hKS-uT-kzb" secondAttribute="bottom" constant="-35" id="2Oh-bD-BvI"/>
                             <constraint firstItem="XJq-8U-XjO" firstAttribute="centerX" secondItem="nYt-0E-oyr" secondAttribute="centerX" id="3Kw-hg-FOd"/>
-                            <constraint firstItem="hKS-uT-kzb" firstAttribute="top" secondItem="RwY-gc-bjR" secondAttribute="top" constant="5" id="734-6i-x1s"/>
+                            <constraint firstItem="hKS-uT-kzb" firstAttribute="top" secondItem="NqI-gk-bPO" secondAttribute="bottom" constant="5" id="734-6i-x1s"/>
                             <constraint firstItem="XJq-8U-XjO" firstAttribute="trailing" secondItem="nYt-0E-oyr" secondAttribute="trailing" id="7BY-U9-cab"/>
-                            <constraint firstItem="fOn-EG-TF9" firstAttribute="leading" secondItem="RwY-gc-bjR" secondAttribute="leading" constant="9" id="Cjv-a3-4Qg"/>
+                            <constraint firstItem="fOn-EG-TF9" firstAttribute="leading" secondItem="QQA-3n-7DL" secondAttribute="leading" constant="9" id="Cjv-a3-4Qg"/>
                             <constraint firstItem="nYt-0E-oyr" firstAttribute="trailing" secondItem="dvl-7u-MDp" secondAttribute="trailing" id="DDK-Yf-PiF"/>
                             <constraint firstItem="fOn-EG-TF9" firstAttribute="top" secondItem="hKS-uT-kzb" secondAttribute="bottom" constant="45" id="UQH-1A-ng0"/>
                             <constraint firstItem="nYt-0E-oyr" firstAttribute="top" secondItem="XJq-8U-XjO" secondAttribute="bottom" constant="20" id="ZXf-R1-stN"/>
                             <constraint firstItem="dvl-7u-MDp" firstAttribute="trailing" secondItem="dkf-Fd-7Jc" secondAttribute="trailing" id="eP5-f4-6Hg"/>
-                            <constraint firstItem="nYt-0E-oyr" firstAttribute="leading" secondItem="RwY-gc-bjR" secondAttribute="leading" constant="12" id="jBP-Zk-7yU"/>
+                            <constraint firstItem="nYt-0E-oyr" firstAttribute="leading" secondItem="QQA-3n-7DL" secondAttribute="leading" constant="12" id="jBP-Zk-7yU"/>
                             <constraint firstItem="fOn-EG-TF9" firstAttribute="centerX" secondItem="XJq-8U-XjO" secondAttribute="centerX" id="nRN-G9-9nP"/>
-                            <constraint firstItem="RwY-gc-bjR" firstAttribute="trailing" secondItem="dkf-Fd-7Jc" secondAttribute="trailing" constant="13" id="out-jj-2ah"/>
-                            <constraint firstItem="hKS-uT-kzb" firstAttribute="leading" secondItem="RwY-gc-bjR" secondAttribute="leading" constant="14" id="rL7-Dq-FGM"/>
+                            <constraint firstAttribute="trailing" secondItem="dkf-Fd-7Jc" secondAttribute="trailing" constant="13" id="out-jj-2ah"/>
+                            <constraint firstItem="hKS-uT-kzb" firstAttribute="leading" secondItem="QQA-3n-7DL" secondAttribute="leading" constant="14" id="rL7-Dq-FGM"/>
                             <constraint firstItem="dkf-Fd-7Jc" firstAttribute="top" secondItem="dvl-7u-MDp" secondAttribute="bottom" constant="30" id="uPG-vx-GSg"/>
                             <constraint firstItem="XJq-8U-XjO" firstAttribute="top" secondItem="fOn-EG-TF9" secondAttribute="bottom" constant="15" id="vFa-EE-Nrp"/>
                             <constraint firstItem="nYt-0E-oyr" firstAttribute="leading" secondItem="dvl-7u-MDp" secondAttribute="leading" id="xP3-9J-eTQ"/>
                             <constraint firstItem="dvl-7u-MDp" firstAttribute="top" secondItem="nYt-0E-oyr" secondAttribute="bottom" constant="8" symbolic="YES" id="xdX-Rn-OlD"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="RwY-gc-bjR"/>
                     </view>
                     <navigationItem key="navigationItem" id="BKY-3g-0aa"/>
                     <connections>
@@ -321,6 +330,10 @@
         <scene sceneID="qng-nZ-P7L">
             <objects>
                 <viewController storyboardIdentifier="nameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hxm-mz-7oK" customClass="nameViewController" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wOj-hD-SBU"/>
+                        <viewControllerLayoutGuide type="bottom" id="06M-WG-tld"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6rJ-jV-K6g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -380,17 +393,16 @@
                         <constraints>
                             <constraint firstItem="nBe-jj-c79" firstAttribute="top" secondItem="6rJ-jV-K6g" secondAttribute="top" constant="119" id="1Iy-85-WWp"/>
                             <constraint firstItem="ud7-mh-uFi" firstAttribute="top" secondItem="nBe-jj-c79" secondAttribute="bottom" constant="56" id="2jX-Ya-ADu"/>
-                            <constraint firstItem="nBe-jj-c79" firstAttribute="centerX" secondItem="26J-se-s2g" secondAttribute="centerX" constant="1" id="7LN-Ie-paT"/>
-                            <constraint firstItem="7pZ-to-3oh" firstAttribute="top" secondItem="26J-se-s2g" secondAttribute="top" constant="5" id="SuL-E6-fV9"/>
-                            <constraint firstItem="nBe-jj-c79" firstAttribute="leading" secondItem="26J-se-s2g" secondAttribute="leading" constant="10" id="YJv-gx-SvB"/>
+                            <constraint firstItem="nBe-jj-c79" firstAttribute="centerX" secondItem="6rJ-jV-K6g" secondAttribute="centerX" constant="1" id="7LN-Ie-paT"/>
+                            <constraint firstItem="7pZ-to-3oh" firstAttribute="top" secondItem="wOj-hD-SBU" secondAttribute="bottom" constant="5" id="SuL-E6-fV9"/>
+                            <constraint firstItem="nBe-jj-c79" firstAttribute="leading" secondItem="6rJ-jV-K6g" secondAttribute="leading" constant="10" id="YJv-gx-SvB"/>
                             <constraint firstItem="ud7-mh-uFi" firstAttribute="leading" secondItem="6rJ-jV-K6g" secondAttribute="leadingMargin" id="cV9-id-7rg"/>
                             <constraint firstItem="nBe-jj-c79" firstAttribute="top" secondItem="7pZ-to-3oh" secondAttribute="bottom" constant="64" id="ddp-1i-Cq7"/>
-                            <constraint firstItem="7pZ-to-3oh" firstAttribute="leading" secondItem="26J-se-s2g" secondAttribute="leading" constant="14" id="e5O-Lx-mQr"/>
-                            <constraint firstItem="26J-se-s2g" firstAttribute="trailing" secondItem="Spi-Mh-IC2" secondAttribute="trailing" constant="16" id="lw9-J9-Adt"/>
+                            <constraint firstItem="7pZ-to-3oh" firstAttribute="leading" secondItem="6rJ-jV-K6g" secondAttribute="leading" constant="14" id="e5O-Lx-mQr"/>
+                            <constraint firstAttribute="trailing" secondItem="Spi-Mh-IC2" secondAttribute="trailing" constant="16" id="lw9-J9-Adt"/>
                             <constraint firstItem="Spi-Mh-IC2" firstAttribute="top" secondItem="ud7-mh-uFi" secondAttribute="bottom" constant="71" id="oCT-MJ-web"/>
-                            <constraint firstItem="26J-se-s2g" firstAttribute="trailing" secondItem="ud7-mh-uFi" secondAttribute="trailing" constant="2" id="uEL-LW-BIa"/>
+                            <constraint firstAttribute="trailing" secondItem="ud7-mh-uFi" secondAttribute="trailing" constant="2" id="uEL-LW-BIa"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="26J-se-s2g"/>
                     </view>
                     <navigationItem key="navigationItem" id="d12-0a-kBd"/>
                     <connections>
@@ -406,6 +418,10 @@
         <scene sceneID="iAb-BF-fJj">
             <objects>
                 <viewController id="hXi-E7-HZ3" customClass="MaintableViewController" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9XR-An-zha"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q5K-MS-sP3"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jXF-E2-blJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -518,7 +534,7 @@
                                 </connections>
                             </tableView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no Trip history yet." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx9-4x-Dea">
-                                <rect key="frame" x="30" y="209" width="257" height="99"/>
+                                <rect key="frame" x="30" y="199" width="257" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="3CN-vE-KuR"/>
                                     <constraint firstAttribute="width" constant="257" id="eeW-z4-RtL"/>
@@ -550,18 +566,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="MJD-mS-aCj" secondAttribute="trailing" id="6nK-Lp-cZ7"/>
-                            <constraint firstItem="mBk-4f-r71" firstAttribute="leading" secondItem="0Sm-3o-pZ2" secondAttribute="leading" constant="16" id="Ak4-6c-ghz"/>
-                            <constraint firstItem="edL-1N-QPL" firstAttribute="leading" secondItem="0Sm-3o-pZ2" secondAttribute="leading" constant="35" id="CdB-Rv-Nab"/>
+                            <constraint firstItem="mBk-4f-r71" firstAttribute="leading" secondItem="jXF-E2-blJ" secondAttribute="leading" constant="16" id="Ak4-6c-ghz"/>
+                            <constraint firstItem="edL-1N-QPL" firstAttribute="leading" secondItem="jXF-E2-blJ" secondAttribute="leading" constant="35" id="CdB-Rv-Nab"/>
                             <constraint firstItem="edL-1N-QPL" firstAttribute="top" secondItem="mBk-4f-r71" secondAttribute="bottom" constant="17" id="Kju-l8-cw6"/>
-                            <constraint firstItem="Lx9-4x-Dea" firstAttribute="centerX" secondItem="0Sm-3o-pZ2" secondAttribute="centerX" constant="-1.5" id="N8J-t9-dby"/>
+                            <constraint firstItem="Lx9-4x-Dea" firstAttribute="centerX" secondItem="jXF-E2-blJ" secondAttribute="centerX" constant="-1.5" id="N8J-t9-dby"/>
                             <constraint firstItem="MJD-mS-aCj" firstAttribute="top" secondItem="edL-1N-QPL" secondAttribute="bottom" constant="25" id="PSy-jc-oxy"/>
-                            <constraint firstItem="0Sm-3o-pZ2" firstAttribute="trailing" secondItem="edL-1N-QPL" secondAttribute="trailing" constant="136" id="d8H-JT-WFG"/>
-                            <constraint firstItem="mBk-4f-r71" firstAttribute="top" secondItem="0Sm-3o-pZ2" secondAttribute="top" constant="1" id="p62-4N-XgO"/>
+                            <constraint firstAttribute="trailing" secondItem="edL-1N-QPL" secondAttribute="trailing" constant="136" id="d8H-JT-WFG"/>
+                            <constraint firstItem="mBk-4f-r71" firstAttribute="top" secondItem="9XR-An-zha" secondAttribute="bottom" constant="1" id="p62-4N-XgO"/>
                             <constraint firstItem="MJD-mS-aCj" firstAttribute="leading" secondItem="jXF-E2-blJ" secondAttribute="leading" id="tYt-GU-Z1r"/>
-                            <constraint firstItem="Lx9-4x-Dea" firstAttribute="centerY" secondItem="0Sm-3o-pZ2" secondAttribute="centerY" constant="-35.5" id="vnK-Xa-gvH"/>
-                            <constraint firstItem="MJD-mS-aCj" firstAttribute="bottom" secondItem="0Sm-3o-pZ2" secondAttribute="bottom" id="x1R-JC-XYO"/>
+                            <constraint firstItem="Lx9-4x-Dea" firstAttribute="centerY" secondItem="jXF-E2-blJ" secondAttribute="centerY" constant="-35.5" id="vnK-Xa-gvH"/>
+                            <constraint firstItem="MJD-mS-aCj" firstAttribute="bottom" secondItem="Q5K-MS-sP3" secondAttribute="top" id="x1R-JC-XYO"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="0Sm-3o-pZ2"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wgy-gl-iVT"/>
                     <connections>
@@ -577,6 +592,10 @@
         <scene sceneID="Lp0-4A-cDb">
             <objects>
                 <viewController storyboardIdentifier="Trip_detail_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="68x-9N-LoQ" customClass="Trip_detail_ViewController" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iNH-8C-mUl"/>
+                        <viewControllerLayoutGuide type="bottom" id="5or-09-4AM"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ngh-Cm-aUq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -888,12 +907,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sdo-9q-9rr" firstAttribute="width" secondItem="ngh-Cm-aUq" secondAttribute="width" id="0H3-0g-30f"/>
-                            <constraint firstItem="0E6-ge-cKJ" firstAttribute="bottom" secondItem="Jhk-Rn-1Zg" secondAttribute="bottom" id="2cF-Rx-1jS"/>
+                            <constraint firstItem="0E6-ge-cKJ" firstAttribute="bottom" secondItem="5or-09-4AM" secondAttribute="top" id="2cF-Rx-1jS"/>
                             <constraint firstItem="0E6-ge-cKJ" firstAttribute="leading" secondItem="ngh-Cm-aUq" secondAttribute="leading" id="aeP-YN-aUU"/>
                             <constraint firstItem="0E6-ge-cKJ" firstAttribute="top" secondItem="ngh-Cm-aUq" secondAttribute="top" id="dQK-Fj-GDy"/>
                             <constraint firstAttribute="trailing" secondItem="0E6-ge-cKJ" secondAttribute="trailing" id="lxr-LB-Tdc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Jhk-Rn-1Zg"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="800"/>
@@ -921,6 +939,10 @@
         <scene sceneID="3mj-ri-Bqo">
             <objects>
                 <viewController id="KCJ-gA-MyF" customClass="ImageViewController" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ga6-H1-ArK"/>
+                        <viewControllerLayoutGuide type="bottom" id="DkB-oO-iSp"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xds-Fk-wR5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -993,22 +1015,21 @@
                             <constraint firstItem="JJV-rZ-zUL" firstAttribute="top" secondItem="BvV-KL-Mfw" secondAttribute="bottom" constant="25" id="1l0-ar-MOG"/>
                             <constraint firstItem="JJV-rZ-zUL" firstAttribute="leading" secondItem="VyE-0L-NxE" secondAttribute="leading" id="5Qp-Sc-qZR"/>
                             <constraint firstItem="JJV-rZ-zUL" firstAttribute="leading" secondItem="xds-Fk-wR5" secondAttribute="leading" id="684-2m-bdc"/>
-                            <constraint firstItem="JJV-rZ-zUL" firstAttribute="centerX" secondItem="nSF-XW-egt" secondAttribute="centerX" id="EyN-xC-SPR"/>
+                            <constraint firstItem="JJV-rZ-zUL" firstAttribute="centerX" secondItem="xds-Fk-wR5" secondAttribute="centerX" id="EyN-xC-SPR"/>
                             <constraint firstItem="JJV-rZ-zUL" firstAttribute="top" secondItem="xds-Fk-wR5" secondAttribute="top" constant="75" id="JB3-fS-spq"/>
-                            <constraint firstItem="RfU-Gk-jks" firstAttribute="centerX" secondItem="nSF-XW-egt" secondAttribute="centerX" id="M3Z-PU-JSH"/>
+                            <constraint firstItem="RfU-Gk-jks" firstAttribute="centerX" secondItem="xds-Fk-wR5" secondAttribute="centerX" id="M3Z-PU-JSH"/>
                             <constraint firstItem="b1V-St-p2d" firstAttribute="centerX" secondItem="bL0-14-BbA" secondAttribute="centerX" id="WLw-PE-i40"/>
                             <constraint firstItem="VyE-0L-NxE" firstAttribute="top" secondItem="JJV-rZ-zUL" secondAttribute="bottom" constant="16" id="Wid-Gb-oPn"/>
-                            <constraint firstItem="VyE-0L-NxE" firstAttribute="centerX" secondItem="nSF-XW-egt" secondAttribute="centerX" id="Wv2-1m-VtB"/>
+                            <constraint firstItem="VyE-0L-NxE" firstAttribute="centerX" secondItem="xds-Fk-wR5" secondAttribute="centerX" id="Wv2-1m-VtB"/>
                             <constraint firstItem="wQw-iA-Vtq" firstAttribute="top" secondItem="VyE-0L-NxE" secondAttribute="bottom" constant="74" id="aqE-rL-ceY"/>
-                            <constraint firstItem="BvV-KL-Mfw" firstAttribute="top" secondItem="nSF-XW-egt" secondAttribute="top" id="bjF-Bq-wlE"/>
+                            <constraint firstItem="BvV-KL-Mfw" firstAttribute="top" secondItem="Ga6-H1-ArK" secondAttribute="bottom" id="bjF-Bq-wlE"/>
                             <constraint firstItem="aTH-VT-5fu" firstAttribute="top" secondItem="wQw-iA-Vtq" secondAttribute="bottom" constant="14" id="hql-Ks-sfa"/>
-                            <constraint firstItem="BvV-KL-Mfw" firstAttribute="top" secondItem="nSF-XW-egt" secondAttribute="top" id="htF-QU-hsA"/>
+                            <constraint firstItem="BvV-KL-Mfw" firstAttribute="top" secondItem="Ga6-H1-ArK" secondAttribute="bottom" id="htF-QU-hsA"/>
                             <constraint firstItem="bL0-14-BbA" firstAttribute="top" secondItem="b1V-St-p2d" secondAttribute="bottom" constant="11" id="qlr-AI-CMZ"/>
                             <constraint firstItem="BvV-KL-Mfw" firstAttribute="leading" secondItem="xds-Fk-wR5" secondAttribute="leadingMargin" id="qu5-2y-6Cl"/>
                             <constraint firstItem="b1V-St-p2d" firstAttribute="top" secondItem="VyE-0L-NxE" secondAttribute="bottom" constant="74" id="qyZ-SZ-YJO"/>
                             <constraint firstItem="wQw-iA-Vtq" firstAttribute="centerX" secondItem="aTH-VT-5fu" secondAttribute="centerX" id="vRy-vf-nXs"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="nSF-XW-egt"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGq-78-pLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1019,6 +1040,10 @@
         <scene sceneID="Nhm-JT-Eg7">
             <objects>
                 <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="DET-KT-E2W" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wbU-iH-8Sx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gz0-Tp-akO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Xb-M1-sax">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1274,14 +1299,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gQU-px-kRE" firstAttribute="leading" secondItem="uCO-Um-AB1" secondAttribute="leading" constant="10" id="3i8-j5-H0C"/>
+                            <constraint firstItem="gQU-px-kRE" firstAttribute="leading" secondItem="0Xb-M1-sax" secondAttribute="leading" constant="10" id="3i8-j5-H0C"/>
                             <constraint firstItem="gQU-px-kRE" firstAttribute="top" secondItem="63N-Jy-3FG" secondAttribute="bottom" constant="-56" id="LCM-Fm-7kz"/>
-                            <constraint firstItem="uCO-Um-AB1" firstAttribute="trailing" secondItem="63N-Jy-3FG" secondAttribute="trailing" constant="10" id="WWz-Lt-PLP"/>
-                            <constraint firstItem="uCO-Um-AB1" firstAttribute="bottom" secondItem="gQU-px-kRE" secondAttribute="bottom" id="Y5K-a0-HLy"/>
-                            <constraint firstItem="uCO-Um-AB1" firstAttribute="trailing" secondItem="gQU-px-kRE" secondAttribute="trailing" constant="10" id="n3V-Mc-aCW"/>
-                            <constraint firstItem="63N-Jy-3FG" firstAttribute="leading" secondItem="uCO-Um-AB1" secondAttribute="leading" constant="10" id="oMV-ID-aTd"/>
+                            <constraint firstAttribute="trailing" secondItem="63N-Jy-3FG" secondAttribute="trailing" constant="10" id="WWz-Lt-PLP"/>
+                            <constraint firstItem="Gz0-Tp-akO" firstAttribute="top" secondItem="gQU-px-kRE" secondAttribute="bottom" id="Y5K-a0-HLy"/>
+                            <constraint firstAttribute="trailing" secondItem="gQU-px-kRE" secondAttribute="trailing" constant="10" id="n3V-Mc-aCW"/>
+                            <constraint firstItem="63N-Jy-3FG" firstAttribute="leading" secondItem="0Xb-M1-sax" secondAttribute="leading" constant="10" id="oMV-ID-aTd"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="uCO-Um-AB1"/>
                     </view>
                     <connections>
                         <outlet property="lbldesname" destination="Dwr-Y6-2fV" id="iMG-p7-i1c"/>
@@ -1297,6 +1321,10 @@
         <scene sceneID="aR5-QX-ofk">
             <objects>
                 <viewController storyboardIdentifier="OnTripVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3aQ-vu-dbx" customClass="OnTripVC" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r17-Z0-do5"/>
+                        <viewControllerLayoutGuide type="bottom" id="UnC-KU-2eV"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4jO-Dp-nwb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1408,20 +1436,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HsW-dm-Hqe" firstAttribute="bottom" secondItem="rUw-Fo-a15" secondAttribute="bottom" id="5Sk-Do-ktO"/>
+                            <constraint firstItem="HsW-dm-Hqe" firstAttribute="bottom" secondItem="UnC-KU-2eV" secondAttribute="top" id="5Sk-Do-ktO"/>
                             <constraint firstItem="HsW-dm-Hqe" firstAttribute="top" secondItem="4jO-Dp-nwb" secondAttribute="top" id="8je-zM-GUQ"/>
-                            <constraint firstItem="rUw-Fo-a15" firstAttribute="top" secondItem="hmO-6V-Z1I" secondAttribute="top" constant="8" id="AFt-j5-iYg"/>
-                            <constraint firstItem="rUw-Fo-a15" firstAttribute="trailing" secondItem="3Iu-ea-ITI" secondAttribute="trailing" id="IAl-8n-mbK"/>
-                            <constraint firstItem="rUw-Fo-a15" firstAttribute="trailing" secondItem="ubz-5y-5ai" secondAttribute="trailing" id="RGl-aS-704"/>
+                            <constraint firstItem="r17-Z0-do5" firstAttribute="bottom" secondItem="hmO-6V-Z1I" secondAttribute="top" constant="8" id="AFt-j5-iYg"/>
+                            <constraint firstAttribute="trailing" secondItem="3Iu-ea-ITI" secondAttribute="trailing" id="IAl-8n-mbK"/>
+                            <constraint firstAttribute="trailing" secondItem="ubz-5y-5ai" secondAttribute="trailing" id="RGl-aS-704"/>
                             <constraint firstItem="HsW-dm-Hqe" firstAttribute="trailing" secondItem="3Iu-ea-ITI" secondAttribute="trailing" id="TTK-Vf-3qn"/>
                             <constraint firstItem="HsW-dm-Hqe" firstAttribute="leading" secondItem="3Iu-ea-ITI" secondAttribute="leading" id="XOi-dQ-8sh"/>
-                            <constraint firstItem="hmO-6V-Z1I" firstAttribute="leading" secondItem="rUw-Fo-a15" secondAttribute="leading" constant="15" id="dg7-fe-vl3"/>
-                            <constraint firstItem="ubz-5y-5ai" firstAttribute="leading" secondItem="rUw-Fo-a15" secondAttribute="leading" id="fj7-Nc-o5a"/>
-                            <constraint firstItem="rUw-Fo-a15" firstAttribute="bottom" secondItem="3Iu-ea-ITI" secondAttribute="bottom" constant="84" id="fzk-rJ-q12"/>
-                            <constraint firstItem="ubz-5y-5ai" firstAttribute="top" secondItem="rUw-Fo-a15" secondAttribute="top" constant="100" id="oMG-4I-Pbj"/>
-                            <constraint firstItem="3Iu-ea-ITI" firstAttribute="leading" secondItem="rUw-Fo-a15" secondAttribute="leading" id="qwp-cK-xty"/>
+                            <constraint firstItem="hmO-6V-Z1I" firstAttribute="leading" secondItem="4jO-Dp-nwb" secondAttribute="leading" constant="15" id="dg7-fe-vl3"/>
+                            <constraint firstItem="ubz-5y-5ai" firstAttribute="leading" secondItem="4jO-Dp-nwb" secondAttribute="leading" id="fj7-Nc-o5a"/>
+                            <constraint firstItem="UnC-KU-2eV" firstAttribute="top" secondItem="3Iu-ea-ITI" secondAttribute="bottom" constant="84" id="fzk-rJ-q12"/>
+                            <constraint firstItem="ubz-5y-5ai" firstAttribute="top" secondItem="r17-Z0-do5" secondAttribute="bottom" constant="100" id="oMG-4I-Pbj"/>
+                            <constraint firstItem="3Iu-ea-ITI" firstAttribute="leading" secondItem="4jO-Dp-nwb" secondAttribute="leading" id="qwp-cK-xty"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="rUw-Fo-a15"/>
                     </view>
                     <connections>
                         <outlet property="imguser" destination="hmO-6V-Z1I" id="dc1-M3-TID"/>
@@ -1439,6 +1466,10 @@
         <scene sceneID="t6f-wX-XZr">
             <objects>
                 <viewController id="yKI-Jv-72v" customClass="EmailverificationViewController" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1B7-ea-NGs"/>
+                        <viewControllerLayoutGuide type="bottom" id="4j6-A3-FWn"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qwx-pG-uTI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1520,7 +1551,7 @@
                             <constraint firstItem="SLo-AI-7bf" firstAttribute="centerX" secondItem="ZBs-Pl-eRT" secondAttribute="centerX" id="8Og-ff-pTy"/>
                             <constraint firstItem="jMx-rU-C8y" firstAttribute="trailing" secondItem="td5-Sa-Y56" secondAttribute="trailing" id="BqM-n6-vIU"/>
                             <constraint firstItem="td5-Sa-Y56" firstAttribute="centerX" secondItem="SLo-AI-7bf" secondAttribute="centerX" id="Etu-eb-gB3"/>
-                            <constraint firstItem="GcT-vy-aOe" firstAttribute="leading" secondItem="Lht-Ki-XCe" secondAttribute="leading" constant="15" id="QSo-pw-W9r"/>
+                            <constraint firstItem="GcT-vy-aOe" firstAttribute="leading" secondItem="qwx-pG-uTI" secondAttribute="leading" constant="15" id="QSo-pw-W9r"/>
                             <constraint firstItem="ZBs-Pl-eRT" firstAttribute="top" secondItem="SLo-AI-7bf" secondAttribute="bottom" constant="20" id="Rc1-Pr-RZc"/>
                             <constraint firstItem="jMx-rU-C8y" firstAttribute="leading" secondItem="qwx-pG-uTI" secondAttribute="leading" id="T0a-sy-1Hh"/>
                             <constraint firstItem="jMx-rU-C8y" firstAttribute="top" secondItem="GcT-vy-aOe" secondAttribute="bottom" constant="1" id="Wtx-gv-qVn"/>
@@ -1530,7 +1561,6 @@
                             <constraint firstItem="SLo-AI-7bf" firstAttribute="top" secondItem="td5-Sa-Y56" secondAttribute="bottom" constant="62" id="uOJ-1f-pp2"/>
                             <constraint firstItem="GcT-vy-aOe" firstAttribute="top" secondItem="qwx-pG-uTI" secondAttribute="topMargin" constant="-1" id="y61-gb-exo"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Lht-Ki-XCe"/>
                     </view>
                     <connections>
                         <outlet property="emailview" destination="td5-Sa-Y56" id="zaC-d0-dgD"/>
@@ -1545,11 +1575,14 @@
         <scene sceneID="YQv-W4-toS">
             <objects>
                 <viewController storyboardIdentifier="SWRevealViewController" id="2Ez-ba-kIf" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ltk-1L-Xdk"/>
+                        <viewControllerLayoutGuide type="bottom" id="RHn-4V-fhQ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fc0-pT-T9K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="oa0-FD-7ZV"/>
                     </view>
                     <navigationItem key="navigationItem" id="2V2-Uf-Ppu"/>
                     <connections>
@@ -1565,12 +1598,16 @@
         <scene sceneID="sXg-ha-z6Z">
             <objects>
                 <viewController storyboardIdentifier="MainmapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XOO-md-Srn" customClass="MainmapViewController" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ywf-Ja-3f9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ajr-hg-EOD"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hax-xj-2wK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvc-pS-m9l">
-                                <rect key="frame" x="30" y="229" width="260" height="130"/>
+                                <rect key="frame" x="30" y="219" width="260" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="us3-i7-eD9">
                                         <rect key="frame" x="70" y="69.5" width="120" height="40"/>
@@ -1597,16 +1634,15 @@ you have to update your information.</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="us3-i7-eD9" firstAttribute="centerX" secondItem="L6a-U6-Z9t" secondAttribute="centerX" id="BhH-kl-ckn"/>
-                                    <constraint firstItem="L6a-U6-Z9t" firstAttribute="centerX" secondItem="afQ-F6-bX6" secondAttribute="centerX" id="E0D-uv-YI9"/>
+                                    <constraint firstItem="L6a-U6-Z9t" firstAttribute="centerX" secondItem="Fvc-pS-m9l" secondAttribute="centerX" id="E0D-uv-YI9"/>
                                     <constraint firstAttribute="height" constant="130" id="H4P-Dh-7nZ"/>
                                     <constraint firstAttribute="width" constant="260" id="Tog-cC-jUN"/>
-                                    <constraint firstItem="afQ-F6-bX6" firstAttribute="leading" secondItem="L6a-U6-Z9t" secondAttribute="leading" constant="-10" id="e4B-3g-Z5E"/>
+                                    <constraint firstAttribute="leading" secondItem="L6a-U6-Z9t" secondAttribute="leading" constant="-10" id="e4B-3g-Z5E"/>
                                     <constraint firstItem="us3-i7-eD9" firstAttribute="width" secondItem="Fvc-pS-m9l" secondAttribute="height" multiplier="12:13" id="kEX-Lz-N5U"/>
-                                    <constraint firstItem="L6a-U6-Z9t" firstAttribute="trailing" secondItem="afQ-F6-bX6" secondAttribute="trailing" constant="-10" id="n0e-TX-GjY"/>
-                                    <constraint firstItem="L6a-U6-Z9t" firstAttribute="top" secondItem="afQ-F6-bX6" secondAttribute="top" id="pUD-b3-f0Q"/>
+                                    <constraint firstItem="L6a-U6-Z9t" firstAttribute="trailing" secondItem="Fvc-pS-m9l" secondAttribute="trailing" constant="-10" id="n0e-TX-GjY"/>
+                                    <constraint firstItem="L6a-U6-Z9t" firstAttribute="top" secondItem="Fvc-pS-m9l" secondAttribute="top" id="pUD-b3-f0Q"/>
                                     <constraint firstItem="us3-i7-eD9" firstAttribute="top" secondItem="L6a-U6-Z9t" secondAttribute="bottom" id="tWR-mx-yRP"/>
                                 </constraints>
-                                <viewLayoutGuide key="safeArea" id="afQ-F6-bX6"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsX-Xj-8dn" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1687,7 +1723,7 @@ Greego to drive?</string>
                                 </constraints>
                             </view>
                             <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SwZ-em-taa">
-                                <rect key="frame" x="70" y="159" width="180" height="190"/>
+                                <rect key="frame" x="70" y="149" width="180" height="190"/>
                                 <subviews>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updates" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxX-tt-AhS">
                                         <rect key="frame" x="-12" y="10" width="123" height="27"/>
@@ -1806,7 +1842,7 @@ Greego to drive?</string>
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where do you want to go?" textAlignment="natural" minimumFontSize="17" background="Rectangle 38" translatesAutoresizingMaskIntoConstraints="NO" id="tXK-Xs-96l">
-                                <rect key="frame" x="20" y="121" width="280" height="46"/>
+                                <rect key="frame" x="20" y="111" width="280" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="5Ch-cC-jhZ"/>
                                 </constraints>
@@ -1836,25 +1872,24 @@ Greego to drive?</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tXK-Xs-96l" firstAttribute="centerX" secondItem="cZn-tz-Ndk" secondAttribute="centerX" id="5es-Bw-88N"/>
-                            <constraint firstItem="cZn-tz-Ndk" firstAttribute="trailing" secondItem="jsX-Xj-8dn" secondAttribute="trailing" id="9Oc-QJ-tjx"/>
-                            <constraint firstItem="DIC-pF-ulK" firstAttribute="leading" secondItem="cZn-tz-Ndk" secondAttribute="leading" constant="16" id="Flu-66-jbh"/>
+                            <constraint firstItem="tXK-Xs-96l" firstAttribute="centerX" secondItem="Hax-xj-2wK" secondAttribute="centerX" id="5es-Bw-88N"/>
+                            <constraint firstAttribute="trailing" secondItem="jsX-Xj-8dn" secondAttribute="trailing" id="9Oc-QJ-tjx"/>
+                            <constraint firstItem="DIC-pF-ulK" firstAttribute="leading" secondItem="Hax-xj-2wK" secondAttribute="leading" constant="16" id="Flu-66-jbh"/>
                             <constraint firstItem="SwZ-em-taa" firstAttribute="top" secondItem="tXK-Xs-96l" secondAttribute="bottom" constant="-8" id="IZo-jb-lum"/>
-                            <constraint firstItem="cZn-tz-Ndk" firstAttribute="bottom" secondItem="jsX-Xj-8dn" secondAttribute="bottom" id="J3N-go-tWL"/>
+                            <constraint firstItem="Ajr-hg-EOD" firstAttribute="top" secondItem="jsX-Xj-8dn" secondAttribute="bottom" id="J3N-go-tWL"/>
                             <constraint firstItem="SwZ-em-taa" firstAttribute="leading" secondItem="tXK-Xs-96l" secondAttribute="leading" constant="50" id="JRj-Cq-sIH"/>
-                            <constraint firstItem="Fvc-pS-m9l" firstAttribute="centerY" secondItem="cZn-tz-Ndk" secondAttribute="centerY" id="UTS-mk-uCz"/>
+                            <constraint firstItem="Fvc-pS-m9l" firstAttribute="centerY" secondItem="Hax-xj-2wK" secondAttribute="centerY" id="UTS-mk-uCz"/>
                             <constraint firstItem="DIC-pF-ulK" firstAttribute="top" secondItem="Hax-xj-2wK" secondAttribute="top" constant="16" id="Utu-uE-Uoe"/>
-                            <constraint firstItem="Fvc-pS-m9l" firstAttribute="centerX" secondItem="cZn-tz-Ndk" secondAttribute="centerX" id="XLE-hV-Fnd"/>
-                            <constraint firstItem="7z8-ag-sPi" firstAttribute="leading" secondItem="cZn-tz-Ndk" secondAttribute="leading" constant="40" id="Yw3-bj-6Q9"/>
-                            <constraint firstItem="cZn-tz-Ndk" firstAttribute="trailing" secondItem="7z8-ag-sPi" secondAttribute="trailing" constant="40" id="ZQK-iv-lnY"/>
-                            <constraint firstItem="cZn-tz-Ndk" firstAttribute="bottom" secondItem="7z8-ag-sPi" secondAttribute="bottom" constant="25" id="g0r-3e-qIp"/>
+                            <constraint firstItem="Fvc-pS-m9l" firstAttribute="centerX" secondItem="Hax-xj-2wK" secondAttribute="centerX" id="XLE-hV-Fnd"/>
+                            <constraint firstItem="7z8-ag-sPi" firstAttribute="leading" secondItem="Hax-xj-2wK" secondAttribute="leading" constant="40" id="Yw3-bj-6Q9"/>
+                            <constraint firstAttribute="trailing" secondItem="7z8-ag-sPi" secondAttribute="trailing" constant="40" id="ZQK-iv-lnY"/>
+                            <constraint firstItem="Ajr-hg-EOD" firstAttribute="top" secondItem="7z8-ag-sPi" secondAttribute="bottom" constant="25" id="g0r-3e-qIp"/>
                             <constraint firstItem="jsX-Xj-8dn" firstAttribute="top" secondItem="Hax-xj-2wK" secondAttribute="top" id="iVD-LY-R5N"/>
                             <constraint firstItem="SwZ-em-taa" firstAttribute="trailing" secondItem="tXK-Xs-96l" secondAttribute="trailing" constant="-50" id="lBq-JL-wQW"/>
                             <constraint firstItem="tXK-Xs-96l" firstAttribute="width" secondItem="Hax-xj-2wK" secondAttribute="height" multiplier="70:142" id="sKa-H4-O1h"/>
-                            <constraint firstItem="tXK-Xs-96l" firstAttribute="centerY" secondItem="cZn-tz-Ndk" secondAttribute="centerY" constant="-150" id="sPd-3c-abB"/>
-                            <constraint firstItem="jsX-Xj-8dn" firstAttribute="leading" secondItem="cZn-tz-Ndk" secondAttribute="leading" id="soH-wu-7ha"/>
+                            <constraint firstItem="tXK-Xs-96l" firstAttribute="centerY" secondItem="Hax-xj-2wK" secondAttribute="centerY" constant="-150" id="sPd-3c-abB"/>
+                            <constraint firstItem="jsX-Xj-8dn" firstAttribute="leading" secondItem="Hax-xj-2wK" secondAttribute="leading" id="soH-wu-7ha"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="cZn-tz-Ndk"/>
                     </view>
                     <navigationItem key="navigationItem" id="sXm-wa-ItS"/>
                     <connections>
@@ -1879,7 +1914,7 @@ Greego to drive?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAj-kp-YsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2409.375" y="2235.211267605634"/>
+            <point key="canvasLocation" x="-3373" y="2265"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EgR-UH-spf">
@@ -1898,7 +1933,7 @@ Greego to drive?</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ro-nT-QVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3208" y="2237"/>
+            <point key="canvasLocation" x="-4056" y="2265"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uNk-vQ-x43">
@@ -1922,6 +1957,10 @@ Greego to drive?</string>
         <scene sceneID="hcc-HF-s09">
             <objects>
                 <viewController storyboardIdentifier="ChooseDestinatioVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HWR-gZ-bBH" customClass="ChooseDestinatioVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EnV-vN-LoC"/>
+                        <viewControllerLayoutGuide type="bottom" id="iWB-OJ-BE0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="way-Hy-XUt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2132,23 +2171,22 @@ Greego to drive?</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fjm-yQ-0le" firstAttribute="bottom" secondItem="0LL-PN-7eZ" secondAttribute="bottom" id="1wL-gd-Po5"/>
+                            <constraint firstItem="iWB-OJ-BE0" firstAttribute="top" secondItem="0LL-PN-7eZ" secondAttribute="bottom" id="1wL-gd-Po5"/>
                             <constraint firstItem="GlE-E2-6QE" firstAttribute="leading" secondItem="gFo-7e-CNV" secondAttribute="leading" constant="-2" id="24V-j0-bQI"/>
                             <constraint firstItem="GlE-E2-6QE" firstAttribute="top" secondItem="gFo-7e-CNV" secondAttribute="bottom" constant="-2" id="4uW-6I-ZvQ"/>
                             <constraint firstItem="GlE-E2-6QE" firstAttribute="trailing" secondItem="gFo-7e-CNV" secondAttribute="trailing" constant="2" id="50q-EJ-njN"/>
-                            <constraint firstItem="Fjm-yQ-0le" firstAttribute="bottom" secondItem="q3t-rC-CxO" secondAttribute="bottom" id="CNs-CZ-lPh"/>
-                            <constraint firstItem="Fjm-yQ-0le" firstAttribute="trailing" secondItem="q3t-rC-CxO" secondAttribute="trailing" id="MfQ-ay-kBW"/>
-                            <constraint firstItem="Fjm-yQ-0le" firstAttribute="trailing" secondItem="0LL-PN-7eZ" secondAttribute="trailing" id="OQf-aR-0Ec"/>
-                            <constraint firstItem="0LL-PN-7eZ" firstAttribute="leading" secondItem="Fjm-yQ-0le" secondAttribute="leading" id="Ovb-zU-2FI"/>
-                            <constraint firstItem="q3t-rC-CxO" firstAttribute="top" secondItem="Fjm-yQ-0le" secondAttribute="top" id="PNl-1M-AJe"/>
-                            <constraint firstItem="Fjm-yQ-0le" firstAttribute="top" secondItem="gFo-7e-CNV" secondAttribute="top" constant="19" id="ber-Ri-S6E"/>
-                            <constraint firstItem="Fjm-yQ-0le" firstAttribute="trailing" secondItem="gFo-7e-CNV" secondAttribute="trailing" constant="-2" id="dLS-DW-mUv"/>
-                            <constraint firstItem="gFo-7e-CNV" firstAttribute="leading" secondItem="Fjm-yQ-0le" secondAttribute="leading" constant="2" id="dsL-I1-pKQ"/>
-                            <constraint firstItem="0LL-PN-7eZ" firstAttribute="top" secondItem="Fjm-yQ-0le" secondAttribute="top" id="ixv-Q1-ViM"/>
-                            <constraint firstItem="q3t-rC-CxO" firstAttribute="leading" secondItem="Fjm-yQ-0le" secondAttribute="leading" id="otV-pi-Ui5"/>
-                            <constraint firstItem="Fjm-yQ-0le" firstAttribute="bottom" secondItem="GlE-E2-6QE" secondAttribute="bottom" id="ygU-0f-CPS"/>
+                            <constraint firstItem="iWB-OJ-BE0" firstAttribute="top" secondItem="q3t-rC-CxO" secondAttribute="bottom" id="CNs-CZ-lPh"/>
+                            <constraint firstAttribute="trailing" secondItem="q3t-rC-CxO" secondAttribute="trailing" id="MfQ-ay-kBW"/>
+                            <constraint firstAttribute="trailing" secondItem="0LL-PN-7eZ" secondAttribute="trailing" id="OQf-aR-0Ec"/>
+                            <constraint firstItem="0LL-PN-7eZ" firstAttribute="leading" secondItem="way-Hy-XUt" secondAttribute="leading" id="Ovb-zU-2FI"/>
+                            <constraint firstItem="q3t-rC-CxO" firstAttribute="top" secondItem="EnV-vN-LoC" secondAttribute="bottom" id="PNl-1M-AJe"/>
+                            <constraint firstItem="EnV-vN-LoC" firstAttribute="bottom" secondItem="gFo-7e-CNV" secondAttribute="top" constant="19" id="ber-Ri-S6E"/>
+                            <constraint firstAttribute="trailing" secondItem="gFo-7e-CNV" secondAttribute="trailing" constant="-2" id="dLS-DW-mUv"/>
+                            <constraint firstItem="gFo-7e-CNV" firstAttribute="leading" secondItem="way-Hy-XUt" secondAttribute="leading" constant="2" id="dsL-I1-pKQ"/>
+                            <constraint firstItem="0LL-PN-7eZ" firstAttribute="top" secondItem="EnV-vN-LoC" secondAttribute="bottom" id="ixv-Q1-ViM"/>
+                            <constraint firstItem="q3t-rC-CxO" firstAttribute="leading" secondItem="way-Hy-XUt" secondAttribute="leading" id="otV-pi-Ui5"/>
+                            <constraint firstItem="iWB-OJ-BE0" firstAttribute="top" secondItem="GlE-E2-6QE" secondAttribute="bottom" id="ygU-0f-CPS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Fjm-yQ-0le"/>
                     </view>
                     <connections>
                         <outlet property="btnSet" destination="grF-9Q-7oa" id="u2d-ZF-5Z4"/>
@@ -2170,19 +2208,23 @@ Greego to drive?</string>
         <scene sceneID="Ttv-yD-apf">
             <objects>
                 <viewController storyboardIdentifier="DrideMapVC" id="THf-cB-EVq" customClass="DrideMapVC" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xXg-N6-HyU"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Lr-eH-HGC"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7c1-1F-8vE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrG-pf-q8Z" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="351" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAJ-4y-fwl">
-                                <rect key="frame" x="40" y="388.5" width="271" height="144.5"/>
+                                <rect key="frame" x="40" y="405" width="240" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Est. Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5r-7Z-jTx">
-                                        <rect key="frame" x="20" y="0.0" width="113" height="32.5"/>
+                                        <rect key="frame" x="20" y="0.0" width="100" height="28.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="N5r-7Z-jTx" secondAttribute="height" multiplier="7:2" id="If4-ai-Wzj"/>
                                         </constraints>
@@ -2191,19 +2233,19 @@ Greego to drive?</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US $32.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htf-Qh-BIg">
-                                        <rect key="frame" x="20" y="32.5" width="113" height="32"/>
+                                        <rect key="frame" x="20" y="28.5" width="100" height="28.5"/>
                                         <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-7d-93M">
-                                        <rect key="frame" x="20" y="64.5" width="113" height="32"/>
+                                        <rect key="frame" x="20" y="57" width="100" height="29"/>
                                         <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoQ-lx-uvS">
-                                        <rect key="frame" x="141" y="47" width="108.5" height="60"/>
+                                        <rect key="frame" x="128" y="37.5" width="96" height="53"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JoQ-lx-uvS" secondAttribute="height" multiplier="9:5" id="t6D-Xk-WMG"/>
@@ -2217,7 +2259,7 @@ Greego to drive?</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dy3-tx-vmO">
-                                        <rect key="frame" x="20" y="110" width="111" height="29.5"/>
+                                        <rect key="frame" x="20" y="93.5" width="111" height="29.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoVictor_(Visa)" translatesAutoresizingMaskIntoConstraints="NO" id="sqM-nW-JOo">
                                                 <rect key="frame" x="0.0" y="3" width="31.5" height="23.5"/>
@@ -2299,18 +2341,17 @@ Greego to drive?</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jwa-LY-bgs" firstAttribute="trailing" secondItem="MAJ-4y-fwl" secondAttribute="trailing" constant="40" id="4Sq-m3-JAU"/>
-                            <constraint firstItem="jwa-LY-bgs" firstAttribute="leading" secondItem="Ofs-LP-RXY" secondAttribute="trailing" constant="-57" id="JYz-gJ-ms8"/>
-                            <constraint firstItem="VrG-pf-q8Z" firstAttribute="leading" secondItem="jwa-LY-bgs" secondAttribute="leading" id="NkL-R9-HSZ"/>
-                            <constraint firstItem="MAJ-4y-fwl" firstAttribute="leading" secondItem="jwa-LY-bgs" secondAttribute="leading" constant="40" id="OL1-7P-RSF"/>
-                            <constraint firstItem="jwa-LY-bgs" firstAttribute="bottom" secondItem="VrG-pf-q8Z" secondAttribute="bottom" id="ONf-gY-q7o"/>
-                            <constraint firstItem="jwa-LY-bgs" firstAttribute="top" secondItem="Ofs-LP-RXY" secondAttribute="top" constant="1" id="Omu-Tf-JMn"/>
-                            <constraint firstItem="jwa-LY-bgs" firstAttribute="top" secondItem="VrG-pf-q8Z" secondAttribute="top" constant="20" id="RNs-VB-XVg"/>
-                            <constraint firstItem="jwa-LY-bgs" firstAttribute="bottom" secondItem="MAJ-4y-fwl" secondAttribute="bottom" constant="35" id="ZJz-Kt-IHG"/>
+                            <constraint firstAttribute="trailing" secondItem="MAJ-4y-fwl" secondAttribute="trailing" constant="40" id="4Sq-m3-JAU"/>
+                            <constraint firstAttribute="leading" secondItem="Ofs-LP-RXY" secondAttribute="trailing" constant="-57" id="JYz-gJ-ms8"/>
+                            <constraint firstItem="VrG-pf-q8Z" firstAttribute="leading" secondItem="7c1-1F-8vE" secondAttribute="leading" id="NkL-R9-HSZ"/>
+                            <constraint firstItem="MAJ-4y-fwl" firstAttribute="leading" secondItem="7c1-1F-8vE" secondAttribute="leading" constant="40" id="OL1-7P-RSF"/>
+                            <constraint firstItem="6Lr-eH-HGC" firstAttribute="top" secondItem="VrG-pf-q8Z" secondAttribute="bottom" id="ONf-gY-q7o"/>
+                            <constraint firstItem="xXg-N6-HyU" firstAttribute="bottom" secondItem="Ofs-LP-RXY" secondAttribute="top" constant="1" id="Omu-Tf-JMn"/>
+                            <constraint firstItem="xXg-N6-HyU" firstAttribute="bottom" secondItem="VrG-pf-q8Z" secondAttribute="top" constant="20" id="RNs-VB-XVg"/>
+                            <constraint firstItem="6Lr-eH-HGC" firstAttribute="top" secondItem="MAJ-4y-fwl" secondAttribute="bottom" constant="35" id="ZJz-Kt-IHG"/>
                             <constraint firstItem="Ofs-LP-RXY" firstAttribute="width" secondItem="7c1-1F-8vE" secondAttribute="height" multiplier="35:568" id="wbh-v6-yGN"/>
-                            <constraint firstItem="jwa-LY-bgs" firstAttribute="trailing" secondItem="VrG-pf-q8Z" secondAttribute="trailing" id="zKZ-iR-si0"/>
+                            <constraint firstAttribute="trailing" secondItem="VrG-pf-q8Z" secondAttribute="trailing" id="zKZ-iR-si0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="jwa-LY-bgs"/>
                     </view>
                     <connections>
                         <outlet property="debitCardSubView" destination="Dy3-tx-vmO" id="s8a-dR-07h"/>
@@ -2328,6 +2369,10 @@ Greego to drive?</string>
         <scene sceneID="cWt-TW-bkM">
             <objects>
                 <viewController storyboardIdentifier="DriverPopupVC" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LDH-Mt-aIz" customClass="DriverPopupVC" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XIK-7m-vGG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lcd-ca-WkR"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vY3-YR-dj8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2550,18 +2595,17 @@ Greego to drive?</string>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mzK-ut-msY" firstAttribute="trailing" secondItem="h35-aW-pS8" secondAttribute="trailing" constant="14" id="9Yl-2n-WdO"/>
+                            <constraint firstAttribute="trailing" secondItem="h35-aW-pS8" secondAttribute="trailing" constant="14" id="9Yl-2n-WdO"/>
                             <constraint firstItem="jVU-CW-wSr" firstAttribute="top" secondItem="h35-aW-pS8" secondAttribute="bottom" constant="8" symbolic="YES" id="9hz-9r-7vV"/>
                             <constraint firstItem="jVU-CW-wSr" firstAttribute="trailing" secondItem="0i2-eo-pEN" secondAttribute="trailing" id="Do4-YI-jDJ"/>
                             <constraint firstItem="jVU-CW-wSr" firstAttribute="leading" secondItem="0i2-eo-pEN" secondAttribute="leading" id="HqZ-lo-OHU"/>
-                            <constraint firstItem="h35-aW-pS8" firstAttribute="leading" secondItem="mzK-ut-msY" secondAttribute="leading" constant="15" id="SqU-7Y-Ngd"/>
+                            <constraint firstItem="h35-aW-pS8" firstAttribute="leading" secondItem="vY3-YR-dj8" secondAttribute="leading" constant="15" id="SqU-7Y-Ngd"/>
                             <constraint firstItem="h35-aW-pS8" firstAttribute="centerX" secondItem="jVU-CW-wSr" secondAttribute="centerX" id="YlY-G6-z0g"/>
-                            <constraint firstItem="h35-aW-pS8" firstAttribute="centerX" secondItem="mzK-ut-msY" secondAttribute="centerX" id="ZNw-9m-gd2"/>
-                            <constraint firstItem="mzK-ut-msY" firstAttribute="bottom" secondItem="0i2-eo-pEN" secondAttribute="bottom" constant="11" id="aDM-O5-Afc"/>
+                            <constraint firstItem="h35-aW-pS8" firstAttribute="centerX" secondItem="vY3-YR-dj8" secondAttribute="centerX" id="ZNw-9m-gd2"/>
+                            <constraint firstItem="Lcd-ca-WkR" firstAttribute="top" secondItem="0i2-eo-pEN" secondAttribute="bottom" constant="11" id="aDM-O5-Afc"/>
                             <constraint firstItem="jVU-CW-wSr" firstAttribute="leading" secondItem="vY3-YR-dj8" secondAttribute="leadingMargin" id="jtO-rw-TZj"/>
                             <constraint firstItem="0i2-eo-pEN" firstAttribute="top" secondItem="jVU-CW-wSr" secondAttribute="bottom" constant="8" symbolic="YES" id="sUD-sS-8TV"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="mzK-ut-msY"/>
                     </view>
                     <connections>
                         <outlet property="lblcardnum" destination="G0M-gc-qOt" id="OQX-1X-wKi"/>
@@ -2583,6 +2627,10 @@ Greego to drive?</string>
         <scene sceneID="MKX-5d-cnN">
             <objects>
                 <viewController storyboardIdentifier="otpVC" id="O21-qJ-gPp" customClass="otpVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kf5-HY-HoN"/>
+                        <viewControllerLayoutGuide type="bottom" id="VKj-3M-5gk"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="581-7f-AWv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2666,26 +2714,25 @@ Greego to drive?</string>
                             <constraint firstItem="zmz-DB-G40" firstAttribute="leading" secondItem="ouf-r3-9rh" secondAttribute="leading" id="505-Zl-ZOi"/>
                             <constraint firstItem="NSF-ag-ecV" firstAttribute="leading" secondItem="hGi-cC-MQK" secondAttribute="trailing" constant="89" id="6Nh-bG-v8x"/>
                             <constraint firstItem="zmz-DB-G40" firstAttribute="centerX" secondItem="581-7f-AWv" secondAttribute="centerX" id="6VL-WY-2II"/>
-                            <constraint firstItem="U7G-SN-QcQ" firstAttribute="leading" secondItem="tPt-YG-g7E" secondAttribute="leading" constant="15" id="7Al-vW-1u6"/>
-                            <constraint firstItem="tPt-YG-g7E" firstAttribute="trailing" secondItem="eSE-tP-YSA" secondAttribute="trailing" constant="10" id="7cC-MB-qCZ"/>
+                            <constraint firstItem="U7G-SN-QcQ" firstAttribute="leading" secondItem="581-7f-AWv" secondAttribute="leading" constant="15" id="7Al-vW-1u6"/>
+                            <constraint firstAttribute="trailing" secondItem="eSE-tP-YSA" secondAttribute="trailing" constant="10" id="7cC-MB-qCZ"/>
                             <constraint firstItem="hGi-cC-MQK" firstAttribute="leading" secondItem="ouf-r3-9rh" secondAttribute="trailing" constant="8" symbolic="YES" id="8Ok-Q6-rJ0"/>
                             <constraint firstItem="hGi-cC-MQK" firstAttribute="top" secondItem="zmz-DB-G40" secondAttribute="bottom" constant="47" id="9v0-Vc-SDo"/>
-                            <constraint firstItem="tPt-YG-g7E" firstAttribute="top" secondItem="U7G-SN-QcQ" secondAttribute="bottom" constant="-35" id="HVj-dK-j11"/>
+                            <constraint firstItem="Kf5-HY-HoN" firstAttribute="bottom" secondItem="U7G-SN-QcQ" secondAttribute="bottom" constant="-35" id="HVj-dK-j11"/>
                             <constraint firstItem="ouf-r3-9rh" firstAttribute="centerY" secondItem="NSF-ag-ecV" secondAttribute="centerY" id="IaC-Oo-EY5"/>
                             <constraint firstItem="8OY-qF-b3Z" firstAttribute="top" secondItem="eSE-tP-YSA" secondAttribute="bottom" constant="23" id="K8s-Tz-Ydf"/>
                             <constraint firstItem="ouf-r3-9rh" firstAttribute="top" secondItem="zmz-DB-G40" secondAttribute="bottom" constant="38" id="Nl4-7V-qyA"/>
-                            <constraint firstItem="zmz-DB-G40" firstAttribute="leading" secondItem="tPt-YG-g7E" secondAttribute="leading" constant="34" id="PtK-xY-ffI"/>
+                            <constraint firstItem="zmz-DB-G40" firstAttribute="leading" secondItem="581-7f-AWv" secondAttribute="leading" constant="34" id="PtK-xY-ffI"/>
                             <constraint firstItem="U7G-SN-QcQ" firstAttribute="leading" secondItem="eSE-tP-YSA" secondAttribute="leading" constant="7" id="SHk-ME-cSY"/>
                             <constraint firstItem="NSF-ag-ecV" firstAttribute="top" secondItem="zmz-DB-G40" secondAttribute="bottom" constant="32" id="caD-lC-a5s"/>
                             <constraint firstItem="eSE-tP-YSA" firstAttribute="trailing" secondItem="8OY-qF-b3Z" secondAttribute="trailing" id="eK7-vy-D01"/>
                             <constraint firstItem="8OY-qF-b3Z" firstAttribute="leading" secondItem="581-7f-AWv" secondAttribute="leadingMargin" id="iOG-3E-KdL"/>
                             <constraint firstItem="hGi-cC-MQK" firstAttribute="centerY" secondItem="ouf-r3-9rh" secondAttribute="centerY" id="riq-0f-EFj"/>
                             <constraint firstItem="eSE-tP-YSA" firstAttribute="top" secondItem="U7G-SN-QcQ" secondAttribute="bottom" constant="68" id="sih-fu-UwJ"/>
-                            <constraint firstItem="tPt-YG-g7E" firstAttribute="trailing" secondItem="NSF-ag-ecV" secondAttribute="trailing" constant="30" id="tQx-r4-syJ"/>
-                            <constraint firstItem="U7G-SN-QcQ" firstAttribute="top" secondItem="tPt-YG-g7E" secondAttribute="top" constant="5" id="ua2-y7-hQI"/>
+                            <constraint firstAttribute="trailing" secondItem="NSF-ag-ecV" secondAttribute="trailing" constant="30" id="tQx-r4-syJ"/>
+                            <constraint firstItem="U7G-SN-QcQ" firstAttribute="top" secondItem="Kf5-HY-HoN" secondAttribute="bottom" constant="5" id="ua2-y7-hQI"/>
                             <constraint firstItem="U7G-SN-QcQ" firstAttribute="top" secondItem="581-7f-AWv" secondAttribute="topMargin" constant="5" id="vAI-kK-CeH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="tPt-YG-g7E"/>
                     </view>
                     <navigationItem key="navigationItem" id="uIK-yQ-kGc"/>
                     <connections>
@@ -2807,7 +2854,6 @@ Greego to drive?</string>
                             <constraint firstItem="9nC-u2-QeE" firstAttribute="centerX" secondItem="WMP-jt-tCv" secondAttribute="centerX" id="yuH-oP-TNT"/>
                             <constraint firstItem="9nC-u2-QeE" firstAttribute="top" secondItem="f7T-gF-sbI" secondAttribute="bottom" constant="58" id="zfV-Im-zLj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="EEq-Eh-YVV"/>
                     </view>
                     <connections>
                         <outlet property="cb" destination="5Jb-Ao-PQ6" id="nsm-IV-c7F"/>
@@ -2839,6 +2885,10 @@ Greego to drive?</string>
         <scene sceneID="cER-XI-59j">
             <objects>
                 <viewController storyboardIdentifier="sidemenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="W2o-OO-7qi" customClass="sidemenuViewController" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hl4-IZ-Pfl"/>
+                        <viewControllerLayoutGuide type="bottom" id="6G8-ec-h4h"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8yT-ff-evy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2998,11 +3048,11 @@ Greego to drive?</string>
                             <constraint firstItem="Ylt-yz-pAi" firstAttribute="leading" secondItem="8yT-ff-evy" secondAttribute="leading" id="4Dr-9G-nQO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="051-Xr-ytN" secondAttribute="trailing" constant="28" id="6wc-RT-XNS"/>
                             <constraint firstItem="mdu-qd-EE7" firstAttribute="top" secondItem="Ylt-yz-pAi" secondAttribute="bottom" id="As1-MX-sK6"/>
-                            <constraint firstItem="0UC-3f-2P2" firstAttribute="trailing" secondItem="WOn-Y4-u3s" secondAttribute="trailing" constant="149" id="Bqd-lu-ybA"/>
+                            <constraint firstAttribute="trailing" secondItem="WOn-Y4-u3s" secondAttribute="trailing" constant="149" id="Bqd-lu-ybA"/>
                             <constraint firstAttribute="trailing" secondItem="Ylt-yz-pAi" secondAttribute="trailing" id="C3F-kF-1e8"/>
-                            <constraint firstItem="0UC-3f-2P2" firstAttribute="top" secondItem="Ylt-yz-pAi" secondAttribute="top" constant="20" id="FX8-0u-OfZ"/>
+                            <constraint firstItem="hl4-IZ-Pfl" firstAttribute="bottom" secondItem="Ylt-yz-pAi" secondAttribute="top" constant="20" id="FX8-0u-OfZ"/>
                             <constraint firstItem="0L5-fl-DAT" firstAttribute="leading" secondItem="mdu-qd-EE7" secondAttribute="leading" id="KLj-9l-Kio"/>
-                            <constraint firstItem="0UC-3f-2P2" firstAttribute="bottom" secondItem="WOn-Y4-u3s" secondAttribute="bottom" constant="8" id="MWg-VH-lar"/>
+                            <constraint firstItem="6G8-ec-h4h" firstAttribute="top" secondItem="WOn-Y4-u3s" secondAttribute="bottom" constant="8" id="MWg-VH-lar"/>
                             <constraint firstItem="WOn-Y4-u3s" firstAttribute="top" secondItem="051-Xr-ytN" secondAttribute="bottom" constant="6" id="OdR-aW-2hl"/>
                             <constraint firstItem="Ylt-yz-pAi" firstAttribute="leading" secondItem="mdu-qd-EE7" secondAttribute="leading" id="SGT-QN-m4w"/>
                             <constraint firstItem="0L5-fl-DAT" firstAttribute="trailing" secondItem="mdu-qd-EE7" secondAttribute="trailing" id="Tdh-hj-s1T"/>
@@ -3010,12 +3060,11 @@ Greego to drive?</string>
                             <constraint firstItem="Ylt-yz-pAi" firstAttribute="trailing" secondItem="mdu-qd-EE7" secondAttribute="trailing" id="ZWX-u4-Qly"/>
                             <constraint firstItem="Ylt-yz-pAi" firstAttribute="top" secondItem="8yT-ff-evy" secondAttribute="top" id="Zt4-mG-4Qr"/>
                             <constraint firstItem="051-Xr-ytN" firstAttribute="leading" secondItem="WOn-Y4-u3s" secondAttribute="leading" id="g81-14-ddT"/>
-                            <constraint firstItem="0UC-3f-2P2" firstAttribute="trailing" secondItem="dcF-El-64z" secondAttribute="trailing" constant="82" id="iHg-Ly-tc2"/>
+                            <constraint firstAttribute="trailing" secondItem="dcF-El-64z" secondAttribute="trailing" constant="82" id="iHg-Ly-tc2"/>
                             <constraint firstItem="dcF-El-64z" firstAttribute="leading" secondItem="051-Xr-ytN" secondAttribute="leading" id="kEX-gT-KfV"/>
                             <constraint firstItem="dcF-El-64z" firstAttribute="top" secondItem="0L5-fl-DAT" secondAttribute="bottom" constant="4" id="ttb-HL-cbV"/>
                             <constraint firstItem="dcF-El-64z" firstAttribute="leading" secondItem="8yT-ff-evy" secondAttribute="leadingMargin" id="ysz-JN-W65"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="0UC-3f-2P2"/>
                     </view>
                     <connections>
                         <outlet property="fname" destination="PFB-fY-Y6H" id="sqM-Ji-Lr2"/>
@@ -3046,6 +3095,10 @@ Greego to drive?</string>
         <scene sceneID="LIc-Vz-jCu">
             <objects>
                 <viewController storyboardIdentifier="FreetripsViewController" id="FYz-4t-NvA" customClass="FreetripsViewController" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SOR-VD-YS5"/>
+                        <viewControllerLayoutGuide type="bottom" id="KSa-j9-0oX"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EKN-Zg-hrO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3123,33 +3176,32 @@ Greego to drive?</string>
                             <constraint firstItem="RXT-WZ-qcO" firstAttribute="top" secondItem="3WD-5w-ZYo" secondAttribute="bottom" constant="4" id="0US-bv-soE"/>
                             <constraint firstItem="CS6-FI-SdY" firstAttribute="top" secondItem="RXT-WZ-qcO" secondAttribute="top" id="0cf-Z6-fLv"/>
                             <constraint firstItem="xT8-2x-J4R" firstAttribute="trailing" secondItem="RXT-WZ-qcO" secondAttribute="trailing" constant="38" id="3N4-uQ-XeD"/>
-                            <constraint firstItem="RXT-WZ-qcO" firstAttribute="leading" secondItem="egS-Rv-pSo" secondAttribute="leading" constant="36" id="3zc-r4-Ejw"/>
+                            <constraint firstItem="RXT-WZ-qcO" firstAttribute="leading" secondItem="EKN-Zg-hrO" secondAttribute="leading" constant="36" id="3zc-r4-Ejw"/>
                             <constraint firstItem="CS6-FI-SdY" firstAttribute="centerY" secondItem="OD1-8T-nzu" secondAttribute="centerY" id="5AZ-sE-A4O"/>
-                            <constraint firstItem="egS-Rv-pSo" firstAttribute="trailing" secondItem="CS6-FI-SdY" secondAttribute="trailing" constant="38" id="97C-FC-M3C"/>
+                            <constraint firstAttribute="trailing" secondItem="CS6-FI-SdY" secondAttribute="trailing" constant="38" id="97C-FC-M3C"/>
                             <constraint firstItem="9dP-1j-IJY" firstAttribute="top" secondItem="quW-LH-06S" secondAttribute="bottom" constant="43" id="FYd-5G-RrC"/>
                             <constraint firstItem="9dP-1j-IJY" firstAttribute="trailing" secondItem="xT8-2x-J4R" secondAttribute="trailing" id="ITO-QQ-RdP"/>
-                            <constraint firstItem="egS-Rv-pSo" firstAttribute="bottom" secondItem="OD1-8T-nzu" secondAttribute="bottom" constant="76" id="NLu-Cd-gPM"/>
+                            <constraint firstItem="KSa-j9-0oX" firstAttribute="top" secondItem="OD1-8T-nzu" secondAttribute="bottom" constant="76" id="NLu-Cd-gPM"/>
                             <constraint firstItem="9dP-1j-IJY" firstAttribute="leading" secondItem="xT8-2x-J4R" secondAttribute="leading" id="ORE-Sz-3NT"/>
                             <constraint firstItem="quW-LH-06S" firstAttribute="leading" secondItem="9dP-1j-IJY" secondAttribute="leading" id="P1E-uh-lC6"/>
-                            <constraint firstItem="egS-Rv-pSo" firstAttribute="trailing" secondItem="RXT-WZ-qcO" secondAttribute="trailing" constant="76" id="QOY-xF-Qpn"/>
-                            <constraint firstItem="egS-Rv-pSo" firstAttribute="trailing" secondItem="OD1-8T-nzu" secondAttribute="trailing" constant="46" id="QeY-wH-oJQ"/>
-                            <constraint firstItem="quW-LH-06S" firstAttribute="leading" secondItem="egS-Rv-pSo" secondAttribute="leading" constant="36" id="Rhx-b6-n9G"/>
+                            <constraint firstAttribute="trailing" secondItem="RXT-WZ-qcO" secondAttribute="trailing" constant="76" id="QOY-xF-Qpn"/>
+                            <constraint firstAttribute="trailing" secondItem="OD1-8T-nzu" secondAttribute="trailing" constant="46" id="QeY-wH-oJQ"/>
+                            <constraint firstItem="quW-LH-06S" firstAttribute="leading" secondItem="EKN-Zg-hrO" secondAttribute="leading" constant="36" id="Rhx-b6-n9G"/>
                             <constraint firstItem="RXT-WZ-qcO" firstAttribute="centerY" secondItem="OD1-8T-nzu" secondAttribute="centerY" constant="-3.5" id="UFh-BT-2fh"/>
-                            <constraint firstItem="egS-Rv-pSo" firstAttribute="bottom" secondItem="RXT-WZ-qcO" secondAttribute="bottom" constant="76" id="ZgS-zW-coY"/>
+                            <constraint firstItem="KSa-j9-0oX" firstAttribute="top" secondItem="RXT-WZ-qcO" secondAttribute="bottom" constant="76" id="ZgS-zW-coY"/>
                             <constraint firstItem="3WD-5w-ZYo" firstAttribute="leading" secondItem="RXT-WZ-qcO" secondAttribute="leading" id="a5P-BL-46Q"/>
                             <constraint firstItem="0YY-yv-kdl" firstAttribute="width" secondItem="EKN-Zg-hrO" secondAttribute="height" multiplier="35:568" constant="-5" id="bjp-QG-eh0"/>
                             <constraint firstItem="xT8-2x-J4R" firstAttribute="top" secondItem="9dP-1j-IJY" secondAttribute="bottom" constant="34" id="bnU-oC-rd0"/>
                             <constraint firstItem="xT8-2x-J4R" firstAttribute="leading" secondItem="3WD-5w-ZYo" secondAttribute="leading" id="d9s-9m-DQ6"/>
-                            <constraint firstItem="0YY-yv-kdl" firstAttribute="leading" secondItem="egS-Rv-pSo" secondAttribute="leading" constant="16" id="dk8-2K-ETq"/>
+                            <constraint firstItem="0YY-yv-kdl" firstAttribute="leading" secondItem="EKN-Zg-hrO" secondAttribute="leading" constant="16" id="dk8-2K-ETq"/>
                             <constraint firstItem="OD1-8T-nzu" firstAttribute="leading" secondItem="RXT-WZ-qcO" secondAttribute="trailing" constant="8" id="fjH-7Z-HBr"/>
-                            <constraint firstItem="0YY-yv-kdl" firstAttribute="top" secondItem="egS-Rv-pSo" secondAttribute="top" id="hpe-NV-4KI"/>
-                            <constraint firstItem="CS6-FI-SdY" firstAttribute="leading" secondItem="egS-Rv-pSo" secondAttribute="leading" constant="34" id="rbq-xW-Dvh"/>
-                            <constraint firstItem="egS-Rv-pSo" firstAttribute="trailing" secondItem="quW-LH-06S" secondAttribute="trailing" constant="131" id="sgK-eS-RKj"/>
-                            <constraint firstItem="egS-Rv-pSo" firstAttribute="trailing" secondItem="3WD-5w-ZYo" secondAttribute="trailing" constant="104" id="vk8-IO-45B"/>
+                            <constraint firstItem="0YY-yv-kdl" firstAttribute="top" secondItem="SOR-VD-YS5" secondAttribute="bottom" id="hpe-NV-4KI"/>
+                            <constraint firstItem="CS6-FI-SdY" firstAttribute="leading" secondItem="EKN-Zg-hrO" secondAttribute="leading" constant="34" id="rbq-xW-Dvh"/>
+                            <constraint firstAttribute="trailing" secondItem="quW-LH-06S" secondAttribute="trailing" constant="131" id="sgK-eS-RKj"/>
+                            <constraint firstAttribute="trailing" secondItem="3WD-5w-ZYo" secondAttribute="trailing" constant="104" id="vk8-IO-45B"/>
                             <constraint firstItem="quW-LH-06S" firstAttribute="top" secondItem="0YY-yv-kdl" secondAttribute="bottom" constant="17" id="xdV-sM-9AS"/>
                             <constraint firstItem="0YY-yv-kdl" firstAttribute="leading" secondItem="EKN-Zg-hrO" secondAttribute="leadingMargin" id="yP1-xf-aRK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="egS-Rv-pSo"/>
                     </view>
                     <navigationItem key="navigationItem" id="f1X-24-bUt"/>
                     <connections>
@@ -3164,6 +3216,10 @@ Greego to drive?</string>
         <scene sceneID="dUI-ev-NJ8">
             <objects>
                 <viewController storyboardIdentifier="SettingViewController" id="cbD-X6-rF1" customClass="SettingViewController" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RnZ-2f-HZC"/>
+                        <viewControllerLayoutGuide type="bottom" id="iBe-Or-Z62"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Pnu-8l-Gxq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3358,20 +3414,19 @@ Greego to drive?</string>
                             <constraint firstItem="moN-HU-7nx" firstAttribute="top" secondItem="PAT-hh-gvA" secondAttribute="bottom" constant="53" id="APn-cc-DUV"/>
                             <constraint firstItem="PAT-hh-gvA" firstAttribute="leading" secondItem="moN-HU-7nx" secondAttribute="leading" id="EGV-me-82g"/>
                             <constraint firstItem="H5m-Tj-n8V" firstAttribute="leading" secondItem="g3o-VT-emF" secondAttribute="leading" id="G6q-y7-Dxe"/>
-                            <constraint firstItem="EeT-Wr-KGW" firstAttribute="leading" secondItem="chj-gc-IXq" secondAttribute="leading" constant="16" id="M9T-pD-jgw"/>
+                            <constraint firstItem="EeT-Wr-KGW" firstAttribute="leading" secondItem="Pnu-8l-Gxq" secondAttribute="leading" constant="16" id="M9T-pD-jgw"/>
                             <constraint firstItem="g3o-VT-emF" firstAttribute="top" secondItem="H5m-Tj-n8V" secondAttribute="bottom" constant="20" id="NQN-uu-JgJ"/>
                             <constraint firstItem="g3o-VT-emF" firstAttribute="trailing" secondItem="PAT-hh-gvA" secondAttribute="trailing" id="TsO-Nd-P2Y"/>
                             <constraint firstItem="PAT-hh-gvA" firstAttribute="trailing" secondItem="moN-HU-7nx" secondAttribute="trailing" id="ZS8-5V-9KS"/>
                             <constraint firstItem="TvB-X0-nm5" firstAttribute="trailing" secondItem="H5m-Tj-n8V" secondAttribute="trailing" id="a5B-bs-kog"/>
                             <constraint firstItem="H5m-Tj-n8V" firstAttribute="top" secondItem="TvB-X0-nm5" secondAttribute="bottom" constant="34" id="acc-1t-aZ4"/>
                             <constraint firstItem="g3o-VT-emF" firstAttribute="leading" secondItem="PAT-hh-gvA" secondAttribute="leading" id="btL-on-Lmx"/>
-                            <constraint firstItem="TvB-X0-nm5" firstAttribute="centerX" secondItem="chj-gc-IXq" secondAttribute="centerX" id="eBE-gL-Whw"/>
+                            <constraint firstItem="TvB-X0-nm5" firstAttribute="centerX" secondItem="Pnu-8l-Gxq" secondAttribute="centerX" id="eBE-gL-Whw"/>
                             <constraint firstItem="TvB-X0-nm5" firstAttribute="top" secondItem="EeT-Wr-KGW" secondAttribute="bottom" constant="13" id="nvA-Ic-Icb"/>
-                            <constraint firstItem="EeT-Wr-KGW" firstAttribute="top" secondItem="chj-gc-IXq" secondAttribute="top" constant="2" id="rTT-fM-aQD"/>
+                            <constraint firstItem="EeT-Wr-KGW" firstAttribute="top" secondItem="RnZ-2f-HZC" secondAttribute="bottom" constant="2" id="rTT-fM-aQD"/>
                             <constraint firstItem="PAT-hh-gvA" firstAttribute="top" secondItem="g3o-VT-emF" secondAttribute="bottom" constant="20" id="xjQ-fe-JUC"/>
                             <constraint firstItem="TvB-X0-nm5" firstAttribute="leading" secondItem="H5m-Tj-n8V" secondAttribute="leading" id="zlA-lT-aKi"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="chj-gc-IXq"/>
                     </view>
                     <navigationItem key="navigationItem" id="jM5-eG-IS0"/>
                     <connections>
@@ -3395,6 +3450,10 @@ Greego to drive?</string>
         <scene sceneID="1yv-rM-lN4">
             <objects>
                 <viewController storyboardIdentifier="FreeridesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wAI-Xf-07F" customClass="FreeridesVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Auf-P3-tdB"/>
+                        <viewControllerLayoutGuide type="bottom" id="CmB-c3-KPR"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vbm-ru-gsn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3472,18 +3531,17 @@ Greego to drive?</string>
                             <constraint firstItem="vvm-jf-gqU" firstAttribute="leading" secondItem="3uQ-4q-hLu" secondAttribute="leading" id="Crt-SE-AQ3"/>
                             <constraint firstItem="3uQ-4q-hLu" firstAttribute="top" secondItem="vvm-jf-gqU" secondAttribute="bottom" constant="94" id="HQE-qA-JQx"/>
                             <constraint firstItem="q2u-dq-aB1" firstAttribute="leading" secondItem="vvm-jf-gqU" secondAttribute="leading" id="Laj-p7-hJx"/>
-                            <constraint firstItem="1EE-b4-gXQ" firstAttribute="trailing" secondItem="3uQ-4q-hLu" secondAttribute="trailing" constant="104" id="U8D-Zu-3yn"/>
-                            <constraint firstItem="q2u-dq-aB1" firstAttribute="centerX" secondItem="1EE-b4-gXQ" secondAttribute="centerX" id="c7n-fL-X6z"/>
+                            <constraint firstAttribute="trailing" secondItem="3uQ-4q-hLu" secondAttribute="trailing" constant="104" id="U8D-Zu-3yn"/>
+                            <constraint firstItem="q2u-dq-aB1" firstAttribute="centerX" secondItem="vbm-ru-gsn" secondAttribute="centerX" id="c7n-fL-X6z"/>
                             <constraint firstItem="q2u-dq-aB1" firstAttribute="top" secondItem="ymE-D0-Byp" secondAttribute="bottom" constant="32" id="cFc-2z-5VC"/>
-                            <constraint firstItem="1EE-b4-gXQ" firstAttribute="trailing" secondItem="XiW-Jb-G7F" secondAttribute="trailing" constant="21" id="fBQ-mx-j7N"/>
+                            <constraint firstAttribute="trailing" secondItem="XiW-Jb-G7F" secondAttribute="trailing" constant="21" id="fBQ-mx-j7N"/>
                             <constraint firstItem="vvm-jf-gqU" firstAttribute="top" secondItem="q2u-dq-aB1" secondAttribute="bottom" constant="26" id="i21-Eg-j0f"/>
                             <constraint firstItem="XiW-Jb-G7F" firstAttribute="top" secondItem="3uQ-4q-hLu" secondAttribute="bottom" constant="8" symbolic="YES" id="jGz-sU-Zrr"/>
                             <constraint firstItem="ymE-D0-Byp" firstAttribute="leading" secondItem="vbm-ru-gsn" secondAttribute="leadingMargin" id="nTt-Xd-foK"/>
                             <constraint firstItem="vvm-jf-gqU" firstAttribute="trailing" secondItem="vbm-ru-gsn" secondAttribute="trailingMargin" id="xNe-nr-EFu"/>
-                            <constraint firstItem="ymE-D0-Byp" firstAttribute="top" secondItem="1EE-b4-gXQ" secondAttribute="top" id="xsf-VT-djP"/>
+                            <constraint firstItem="ymE-D0-Byp" firstAttribute="top" secondItem="Auf-P3-tdB" secondAttribute="bottom" id="xsf-VT-djP"/>
                             <constraint firstItem="3uQ-4q-hLu" firstAttribute="leading" secondItem="XiW-Jb-G7F" secondAttribute="leading" id="zJX-X5-S5t"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="1EE-b4-gXQ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibg-Gm-Q0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3494,6 +3552,10 @@ Greego to drive?</string>
         <scene sceneID="ntG-mQ-Gue">
             <objects>
                 <viewController storyboardIdentifier="UpdateprofileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FJ9-fA-zrV" customClass="UpdateprofileViewController" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dhC-Eh-DEy"/>
+                        <viewControllerLayoutGuide type="bottom" id="6ow-Mm-SRu"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VlZ-rT-M36">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3789,12 +3851,11 @@ Greego to drive?</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YB4-D9-VJt" firstAttribute="bottom" secondItem="lBW-jO-fsn" secondAttribute="bottom" id="2Sa-W3-zD3"/>
+                            <constraint firstItem="YB4-D9-VJt" firstAttribute="bottom" secondItem="6ow-Mm-SRu" secondAttribute="top" id="2Sa-W3-zD3"/>
                             <constraint firstAttribute="trailing" secondItem="YB4-D9-VJt" secondAttribute="trailing" id="WGZ-f8-qpS"/>
                             <constraint firstItem="YB4-D9-VJt" firstAttribute="top" secondItem="VlZ-rT-M36" secondAttribute="top" id="gzp-zE-gJY"/>
                             <constraint firstItem="YB4-D9-VJt" firstAttribute="leading" secondItem="VlZ-rT-M36" secondAttribute="leading" id="jLy-gN-Jjp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="lBW-jO-fsn"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="800"/>
@@ -3816,12 +3877,16 @@ Greego to drive?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfk-ap-AeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2568" y="3044"/>
+            <point key="canvasLocation" x="-2679" y="3839"/>
         </scene>
         <!--Vehicle information View Controller-->
         <scene sceneID="7in-fo-118">
             <objects>
                 <viewController storyboardIdentifier="Vehicle_informationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AKH-Ak-u5s" customClass="Vehicle_informationViewController" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eJi-T8-FZk"/>
+                        <viewControllerLayoutGuide type="bottom" id="YXn-VZ-3wM"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="anm-mx-U0A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="870"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4148,11 +4213,10 @@ Greego to drive?</string>
                         <constraints>
                             <constraint firstItem="x6I-0J-8m9" firstAttribute="width" secondItem="anm-mx-U0A" secondAttribute="width" id="5hE-qf-fi3"/>
                             <constraint firstItem="ZV4-yu-U4H" firstAttribute="leading" secondItem="anm-mx-U0A" secondAttribute="leading" id="Uc2-aT-8SS"/>
-                            <constraint firstItem="ZV4-yu-U4H" firstAttribute="bottom" secondItem="8bu-3d-E8W" secondAttribute="bottom" id="bas-La-mzz"/>
+                            <constraint firstItem="ZV4-yu-U4H" firstAttribute="bottom" secondItem="YXn-VZ-3wM" secondAttribute="top" id="bas-La-mzz"/>
                             <constraint firstAttribute="trailing" secondItem="ZV4-yu-U4H" secondAttribute="trailing" id="qVO-O1-sFE"/>
                             <constraint firstItem="ZV4-yu-U4H" firstAttribute="top" secondItem="anm-mx-U0A" secondAttribute="top" id="x4M-FD-5f5"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8bu-3d-E8W"/>
                     </view>
                     <size key="freeformSize" width="320" height="870"/>
                     <connections>
@@ -4175,6 +4239,10 @@ Greego to drive?</string>
         <scene sceneID="PIl-LL-AFE">
             <objects>
                 <viewController storyboardIdentifier="DriverRatingVC" title="DriverRatingVC" id="E90-ib-u0q" customClass="DriverRatingVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wMh-mn-1Gm"/>
+                        <viewControllerLayoutGuide type="bottom" id="DjA-3h-fmF"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Duv-ei-jVJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4296,8 +4364,8 @@ Greego to drive?</string>
                         </subviews>
                         <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="0.70029159330000001" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8JO-yx-Pvb" firstAttribute="top" secondItem="xwX-us-MJd" secondAttribute="top" constant="46" id="2Z7-9b-l8N"/>
-                            <constraint firstItem="8JO-yx-Pvb" firstAttribute="centerX" secondItem="xwX-us-MJd" secondAttribute="centerX" id="8Fh-SX-Y3r"/>
+                            <constraint firstItem="8JO-yx-Pvb" firstAttribute="top" secondItem="wMh-mn-1Gm" secondAttribute="bottom" constant="46" id="2Z7-9b-l8N"/>
+                            <constraint firstItem="8JO-yx-Pvb" firstAttribute="centerX" secondItem="Duv-ei-jVJ" secondAttribute="centerX" id="8Fh-SX-Y3r"/>
                             <constraint firstItem="L1X-fp-8nX" firstAttribute="top" secondItem="8JO-yx-Pvb" secondAttribute="bottom" constant="28" id="Lv7-Kf-cFg"/>
                             <constraint firstItem="8JO-yx-Pvb" firstAttribute="leading" secondItem="L1X-fp-8nX" secondAttribute="leading" id="T7z-JP-lak"/>
                             <constraint firstItem="8JO-yx-Pvb" firstAttribute="top" secondItem="Dzt-EA-ewL" secondAttribute="bottom" constant="15" id="ZEs-j5-yUd"/>
@@ -4306,7 +4374,6 @@ Greego to drive?</string>
                             <constraint firstItem="8JO-yx-Pvb" firstAttribute="leading" secondItem="Duv-ei-jVJ" secondAttribute="leadingMargin" id="j6W-Hs-EbF"/>
                             <constraint firstItem="8JO-yx-Pvb" firstAttribute="trailing" secondItem="L1X-fp-8nX" secondAttribute="trailing" id="wfY-MQ-Nx6"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="xwX-us-MJd"/>
                     </view>
                     <connections>
                         <outlet property="btnsubmit" destination="L1X-fp-8nX" id="Hql-7s-DGU"/>
@@ -4326,6 +4393,10 @@ Greego to drive?</string>
         <scene sceneID="QLP-8s-6gm">
             <objects>
                 <viewController storyboardIdentifier="LoaderVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3ku-OT-S6U" customClass="LoaderVC" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2g4-dd-HZ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="zoi-i0-nze"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GUr-EN-PbG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4350,12 +4421,11 @@ Greego to drive?</string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.50588235290000005" alpha="0.34069652288732394" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="D6C-CR-TXK" firstAttribute="centerX" secondItem="eb5-lw-4XR" secondAttribute="centerX" id="DAB-99-E8j"/>
-                            <constraint firstItem="eb5-lw-4XR" firstAttribute="bottom" secondItem="Wwq-TO-uLV" secondAttribute="bottom" constant="86" id="EOR-gq-ML2"/>
+                            <constraint firstItem="D6C-CR-TXK" firstAttribute="centerX" secondItem="GUr-EN-PbG" secondAttribute="centerX" id="DAB-99-E8j"/>
+                            <constraint firstItem="zoi-i0-nze" firstAttribute="top" secondItem="Wwq-TO-uLV" secondAttribute="bottom" constant="86" id="EOR-gq-ML2"/>
                             <constraint firstItem="Wwq-TO-uLV" firstAttribute="top" secondItem="D6C-CR-TXK" secondAttribute="bottom" constant="54" id="SU2-q7-caE"/>
                             <constraint firstItem="Wwq-TO-uLV" firstAttribute="centerX" secondItem="D6C-CR-TXK" secondAttribute="centerX" id="WtW-Ob-4ki"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="eb5-lw-4XR"/>
                     </view>
                     <connections>
                         <outlet property="imgview" destination="D6C-CR-TXK" id="aCB-5Z-cha"/>
@@ -4363,12 +4433,16 @@ Greego to drive?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9LY-WC-z1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1747.5" y="3094.0140845070423"/>
+            <point key="canvasLocation" x="-1828" y="3757"/>
         </scene>
         <!--Paymentscreen1 View Controller-->
         <scene sceneID="qX3-UF-Y0s">
             <objects>
                 <viewController storyboardIdentifier="Paymentscreen1ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fBa-EN-2rc" customClass="Paymentscreen1ViewController" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fqG-si-3CU"/>
+                        <viewControllerLayoutGuide type="bottom" id="h4k-qN-Jq7"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cyh-B2-0kY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4596,7 +4670,7 @@ Greego to drive?</string>
                             <constraint firstItem="wWt-yO-n7f" firstAttribute="top" secondItem="TlF-zU-WkE" secondAttribute="bottom" constant="8" symbolic="YES" id="7wy-jC-Ff4"/>
                             <constraint firstItem="rj3-Rt-NSL" firstAttribute="leading" secondItem="wWt-yO-n7f" secondAttribute="leading" id="9YF-px-8vI"/>
                             <constraint firstItem="zWd-fi-orR" firstAttribute="top" secondItem="wWt-yO-n7f" secondAttribute="top" id="Fqb-i1-MA0"/>
-                            <constraint firstItem="sj5-MT-tvo" firstAttribute="bottom" secondItem="wg7-RT-4Tm" secondAttribute="bottom" constant="-1" id="GAP-lF-smK"/>
+                            <constraint firstItem="sj5-MT-tvo" firstAttribute="bottom" secondItem="h4k-qN-Jq7" secondAttribute="top" constant="-1" id="GAP-lF-smK"/>
                             <constraint firstItem="api-ZA-Ac3" firstAttribute="top" secondItem="wWt-yO-n7f" secondAttribute="bottom" constant="36" id="HlW-Tx-fnL"/>
                             <constraint firstItem="TlF-zU-WkE" firstAttribute="leading" secondItem="CbF-vH-pH6" secondAttribute="leading" id="KVi-Md-7tF"/>
                             <constraint firstItem="TlF-zU-WkE" firstAttribute="trailing" secondItem="wWt-yO-n7f" secondAttribute="trailing" id="NIW-wn-lBe"/>
@@ -4604,17 +4678,16 @@ Greego to drive?</string>
                             <constraint firstItem="TlF-zU-WkE" firstAttribute="leading" secondItem="wWt-yO-n7f" secondAttribute="leading" id="UNy-qk-DWv"/>
                             <constraint firstItem="TlF-zU-WkE" firstAttribute="trailing" secondItem="CbF-vH-pH6" secondAttribute="trailing" id="VOh-3M-6Vc"/>
                             <constraint firstItem="zWd-fi-orR" firstAttribute="centerX" secondItem="sj5-MT-tvo" secondAttribute="centerX" id="bJE-Dx-8AR"/>
-                            <constraint firstItem="CbF-vH-pH6" firstAttribute="top" secondItem="wg7-RT-4Tm" secondAttribute="top" constant="35" id="dUG-ve-eBk"/>
-                            <constraint firstItem="gbX-Pr-l9A" firstAttribute="leading" secondItem="wg7-RT-4Tm" secondAttribute="leading" constant="10" id="eNx-o7-2Ls"/>
+                            <constraint firstItem="CbF-vH-pH6" firstAttribute="top" secondItem="fqG-si-3CU" secondAttribute="bottom" constant="35" id="dUG-ve-eBk"/>
+                            <constraint firstItem="gbX-Pr-l9A" firstAttribute="leading" secondItem="Cyh-B2-0kY" secondAttribute="leading" constant="10" id="eNx-o7-2Ls"/>
                             <constraint firstItem="CbF-vH-pH6" firstAttribute="leading" secondItem="Cyh-B2-0kY" secondAttribute="leading" id="eRe-yc-NSS"/>
                             <constraint firstItem="8Zw-MM-jkw" firstAttribute="leading" secondItem="Cyh-B2-0kY" secondAttribute="leadingMargin" id="iV1-XD-Ohg"/>
-                            <constraint firstItem="Cwf-r3-TMn" firstAttribute="top" secondItem="wg7-RT-4Tm" secondAttribute="top" constant="1" id="jCe-Kh-dvD"/>
-                            <constraint firstItem="Cwf-r3-TMn" firstAttribute="leading" secondItem="wg7-RT-4Tm" secondAttribute="leading" constant="9" id="lv5-yX-AW8"/>
-                            <constraint firstItem="wg7-RT-4Tm" firstAttribute="trailing" secondItem="gbX-Pr-l9A" secondAttribute="trailing" constant="186" id="pDQ-aA-FuN"/>
+                            <constraint firstItem="Cwf-r3-TMn" firstAttribute="top" secondItem="fqG-si-3CU" secondAttribute="bottom" constant="1" id="jCe-Kh-dvD"/>
+                            <constraint firstItem="Cwf-r3-TMn" firstAttribute="leading" secondItem="Cyh-B2-0kY" secondAttribute="leading" constant="9" id="lv5-yX-AW8"/>
+                            <constraint firstAttribute="trailing" secondItem="gbX-Pr-l9A" secondAttribute="trailing" constant="186" id="pDQ-aA-FuN"/>
                             <constraint firstItem="api-ZA-Ac3" firstAttribute="centerX" secondItem="wWt-yO-n7f" secondAttribute="centerX" id="qw1-At-aAR"/>
                             <constraint firstItem="api-ZA-Ac3" firstAttribute="leading" secondItem="Cwf-r3-TMn" secondAttribute="leading" id="uQb-nh-2rH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="wg7-RT-4Tm"/>
                     </view>
                     <connections>
                         <outlet property="btnmethod" destination="wWt-yO-n7f" id="eCC-UU-SNc"/>
@@ -4629,10 +4702,168 @@ Greego to drive?</string>
             </objects>
             <point key="canvasLocation" x="-958.125" y="3017.9577464788731"/>
         </scene>
-        <!--HelpVC-->
+        <!--Tip View Controller-->
+        <scene sceneID="EyN-2G-SPn">
+            <objects>
+                <viewController storyboardIdentifier="TipViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gqa-pN-W6N" customClass="TipViewController" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6dt-I5-7Ua"/>
+                        <viewControllerLayoutGuide type="bottom" id="MbF-dP-BKR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mve-mf-OVP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6p7-Zm-Ua7">
+                                <rect key="frame" x="19" y="113" width="282" height="302"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2nd Avenue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcJ-on-0X8">
+                                        <rect key="frame" x="63" y="15" width="158" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="158" id="NXY-yJ-P4Y"/>
+                                            <constraint firstAttribute="height" constant="43" id="X71-FI-q4C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWF-se-L4P">
+                                        <rect key="frame" x="30" y="92" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="o9x-yP-tKB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="20"/>
+                                        <state key="normal" title="10%">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deX-2F-s9S">
+                                        <rect key="frame" x="115" y="92" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="h4R-z7-DRQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="20"/>
+                                        <state key="normal" title="15%">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6G-mN-IHb">
+                                        <rect key="frame" x="202" y="92" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="20"/>
+                                        <state key="normal" title="20%">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igc-iV-4IX">
+                                        <rect key="frame" x="9" y="178" width="89" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="S3M-yL-htm"/>
+                                            <constraint firstAttribute="width" constant="89" id="Sp5-LV-hzr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tip" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceT-Vv-Yeu">
+                                        <rect key="frame" x="103" y="174" width="72" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="goS-kj-esj"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McJ-SC-1jZ">
+                                        <rect key="frame" x="77" y="240" width="128" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.82352941180000006" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="DMZ-eD-btu"/>
+                                            <constraint firstAttribute="width" constant="128" id="tH1-lg-C3V"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnnextaction:" destination="gqa-pN-W6N" eventType="touchUpInside" id="D69-1B-Zwi"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLn-sq-en4">
+                                        <rect key="frame" x="227" y="176" width="53" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="53" id="4iV-oy-T6D"/>
+                                            <constraint firstAttribute="height" constant="22" id="Ee5-cl-XrR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDS-4j-8i1" customClass="CTCheckbox">
+                                        <rect key="frame" x="192" y="175" width="27" height="27"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="checkbox:" destination="plE-Gt-DJs" eventType="valueChanged" id="unV-mB-sCD"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qWF-se-L4P" firstAttribute="baseline" secondItem="deX-2F-s9S" secondAttribute="firstBaseline" id="4Ws-lO-CKZ"/>
+                                    <constraint firstItem="BLn-sq-en4" firstAttribute="top" secondItem="k6G-mN-IHb" secondAttribute="bottom" constant="34" id="5qc-ol-y0b"/>
+                                    <constraint firstAttribute="height" constant="302" id="6PJ-9x-Gew"/>
+                                    <constraint firstItem="ceT-Vv-Yeu" firstAttribute="leading" secondItem="igc-iV-4IX" secondAttribute="trailing" constant="5" id="7qR-O0-jwZ"/>
+                                    <constraint firstItem="qWF-se-L4P" firstAttribute="top" secondItem="DcJ-on-0X8" secondAttribute="bottom" constant="34" id="8mI-bO-rQf"/>
+                                    <constraint firstAttribute="bottom" secondItem="McJ-SC-1jZ" secondAttribute="bottom" constant="24" id="AgN-ew-beL"/>
+                                    <constraint firstItem="deX-2F-s9S" firstAttribute="top" secondItem="k6G-mN-IHb" secondAttribute="top" id="BZV-zf-u6j"/>
+                                    <constraint firstItem="deX-2F-s9S" firstAttribute="baseline" secondItem="k6G-mN-IHb" secondAttribute="firstBaseline" id="Bac-P3-glR"/>
+                                    <constraint firstItem="BLn-sq-en4" firstAttribute="leading" secondItem="tDS-4j-8i1" secondAttribute="trailing" constant="8" symbolic="YES" id="EZ7-QX-CEG"/>
+                                    <constraint firstItem="igc-iV-4IX" firstAttribute="top" secondItem="qWF-se-L4P" secondAttribute="bottom" constant="36" id="JqB-rg-zlD"/>
+                                    <constraint firstItem="DcJ-on-0X8" firstAttribute="centerX" secondItem="6p7-Zm-Ua7" secondAttribute="centerX" constant="1" id="W0B-VF-uJQ"/>
+                                    <constraint firstItem="igc-iV-4IX" firstAttribute="centerY" secondItem="ceT-Vv-Yeu" secondAttribute="centerY" id="WoU-6l-iD6"/>
+                                    <constraint firstItem="qWF-se-L4P" firstAttribute="leading" secondItem="6p7-Zm-Ua7" secondAttribute="leading" constant="30" id="Xxd-Hl-awR"/>
+                                    <constraint firstItem="igc-iV-4IX" firstAttribute="leading" secondItem="6p7-Zm-Ua7" secondAttribute="leading" constant="9" id="YTv-X4-UL1"/>
+                                    <constraint firstAttribute="trailing" secondItem="BLn-sq-en4" secondAttribute="trailing" constant="2" id="dSH-yM-qLo"/>
+                                    <constraint firstItem="DcJ-on-0X8" firstAttribute="top" secondItem="6p7-Zm-Ua7" secondAttribute="top" constant="15" id="f2W-08-RSv"/>
+                                    <constraint firstItem="deX-2F-s9S" firstAttribute="leading" secondItem="qWF-se-L4P" secondAttribute="trailing" constant="35" id="f79-fD-BCM"/>
+                                    <constraint firstItem="McJ-SC-1jZ" firstAttribute="centerX" secondItem="6p7-Zm-Ua7" secondAttribute="centerX" id="kOm-Yt-Vfl"/>
+                                    <constraint firstItem="k6G-mN-IHb" firstAttribute="leading" secondItem="deX-2F-s9S" secondAttribute="trailing" constant="37" id="kb9-oT-drn"/>
+                                    <constraint firstAttribute="trailing" secondItem="k6G-mN-IHb" secondAttribute="trailing" constant="30" id="kfc-zn-IbZ"/>
+                                    <constraint firstItem="tDS-4j-8i1" firstAttribute="top" secondItem="k6G-mN-IHb" secondAttribute="bottom" constant="33" id="lNe-kV-ZDL"/>
+                                    <constraint firstAttribute="width" constant="282" id="mcl-Dm-KXk"/>
+                                    <constraint firstItem="tDS-4j-8i1" firstAttribute="leading" secondItem="ceT-Vv-Yeu" secondAttribute="trailing" constant="17" id="n8D-R8-RGu"/>
+                                    <constraint firstItem="ceT-Vv-Yeu" firstAttribute="centerY" secondItem="tDS-4j-8i1" secondAttribute="centerY" id="osH-Wx-PDX"/>
+                                    <constraint firstItem="McJ-SC-1jZ" firstAttribute="top" secondItem="ceT-Vv-Yeu" secondAttribute="bottom" constant="36" id="r3b-B5-CbW"/>
+                                    <constraint firstItem="qWF-se-L4P" firstAttribute="top" secondItem="deX-2F-s9S" secondAttribute="top" id="xXp-3C-evb"/>
+                                    <constraint firstItem="ceT-Vv-Yeu" firstAttribute="top" secondItem="deX-2F-s9S" secondAttribute="bottom" constant="32" id="xsC-6u-Dzp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="0.70029159330000001" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6p7-Zm-Ua7" firstAttribute="centerX" secondItem="mve-mf-OVP" secondAttribute="centerX" id="4qZ-9o-UJM"/>
+                            <constraint firstItem="6p7-Zm-Ua7" firstAttribute="centerY" secondItem="mve-mf-OVP" secondAttribute="centerY" constant="-20" id="rz2-vz-btU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn10" destination="qWF-se-L4P" id="fF8-g6-M1v"/>
+                        <outlet property="btn15" destination="deX-2F-s9S" id="xQy-sO-qZa"/>
+                        <outlet property="btn20" destination="k6G-mN-IHb" id="18U-wB-OBp"/>
+                        <outlet property="cb" destination="tDS-4j-8i1" id="LAD-we-3aC"/>
+                        <outlet property="txttip" destination="ceT-Vv-Yeu" id="gea-U6-fbp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkB-Dd-Nif" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-198.75" y="3021.1267605633802"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="hHK-u7-xdR">
             <objects>
-                <viewController storyboardIdentifier="HelpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zgd-Cq-np4" customClass="HelpVC" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zgd-Cq-np4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="onj-3e-GJP"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ei-ef-n6B"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0NX-c0-3iG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4666,16 +4897,15 @@ Greego to drive?</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GjF-pa-TbV" secondAttribute="trailing" id="BFp-a8-Tgx"/>
-                            <constraint firstItem="GLZ-Hk-NMz" firstAttribute="top" secondItem="jyJ-Bt-pZ6" secondAttribute="top" id="LKm-EJ-wXy"/>
+                            <constraint firstItem="GLZ-Hk-NMz" firstAttribute="top" secondItem="onj-3e-GJP" secondAttribute="bottom" id="LKm-EJ-wXy"/>
                             <constraint firstItem="GLZ-Hk-NMz" firstAttribute="leading" secondItem="Xam-t6-vb5" secondAttribute="trailing" constant="36" id="RKA-Re-lHz"/>
                             <constraint firstItem="GjF-pa-TbV" firstAttribute="leading" secondItem="0NX-c0-3iG" secondAttribute="leading" id="YSJ-Wh-YdP"/>
-                            <constraint firstItem="Xam-t6-vb5" firstAttribute="top" secondItem="jyJ-Bt-pZ6" secondAttribute="top" constant="4" id="Yeb-Dd-1cR"/>
-                            <constraint firstItem="jyJ-Bt-pZ6" firstAttribute="trailing" secondItem="GLZ-Hk-NMz" secondAttribute="trailing" constant="64" id="ZsQ-il-4sK"/>
-                            <constraint firstItem="GjF-pa-TbV" firstAttribute="bottom" secondItem="jyJ-Bt-pZ6" secondAttribute="bottom" id="hcR-hF-cuG"/>
+                            <constraint firstItem="Xam-t6-vb5" firstAttribute="top" secondItem="onj-3e-GJP" secondAttribute="bottom" constant="4" id="Yeb-Dd-1cR"/>
+                            <constraint firstAttribute="trailing" secondItem="GLZ-Hk-NMz" secondAttribute="trailing" constant="64" id="ZsQ-il-4sK"/>
+                            <constraint firstItem="GjF-pa-TbV" firstAttribute="bottom" secondItem="4ei-ef-n6B" secondAttribute="top" id="hcR-hF-cuG"/>
                             <constraint firstItem="GjF-pa-TbV" firstAttribute="top" secondItem="GLZ-Hk-NMz" secondAttribute="bottom" constant="8" symbolic="YES" id="jaF-E5-4WY"/>
-                            <constraint firstItem="Xam-t6-vb5" firstAttribute="leading" secondItem="jyJ-Bt-pZ6" secondAttribute="leading" constant="19" id="vmJ-Zu-VSw"/>
+                            <constraint firstItem="Xam-t6-vb5" firstAttribute="leading" secondItem="0NX-c0-3iG" secondAttribute="leading" constant="19" id="vmJ-Zu-VSw"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="jyJ-Bt-pZ6"/>
                     </view>
                     <navigationItem key="navigationItem" id="cnc-e8-Jyw">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Qe4-0n-92J">
@@ -4698,6 +4928,10 @@ Greego to drive?</string>
         <scene sceneID="Or3-Vm-5gz">
             <objects>
                 <viewController storyboardIdentifier="AddpaymentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="22X-X6-h1H" customClass="AddpaymentViewController" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mcE-98-gSO"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Ho-xk-h0R"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lMO-Mm-QiV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4839,10 +5073,10 @@ Greego to drive?</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Atx-RU-U3e" firstAttribute="leading" secondItem="ZrZ-rg-XCF" secondAttribute="leading" constant="9" id="08w-JY-V1B"/>
+                            <constraint firstItem="Atx-RU-U3e" firstAttribute="leading" secondItem="lMO-Mm-QiV" secondAttribute="leading" constant="9" id="08w-JY-V1B"/>
                             <constraint firstItem="my8-at-Rrj" firstAttribute="bottom" secondItem="Onu-f0-u6h" secondAttribute="bottom" id="19D-mU-LOE"/>
                             <constraint firstItem="Onu-f0-u6h" firstAttribute="trailing" secondItem="S3f-1l-bhV" secondAttribute="trailing" id="27d-zr-xs4"/>
-                            <constraint firstItem="S3f-1l-bhV" firstAttribute="leading" secondItem="ZrZ-rg-XCF" secondAttribute="leading" constant="41" id="2xs-b5-fct"/>
+                            <constraint firstItem="S3f-1l-bhV" firstAttribute="leading" secondItem="lMO-Mm-QiV" secondAttribute="leading" constant="41" id="2xs-b5-fct"/>
                             <constraint firstItem="3Kf-5d-koQ" firstAttribute="top" secondItem="pAh-N3-xHP" secondAttribute="bottom" constant="24" id="5GZ-In-8da"/>
                             <constraint firstItem="9af-4j-rV3" firstAttribute="top" secondItem="S3f-1l-bhV" secondAttribute="bottom" constant="59" id="8kL-1F-ScH"/>
                             <constraint firstItem="Onu-f0-u6h" firstAttribute="top" secondItem="9af-4j-rV3" secondAttribute="bottom" constant="8" id="9Qe-cd-nOq"/>
@@ -4850,9 +5084,9 @@ Greego to drive?</string>
                             <constraint firstItem="3Kf-5d-koQ" firstAttribute="leading" secondItem="vib-LE-kAD" secondAttribute="leading" id="DOq-dU-3Le"/>
                             <constraint firstItem="my8-at-Rrj" firstAttribute="top" secondItem="Onu-f0-u6h" secondAttribute="top" id="IBS-vM-jqA"/>
                             <constraint firstItem="Onu-f0-u6h" firstAttribute="trailing" secondItem="1r2-h2-SmN" secondAttribute="trailing" id="JML-Yg-2vf"/>
-                            <constraint firstItem="Atx-RU-U3e" firstAttribute="top" secondItem="ZrZ-rg-XCF" secondAttribute="top" constant="11" id="Kmx-6D-zf0"/>
+                            <constraint firstItem="Atx-RU-U3e" firstAttribute="top" secondItem="mcE-98-gSO" secondAttribute="bottom" constant="11" id="Kmx-6D-zf0"/>
                             <constraint firstItem="Nq8-Qy-pIa" firstAttribute="top" secondItem="vib-LE-kAD" secondAttribute="bottom" constant="25" id="MFV-BE-WW2"/>
-                            <constraint firstItem="9af-4j-rV3" firstAttribute="leading" secondItem="ZrZ-rg-XCF" secondAttribute="leading" constant="45" id="NE8-Vd-M7o"/>
+                            <constraint firstItem="9af-4j-rV3" firstAttribute="leading" secondItem="lMO-Mm-QiV" secondAttribute="leading" constant="45" id="NE8-Vd-M7o"/>
                             <constraint firstItem="WFZ-i0-MVp" firstAttribute="top" secondItem="6Yx-6C-ZeZ" secondAttribute="bottom" constant="74" id="QGV-qE-ii2"/>
                             <constraint firstItem="vib-LE-kAD" firstAttribute="top" secondItem="3Kf-5d-koQ" secondAttribute="bottom" constant="1" id="RAx-pf-4bv"/>
                             <constraint firstItem="pAh-N3-xHP" firstAttribute="top" secondItem="Onu-f0-u6h" secondAttribute="bottom" constant="1" id="RIj-GM-qWE"/>
@@ -4863,9 +5097,9 @@ Greego to drive?</string>
                             <constraint firstItem="VLD-db-PBL" firstAttribute="trailing" secondItem="1r2-h2-SmN" secondAttribute="trailing" id="W8N-ER-iHb"/>
                             <constraint firstItem="WFZ-i0-MVp" firstAttribute="width" secondItem="lMO-Mm-QiV" secondAttribute="width" id="Xlz-eo-xDl"/>
                             <constraint firstItem="Nq8-Qy-pIa" firstAttribute="trailing" secondItem="Z1B-hA-C7L" secondAttribute="trailing" id="dYF-KF-LYS"/>
-                            <constraint firstItem="ZrZ-rg-XCF" firstAttribute="trailing" secondItem="WFZ-i0-MVp" secondAttribute="trailing" id="eCN-Xf-1aL"/>
-                            <constraint firstItem="6Yx-6C-ZeZ" firstAttribute="centerX" secondItem="ZrZ-rg-XCF" secondAttribute="centerX" id="fCx-AR-Rz5"/>
-                            <constraint firstItem="ZrZ-rg-XCF" firstAttribute="trailing" secondItem="9af-4j-rV3" secondAttribute="trailing" constant="172" id="fP7-iR-rBQ"/>
+                            <constraint firstAttribute="trailing" secondItem="WFZ-i0-MVp" secondAttribute="trailing" id="eCN-Xf-1aL"/>
+                            <constraint firstItem="6Yx-6C-ZeZ" firstAttribute="centerX" secondItem="lMO-Mm-QiV" secondAttribute="centerX" id="fCx-AR-Rz5"/>
+                            <constraint firstAttribute="trailing" secondItem="9af-4j-rV3" secondAttribute="trailing" constant="172" id="fP7-iR-rBQ"/>
                             <constraint firstItem="3Kf-5d-koQ" firstAttribute="trailing" secondItem="vib-LE-kAD" secondAttribute="trailing" id="fPx-jN-l4g"/>
                             <constraint firstItem="VLD-db-PBL" firstAttribute="leading" secondItem="3Kf-5d-koQ" secondAttribute="trailing" constant="27" id="g3h-k7-nbt"/>
                             <constraint firstItem="vib-LE-kAD" firstAttribute="baseline" secondItem="1r2-h2-SmN" secondAttribute="baseline" id="gH3-fY-uIA"/>
@@ -4873,9 +5107,9 @@ Greego to drive?</string>
                             <constraint firstItem="pAh-N3-xHP" firstAttribute="top" secondItem="my8-at-Rrj" secondAttribute="bottom" constant="1" id="i9L-Ni-gas"/>
                             <constraint firstItem="VLD-db-PBL" firstAttribute="bottom" secondItem="3Kf-5d-koQ" secondAttribute="bottom" id="iED-dp-Ire"/>
                             <constraint firstItem="my8-at-Rrj" firstAttribute="leading" secondItem="9af-4j-rV3" secondAttribute="leading" id="maQ-1g-wZB"/>
-                            <constraint firstItem="WFZ-i0-MVp" firstAttribute="leading" secondItem="ZrZ-rg-XCF" secondAttribute="leading" id="nar-OI-RH9"/>
-                            <constraint firstItem="S3f-1l-bhV" firstAttribute="centerX" secondItem="ZrZ-rg-XCF" secondAttribute="centerX" constant="1" id="oLs-3e-c5v"/>
-                            <constraint firstItem="ZrZ-rg-XCF" firstAttribute="trailing" secondItem="S3f-1l-bhV" secondAttribute="trailing" constant="39" id="rDr-re-dbf"/>
+                            <constraint firstItem="WFZ-i0-MVp" firstAttribute="leading" secondItem="lMO-Mm-QiV" secondAttribute="leading" id="nar-OI-RH9"/>
+                            <constraint firstItem="S3f-1l-bhV" firstAttribute="centerX" secondItem="lMO-Mm-QiV" secondAttribute="centerX" constant="1" id="oLs-3e-c5v"/>
+                            <constraint firstAttribute="trailing" secondItem="S3f-1l-bhV" secondAttribute="trailing" constant="39" id="rDr-re-dbf"/>
                             <constraint firstItem="S3f-1l-bhV" firstAttribute="top" secondItem="Atx-RU-U3e" secondAttribute="bottom" constant="23" id="sdd-Kg-wDm"/>
                             <constraint firstItem="Z1B-hA-C7L" firstAttribute="top" secondItem="Nq8-Qy-pIa" secondAttribute="bottom" constant="2" id="ttg-wi-nyU"/>
                             <constraint firstItem="VLD-db-PBL" firstAttribute="baseline" secondItem="3Kf-5d-koQ" secondAttribute="baseline" id="uWa-DP-d5m"/>
@@ -4886,7 +5120,6 @@ Greego to drive?</string>
                             <constraint firstItem="pAh-N3-xHP" firstAttribute="leading" secondItem="3Kf-5d-koQ" secondAttribute="leading" id="zmJ-kt-tqp"/>
                             <constraint firstItem="VLD-db-PBL" firstAttribute="centerX" secondItem="1r2-h2-SmN" secondAttribute="centerX" id="zv4-N9-RaH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ZrZ-rg-XCF"/>
                     </view>
                     <connections>
                         <outlet property="imgview" destination="my8-at-Rrj" id="89H-g7-YuI"/>
@@ -4912,12 +5145,425 @@ Greego to drive?</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Zgd-Cq-np4" kind="relationship" relationship="rootViewController" id="0Li-R5-CNY"/>
+                        <segue destination="wrH-yK-0E4" kind="relationship" relationship="rootViewController" id="gVF-5U-bEE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jkI-PA-rUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3583" y="1280"/>
+        </scene>
+        <!--HelpVC-->
+        <scene sceneID="vyL-0R-Xeh">
+            <objects>
+                <viewController storyboardIdentifier="HelpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wrH-yK-0E4" customClass="HelpVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hf6-j5-L2J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRW-ux-z45">
+                                <rect key="frame" x="19" y="24" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="CdP-Iz-gTM"/>
+                                    <constraint firstAttribute="height" constant="25" id="Nab-mE-9SE"/>
+                                </constraints>
+                                <state key="normal" image="Back_button"/>
+                                <connections>
+                                    <action selector="back_action:" destination="wrH-yK-0E4" eventType="touchUpInside" id="VNf-yu-rTM"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Greego1" translatesAutoresizingMaskIntoConstraints="NO" id="rHm-UN-Mw4">
+                                <rect key="frame" x="85" y="20" width="171" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AqQ-p1-PdH"/>
+                                    <constraint firstAttribute="width" constant="171" id="x5b-0U-7yv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="xEh-AQ-DI2">
+                                <rect key="frame" x="0.0" y="68" width="320" height="153"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_greego_logo" translatesAutoresizingMaskIntoConstraints="NO" id="auF-LT-Jes">
+                                <rect key="frame" x="34" y="107" width="246" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="IWu-Nw-IsJ"/>
+                                    <constraint firstAttribute="width" constant="246" id="yCm-va-39d"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYb-cE-7x1">
+                                <rect key="frame" x="19" y="256" width="285" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="EMU-Ix-OOn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                <state key="normal" title="HOW CAN WE HELP?">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYi-69-TbZ">
+                                <rect key="frame" x="19" y="315" width="285" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="xvy-Ur-P51"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                <state key="normal" title="Lost &amp; found">
+                                    <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tPm-pP-hn2" kind="show" id="8Ow-p6-5UA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sir-jJ-foO">
+                                <rect key="frame" x="19" y="435" width="285" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="DWn-5w-Tk0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                <state key="normal" title="Service animal policy">
+                                    <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JgM-Mi-Cpg" kind="show" id="b64-fm-fPx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNk-AR-R5r">
+                                <rect key="frame" x="8" y="494" width="305" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="UDT-jV-P4U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
+                                <state key="normal" title="Report an accident, safety incident, or citation">
+                                    <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="INf-mQ-bBG" kind="show" id="fr8-Qr-DaI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ene-J9-lnJ">
+                                <rect key="frame" x="13" y="376" width="300" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="W8Q-tg-W2H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="16"/>
+                                <state key="normal" title="How and when driver pay is calculated?">
+                                    <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bWj-Re-GD5" kind="show" id="J2G-e7-9r2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gYb-cE-7x1" firstAttribute="leading" secondItem="hRW-ux-z45" secondAttribute="leading" id="1KL-Qr-moI"/>
+                            <constraint firstItem="HNk-AR-R5r" firstAttribute="top" secondItem="sir-jJ-foO" secondAttribute="bottom" constant="23" id="3jN-K7-0cw"/>
+                            <constraint firstItem="hRW-ux-z45" firstAttribute="top" secondItem="WT1-mU-YRl" secondAttribute="top" constant="4" id="82U-rR-CAu"/>
+                            <constraint firstItem="gYb-cE-7x1" firstAttribute="trailing" secondItem="hf6-j5-L2J" secondAttribute="trailingMargin" id="9Fc-a5-4xx"/>
+                            <constraint firstAttribute="trailing" secondItem="xEh-AQ-DI2" secondAttribute="trailing" id="AjS-ic-ok5"/>
+                            <constraint firstItem="gYb-cE-7x1" firstAttribute="top" secondItem="xEh-AQ-DI2" secondAttribute="bottom" constant="35" id="Atn-oL-C6c"/>
+                            <constraint firstItem="Ene-J9-lnJ" firstAttribute="top" secondItem="eYi-69-TbZ" secondAttribute="bottom" constant="25" id="CsP-bI-36z"/>
+                            <constraint firstItem="gYb-cE-7x1" firstAttribute="trailing" secondItem="eYi-69-TbZ" secondAttribute="trailing" id="Dao-cZ-JLy"/>
+                            <constraint firstItem="auF-LT-Jes" firstAttribute="centerX" secondItem="xEh-AQ-DI2" secondAttribute="centerX" constant="-3" id="Jsh-ZM-XUF"/>
+                            <constraint firstItem="auF-LT-Jes" firstAttribute="top" secondItem="rHm-UN-Mw4" secondAttribute="bottom" constant="47" id="Num-P4-X3a"/>
+                            <constraint firstItem="hRW-ux-z45" firstAttribute="leading" secondItem="WT1-mU-YRl" secondAttribute="leading" constant="19" id="Pgz-I6-arE"/>
+                            <constraint firstItem="eYi-69-TbZ" firstAttribute="leading" secondItem="sir-jJ-foO" secondAttribute="leading" id="Sfl-Kc-zY3"/>
+                            <constraint firstItem="WT1-mU-YRl" firstAttribute="trailing" secondItem="rHm-UN-Mw4" secondAttribute="trailing" constant="64" id="T8f-RE-T21"/>
+                            <constraint firstItem="eYi-69-TbZ" firstAttribute="trailing" secondItem="sir-jJ-foO" secondAttribute="trailing" id="aIt-Wu-r0v"/>
+                            <constraint firstItem="sir-jJ-foO" firstAttribute="top" secondItem="Ene-J9-lnJ" secondAttribute="bottom" constant="23" id="aZs-Y6-j4g"/>
+                            <constraint firstItem="WT1-mU-YRl" firstAttribute="bottom" secondItem="HNk-AR-R5r" secondAttribute="bottom" constant="38" id="eH7-yO-V2L"/>
+                            <constraint firstItem="xEh-AQ-DI2" firstAttribute="centerX" secondItem="HNk-AR-R5r" secondAttribute="centerX" id="eRs-a5-WZ1"/>
+                            <constraint firstItem="xEh-AQ-DI2" firstAttribute="leading" secondItem="hf6-j5-L2J" secondAttribute="leading" id="exC-kI-Sz2"/>
+                            <constraint firstItem="rHm-UN-Mw4" firstAttribute="leading" secondItem="hRW-ux-z45" secondAttribute="trailing" constant="36" id="fbI-bl-KFV"/>
+                            <constraint firstItem="HNk-AR-R5r" firstAttribute="leading" secondItem="WT1-mU-YRl" secondAttribute="leading" constant="8" id="lNE-7G-l7o"/>
+                            <constraint firstItem="gYb-cE-7x1" firstAttribute="leading" secondItem="eYi-69-TbZ" secondAttribute="leading" id="ltf-g1-eiO"/>
+                            <constraint firstItem="rHm-UN-Mw4" firstAttribute="top" secondItem="WT1-mU-YRl" secondAttribute="top" id="pCX-lN-sY3"/>
+                            <constraint firstItem="Ene-J9-lnJ" firstAttribute="trailing" secondItem="HNk-AR-R5r" secondAttribute="trailing" id="pFQ-u1-eif"/>
+                            <constraint firstItem="Ene-J9-lnJ" firstAttribute="leading" secondItem="WT1-mU-YRl" secondAttribute="leading" constant="13" id="sAX-I8-3Gh"/>
+                            <constraint firstItem="xEh-AQ-DI2" firstAttribute="top" secondItem="rHm-UN-Mw4" secondAttribute="bottom" constant="8" symbolic="YES" id="tBx-n5-4mK"/>
+                            <constraint firstItem="eYi-69-TbZ" firstAttribute="top" secondItem="gYb-cE-7x1" secondAttribute="bottom" constant="23" id="yWP-vH-yzn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WT1-mU-YRl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5nc-80-dha">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="z1u-kw-v8t">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8TH-7T-PU7">
+                                <rect key="frame" x="16" y="6" width="89" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Back_button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="og1-VN-TfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2526" y="2234"/>
+        </scene>
+        <!--Lost foundVC-->
+        <scene sceneID="Nk7-ym-qVO">
+            <objects>
+                <viewController storyboardIdentifier="lost_foundVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tPm-pP-hn2" customClass="lost_foundVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QA8-9B-ipv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O56-qK-Y0o">
+                                <rect key="frame" x="19" y="24" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="2iM-4S-qLd"/>
+                                    <constraint firstAttribute="height" constant="25" id="f2q-ee-qL5"/>
+                                </constraints>
+                                <state key="normal" image="Back_button"/>
+                                <connections>
+                                    <action selector="back_action:" destination="tPm-pP-hn2" eventType="touchUpInside" id="NMX-Hr-gNE"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QA9-Db-q9e">
+                                <rect key="frame" x="0.0" y="71" width="320" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO1-RY-O2L">
+                                <rect key="frame" x="77" y="20" width="183" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="ehY-SP-1M3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                <state key="normal" title="Lost &amp; found">
+                                    <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QA9-Db-q9e" firstAttribute="bottom" secondItem="B7o-Lg-cYo" secondAttribute="bottom" id="8BO-XQ-9n5"/>
+                            <constraint firstItem="B7o-Lg-cYo" firstAttribute="trailing" secondItem="ZO1-RY-O2L" secondAttribute="trailing" constant="60" id="DlA-PK-Uf4"/>
+                            <constraint firstItem="ZO1-RY-O2L" firstAttribute="top" secondItem="O56-qK-Y0o" secondAttribute="top" constant="-4" id="JqG-q7-KSn"/>
+                            <constraint firstAttribute="trailing" secondItem="QA9-Db-q9e" secondAttribute="trailing" id="aZg-Ms-PTz"/>
+                            <constraint firstItem="ZO1-RY-O2L" firstAttribute="leading" secondItem="O56-qK-Y0o" secondAttribute="trailing" constant="28" id="b2h-1c-XRV"/>
+                            <constraint firstItem="O56-qK-Y0o" firstAttribute="leading" secondItem="B7o-Lg-cYo" secondAttribute="leading" constant="19" id="b7w-F8-nhP"/>
+                            <constraint firstItem="O56-qK-Y0o" firstAttribute="top" secondItem="B7o-Lg-cYo" secondAttribute="top" constant="4" id="lZZ-jz-sNG"/>
+                            <constraint firstItem="QA9-Db-q9e" firstAttribute="top" secondItem="O56-qK-Y0o" secondAttribute="bottom" constant="22" id="rqv-gB-OzD"/>
+                            <constraint firstItem="QA9-Db-q9e" firstAttribute="leading" secondItem="QA8-9B-ipv" secondAttribute="leading" id="z6i-KE-gJb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B7o-Lg-cYo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b2c-Op-kf9">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="GnX-D4-C7v">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WHc-e2-goh">
+                                <rect key="frame" x="16" y="6" width="89" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Back_button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="txtview" destination="QA9-Db-q9e" id="MXT-Ot-hEe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cet-Sz-lGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3979" y="3051"/>
+        </scene>
+        <!--HelprateVC-->
+        <scene sceneID="miq-4L-cCd">
+            <objects>
+                <viewController storyboardIdentifier="HelprateVC" id="bWj-Re-GD5" customClass="HelprateVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dTd-6F-4DG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5H-6L-WKY">
+                                <rect key="frame" x="19" y="24" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6yb-fT-oXg"/>
+                                    <constraint firstAttribute="height" constant="25" id="U1w-ls-Dp5"/>
+                                </constraints>
+                                <state key="normal" image="Back_button"/>
+                                <connections>
+                                    <action selector="back_action:" destination="bWj-Re-GD5" eventType="touchUpInside" id="0k4-di-tmy"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wzs-3E-4gH">
+                                <rect key="frame" x="0.0" y="71" width="320" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlJ-Nj-vk7">
+                                <rect key="frame" x="73" y="21" width="183" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="pEV-7r-nOR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                <state key="normal" title="Rate Calculator">
+                                    <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zlJ-Nj-vk7" firstAttribute="top" secondItem="KCe-tP-WUK" secondAttribute="top" constant="1" id="0SR-wc-tuV"/>
+                            <constraint firstItem="h5H-6L-WKY" firstAttribute="top" secondItem="KCe-tP-WUK" secondAttribute="top" constant="4" id="3uS-W6-IbG"/>
+                            <constraint firstItem="KCe-tP-WUK" firstAttribute="trailing" secondItem="zlJ-Nj-vk7" secondAttribute="trailing" constant="64" id="9uX-Dg-axD"/>
+                            <constraint firstItem="Wzs-3E-4gH" firstAttribute="leading" secondItem="dTd-6F-4DG" secondAttribute="leading" id="F63-HM-fbP"/>
+                            <constraint firstItem="zlJ-Nj-vk7" firstAttribute="leading" secondItem="h5H-6L-WKY" secondAttribute="trailing" constant="24" id="Iku-54-nHu"/>
+                            <constraint firstItem="h5H-6L-WKY" firstAttribute="leading" secondItem="KCe-tP-WUK" secondAttribute="leading" constant="19" id="SBX-3L-GyG"/>
+                            <constraint firstItem="Wzs-3E-4gH" firstAttribute="top" secondItem="h5H-6L-WKY" secondAttribute="bottom" constant="22" id="ahM-gj-sfO"/>
+                            <constraint firstAttribute="trailing" secondItem="Wzs-3E-4gH" secondAttribute="trailing" id="v9o-4m-deE"/>
+                            <constraint firstItem="Wzs-3E-4gH" firstAttribute="bottom" secondItem="KCe-tP-WUK" secondAttribute="bottom" id="vVe-Cv-vvJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KCe-tP-WUK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pbs-xM-mO7">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="pTL-HS-WAq">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EcQ-BX-Fs8">
+                                <rect key="frame" x="16" y="6" width="89" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Back_button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="txtview" destination="Wzs-3E-4gH" id="rgx-YF-jKr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tlr-4y-Rkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3208" y="3051"/>
+        </scene>
+        <!--HelpplolicyVC-->
+        <scene sceneID="jRa-4C-Jhw">
+            <objects>
+                <viewController storyboardIdentifier="HelpplolicyVC" id="JgM-Mi-Cpg" customClass="HelpplolicyVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r7C-3A-q7B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qn-tk-7wQ">
+                                <rect key="frame" x="19" y="24" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Pde-5X-Jyy"/>
+                                    <constraint firstAttribute="height" constant="25" id="nom-K1-7Ki"/>
+                                </constraints>
+                                <state key="normal" image="Back_button"/>
+                                <connections>
+                                    <action selector="back_action:" destination="JgM-Mi-Cpg" eventType="touchUpInside" id="V2N-u2-Wxf"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aPL-6F-9xK">
+                                <rect key="frame" x="0.0" y="71" width="320" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLT-sF-cQd">
+                                <rect key="frame" x="69" y="20" width="183" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="6eK-wq-eAa"/>
+                                    <constraint firstAttribute="width" constant="183" id="IjR-Ns-GGg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Qn-tk-7wQ" firstAttribute="top" secondItem="MYw-yb-gN0" secondAttribute="top" constant="4" id="36w-v6-NT4"/>
+                            <constraint firstItem="aPL-6F-9xK" firstAttribute="top" secondItem="8Qn-tk-7wQ" secondAttribute="bottom" constant="22" id="9rQ-is-PNG"/>
+                            <constraint firstItem="aPL-6F-9xK" firstAttribute="leading" secondItem="r7C-3A-q7B" secondAttribute="leading" id="Kne-1r-iB9"/>
+                            <constraint firstItem="JLT-sF-cQd" firstAttribute="top" secondItem="MYw-yb-gN0" secondAttribute="top" id="KuF-54-un4"/>
+                            <constraint firstItem="MYw-yb-gN0" firstAttribute="trailing" secondItem="JLT-sF-cQd" secondAttribute="trailing" constant="68" id="VwD-37-gUT"/>
+                            <constraint firstItem="8Qn-tk-7wQ" firstAttribute="leading" secondItem="MYw-yb-gN0" secondAttribute="leading" constant="19" id="a0z-tX-BG1"/>
+                            <constraint firstItem="JLT-sF-cQd" firstAttribute="leading" secondItem="8Qn-tk-7wQ" secondAttribute="trailing" constant="20" id="iwh-3m-mOE"/>
+                            <constraint firstAttribute="trailing" secondItem="aPL-6F-9xK" secondAttribute="trailing" id="nhb-6Y-Zvl"/>
+                            <constraint firstItem="aPL-6F-9xK" firstAttribute="bottom" secondItem="MYw-yb-gN0" secondAttribute="bottom" id="zTb-Qb-tdx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MYw-yb-gN0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qmU-Ti-Ljd">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="o5t-sd-ho0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ewD-Ao-QAJ">
+                                <rect key="frame" x="16" y="6" width="89" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Back_button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="txtview" destination="aPL-6F-9xK" id="zRB-Zl-Ysm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwk-2o-gxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2441" y="3018"/>
+        </scene>
+        <!--HelpaccidentVC-->
+        <scene sceneID="Lry-wF-oeb">
+            <objects>
+                <viewController id="INf-mQ-bBG" customClass="HelpaccidentVC" customModule="greegotaxiapp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XYl-CH-6p9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9T-r9-ZtQ">
+                                <rect key="frame" x="20" y="24" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="H0b-If-2O0"/>
+                                    <constraint firstAttribute="height" constant="25" id="nkW-bV-YLc"/>
+                                </constraints>
+                                <state key="normal" image="Back_button"/>
+                                <connections>
+                                    <action selector="back_action:" destination="INf-mQ-bBG" eventType="touchUpInside" id="sbq-2V-UmZ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mBc-P5-cB5">
+                                <rect key="frame" x="0.0" y="71" width="320" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyf-iF-Zbj">
+                                <rect key="frame" x="74" y="20" width="187" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="PFn-GA-Xpg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                <state key="normal" title="Safety">
+                                    <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mBc-P5-cB5" firstAttribute="top" secondItem="L9T-r9-ZtQ" secondAttribute="bottom" constant="22" id="1MF-8h-TGy"/>
+                            <constraint firstItem="L9T-r9-ZtQ" firstAttribute="top" secondItem="OOq-NC-EET" secondAttribute="top" constant="4" id="9bc-hR-ggp"/>
+                            <constraint firstItem="L9T-r9-ZtQ" firstAttribute="leading" secondItem="OOq-NC-EET" secondAttribute="leading" constant="20" id="B0G-78-n7b"/>
+                            <constraint firstItem="mBc-P5-cB5" firstAttribute="bottom" secondItem="OOq-NC-EET" secondAttribute="bottom" id="Edu-KW-vk8"/>
+                            <constraint firstItem="Lyf-iF-Zbj" firstAttribute="leading" secondItem="L9T-r9-ZtQ" secondAttribute="trailing" constant="24" id="FHw-Xh-n6D"/>
+                            <constraint firstItem="mBc-P5-cB5" firstAttribute="leading" secondItem="XYl-CH-6p9" secondAttribute="leading" id="Ruq-cK-0E7"/>
+                            <constraint firstItem="Lyf-iF-Zbj" firstAttribute="top" secondItem="OOq-NC-EET" secondAttribute="top" id="Ykq-A6-UBS"/>
+                            <constraint firstAttribute="trailing" secondItem="mBc-P5-cB5" secondAttribute="trailing" id="dW3-Yn-Cmf"/>
+                            <constraint firstItem="OOq-NC-EET" firstAttribute="trailing" secondItem="Lyf-iF-Zbj" secondAttribute="trailing" constant="59" id="yEb-s3-N56"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OOq-NC-EET"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hVV-g3-AnR">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="aKW-8p-Udx">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Z7-G6-4wm">
+                                <rect key="frame" x="16" y="6" width="89" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Back_button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="txtview" destination="mBc-P5-cB5" id="Wfl-IM-m1k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2N-Rv-Kcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1695" y="3021"/>
         </scene>
     </scenes>
     <resources>
@@ -4925,6 +5571,7 @@ Greego to drive?</string>
         <image name="Back_button" width="35" height="33"/>
         <image name="Car" width="50" height="50"/>
         <image name="Greego" width="183" height="56"/>
+        <image name="Greego1" width="16" height="16"/>
         <image name="Greego_App_Icon" width="320" height="319"/>
         <image name="Logout" width="512" height="512"/>
         <image name="Map – Set Destination – 1" width="375" height="667"/>
@@ -4947,6 +5594,7 @@ Greego to drive?</string>
         <image name="filledStar" width="475" height="476"/>
         <image name="flag for mobile" width="124" height="68"/>
         <image name="gallery" width="64" height="64"/>
+        <image name="ic_greego_logo" width="266" height="44"/>
         <image name="invalidcard" width="225" height="225"/>
         <image name="location ico" width="23" height="23"/>
         <image name="minus" width="64" height="64"/>

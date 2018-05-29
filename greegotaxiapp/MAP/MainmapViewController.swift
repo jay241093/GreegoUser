@@ -33,7 +33,8 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
     @IBOutlet weak var viewCarSelection: UIView!
     
     @IBOutlet weak var userMapView: GMSMapView!
-    
+    var timer = Timer()
+
     
     var lat = CLLocationDegrees()
     var long = CLLocationDegrees()
@@ -118,11 +119,21 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         }
     }
     //MARK: - Delegate Methods\
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector:#selector(getDrivers), userInfo: nil, repeats: true)
+    }
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        
+        
+        
+        scheduledTimerWithTimeInterval()
+        
          let tap1 = UITapGestureRecognizer()
         tap1.addTarget(self, action: #selector(explandview))
 
@@ -579,7 +590,7 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
             NSLog("No Internet Connection")
         }
     }
-    func getDrivers()
+    @objc func getDrivers()
     {
         
         UserDefaults.standard.set(lat, forKey:"Latitude")
@@ -588,7 +599,7 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         if AppDelegate.hasConnectivity() == true
         {
             
-            WebServiceClass().showprogress()
+            //WebServiceClass().showprogress()
             let token = UserDefaults.standard.value(forKey: "devicetoken") as! String
             let headers = ["Accept": "application/json","Authorization": "Bearer "+token]
             let parameters = [
@@ -601,7 +612,7 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                 
                 switch(response.result) {
                 case .success(_):
-                    WebServiceClass().dismissprogress()
+                  //  WebServiceClass().dismissprogress()
                     if response.result.value != nil{
                         print(response.result.value!)
                         let dic: NSDictionary =  response.result.value! as! NSDictionary
@@ -635,7 +646,7 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                     break
                     
                 case .failure(_):
-                    WebServiceClass().dismissprogress()
+                   // WebServiceClass().dismissprogress()
 
                     print(response.result.error ?? "")
                     break

@@ -23,8 +23,13 @@
 		2129844120B5899100087499 /* paymentcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2129844020B5899100087499 /* paymentcell.swift */; };
 		212E2EDC20B2839C0062CDF7 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */; };
 		212E2EDE20B2885C0062CDF7 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 212E2EDD20B2885C0062CDF7 /* loader.gif */; };
+		215A6CFA20BD3599006D82B8 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A6CF920BD3599006D82B8 /* TipViewController.swift */; };
+		215A6D0820BD7477006D82B8 /* lost&foundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A6D0320BD7475006D82B8 /* lost&foundVC.swift */; };
+		215A6D0920BD7477006D82B8 /* HelpplolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A6D0420BD7475006D82B8 /* HelpplolicyVC.swift */; };
+		215A6D0A20BD7477006D82B8 /* HelprateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A6D0520BD7476006D82B8 /* HelprateVC.swift */; };
+		215A6D0B20BD7477006D82B8 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A6D0620BD7476006D82B8 /* HelpVC.swift */; };
+		215A6D0C20BD7477006D82B8 /* HelpaccidentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A6D0720BD7476006D82B8 /* HelpaccidentVC.swift */; };
 		215B896D20ADA1400064B8EB /* LoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215B896C20ADA13F0064B8EB /* LoaderVC.swift */; };
-		21692A6020A2CAE8005FF526 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21692A5F20A2CAE8005FF526 /* HelpVC.swift */; };
 		2173C2A6209D8A1800CE7096 /* OnTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173C2A5209D8A1800CE7096 /* OnTripVC.swift */; };
 		2173C2A8209D8CCE00CE7096 /* DriverRatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173C2A7209D8CCE00CE7096 /* DriverRatingVC.swift */; };
 		3B2345CD20853B1C006B1796 /* customTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2345CC20853B1C006B1796 /* customTextField.swift */; };
@@ -103,8 +108,13 @@
 		2129844020B5899100087499 /* paymentcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paymentcell.swift; sourceTree = "<group>"; };
 		212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 		212E2EDD20B2885C0062CDF7 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
+		215A6CF920BD3599006D82B8 /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
+		215A6D0320BD7475006D82B8 /* lost&foundVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "lost&foundVC.swift"; sourceTree = "<group>"; };
+		215A6D0420BD7475006D82B8 /* HelpplolicyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpplolicyVC.swift; sourceTree = "<group>"; };
+		215A6D0520BD7476006D82B8 /* HelprateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelprateVC.swift; sourceTree = "<group>"; };
+		215A6D0620BD7476006D82B8 /* HelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpVC.swift; path = "../../../Greego Driver Krosslink/Greegodriverapp/Sidemenu/HelpVC.swift"; sourceTree = "<group>"; };
+		215A6D0720BD7476006D82B8 /* HelpaccidentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpaccidentVC.swift; sourceTree = "<group>"; };
 		215B896C20ADA13F0064B8EB /* LoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderVC.swift; sourceTree = "<group>"; };
-		21692A5F20A2CAE8005FF526 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		2173C2A5209D8A1800CE7096 /* OnTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTripVC.swift; sourceTree = "<group>"; };
 		2173C2A7209D8CCE00CE7096 /* DriverRatingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverRatingVC.swift; sourceTree = "<group>"; };
 		3B2345CC20853B1C006B1796 /* customTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTextField.swift; sourceTree = "<group>"; };
@@ -192,6 +202,7 @@
 				3BBA890820840C2D0056BFCE /* DrideMapVC.swift */,
 				2173C2A5209D8A1800CE7096 /* OnTripVC.swift */,
 				3BFBCEE1208F3B6600924F04 /* DriverPopupVC.swift */,
+				215A6CF920BD3599006D82B8 /* TipViewController.swift */,
 			);
 			path = MAP;
 			sourceTree = "<group>";
@@ -359,8 +370,12 @@
 		730AF664207359B000AD8993 /* sidemenu */ = {
 			isa = PBXGroup;
 			children = (
+				215A6D0720BD7476006D82B8 /* HelpaccidentVC.swift */,
+				215A6D0420BD7475006D82B8 /* HelpplolicyVC.swift */,
+				215A6D0520BD7476006D82B8 /* HelprateVC.swift */,
+				215A6D0620BD7476006D82B8 /* HelpVC.swift */,
+				215A6D0320BD7475006D82B8 /* lost&foundVC.swift */,
 				3BFBCEDF208F1BC900924F04 /* FreeridesVC.swift */,
-				21692A5F20A2CAE8005FF526 /* HelpVC.swift */,
 				730AF66920735B9600AD8993 /* sidemenuViewController.swift */,
 				730AF66620735A3D00AD8993 /* SWRevealViewController.h */,
 				730AF66720735A3E00AD8993 /* SWRevealViewController.m */,
@@ -637,7 +652,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				73051D972074DAB900C42207 /* Trip_detail_ViewController.swift in Sources */,
-				21692A6020A2CAE8005FF526 /* HelpVC.swift in Sources */,
 				73051D952074A1B300C42207 /* MainTableViewCell.swift in Sources */,
 				04352C6A20800F1A00A7E6D9 /* setLocationCell.swift in Sources */,
 				3BBA890920840C2D0056BFCE /* DrideMapVC.swift in Sources */,
@@ -648,8 +662,10 @@
 				3B92464C2092B21F0011D839 /* UpdateprofileViewController.swift in Sources */,
 				3B9246582092C7140011D839 /* AddpaymentViewController.swift in Sources */,
 				2173C2A6209D8A1800CE7096 /* OnTripVC.swift in Sources */,
+				215A6D0C20BD7477006D82B8 /* HelpaccidentVC.swift in Sources */,
 				734F550C2077408200512886 /* HADropDown.swift in Sources */,
 				040A0B4D2078997B00CBA6D2 /* WebServiceClass.swift in Sources */,
+				215A6D0820BD7477006D82B8 /* lost&foundVC.swift in Sources */,
 				739807E2209AE10F00D0BE3F /* EmailverificationViewController.swift in Sources */,
 				730AF66A20735B9600AD8993 /* sidemenuViewController.swift in Sources */,
 				040A0B502078A30300CBA6D2 /* Reachability.m in Sources */,
@@ -659,14 +675,17 @@
 				739807DE209AE10F00D0BE3F /* mobilenumberViewController.swift in Sources */,
 				040A0B4B2078977500CBA6D2 /* SharedClass.swift in Sources */,
 				739807E4209AE10F00D0BE3F /* EmailVC.swift in Sources */,
+				215A6D0B20BD7477006D82B8 /* HelpVC.swift in Sources */,
 				734F550E2077502900512886 /* ImageViewController.swift in Sources */,
 				739807E5209AE10F00D0BE3F /* otpVC.swift in Sources */,
 				3B9246502092B24D0011D839 /* Vehicle_informationViewController.swift in Sources */,
 				3BFBCEE2208F3B6600924F04 /* DriverPopupVC.swift in Sources */,
 				3BFBCEE0208F1BCA00924F04 /* FreeridesVC.swift in Sources */,
+				215A6D0920BD7477006D82B8 /* HelpplolicyVC.swift in Sources */,
 				041CF18B20777EB700464B5D /* MainmapViewController.swift in Sources */,
 				730AF66820735A3E00AD8993 /* SWRevealViewController.m in Sources */,
 				212E2EDC20B2839C0062CDF7 /* iOSDevCenters+GIF.swift in Sources */,
+				215A6D0A20BD7477006D82B8 /* HelprateVC.swift in Sources */,
 				73051D932074A14900C42207 /* MaintableViewController.swift in Sources */,
 				040A0B552078A97F00CBA6D2 /* ChooseDestinatioVC.swift in Sources */,
 				2129844120B5899100087499 /* paymentcell.swift in Sources */,
@@ -676,6 +695,7 @@
 				3B2345CD20853B1C006B1796 /* customTextField.swift in Sources */,
 				696A6191207212990015C77E /* AppDelegate.swift in Sources */,
 				3B2F5927208763C7000DD298 /* Paymentscreen2ViewController.swift in Sources */,
+				215A6CFA20BD3599006D82B8 /* TipViewController.swift in Sources */,
 				2173C2A8209D8CCE00CE7096 /* DriverRatingVC.swift in Sources */,
 				3B2F5928208763C7000DD298 /* PromocodeViewController.swift in Sources */,
 			);

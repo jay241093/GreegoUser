@@ -53,13 +53,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             // opened from a push notification when the app is closed
             var userInfo = launchOptions![.remoteNotification] as? [AnyHashable: Any]
             if userInfo != nil {
+                
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "DrideMapVC") as! DrideMapVC
+                let dic: NSDictionary = userInfo as! NSDictionary
+                
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+
             }
             else
             {
-                let dic: NSDictionary = userInfo as! NSDictionary
-
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
-
+               
                 
             }
         }
@@ -116,6 +123,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
         }
     }
+   
+    
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
         

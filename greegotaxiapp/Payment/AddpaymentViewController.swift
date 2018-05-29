@@ -207,13 +207,22 @@ txtzipcode.delegate = self
     
     var token1: STPToken?
     @IBAction func btnsavepayment(_ sender: Any) {
-        var card = self.txtCardNumber.text! as! String
-        var str = card.replacingOccurrences(of: " ", with: "")
-        var fullName: String = self.txtdate.text!
-        let fullNameArr = fullName.components(separatedBy: "/")
+    
+        var lastName = ""
+        if(txtdate.text != "")
+        {
+            var card = self.txtCardNumber.text! as! String
+            var str = card.replacingOccurrences(of: " ", with: "")
+            var fullName: String = self.txtdate.text!
+            let fullNameArr = fullName.components(separatedBy: "/")
+            
+            var firstName: String = fullNameArr[0]
+             lastName = fullNameArr[1]
+            
+        }
         
-        var firstName: String = fullNameArr[0]
-        var lastName: String = fullNameArr[1]
+        
+        
         if(txtCardNumber.text == "")
         {
             let alert = UIAlertController(title: nil, message: "Please enter Card Number", preferredStyle: UIAlertControllerStyle.alert)
@@ -251,6 +260,8 @@ txtzipcode.delegate = self
         }
         
        else{
+            
+            
             WebServiceClass().showprogress()
 
         var card = self.txtCardNumber.text! as! String

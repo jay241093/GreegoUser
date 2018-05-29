@@ -14,7 +14,7 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
     
     var menufcID : String?
     var vehicleID : String?
-    var vehtype: String?
+    var vehtype: String = ""
     
     var manufactorary = NSArray()
     var modelary = NSArray()
@@ -179,38 +179,46 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
         
         if(makepicker.text == "")
         {
-            let alert = UIAlertController(title: nil, message: "Please required all feild", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please select vehcile make", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         else if(modelpicker.text == "")
         {
-            let alert = UIAlertController(title: nil, message: "Please required all feild", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please select vehcile model", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
         }
         else if(yearpicker.text == "")
         {
-            let alert = UIAlertController(title: nil, message: "Please Enter year", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter vehicle year", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
         }
         else if(nameOfMonth! > date)
         {
-            let alert = UIAlertController(title: nil, message: "Please Enter correct year", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter correct year", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
         }
         else if(colorpicker.text == "")
         {
-            let alert = UIAlertController(title: nil, message: "Please required all feild", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter vehicle color", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
         }
+        else if(vehtype == "")
+        {
+            let alert = UIAlertController(title: nil, message: "Please select vehicle type", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+            
         else{
             
             

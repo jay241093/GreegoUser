@@ -249,7 +249,7 @@ class DriverPopupVC: UIViewController {
     
     @IBAction func canceltrip(_ sender: Any) {
         
-        let refreshAlert = UIAlertController(title: nil, message: "Are you Sure you wanto cancel Trip?", preferredStyle: UIAlertControllerStyle.alert)
+        let refreshAlert = UIAlertController(title: nil, message: "Are you sure want to cancel this trip?", preferredStyle: UIAlertControllerStyle.alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
             self.caceltrip()

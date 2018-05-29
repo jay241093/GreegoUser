@@ -71,7 +71,7 @@ func checkmobile()
         WebServiceClass().showprogress()
         print( UserDefaults.standard.value(forKey: "Token") as! String)
         let parameters = [
-            "contact_number":"+91" + txtMobileNum.text!,
+            "contact_number":"+1" + txtMobileNum.text!,
             "is_iphone": "1",
             "device_id": UserDefaults.standard.value(forKey: "Token") as! String
         ]

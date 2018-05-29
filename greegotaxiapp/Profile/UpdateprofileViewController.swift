@@ -284,7 +284,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
         
         let dic: NSDictionary =  vehiclearray.object(at: indexPath.row)as! NSDictionary
         
-        let refreshAlert = UIAlertController(title:nil, message: "Are you sure you want this card as default card?", preferredStyle: UIAlertControllerStyle.alert)
+        let refreshAlert = UIAlertController(title:nil, message: "Are you sure you want this vehicle as default vehicle?", preferredStyle: UIAlertControllerStyle.alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
             
