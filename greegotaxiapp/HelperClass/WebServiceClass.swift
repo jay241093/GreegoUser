@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import SVProgressHUD
+import PKHUD
 class WebServiceClass: NSObject
 {
-    let BaseURL = "http://54.144.110.21/api/"
+ //   let BaseURL = "http://54.144.110.21/api/"
 
-  // let BaseURL = "http://kroslinkstech.in/greego/public/api/"
+ let BaseURL = "http://kroslinkstech.in/greego/public/api/"
 
    // let BaseURL = "http://innoviussoftware.com/greego/public/api/"
     static let sharedInstance : WebServiceClass = {
@@ -70,18 +70,17 @@ class WebServiceClass: NSObject
   
     func showprogress()
     {
-        SVProgressHUD.show()
-        
+        PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show()
     }
     func dismissprogress()
     {
-       SVProgressHUD.dismiss()
-        
+        PKHUD.sharedHUD.hide()
     }
     func showwithimage()
     
     {
-        SVProgressHUD.show(UIImage(named:"189792")!, status: "Searching")
+     //   SVProgressHUD.show(UIImage(named:"189792")!, status: "Searching")
     }
     
     func nointernetconnection()

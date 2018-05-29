@@ -48,6 +48,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
         }
         
+        
+        if launchOptions != nil {
+            // opened from a push notification when the app is closed
+            var userInfo = launchOptions![.remoteNotification] as? [AnyHashable: Any]
+            if userInfo != nil {
+            }
+            else
+            {
+                let dic: NSDictionary = userInfo as! NSDictionary
+
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+
+                
+            }
+        }
         application.registerForRemoteNotifications()
         
         FirebaseApp.configure()
@@ -117,6 +132,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
             
             
+            
+        }
+        else if(state == .inactive)
+        {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+
+            
+        }
+        else
+        {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+
             
         }
         

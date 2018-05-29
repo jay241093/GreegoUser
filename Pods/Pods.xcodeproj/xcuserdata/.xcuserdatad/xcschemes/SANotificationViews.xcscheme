@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BE65C041AABB987F95DE95735DFC763E'
+               BlueprintIdentifier = '31A637FEB2CFEFA10AB9589D93462CF9'
                BlueprintName = 'SANotificationViews'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SANotificationViews.framework'>

@@ -42,6 +42,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - PKHUD (5.0.0)
   - Protobuf (3.5.0)
   - SANotificationViews (0.1.1)
   - SDWebImage (4.3.3):
@@ -49,7 +50,6 @@ PODS:
   - SDWebImage/Core (4.3.3)
   - Stripe (12.1.2)
   - SVPinView (1.0.1)
-  - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.0.0)
   - YNDropDownMenu (3.0.1)
 
@@ -63,11 +63,11 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces (~> 2.1)
   - IQKeyboardManagerSwift
+  - PKHUD
   - SANotificationViews
   - SDWebImage (~> 4.0)
   - Stripe
   - SVPinView (~> 1.0.1)
-  - SVProgressHUD
   - SwiftyJSON (~> 4.0)
   - YNDropDownMenu
 
@@ -86,15 +86,15 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   IQKeyboardManagerSwift: 748d06e0f8134fc28934031e6377da3cf3d4f38c
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   SANotificationViews: da9329c2ef421e8c3fcfcbc1a547e5157dd1f9c6
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   Stripe: 3230cdf8a8b0c04902e45e86f222fb82a926239c
   SVPinView: c44afcba589fd2d316d4a4d28cdd527699506a80
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   YNDropDownMenu: 967ebe0c633ce8f40e8667574525aa230ba24560
 
-PODFILE CHECKSUM: 6372b27b243b6d667e0f7bfc80fef5ac9953cb51
+PODFILE CHECKSUM: 676f86b5a39a699253f896476c20edad6761f937
 
 COCOAPODS: 1.4.0

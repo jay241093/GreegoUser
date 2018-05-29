@@ -252,8 +252,10 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         self.userMapView.camera = camera
         self.userMapView.isMyLocationEnabled = true
         self.userMapView.settings.myLocationButton = true
+
         
-        self.userMapView.isBuildingsEnabled = true
+        
+        
 //        let marker = GMSMarker(position: center)
         
 //

@@ -15,9 +15,10 @@ target 'greegotaxiapp' do
 pod 'IQKeyboardManagerSwift'
 pod 'SDWebImage', '~> 4.0'
 pod 'FloatRatingView', '~> 2.0.0'
-pod 'SVProgressHUD'
 pod 'SANotificationViews'
 pod "CreditCardValidator"
+pod 'PKHUD'
+
 
 
 

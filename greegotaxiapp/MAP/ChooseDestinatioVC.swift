@@ -301,7 +301,7 @@ class ChooseDestinatioVC: UIViewController, CLLocationManagerDelegate, GMSMapVie
                         {
                             self.resultArray.append(place)
                         }
-                        print("Place name \(place.name)")
+                         print("Place name \(place.name)")
                         print("Place address \(String(describing: place.formattedAddress))")
                         print("Place placeID \(place.placeID)")
                         print("Place attributions \(String(describing: place.attributions))")
@@ -412,6 +412,8 @@ extension ChooseDestinatioVC:UITextFieldDelegate {
         placeAutocomplete(text:currentText)
         return true
     }
+  
+    
     func textFieldDidBeginEditing(_ textField: UITextField)
     {
         textField.layer.borderColor = SELECTED_COLOR.cgColor
@@ -444,6 +446,8 @@ extension ChooseDestinatioVC:UITextFieldDelegate {
         textField.layer.borderColor = UIColor.clear.cgColor
         textField.layer.borderWidth = 0.0
         self.tblAutoComplete.isHidden = true
+        self.resultArray.removeAll()
+        
     }
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import SVProgressHUD
+import PKHUD
 class SettingViewController: UIViewController {
  
     @IBOutlet weak var lbljoin: UILabel!
