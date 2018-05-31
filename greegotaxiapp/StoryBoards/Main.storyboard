@@ -135,13 +135,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This number will be used to contact with driver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBs-cs-4b0">
-                                <rect key="frame" x="0.0" y="172.5" width="320" height="38.5"/>
+                                <rect key="frame" x="0.0" y="172.5" width="320" height="39"/>
                                 <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mL-WY-QL1">
-                                <rect key="frame" x="250" y="398" width="50" height="50"/>
+                                <rect key="frame" x="250" y="399" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1mL-WY-QL1" secondAttribute="height" multiplier="1:1" id="YDa-4Q-UBo"/>
                                 </constraints>
@@ -152,7 +152,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JbB-yK-C7X" customClass="customTextField" customModule="greegotaxiapp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="285" width="320" height="38"/>
+                                <rect key="frame" x="0.0" y="285.5" width="320" height="38.5"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert"/>
@@ -179,7 +179,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y77-eJ-kpi">
-                                <rect key="frame" x="0.0" y="323" width="320" height="1"/>
+                                <rect key="frame" x="0.0" y="324" width="320" height="1"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="yMT-bR-Kmo"/>
@@ -4705,7 +4705,7 @@ Greego to drive?</string>
         <!--Tip View Controller-->
         <scene sceneID="EyN-2G-SPn">
             <objects>
-                <viewController storyboardIdentifier="TipViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gqa-pN-W6N" customClass="TipViewController" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TipViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gqa-pN-W6N" customClass="TipViewController" customModule="greegotaxiapp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6dt-I5-7Ua"/>
                         <viewControllerLayoutGuide type="bottom" id="MbF-dP-BKR"/>
@@ -4717,10 +4717,10 @@ Greego to drive?</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6p7-Zm-Ua7">
                                 <rect key="frame" x="19" y="113" width="282" height="302"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2nd Avenue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcJ-on-0X8">
-                                        <rect key="frame" x="63" y="15" width="158" height="43"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2nd Avenue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcJ-on-0X8">
+                                        <rect key="frame" x="19" y="15" width="244" height="43"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="158" id="NXY-yJ-P4Y"/>
+                                            <constraint firstAttribute="width" constant="244" id="NXY-yJ-P4Y"/>
                                             <constraint firstAttribute="height" constant="43" id="X71-FI-q4C"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
@@ -4729,6 +4729,7 @@ Greego to drive?</string>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWF-se-L4P">
                                         <rect key="frame" x="30" y="92" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="o9x-yP-tKB"/>
                                         </constraints>
@@ -4736,9 +4737,13 @@ Greego to drive?</string>
                                         <state key="normal" title="10%">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btn10action:" destination="gqa-pN-W6N" eventType="touchUpInside" id="jyQ-CU-dLM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deX-2F-s9S">
                                         <rect key="frame" x="115" y="92" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="h4R-z7-DRQ"/>
                                         </constraints>
@@ -4746,13 +4751,20 @@ Greego to drive?</string>
                                         <state key="normal" title="15%">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btn15action:" destination="gqa-pN-W6N" eventType="touchUpInside" id="BLz-5Q-kPo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6G-mN-IHb">
                                         <rect key="frame" x="202" y="92" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="20"/>
                                         <state key="normal" title="20%">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btn20action:" destination="gqa-pN-W6N" eventType="touchUpInside" id="fCl-ub-vMA"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igc-iV-4IX">
                                         <rect key="frame" x="9" y="178" width="89" height="21"/>
@@ -4771,7 +4783,10 @@ Greego to drive?</string>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="gqa-pN-W6N" id="TAQ-gN-PnY"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McJ-SC-1jZ">
                                         <rect key="frame" x="77" y="240" width="128" height="38"/>
@@ -4788,7 +4803,7 @@ Greego to drive?</string>
                                             <action selector="btnnextaction:" destination="gqa-pN-W6N" eventType="touchUpInside" id="D69-1B-Zwi"/>
                                         </connections>
                                     </button>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLn-sq-en4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLn-sq-en4">
                                         <rect key="frame" x="227" y="176" width="53" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="53" id="4iV-oy-T6D"/>
@@ -4797,11 +4812,12 @@ Greego to drive?</string>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDS-4j-8i1" customClass="CTCheckbox">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDS-4j-8i1" customClass="CTCheckbox">
                                         <rect key="frame" x="192" y="175" width="27" height="27"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <action selector="checkaction:" destination="gqa-pN-W6N" eventType="valueChanged" id="X8g-Md-jFc"/>
                                             <action selector="checkbox:" destination="plE-Gt-DJs" eventType="valueChanged" id="unV-mB-sCD"/>
                                         </connections>
                                     </view>
@@ -4818,7 +4834,8 @@ Greego to drive?</string>
                                     <constraint firstItem="deX-2F-s9S" firstAttribute="baseline" secondItem="k6G-mN-IHb" secondAttribute="firstBaseline" id="Bac-P3-glR"/>
                                     <constraint firstItem="BLn-sq-en4" firstAttribute="leading" secondItem="tDS-4j-8i1" secondAttribute="trailing" constant="8" symbolic="YES" id="EZ7-QX-CEG"/>
                                     <constraint firstItem="igc-iV-4IX" firstAttribute="top" secondItem="qWF-se-L4P" secondAttribute="bottom" constant="36" id="JqB-rg-zlD"/>
-                                    <constraint firstItem="DcJ-on-0X8" firstAttribute="centerX" secondItem="6p7-Zm-Ua7" secondAttribute="centerX" constant="1" id="W0B-VF-uJQ"/>
+                                    <constraint firstItem="qWF-se-L4P" firstAttribute="height" secondItem="deX-2F-s9S" secondAttribute="height" id="R8v-zU-2m2"/>
+                                    <constraint firstItem="DcJ-on-0X8" firstAttribute="centerX" secondItem="6p7-Zm-Ua7" secondAttribute="centerX" id="W0B-VF-uJQ"/>
                                     <constraint firstItem="igc-iV-4IX" firstAttribute="centerY" secondItem="ceT-Vv-Yeu" secondAttribute="centerY" id="WoU-6l-iD6"/>
                                     <constraint firstItem="qWF-se-L4P" firstAttribute="leading" secondItem="6p7-Zm-Ua7" secondAttribute="leading" constant="30" id="Xxd-Hl-awR"/>
                                     <constraint firstItem="igc-iV-4IX" firstAttribute="leading" secondItem="6p7-Zm-Ua7" secondAttribute="leading" constant="9" id="YTv-X4-UL1"/>
@@ -4829,6 +4846,7 @@ Greego to drive?</string>
                                     <constraint firstItem="k6G-mN-IHb" firstAttribute="leading" secondItem="deX-2F-s9S" secondAttribute="trailing" constant="37" id="kb9-oT-drn"/>
                                     <constraint firstAttribute="trailing" secondItem="k6G-mN-IHb" secondAttribute="trailing" constant="30" id="kfc-zn-IbZ"/>
                                     <constraint firstItem="tDS-4j-8i1" firstAttribute="top" secondItem="k6G-mN-IHb" secondAttribute="bottom" constant="33" id="lNe-kV-ZDL"/>
+                                    <constraint firstItem="deX-2F-s9S" firstAttribute="height" secondItem="k6G-mN-IHb" secondAttribute="height" id="mQ7-06-NgP"/>
                                     <constraint firstAttribute="width" constant="282" id="mcl-Dm-KXk"/>
                                     <constraint firstItem="tDS-4j-8i1" firstAttribute="leading" secondItem="ceT-Vv-Yeu" secondAttribute="trailing" constant="17" id="n8D-R8-RGu"/>
                                     <constraint firstItem="ceT-Vv-Yeu" firstAttribute="centerY" secondItem="tDS-4j-8i1" secondAttribute="centerY" id="osH-Wx-PDX"/>
@@ -4838,7 +4856,6 @@ Greego to drive?</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="0.70029159330000001" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6p7-Zm-Ua7" firstAttribute="centerX" secondItem="mve-mf-OVP" secondAttribute="centerX" id="4qZ-9o-UJM"/>
                             <constraint firstItem="6p7-Zm-Ua7" firstAttribute="centerY" secondItem="mve-mf-OVP" secondAttribute="centerY" constant="-20" id="rz2-vz-btU"/>
@@ -4849,6 +4866,7 @@ Greego to drive?</string>
                         <outlet property="btn15" destination="deX-2F-s9S" id="xQy-sO-qZa"/>
                         <outlet property="btn20" destination="k6G-mN-IHb" id="18U-wB-OBp"/>
                         <outlet property="cb" destination="tDS-4j-8i1" id="LAD-we-3aC"/>
+                        <outlet property="lblamount" destination="DcJ-on-0X8" id="uek-w4-dTn"/>
                         <outlet property="txttip" destination="ceT-Vv-Yeu" id="gea-U6-fbp"/>
                     </connections>
                 </viewController>

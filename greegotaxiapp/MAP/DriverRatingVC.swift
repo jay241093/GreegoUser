@@ -44,7 +44,8 @@ class DriverRatingVC: UIViewController,FloatRatingViewDelegate{
         btnsubmit.layer.cornerRadius = 8.0
         
        
-    lblamount.text = "US " +  amount
+        
+    lblamount.text = "$ " +  amount
         
     ratingView.delegate = self
         

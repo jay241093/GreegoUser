@@ -36,7 +36,8 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        NotificationCenter.default.addObserver(self, selector:  #selector(AcceptRequest), name: NSNotification.Name(rawValue: "Acceptnotification"), object: nil)
+
         do {
             // Set the map style by passing the URL of the local file. Make sure style.json is present in your project
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json")
@@ -336,7 +337,79 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
             NSLog("No Internet Connection")
         }
     }
-    
+    @objc func AcceptRequest(notification: NSNotification) {
+        WebServiceClass().dismissprogress()
+        
+        let object = notification.object as! NSDictionary
+        
+        if let key = object.object(forKey: "payment_status")
+        {
+            if(object.value(forKey: "payment_status") as! String == "1")
+            {
+
+                
+                
+            }
+            
+            
+            
+        }
+            
+            
+        else{
+            
+            if let key = object.object(forKey: "status")
+            {
+                
+                var num = object.value(forKey: "status") as! String
+                if(num == "2")
+                {
+
+                    
+                }
+                if(num == "3")
+                {
+                }
+                    
+                else if(num == "4")
+                {
+                  
+                    let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! TipViewController
+                    
+                    
+                    let tripid : String = (object.value(forKey:"trip_id") as? String)!
+                    let fees = object.value(forKey: "trip_amount") as! String
+                    
+                    print(fees)
+                    popOverConfirmVC.amount = fees
+                    popOverConfirmVC.tripid =  tripid
+                    self.addChildViewController(popOverConfirmVC)
+                    popOverConfirmVC.view.frame = self.view.frame
+                    self.view.center = popOverConfirmVC.view.center
+                    self.view.addSubview(popOverConfirmVC.view)
+                    popOverConfirmVC.didMove(toParentViewController: self)
+                    
+                    
+                }
+                else if(num == "5")
+                {
+              
+                    
+                }
+                else
+                {
+                    
+                    
+                }
+                
+            }
+            else
+            {
+          
+                
+            }
+        }
+    }
     
     
     /*

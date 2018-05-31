@@ -114,18 +114,28 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
         {
      
             AudioServicesPlayAlertSound(SystemSoundID(1322))
-
-            self.debitCardView.isHidden = true
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "DriverRatingVC") as! DriverRatingVC
             
-            let tripid : String = (object.value(forKey:"trip_id") as? String)!
-            let fees = object.value(forKey: "total_amount") as! String
+            var imageview = UIImageView()
             
-            print(fees)
-            vc.amount = fees
-            vc.tripid =  tripid
-            self.navigationController?.pushViewController(vc, animated: true)
+            imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
             
+            if(imageview.image != nil)
+            {
+                SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Transaction Success", image: imageview.image!,  showTime: 5)
+                
+            }
+//
+//            self.debitCardView.isHidden = true
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "DriverRatingVC") as! DriverRatingVC
+//
+//            let tripid : String = (object.value(forKey:"trip_id") as? String)!
+//            let fees = object.value(forKey: "total_amount") as! String
+//
+//            print(fees)
+//            vc.amount = fees
+//            vc.tripid =  tripid
+//            self.navigationController?.pushViewController(vc, animated: true)
+//
         
 
         }
@@ -152,7 +162,8 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
 
             if(imageview.image != nil)
             {
-                SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver Ongoing", image: imageview.image!,  showTime: 5)
+                SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver is on your way", image: imageview.image!,  showTime: 5)
+            
             }
 //
 //            let newdic: String = ((object.value(forKey:"aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! String
@@ -198,8 +209,23 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
             imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
             if(imageview.image != nil)
             {
-                SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver has drop off you", image: imageview.image!,  showTime: 5)
+                SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver has drop you off", image: imageview.image!,  showTime: 5)
             }
+            
+//            let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! TipViewController
+//
+//
+//            let tripid : String = (object.value(forKey:"trip_id") as? String)!
+//            let fees = object.value(forKey: "trip_amount") as! String
+//
+//            print(fees)
+//            popOverConfirmVC.amount = fees
+//            popOverConfirmVC.tripid =  tripid
+//            self.addChildViewController(popOverConfirmVC)
+//            popOverConfirmVC.view.frame = self.view.frame
+//            self.view.center = popOverConfirmVC.view.center
+//            self.view.addSubview(popOverConfirmVC.view)
+//            popOverConfirmVC.didMove(toParentViewController: self)
             
             
         }

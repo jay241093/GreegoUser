@@ -608,8 +608,8 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                 
                 ] as [String : Any]
             
-            Alamofire.request(WebServiceClass().BaseURL+"user/get/drivers", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response:DataResponse<Any>) in
-                
+                Alamofire.request(WebServiceClass().BaseURL+"user/get/drivers", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response:DataResponse<Any>) in
+                    
                 switch(response.result) {
                 case .success(_):
                   //  WebServiceClass().dismissprogress()
