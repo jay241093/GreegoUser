@@ -69,9 +69,9 @@ func checkmobile()
     {
         
         WebServiceClass().showprogress()
-        print( UserDefaults.standard.value(forKey: "Token") as! String)
+      //  print( UserDefaults.standard.value(forKey: "Token") as! String)
         let parameters = [
-            "contact_number":"+1" + txtMobileNum.text!,
+            "contact_number":"+91" + txtMobileNum.text!,
             "is_iphone": "1",
             "device_id": UserDefaults.standard.value(forKey: "Token") as! String
         ]
@@ -84,7 +84,7 @@ func checkmobile()
                 WebServiceClass().dismissprogress()
 
                 if let data = response.result.value{
-                    print(response.result.value!)
+                   // print(response.result.value!)
                     
                     
                     

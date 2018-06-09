@@ -74,7 +74,7 @@ class MaintableViewController: UIViewController,UITableViewDelegate,UITableViewD
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell!
         
-       let dic: NSDictionary =  usertriparray.object(at: indexPath.row)as! NSDictionary
+       let dic: NSDictionary =  usertriparray.object(at: indexPath.row) as! NSDictionary
         
          let date =  dic.value(forKey: "created_at")as! String
         
@@ -90,12 +90,12 @@ class MaintableViewController: UIViewController,UITableViewDelegate,UITableViewD
         
         if(dic.value(forKey: "total_estimated_trip_cost") != nil){
         
-      if  let amt =  dic.value(forKey: "total_estimated_trip_cost")as? NSNumber
+      if  let amt =  dic.value(forKey: "total_estimated_trip_cost")as? Double
       {
-            cell?.amtlbl.text = "$"+amt.stringValue
+            cell?.amtlbl.text = "$" + String(format:"%.2f", amt)
             }
         }
-        let time =  dic.value(forKey: "total_estimated_travel_time")as! NSNumber
+        let time =  dic.value(forKey: "total_estimated_travel_time") as? String
         cell?.profilepic.layer.borderWidth=1.0
         cell?.profilepic.layer.masksToBounds = false
         cell?.profilepic.layer.borderColor = UIColor.white.cgColor
@@ -103,7 +103,7 @@ class MaintableViewController: UIViewController,UITableViewDelegate,UITableViewD
         cell?.profilepic.clipsToBounds = true
         cell?.view.layer.cornerRadius = 10.0
         cell?.datelbl.text = timeStamp
-        cell?.timelbl.text = time.stringValue + " minutes"
+        cell?.timelbl.text = time
       
         var name =  dic.value(forKey:"profile_pic") as! String
         var finalstr = "http://kroslinkstech.in/greego/storage/app/" + name
@@ -147,22 +147,28 @@ class MaintableViewController: UIViewController,UITableViewDelegate,UITableViewD
             case .success(_):
                 WebServiceClass().dismissprogress()
                 if let data = response.result.value{
-            self.usertriparray.removeAllObjects()
-          if(self.usertriparray.count == 0)
-          {
-            self.lblnotrip.isHidden = false
-         self.maintableview.isHidden = true
-            }
-          else
-          {
-            self.lblnotrip.isHidden = true
-            self.maintableview.isHidden = false
-            }
+                    
+    
             var dic = response.result.value as! NSDictionary
               let data = dic.value(forKey: "data")as! NSArray
-            self.usertriparray = data.mutableCopy() as! NSMutableArray
+                    
+                    let newary = data.reversed() as!  NSArray
+            self.usertriparray = newary.mutableCopy() as! NSMutableArray
+                    
+                    
+                    if(self.usertriparray.count == 0)
+                    {
+                        self.lblnotrip.isHidden = false
+                        self.maintableview.isHidden = true
+                    }
+                    else
+                    {
+                        self.lblnotrip.isHidden = true
+                        self.maintableview.isHidden = false
+                    }
+                    
             self.maintableview.reloadData()
-            print(response.result.value!)
+           // print(response.result.value!)
                 }
             case .failure(_):
                 

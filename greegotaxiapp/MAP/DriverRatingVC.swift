@@ -85,7 +85,7 @@ ratingnew = String(format: "%.2f", rating)
                     
                     if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                     {
-                        print(response.result.value!)
+                      //  print(response.result.value!)
                         let newdic : NSDictionary =  dic.value(forKey: "data") as! NSDictionary
                         
                         let driverdic = newdic.value(forKey: "driver") as! NSDictionary
@@ -114,7 +114,7 @@ ratingnew = String(format: "%.2f", rating)
                 case .failure(_):
                     WebServiceClass().dismissprogress()
 
-                    print(response.result.error ?? "")
+                  //  print(response.result.error ?? "")
                     break
                     
                 }
@@ -154,7 +154,7 @@ ratingnew = String(format: "%.2f", rating)
                 case .success(_):
                     WebServiceClass().dismissprogress()
 
-                    print(response.result.value! )
+                   // print(response.result.value! )
                     let dic: NSDictionary =  response.result.value! as! NSDictionary
                     
                     if(dic.value(forKey: "error_code") as! NSNumber  == 0)
@@ -177,7 +177,7 @@ ratingnew = String(format: "%.2f", rating)
                 case .failure(_):
                     WebServiceClass().dismissprogress()
 
-                    print(response.result.error ?? "")
+                  //  print(response.result.error ?? "")
                     break
                     
                 }
@@ -195,7 +195,12 @@ ratingnew = String(format: "%.2f", rating)
     
     @IBAction func btnBackClicked(_ sender: Any)
     {
-        self.navigationController?.popViewController(animated: true)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+        
+        
     }
     @IBAction func Submitaction(_ sender: Any) {
         

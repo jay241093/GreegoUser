@@ -14,6 +14,18 @@ import SDWebImage
 
 class Trip_detail_ViewController: UIViewController {
 
+    
+    @IBOutlet weak var lbltripprice: UILabel!
+    
+    @IBOutlet weak var lblfinaltripprice: UILabel!
+    
+    
+    @IBOutlet weak var lblpromocode: UILabel!
+    
+    
+    @IBOutlet weak var lbldistance: UILabel!
+    
+    
     @IBOutlet weak var lblcost: UILabel!
     
     @IBOutlet weak var lbldate: UILabel!
@@ -52,6 +64,7 @@ class Trip_detail_ViewController: UIViewController {
     {
         super.viewDidLoad()
        
+     print(tripdic)
         do {
             // Set the map style by passing the URL of the local file. Make sure style.json is present in your project
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json")
@@ -64,8 +77,15 @@ class Trip_detail_ViewController: UIViewController {
             print("The style definition could not be loaded: \(error)")
         }
         
-        let rate = tripdic.value(forKey:"total_estimated_trip_cost") as! NSNumber
-        lblcost.text =  "$ "+rate.stringValue
+        lblpromocode.text = tripdic.value(forKey:"promocode") as? String
+   if  let rate = tripdic.value(forKey:"total_estimated_trip_cost") as? Double
+        
+   {     lblcost.text =  "$ "+String(format:"%.2f", rate)
+        
+    lbltripprice.text = "$ "+String(format:"%.2f", rate)
+    
+    lblfinaltripprice.text = "$ "+String(format:"%.2f", rate)
+        }
         lbldate.text = tripdic.value(forKey:"updated_at") as! String
         var name =  tripdic.value(forKey:"profile_pic") as! String
         var finalstr = "http://kroslinkstech.in/greego/storage/app/" + name
@@ -145,7 +165,7 @@ class Trip_detail_ViewController: UIViewController {
                         let points = routeOverviewPolyline?["points"]?.stringValue
                         let path = GMSPath.init(fromEncodedPath: points!)
                         let polyline = GMSPolyline.init(path: path)
-                        polyline.strokeWidth = 6.0
+                        polyline.strokeWidth = 4.0
                         polyline.strokeColor = UIColor.black
                         polyline.map = self.gmsmapview
                         
@@ -167,12 +187,12 @@ class Trip_detail_ViewController: UIViewController {
                         let update = GMSCameraUpdate.fit(bounds, withPadding: 20)
                         self.gmsmapview.animate(with: update)
                         
-                        self.sourceMarker.icon = UIImage(named:"pinview")
+                        self.sourceMarker.icon = #imageLiteral(resourceName: "Start-pin.png")
                         self.sourceMarker.position = CLLocationCoordinate2D(latitude: sourceCord.latitude, longitude:sourceCord.longitude)
                         self.sourceMarker.map = self.gmsmapview
                         
                         
-                        self.destMarker.icon = UIImage(named:"pinview")
+                        self.destMarker.icon = #imageLiteral(resourceName: "Start-pin.png")
                         
                         self.destMarker.position = CLLocationCoordinate2D(latitude:destCord.latitude, longitude: destCord.longitude)
                         self.destMarker.map = self.gmsmapview

@@ -14,7 +14,7 @@ import UserNotifications
 import Firebase
 import Stripe
 import IQKeyboardManagerSwift
-
+import Bugsnag
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate
 {
@@ -27,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
         
+        
+        Bugsnag.start(withApiKey: "05f4f3a3580c0c58df6c0b721a34b5b6")
+
         GMSServices.provideAPIKey("AIzaSyCTYoZFJBLdRwY9QdneWtG4LvwVuzSw_AM")
         GMSPlacesClient.provideAPIKey("AIzaSyAyvGa8vAvoiFNgAUo8QW7zh8qJbBn8X8o")
         STPPaymentConfiguration.shared().publishableKey = "pk_test_GF0y48SCqViKdCSA8LwOPFVj"
@@ -53,14 +56,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             // opened from a push notification when the app is closed
             var userInfo = launchOptions![.remoteNotification] as? [AnyHashable: Any]
             if userInfo != nil {
-                
-                
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
                 let initialViewController = storyboard.instantiateViewController(withIdentifier: "DrideMapVC") as! DrideMapVC
                 let dic: NSDictionary = userInfo as! NSDictionary
-                
-                
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
 
             }

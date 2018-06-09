@@ -10,9 +10,8 @@ import UIKit
 import PKHUD
 class WebServiceClass: NSObject
 {
- let BaseURL = "http://54.144.110.21/api/"
-
-// let BaseURL = "http://kroslinkstech.in/greego/public/api/"
+let BaseURL = "http://54.144.110.21/api/"
+//let BaseURL = "http://kroslinkstech.in/greego/public/api/"
 
    // let BaseURL = "http://innoviussoftware.com/greego/public/api/"
     static let sharedInstance : WebServiceClass = {
@@ -20,7 +19,6 @@ class WebServiceClass: NSObject
         return instance
     }()
     func callAPIWithURLWithHandler(requestType:String , parameters:Dictionary<String, Any> , completionHandler :@escaping (_ success:Bool,_ responseData:Any,_ urlResponse:HTTPURLResponse) -> Void) {
-        
         
         let apiUrl:String = BaseURL + requestType
         print(apiUrl)

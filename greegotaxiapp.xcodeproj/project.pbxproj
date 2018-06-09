@@ -20,6 +20,7 @@
 		21113CFA20B930BB0019A776 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21113CF920B930B00019A776 /* Segoe UI.ttf */; };
 		21113CFE20B938600019A776 /* seguisb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21113CFD20B938540019A776 /* seguisb.ttf */; };
 		21113D0020B940110019A776 /* segoe-ui-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21113CFF20B940030019A776 /* segoe-ui-bold.ttf */; };
+		2119682320CB93A200831D7A /* UpdateEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119682220CB93A100831D7A /* UpdateEmailVC.swift */; };
 		2129844120B5899100087499 /* paymentcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2129844020B5899100087499 /* paymentcell.swift */; };
 		212E2EDC20B2839C0062CDF7 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */; };
 		212E2EDE20B2885C0062CDF7 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 212E2EDD20B2885C0062CDF7 /* loader.gif */; };
@@ -105,6 +106,7 @@
 		21113CF920B930B00019A776 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		21113CFD20B938540019A776 /* seguisb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seguisb.ttf; sourceTree = "<group>"; };
 		21113CFF20B940030019A776 /* segoe-ui-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "segoe-ui-bold.ttf"; sourceTree = "<group>"; };
+		2119682220CB93A100831D7A /* UpdateEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateEmailVC.swift; sourceTree = "<group>"; };
 		2129844020B5899100087499 /* paymentcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paymentcell.swift; sourceTree = "<group>"; };
 		212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 		212E2EDD20B2885C0062CDF7 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 		739807D5209AE10200D0BE3F /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				2119682220CB93A100831D7A /* UpdateEmailVC.swift */,
 				739807D8209AE10F00D0BE3F /* addMobileVC.swift */,
 				739807DC209AE10F00D0BE3F /* EmailVC.swift */,
 				739807DA209AE10F00D0BE3F /* EmailverificationViewController.swift */,
@@ -588,6 +591,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-greegotaxiapp/Pods-greegotaxiapp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bugsnag/Bugsnag.framework",
 				"${BUILT_PRODUCTS_DIR}/CTCheckbox/CTCheckbox.framework",
 				"${BUILT_PRODUCTS_DIR}/CreditCardValidator/CreditCardValidator.framework",
 				"${BUILT_PRODUCTS_DIR}/FloatRatingView/FloatRatingView.framework",
@@ -606,6 +610,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bugsnag.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTCheckbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CreditCardValidator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatRatingView.framework",
@@ -685,6 +690,7 @@
 				041CF18B20777EB700464B5D /* MainmapViewController.swift in Sources */,
 				730AF66820735A3E00AD8993 /* SWRevealViewController.m in Sources */,
 				212E2EDC20B2839C0062CDF7 /* iOSDevCenters+GIF.swift in Sources */,
+				2119682320CB93A200831D7A /* UpdateEmailVC.swift in Sources */,
 				215A6D0A20BD7477006D82B8 /* HelprateVC.swift in Sources */,
 				73051D932074A14900C42207 /* MaintableViewController.swift in Sources */,
 				040A0B552078A97F00CBA6D2 /* ChooseDestinatioVC.swift in Sources */,

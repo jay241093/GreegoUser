@@ -482,6 +482,10 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                             
                             let dataDic: NSDictionary = dic.value(forKey: "data") as! NSDictionary
                             
+                            
+                            
+                            UserDefaults.standard.set(dataDic.value(forKey:"email_verified"), forKey: "email_verified")
+
                             UserDefaults.standard.set(dataDic.value(forKey:"id"), forKey: "user_id")
                             UserDefaults.standard.set(dataDic.value(forKey:"created_at") as! String, forKey: "CreatedAt")
                             UserDefaults.standard.synchronize()
@@ -602,6 +606,9 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
             //WebServiceClass().showprogress()
             let token = UserDefaults.standard.value(forKey: "devicetoken") as! String
             let headers = ["Accept": "application/json","Authorization": "Bearer "+token]
+            print(headers)
+            print(lat)
+            print(long)
             let parameters = [
                 "lat" : lat,
                 "lng" : long
@@ -625,6 +632,9 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                             for arr in data
                             {
                                 let dicTmp = arr as! Dictionary<String,Any>
+                                
+                                if(dicTmp["driver_on"] as! NSNumber == 1)
+                                {
                                 let marker = GMSMarker()
                                 let lat = dicTmp["lat"] as! Double
                                 let lng = dicTmp["lng"] as! Double
@@ -633,7 +643,7 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                                 marker.snippet = ""
                                 marker.icon = #imageLiteral(resourceName: "user1")
                                 marker.map = self.userMapView
-                                print(dic)
+                                }
                             }
                         }else{
                             let alert = UIAlertController(title: nil, message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)

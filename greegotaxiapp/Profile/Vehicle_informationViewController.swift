@@ -244,7 +244,7 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
                         WebServiceClass().dismissprogress()
 
                         if let data = response.result.value{
-                            print(response.result.value!)
+                          //  print(response.result.value!)
                             var dic = response.result.value as! NSDictionary
                             
                             if(dic.value(forKey: "error_code") as! NSNumber == 0)
@@ -302,12 +302,12 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
                 case .success(_):
                     WebServiceClass().dismissprogress()
                     if let data = response.result.value{
-                        print(response.result.value!)
+                      //  print(response.result.value!)
                         var dic = response.result.value as! NSDictionary
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)
                         {
-                            let alert = UIAlertController(title: nil, message:"Vehicle Added Successfully.", preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message:"Vehicle added successfully.", preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (Greego) in
                                 
                                 self.navigationController?.popViewController(animated: true)
@@ -357,7 +357,7 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
                     WebServiceClass().dismissprogress()
 
                     if let data = response.result.value{
-                        print(response.result.value!)
+                       // print(response.result.value!)
                         
                         
                         let dic: NSDictionary =  response.result.value! as! NSDictionary
@@ -403,7 +403,7 @@ class Vehicle_informationViewController: UIViewController,UIPickerViewDelegate,U
                     WebServiceClass().dismissprogress()
 
                     if let data = response.result.value{
-                        print(response.result.value!)
+                       // print(response.result.value!)
                         
                         
                         let dic: NSDictionary =  response.result.value! as! NSDictionary

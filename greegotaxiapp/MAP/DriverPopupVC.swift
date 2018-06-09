@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SDWebImage
+import SANotificationViews
 class DriverPopupVC: UIViewController {
 
     @IBOutlet weak var lblpromocode: UILabel!
@@ -37,6 +38,8 @@ class DriverPopupVC: UIViewController {
     var reqid = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         lblprice.text = "$US " + tripcost
 
         lblcardnum.text = "Ending with " + cardnum
@@ -117,9 +120,7 @@ class DriverPopupVC: UIViewController {
                     let last = driverdic.value(forKey: "lastname") as! String
 
                     self.lblusername.text = first + " " + last
- 
-                    
-                    self.lblpromocode.text = driverdic.value(forKey:"promocode") as! String
+                    self.lblpromocode.text = driverdic.value(forKey:"promocode") as? String
                     let reqdic: NSDictionary = newdic.value(forKey:"request") as! NSDictionary
                     self.lbldesname.setTitle(reqdic.value(forKey: "to_address") as! String, for: .normal)
                     
@@ -131,6 +132,15 @@ class DriverPopupVC: UIViewController {
                     
                     self.userpic.sd_setImage(with: URL(string: driverdic.value(forKey: "profile_pic") as! String), placeholderImage: UIImage(named: "default-user"))
 
+                    var imageview = UIImageView()
+                    imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
+                    
+                    if(imageview.image != nil)
+                    {
+                        SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver assigned", image: imageview.image!,  showTime: 5)
+                        
+                    }
+                    
                 }else{
                     
                     let alert = UIAlertController(title: nil, message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
@@ -236,7 +246,9 @@ class DriverPopupVC: UIViewController {
     
     @IBAction func Shareaction(_ sender: Any) {
         
-        let message = "Message goes here."
+        let message = "Driver name :" + UserDefaults.standard.string(forKey: "Drivername")!  + "\n" +
+            "Destnation :" + (lbldesname.titleLabel?.text!)!
+        
         //Set the link to share.
         
         let objectsToShare = [message]

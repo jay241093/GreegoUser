@@ -36,7 +36,7 @@ class lost_foundVC: UIViewController {
                 switch(response.result) {
                 case .success(_):
                     if let data = response.result.value{
-                        print(response.result.value!)
+                     //   print(response.result.value!)
                         
                         
                         WebServiceClass().dismissprogress()

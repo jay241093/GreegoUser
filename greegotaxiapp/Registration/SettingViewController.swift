@@ -27,15 +27,34 @@ class SettingViewController: UIViewController {
     
     @IBOutlet weak var profileimg: UIImageView!
     
+    @IBOutlet weak var lblverifed: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(UserDefaults.standard.value(forKey:"CreatedAt") as? String)
+        
+        print(UserDefaults.standard.value(forKey: "email_verified")!)
+   
+        
+        
+     if(UserDefaults.standard.value(forKey: "email_verified")! as! NSNumber == 0)
+     {
+        
+        thirdview.isUserInteractionEnabled = true
+        lblverifed.text = "Unverified"
+        
+        
+        }
+        else
+     {
+        thirdview.isUserInteractionEnabled = false
+          lblverifed.text = "Verified"
+        
+        }
         
         let str = UserDefaults.standard.value(forKey:"CreatedAt") as? String
         lbljoin.text = "Created On " + str!
         
-        thirdview.isUserInteractionEnabled = true
+      //  thirdview.isUserInteractionEnabled = true
         secondview.isUserInteractionEnabled = true
 
         let tap1 = UITapGestureRecognizer()
@@ -95,70 +114,14 @@ class SettingViewController: UIViewController {
     }
     @objc func Verifyemail()
   {
-        if AppDelegate.hasConnectivity() == true
-    {
-        WebServiceClass().showprogress()
-        let token = UserDefaults.standard.value(forKey: "devicetoken") as! String
-        let headers = ["Accept": "application/json","Authorization": "Bearer "+token]
-        let parameters = [
-            "device_id": UserDefaults.standard.value(forKey: "Token") as! String
-            
-        ]
-        
-        
-        Alamofire.request(WebServiceClass().BaseURL+"user/verify/email", method: .post, parameters:[:], encoding: JSONEncoding.default, headers: headers).responseJSON { (response:DataResponse<Any>) in
-            
-            switch(response.result) {
-            case .success(_):
-                WebServiceClass().dismissprogress()
-                
-                if let data = response.result.value{
-                    print(response.result.value!)
-                    
-                  
-                    
-                    
-                    let dic: NSDictionary =  response.result.value! as! NSDictionary
-                    
-                    if(dic.value(forKey: "error_code") as! NSNumber  == 0)
-                    {
-                   
-                        
-                        let dialogMessage = UIAlertController(title: nil, message:"Email Sent Successfully", preferredStyle: .alert)
-                        
-                      
-                        // Create Cancel button with action handlder
-                        let cancel = UIAlertAction(title: "Ok", style: .cancel) { (action) -> Void in
-                        }
-                        
-                        //Add OK and Cancel button to dialog message
-                        dialogMessage.addAction(cancel)
-                        
-                        // Present dialog message to user
-                        self.present(dialogMessage, animated: true, completion: nil)
-                        
-                    }
-                }
-                break
-                
-            case .failure(_):
-                WebServiceClass().dismissprogress()
-                
-                print(response.result.error)
-                break
-                
-            }
-        }
-        
-    }
-    else
-    {
-        WebServiceClass().nointernetconnection()
+    
+    let vc = self.storyboard?.instantiateViewController(withIdentifier: "UpdateEmailVC") as! UpdateEmailVC
+    vc.email =  txtemil.text!
+    self.navigationController?.pushViewController(vc, animated: true)
+    
+    
+    
 
-        NSLog("No Internet Connection")
-    }
-    
-    
     
     }
     
@@ -233,6 +196,9 @@ class SettingViewController: UIViewController {
             UserDefaults.standard.removeObject(forKey: "CreatedAt")
             UserDefaults.standard.removeObject(forKey: "DriverImg")
             UserDefaults.standard.removeObject(forKey: "Drivername")
+            UserDefaults.standard.removeObject(forKey: "email_verified")
+
+            
             UserDefaults.standard.synchronize()
             
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)

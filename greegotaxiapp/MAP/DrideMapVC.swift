@@ -55,7 +55,31 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-      
+        let geocoder = GMSGeocoder()
+        geocoder.reverseGeocodeCoordinate(self.sourceCord) { response , error in
+            
+            //Add this line
+            if let address = response!.firstResult() {
+                
+                
+                self.source = (address.lines?.first)!
+            }
+            
+            
+        }
+        geocoder.reverseGeocodeCoordinate(self.destCord) { response , error in
+            
+            //Add this line
+            if let address = response!.firstResult() {
+                
+                
+                self.destination = (address.lines?.first)!
+            }
+            
+            
+        }
+        
+        
         do {
             // Set the map style by passing the URL of the local file. Make sure style.json is present in your project
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json")
@@ -162,7 +186,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
 
             if(imageview.image != nil)
             {
-                SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver is on your way", image: imageview.image!,  showTime: 5)
+                SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver is reached at your location", image: imageview.image!,  showTime: 5)
             
             }
 //
@@ -410,7 +434,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                     let finaldate  = Calendar.current.date(byAdding: .minute, value: Int(firstName as String)!, to: date1)
                     let format = DateFormatter()
                     format.dateStyle = .none
-                    format.timeStyle = .medium
+                    format.timeStyle = .short
                     print(format.string(from: finaldate!))
                     
 //                    let time:Int? = Int(firstName) // firstText is UITextField
@@ -500,7 +524,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                     WebServiceClass().dismissprogress()
                     if response.result.value != nil
                     {
-                        print(response.result.value!)
+                       // print(response.result.value!)
                         let dic: NSDictionary =  response.result.value! as! NSDictionary
                         let data = dic.value(forKey: "data")
                         self.setRate(baseFare: data as! NSDictionary)
@@ -511,7 +535,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                 case .failure(_):
                     WebServiceClass().dismissprogress()
 
-                    print(response.result.error ?? "")
+                   // print(response.result.error ?? "")
                     break
                     
                 }
@@ -555,9 +579,9 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
             tripPrice = tmpFare + ((distance! - 10) * overMileFee)
         }
         
-        self.lblRatePrice.text = "$" + String(tripPrice)
+        self.lblRatePrice.text = "$" +  String(format:"%.2f", tripPrice)
         
-        self.tripprice = String(tripPrice)
+        self.tripprice = String(format:"%.2f", tripPrice)
         print(tripPrice)
     }
     
@@ -626,7 +650,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                 
                 if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                 {
-                    print(response.result.value!)
+                   // print(response.result.value!)
                     
                     let dic: NSDictionary = response.result.value! as! NSDictionary
                     
@@ -697,7 +721,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                     WebServiceClass().dismissprogress()
 
                     if response.result.value != nil{
-                        print(response.result.value!)
+                       // print(response.result.value!)
                         let dic: NSDictionary =  response.result.value! as! NSDictionary
                         
                         if(dic.value(forKey: "error_code") as! NSNumber  == 0)
@@ -707,14 +731,17 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                         for arr in data
                         {
                             let dicTmp = arr as! Dictionary<String,Any>
-                            let marker = GMSMarker()
-                            let lat = dicTmp["lat"] as! Double
-                            let lng = dicTmp["lng"] as! Double
-                            marker.position = CLLocationCoordinate2D(latitude: lat , longitude: lng )
-                            marker.title = ""
-                            marker.snippet = ""
-                            marker.icon = #imageLiteral(resourceName: "user1")
-                            marker.map = self.mapView
+                            if(dicTmp["driver_on"] as! NSNumber == 1)
+                            {
+                                let marker = GMSMarker()
+                                let lat = dicTmp["lat"] as! Double
+                                let lng = dicTmp["lng"] as! Double
+                                marker.position = CLLocationCoordinate2DMake(lat,lng)
+                                marker.title = ""
+                                marker.snippet = ""
+                                marker.icon = #imageLiteral(resourceName: "user1")
+                                marker.map = self.mapView
+                            }
                             print(dic)
                         }
                         }else{
@@ -762,7 +789,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                 switch(response.result) {
                 case .success(_):
                     if response.result.value != nil{
-                        print(response.result.value!)
+                      //  print(response.result.value!)
                         
                         let dic: NSDictionary =  response.result.value! as! NSDictionary
                         
@@ -770,30 +797,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                         {
                             
                          
-                            let geocoder = GMSGeocoder()
-                            geocoder.reverseGeocodeCoordinate(self.sourceCord) { response , error in
-                                
-                                //Add this line
-                                if let address = response!.firstResult() {
-                                    
-                                    
-                                    self.source = (address.lines?.first)!
-                                }
-                                
-                                
-                            }
-                            geocoder.reverseGeocodeCoordinate(self.destCord) { response , error in
-                                
-                                //Add this line
-                                if let address = response!.firstResult() {
-                                    
-                                    
-                                    self.destination = (address.lines?.first)!
-                                }
-                                
-                                
-                            }
-                            
+                        
                             
                             
                             
@@ -893,7 +897,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                 case .failure(_):
                     WebServiceClass().dismissprogress()
                     
-                    print(response.result.error)
+                   // print(response.result.error)
                     break
                     
                 }

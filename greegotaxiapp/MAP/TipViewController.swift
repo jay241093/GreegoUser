@@ -38,16 +38,16 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         
         let myDouble = Double(amount)
-        let doubleStr = String(format: "%.2f", myDouble!)
+        let doubleStr = String(format: "%.1f", myDouble!)
         
-  lblamount.text = " Trip Amount$ " +  doubleStr
+  lblamount.text = " Trip Amount $ " +  doubleStr
         
         
         setshadow(myBtn: btn10)
         setshadow(myBtn: btn15)
         setshadow(myBtn: btn20)
 
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         
         self.showAnimate()
         Finalamount = 0
@@ -154,6 +154,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
       
      if(isselected10 == 0)
      {
+        txttip.text = ""
         txttip.isEnabled = false
 
         Finalamount =   Double(amount)! * (10/100)
@@ -200,6 +201,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         
         if(isselected15 == 0)
         {
+            txttip.text = ""
             txttip.isEnabled = false
 
             Finalamount = Double(amount)!  * (15/100)
@@ -238,6 +240,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         
         if(isselected20 == 0)
         {
+            txttip.text = ""
             txttip.isEnabled = false
             Finalamount = Double(amount)!  * (20/100)
             isselected20 = 1
@@ -280,10 +283,18 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         
         
         txttip.isEnabled = false
+        btn10.isEnabled = false
+        btn15.isEnabled = false
+        btn20.isEnabled = false
+
+
         }
         else
     {
         
+        btn10.isEnabled = true
+        btn15.isEnabled = true
+        btn20.isEnabled = true
         txttip.isEnabled = true
 
         }
@@ -313,34 +324,37 @@ class TipViewController: UIViewController,UITextFieldDelegate {
                 switch(response.result)
                 {
                 case .success(_):
+                    
                     WebServiceClass().dismissprogress()
                     
-                    print(response.result.value! )
+                   // print(response.result.value! )
                     let dic: NSDictionary =  response.result.value! as! NSDictionary
                     
                     if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                     {
                        
-                        let alert = UIAlertController(title: nil, message:"Tip added successfully", preferredStyle: UIAlertControllerStyle.alert)
+                        self.removeAnimate()
                         
-                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (Greego) in
-                            self.removeAnimate()
-                            
-                            
-                            
-                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "DriverRatingVC") as! DriverRatingVC
-                            
-                            let amount1 = Double(self.amount)! + Double(self.Finalamount)
-                           
-
-                            vc.amount = String(format: "%.2f", Double(amount1))
-                            vc.tripid =  self.tripid
-                            self.navigationController?.pushViewController(vc, animated: true)
-                                print(self.amount + String(self.Finalamount))
-
-                      
-                        }))
-                        self.present(alert, animated: true, completion: nil)
+                        
+                        
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DriverRatingVC") as! DriverRatingVC
+                        
+                        let amount1 = Double(self.amount)! + Double(self.Finalamount)
+                        
+                        
+                        vc.amount = String(format: "%.2f", Double(amount1))
+                        vc.tripid =  self.tripid
+                        self.navigationController?.pushViewController(vc, animated: true)
+                        print(self.amount + String(self.Finalamount))
+                        
+//                        let alert = UIAlertController(title: nil, message:"Tip added successfully", preferredStyle: UIAlertControllerStyle.alert)
+//
+//                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (Greego) in
+//
+//
+//
+//                        }))
+//                        self.present(alert, animated: true, completion: nil)
 
                         
                         

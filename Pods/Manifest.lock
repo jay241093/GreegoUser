@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.0)
+  - Bugsnag (5.15.5)
   - CreditCardValidator (0.4)
   - CTCheckbox (0.0.5)
   - Firebase/Core (4.10.1):
@@ -55,6 +56,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - Bugsnag
   - CreditCardValidator
   - CTCheckbox
   - Firebase/Core
@@ -73,6 +75,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  Bugsnag: 82788750cec86630828bb7dd250943f8356c53ea
   CreditCardValidator: 9f0814dd61682c004071a250d89327ca83514a48
   CTCheckbox: fec0e51c635ad555effd230a1fa186105010a382
   Firebase: 92c6ba593e32db0defde464a9adc981d5cb49f97
@@ -95,6 +98,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   YNDropDownMenu: 967ebe0c633ce8f40e8667574525aa230ba24560
 
-PODFILE CHECKSUM: 676f86b5a39a699253f896476c20edad6761f937
+PODFILE CHECKSUM: 7264c802d09120b0663e45093c1554d71690a8b3
 
 COCOAPODS: 1.4.0

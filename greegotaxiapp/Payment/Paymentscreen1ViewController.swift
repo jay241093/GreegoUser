@@ -106,7 +106,7 @@ func checkpayment() {
                     }
                     else{
                         self.maintableview.reloadData()
-                        print(response.result.value!)
+                       // print(response.result.value!)
                     }
                   
                 }
@@ -114,7 +114,6 @@ func checkpayment() {
             case .failure(_):
                 WebServiceClass().dismissprogress()
 
-                print("error")
             }
   
         }
@@ -258,7 +257,7 @@ func checkpayment() {
                     WebServiceClass().dismissprogress()
 
                     if let data = response.result.value{
-                        print(response.result.value!)
+                       // print(response.result.value!)
                         var dic = response.result.value as! NSDictionary
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)
@@ -318,7 +317,7 @@ func checkpayment() {
                 case .success(_):
                     WebServiceClass().dismissprogress()
                     if let data = response.result.value{
-                        print(response.result.value!)
+                      //  print(response.result.value!)
                         var dic = response.result.value as! NSDictionary
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)

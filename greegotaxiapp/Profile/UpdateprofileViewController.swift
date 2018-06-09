@@ -135,13 +135,13 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
                         else
                         {
                             self.maintableview.reloadData()
-                            print(response.result.value!)
+                           // print(response.result.value!)
                         }
                     }
                     else{
                     //   self.vehiclemakearray = vmakearray.mutableCopy() as! NSMutableArray
                     self.maintableview.reloadData()
-                    print(response.result.value!)
+                    //print(response.result.value!)
                     }
                 }
                 
@@ -244,7 +244,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
                 switch(response.result) {
                 case .success(_):
                     if let data = response.result.value{
-                        print(response.result.value!)
+                      //  print(response.result.value!)
                         var dic = response.result.value as! NSDictionary
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)
@@ -321,7 +321,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
                 case .success(_):
                     WebServiceClass().dismissprogress()
                     if let data = response.result.value{
-                        print(response.result.value!)
+                       // print(response.result.value!)
                         var dic = response.result.value as! NSDictionary
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)
@@ -447,7 +447,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
             switch result{
             case .success(let upload, _, _):
                 upload.responseJSON { response in
-                    print(response.result.value!)
+                  //  print(response.result.value!)
                     WebServiceClass().dismissprogress()
 
                     let dic = response.result.value as! NSDictionary
@@ -552,7 +552,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
                 case .success(_):
                     WebServiceClass().dismissprogress()
                     if let data = response.result.value{
-                        print(response.result.value!)
+                     //   print(response.result.value!)
                         let alert = UIAlertController(title: nil, message: "Suceessfully Updated.", preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)

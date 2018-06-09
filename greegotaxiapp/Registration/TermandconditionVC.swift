@@ -66,7 +66,7 @@ class TermandconditionVC: UIViewController,UIScrollViewDelegate{
         if(ischecked == "0")
         
         {
-            let alert = UIAlertController(title: nil, message: "Please Accept Terms and condition", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please accept terms and condition", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
@@ -111,8 +111,7 @@ func gettermscondition()
             switch(response.result) {
             case .success(_):
                 if let data = response.result.value{
-                    print(response.result.value!)
-                    
+                  //  print(response.result.value!)
                     
                     WebServiceClass().dismissprogress()
                     
@@ -138,7 +137,7 @@ func gettermscondition()
             case .failure(_):
                 WebServiceClass().dismissprogress()
                 
-                print(response.result.error)
+               // print(response.result.error)
                 break
                 
             }
@@ -185,7 +184,7 @@ func getuserprofile()
                 switch(response.result) {
                 case .success(_):
                     if let data = response.result.value{
-                        print(response.result.value!)
+                       // print(response.result.value!)
                         
                         
                         WebServiceClass().dismissprogress()
@@ -217,7 +216,7 @@ func getuserprofile()
                 case .failure(_):
                     WebServiceClass().dismissprogress()
 
-                    print(response.result.error)
+                   // print(response.result.error)
                     break
                     
                 }

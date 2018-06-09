@@ -73,7 +73,6 @@ txtzipcode.delegate = self
             
             let v = CreditCardValidator()
             if let type = v.type(from: txtCardNumber.text!) {
-                print(type.name)
                 if(type.name == "")
                 {
                     imgview.image = UIImage(named:"invalidcard")
@@ -163,13 +162,19 @@ txtzipcode.delegate = self
             }
             break
         case 4:
-            if newString?.characters.count == 5 {
+            if (isBackSpace == -92) {
+                //  print("Backspace was pressed")
+            }
+            else if newString?.characters.count == 5 {
                 return false
                 
             }
             break
         case 5:
-            if textField.text?.characters.count == 5 {
+            if (isBackSpace == -92) {
+                //  print("Backspace was pressed")
+            }
+            else if textField.text?.characters.count == 5 {
                 return false
                 
             }
@@ -225,20 +230,20 @@ txtzipcode.delegate = self
         
         if(txtCardNumber.text == "")
         {
-            let alert = UIAlertController(title: nil, message: "Please enter Card Number", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter card number", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         else if(txtdate.text == "")
         {
-            let alert = UIAlertController(title: nil, message: "Please enter Expiry Date", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter expiry date", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
         }
         else if(txtcvv.text == "")
         {
-            let alert = UIAlertController(title: nil, message: "Please enter CVV", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter cvv", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
@@ -246,7 +251,7 @@ txtzipcode.delegate = self
         
         else if(txtzipcode.text == "")
         {
-            let alert = UIAlertController(title: nil, message: "Please enter Zipcode", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter zipcode", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
@@ -286,6 +291,8 @@ txtzipcode.delegate = self
         
         STPAPIClient.shared().createToken(withCard: cardParams) { (token: STPToken?, error: Error?) in
             guard var token = token, error == nil else {
+                WebServiceClass().dismissprogress()
+
                 let alert = UIAlertController(title: nil, message:"Your card number is Invalid", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
@@ -331,7 +338,7 @@ txtzipcode.delegate = self
                 case .success(_):
                     WebServiceClass().dismissprogress()
                     if let data = response.result.value{
-                        print(response.result.value!)
+                       // print(response.result.value!)
                         var dic = response.result.value as! NSDictionary
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)
@@ -396,7 +403,7 @@ txtzipcode.delegate = self
                 case .success(_):
                     WebServiceClass().dismissprogress()
                     if let data = response.result.value{
-                    print(response.result.value!)
+                   // print(response.result.value!)
                         var dic = response.result.value as! NSDictionary
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)

@@ -475,7 +475,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsn-Vn-Qpu">
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsn-Vn-Qpu">
                                                             <rect key="frame" x="253" y="23" width="41" height="41"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="41" id="fph-dG-Ysk"/>
@@ -483,7 +483,6 @@
                                                             <state key="normal" backgroundImage="backimg"/>
                                                             <connections>
                                                                 <action selector="nextbtn:" destination="aeh-ry-Qb4" eventType="touchUpInside" id="N3M-40-qjl"/>
-                                                                <segue destination="68x-9N-LoQ" kind="showDetail" id="kQ4-UF-WdH"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -533,7 +532,7 @@
                                     <outlet property="delegate" destination="hXi-E7-HZ3" id="f78-3V-D0W"/>
                                 </connections>
                             </tableView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no Trip history yet." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx9-4x-Dea">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No trip history found." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx9-4x-Dea">
                                 <rect key="frame" x="30" y="199" width="257" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="3CN-vE-KuR"/>
@@ -677,26 +676,26 @@
                                                 <rect key="frame" x="0.0" y="440" width="320" height="120.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKU-50-4tm">
-                                                        <rect key="frame" x="21" y="8" width="42" height="20.5"/>
+                                                        <rect key="frame" x="21" y="8" width="43" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB8-6S-GHh">
-                                                        <rect key="frame" x="21" y="67.5" width="42" height="21"/>
+                                                        <rect key="frame" x="21" y="67.5" width="43" height="21"/>
                                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOv-H2-UPw">
-                                                        <rect key="frame" x="41" y="34" width="1" height="26"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOv-H2-UPw">
+                                                        <rect key="frame" x="41" y="34" width="2" height="26"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:43 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLn-ru-Hdh">
-                                                        <rect key="frame" x="79" y="9" width="127" height="17.5"/>
+                                                        <rect key="frame" x="80" y="9" width="127" height="17.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="127" id="52m-Zw-lq2"/>
                                                         </constraints>
@@ -705,19 +704,19 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3rd Avenue, New York,NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4v-Fi-RxK">
-                                                        <rect key="frame" x="79" y="29.5" width="187" height="20"/>
+                                                        <rect key="frame" x="79" y="30" width="233" height="20"/>
                                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:48 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoM-p6-hJI">
-                                                        <rect key="frame" x="79" y="68.5" width="127" height="18"/>
+                                                        <rect key="frame" x="80" y="68.5" width="127" height="18"/>
                                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2nd Avenue,New York,NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3on-T5-av3">
-                                                        <rect key="frame" x="80" y="89.5" width="186" height="17"/>
+                                                        <rect key="frame" x="80" y="90" width="232" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="P8E-oQ-VK2"/>
                                                         </constraints>
@@ -732,13 +731,13 @@
                                                     <constraint firstItem="3on-T5-av3" firstAttribute="leading" secondItem="hfc-gc-jql" secondAttribute="leading" constant="80" id="4Ti-yg-RQn"/>
                                                     <constraint firstAttribute="bottom" secondItem="3on-T5-av3" secondAttribute="bottom" constant="14" id="9z9-Jt-aDz"/>
                                                     <constraint firstItem="aKU-50-4tm" firstAttribute="trailing" secondItem="lB8-6S-GHh" secondAttribute="trailing" id="Bsp-BD-Mzg"/>
-                                                    <constraint firstAttribute="trailing" secondItem="F4v-Fi-RxK" secondAttribute="trailing" constant="54" id="Crv-eF-L2t"/>
+                                                    <constraint firstAttribute="trailing" secondItem="F4v-Fi-RxK" secondAttribute="trailing" constant="8" id="Crv-eF-L2t"/>
                                                     <constraint firstItem="aKU-50-4tm" firstAttribute="leading" secondItem="hfc-gc-jql" secondAttribute="leading" constant="21" id="DLI-Dz-n7x"/>
                                                     <constraint firstItem="lB8-6S-GHh" firstAttribute="top" secondItem="aKU-50-4tm" secondAttribute="bottom" constant="39" id="HRy-Hz-dtl"/>
-                                                    <constraint firstItem="F4v-Fi-RxK" firstAttribute="leading" secondItem="KoM-p6-hJI" secondAttribute="leading" id="Ib4-2u-f94"/>
+                                                    <constraint firstItem="F4v-Fi-RxK" firstAttribute="leading" secondItem="KoM-p6-hJI" secondAttribute="leading" constant="-1" id="Ib4-2u-f94"/>
                                                     <constraint firstItem="aKU-50-4tm" firstAttribute="firstBaseline" secondItem="uLn-ru-Hdh" secondAttribute="firstBaseline" id="Iwc-k5-7pm"/>
                                                     <constraint firstItem="uLn-ru-Hdh" firstAttribute="leading" secondItem="aKU-50-4tm" secondAttribute="trailing" constant="16" id="NiL-L5-Cpb"/>
-                                                    <constraint firstItem="F4v-Fi-RxK" firstAttribute="centerX" secondItem="3on-T5-av3" secondAttribute="centerX" id="RvP-vF-A9g"/>
+                                                    <constraint firstItem="F4v-Fi-RxK" firstAttribute="centerX" secondItem="3on-T5-av3" secondAttribute="centerX" constant="-0.5" id="RvP-vF-A9g"/>
                                                     <constraint firstItem="aKU-50-4tm" firstAttribute="top" secondItem="hfc-gc-jql" secondAttribute="topMargin" id="Wrc-CL-IQk"/>
                                                     <constraint firstItem="3on-T5-av3" firstAttribute="top" secondItem="KoM-p6-hJI" secondAttribute="bottom" constant="3" id="eXr-3V-lsw"/>
                                                     <constraint firstItem="uLn-ru-Hdh" firstAttribute="trailing" secondItem="KoM-p6-hJI" secondAttribute="trailing" id="f0S-BR-jiD"/>
@@ -746,7 +745,7 @@
                                                     <constraint firstItem="F4v-Fi-RxK" firstAttribute="leading" secondItem="fOv-H2-UPw" secondAttribute="trailing" constant="36" id="fw8-iQ-cuw"/>
                                                     <constraint firstAttribute="bottom" secondItem="fOv-H2-UPw" secondAttribute="bottom" constant="61" id="ge5-Nd-RRf"/>
                                                     <constraint firstItem="aKU-50-4tm" firstAttribute="leading" secondItem="lB8-6S-GHh" secondAttribute="leading" id="hng-zu-uVH"/>
-                                                    <constraint firstItem="uLn-ru-Hdh" firstAttribute="leading" secondItem="F4v-Fi-RxK" secondAttribute="leading" id="ijO-LK-gfc"/>
+                                                    <constraint firstItem="uLn-ru-Hdh" firstAttribute="leading" secondItem="F4v-Fi-RxK" secondAttribute="leading" constant="1" id="ijO-LK-gfc"/>
                                                     <constraint firstAttribute="bottom" secondItem="lB8-6S-GHh" secondAttribute="bottom" constant="32" id="kEV-xj-APU"/>
                                                     <constraint firstItem="fOv-H2-UPw" firstAttribute="top" secondItem="hfc-gc-jql" secondAttribute="top" constant="34" id="l4x-ZH-zvx"/>
                                                     <constraint firstItem="F4v-Fi-RxK" firstAttribute="trailing" secondItem="3on-T5-av3" secondAttribute="trailing" id="ni8-Hl-fXn"/>
@@ -924,6 +923,10 @@
                         <outlet property="lblSadd" destination="F4v-Fi-RxK" id="y91-6F-RMz"/>
                         <outlet property="lblcost" destination="4dD-XC-jF2" id="f6S-CG-biU"/>
                         <outlet property="lbldate" destination="VIN-Zp-blv" id="iRI-zl-mQu"/>
+                        <outlet property="lbldistance" destination="vD3-Vu-BRo" id="OLf-xn-dhD"/>
+                        <outlet property="lblfinaltripprice" destination="ha2-1W-n7W" id="XpN-DJ-82i"/>
+                        <outlet property="lblpromocode" destination="x3r-Fx-R2g" id="usg-YF-s5b"/>
+                        <outlet property="lbltripprice" destination="IAo-VN-tjb" id="WRP-J6-82W"/>
                         <outlet property="mainview" destination="eBK-lz-IYs" id="bsI-om-3L5"/>
                         <outlet property="mapshadowview" destination="1OD-KI-iZy" id="874-6S-RV3"/>
                         <outlet property="secondview" destination="hfc-gc-jql" id="BTe-sv-dac"/>
@@ -2232,7 +2235,7 @@ Greego to drive?</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US $32.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htf-Qh-BIg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htf-Qh-BIg">
                                         <rect key="frame" x="20" y="28.5" width="100" height="28.5"/>
                                         <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2245,7 +2248,7 @@ Greego to drive?</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoQ-lx-uvS">
-                                        <rect key="frame" x="128" y="37.5" width="96" height="53"/>
+                                        <rect key="frame" x="128" y="37" width="96" height="53.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JoQ-lx-uvS" secondAttribute="height" multiplier="9:5" id="t6D-Xk-WMG"/>
@@ -2276,7 +2279,7 @@ Greego to drive?</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNT-g9-T1h">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNT-g9-T1h">
                                                 <rect key="frame" x="72.5" y="3" width="36.5" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="36.5" id="qN6-0C-wJ3"/>
@@ -3297,7 +3300,7 @@ Greego to drive?</string>
                                     <constraint firstAttribute="bottom" secondItem="g0I-bJ-9pi" secondAttribute="bottom" constant="12" id="wcL-aV-3SD"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3o-VT-emF">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3o-VT-emF">
                                 <rect key="frame" x="0.0" y="227.5" width="320" height="59"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact" translatesAutoresizingMaskIntoConstraints="NO" id="Pqo-Iv-x2M">
@@ -3373,7 +3376,7 @@ Greego to drive?</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moN-HU-7nx">
-                                <rect key="frame" x="0.0" y="411" width="320" height="67"/>
+                                <rect key="frame" x="0.0" y="377" width="320" height="67"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljP-iJ-l2L">
                                         <rect key="frame" x="11" y="13" width="40" height="40"/>
@@ -3382,7 +3385,7 @@ Greego to drive?</string>
                                         </constraints>
                                         <state key="normal" backgroundImage="Logout"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dab-Bm-dvx">
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dab-Bm-dvx">
                                         <rect key="frame" x="55" y="15.5" width="115" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="115" id="xKs-42-uiH"/>
@@ -3411,7 +3414,7 @@ Greego to drive?</string>
                         <constraints>
                             <constraint firstItem="H5m-Tj-n8V" firstAttribute="trailing" secondItem="g3o-VT-emF" secondAttribute="trailing" id="1ID-pB-KHa"/>
                             <constraint firstItem="TvB-X0-nm5" firstAttribute="leading" secondItem="Pnu-8l-Gxq" secondAttribute="leading" id="9p5-Zr-xcX"/>
-                            <constraint firstItem="moN-HU-7nx" firstAttribute="top" secondItem="PAT-hh-gvA" secondAttribute="bottom" constant="53" id="APn-cc-DUV"/>
+                            <constraint firstItem="moN-HU-7nx" firstAttribute="top" secondItem="PAT-hh-gvA" secondAttribute="bottom" constant="19" id="APn-cc-DUV"/>
                             <constraint firstItem="PAT-hh-gvA" firstAttribute="leading" secondItem="moN-HU-7nx" secondAttribute="leading" id="EGV-me-82g"/>
                             <constraint firstItem="H5m-Tj-n8V" firstAttribute="leading" secondItem="g3o-VT-emF" secondAttribute="leading" id="G6q-y7-Dxe"/>
                             <constraint firstItem="EeT-Wr-KGW" firstAttribute="leading" secondItem="Pnu-8l-Gxq" secondAttribute="leading" constant="16" id="M9T-pD-jgw"/>
@@ -3434,6 +3437,7 @@ Greego to drive?</string>
                         <outlet property="firstview" destination="TvB-X0-nm5" id="GlI-ng-H7I"/>
                         <outlet property="forthview" destination="PAT-hh-gvA" id="WYo-1Y-OU0"/>
                         <outlet property="lbljoin" destination="g0I-bJ-9pi" id="Mz0-zQ-KQr"/>
+                        <outlet property="lblverifed" destination="00P-2M-OoB" id="XjZ-50-s4z"/>
                         <outlet property="profileimg" destination="S8a-xd-fyl" id="itN-zx-9zN"/>
                         <outlet property="secondview" destination="H5m-Tj-n8V" id="WrY-90-Ytp"/>
                         <outlet property="thirdview" destination="g3o-VT-emF" id="Lx8-gj-DHs"/>
@@ -3444,7 +3448,7 @@ Greego to drive?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLa-rs-l8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="1462"/>
+            <point key="canvasLocation" x="1046" y="1518"/>
         </scene>
         <!--FreeridesVC-->
         <scene sceneID="1yv-rM-lN4">
@@ -3927,7 +3931,7 @@ Greego to drive?</string>
                                                 <color key="textColor" red="0.0" green="0.47417285479999999" blue="0.47962507589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select the option for your tansmission type" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqT-OL-0kr">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select the option for your transmission type" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqT-OL-0kr">
                                                 <rect key="frame" x="52" y="561" width="222" height="68"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.47417285479999999" blue="0.47962507589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4717,7 +4721,7 @@ Greego to drive?</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6p7-Zm-Ua7">
                                 <rect key="frame" x="19" y="113" width="282" height="302"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2nd Avenue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcJ-on-0X8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcJ-on-0X8">
                                         <rect key="frame" x="19" y="15" width="244" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="244" id="NXY-yJ-P4Y"/>
@@ -4727,7 +4731,7 @@ Greego to drive?</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWF-se-L4P">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qWF-se-L4P">
                                         <rect key="frame" x="30" y="92" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -4741,7 +4745,7 @@ Greego to drive?</string>
                                             <action selector="btn10action:" destination="gqa-pN-W6N" eventType="touchUpInside" id="jyQ-CU-dLM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deX-2F-s9S">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="deX-2F-s9S">
                                         <rect key="frame" x="115" y="92" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -4755,7 +4759,7 @@ Greego to drive?</string>
                                             <action selector="btn15action:" destination="gqa-pN-W6N" eventType="touchUpInside" id="BLz-5Q-kPo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6G-mN-IHb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k6G-mN-IHb">
                                         <rect key="frame" x="202" y="92" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="20"/>
@@ -4783,7 +4787,7 @@ Greego to drive?</string>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                         <connections>
                                             <outlet property="delegate" destination="gqa-pN-W6N" id="TAQ-gN-PnY"/>
                                         </connections>
@@ -5186,7 +5190,7 @@ Greego to drive?</string>
                                 </constraints>
                                 <state key="normal" image="Back_button"/>
                                 <connections>
-                                    <action selector="back_action:" destination="wrH-yK-0E4" eventType="touchUpInside" id="VNf-yu-rTM"/>
+                                    <action selector="back_action:" destination="wrH-yK-0E4" eventType="touchUpInside" id="UVl-VY-iDB"/>
                                 </connections>
                             </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Greego1" translatesAutoresizingMaskIntoConstraints="NO" id="rHm-UN-Mw4">
@@ -5221,7 +5225,7 @@ Greego to drive?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="xvy-Ur-P51"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="20"/>
                                 <state key="normal" title="Lost &amp; found">
                                     <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -5229,17 +5233,17 @@ Greego to drive?</string>
                                     <segue destination="tPm-pP-hn2" kind="show" id="8Ow-p6-5UA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sir-jJ-foO">
-                                <rect key="frame" x="19" y="435" width="285" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sir-jJ-foO">
+                                <rect key="frame" x="19" y="435" width="285" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="DWn-5w-Tk0"/>
+                                    <constraint firstAttribute="height" constant="51" id="DWn-5w-Tk0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="22"/>
-                                <state key="normal" title="Service animal policy">
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="20"/>
+                                <state key="normal" title="     How and when driver pay                  is calculated">
                                     <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JgM-Mi-Cpg" kind="show" id="b64-fm-fPx"/>
+                                    <segue destination="bWj-Re-GD5" kind="show" id="UO0-fe-Zw7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNk-AR-R5r">
@@ -5247,37 +5251,37 @@ Greego to drive?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="UDT-jV-P4U"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
-                                <state key="normal" title="Report an accident, safety incident, or citation">
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="20"/>
+                                <state key="normal" title="Service animal policy">
                                     <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="INf-mQ-bBG" kind="show" id="fr8-Qr-DaI"/>
+                                    <segue destination="JgM-Mi-Cpg" kind="show" id="cFn-OD-aDT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ene-J9-lnJ">
-                                <rect key="frame" x="13" y="376" width="300" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ene-J9-lnJ">
+                                <rect key="frame" x="13" y="368" width="300" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="W8Q-tg-W2H"/>
+                                    <constraint firstAttribute="height" constant="51" id="W8Q-tg-W2H"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="16"/>
-                                <state key="normal" title="How and when driver pay is calculated?">
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="20"/>
+                                <state key="normal" title="      Report an accident, safety               incident, or citation">
                                     <color key="titleColor" red="0.0" green="0.56470588239999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bWj-Re-GD5" kind="show" id="J2G-e7-9r2"/>
+                                    <segue destination="INf-mQ-bBG" kind="show" id="Pw1-Cp-L56"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gYb-cE-7x1" firstAttribute="leading" secondItem="hRW-ux-z45" secondAttribute="leading" id="1KL-Qr-moI"/>
-                            <constraint firstItem="HNk-AR-R5r" firstAttribute="top" secondItem="sir-jJ-foO" secondAttribute="bottom" constant="23" id="3jN-K7-0cw"/>
+                            <constraint firstItem="HNk-AR-R5r" firstAttribute="top" secondItem="sir-jJ-foO" secondAttribute="bottom" constant="8" id="3jN-K7-0cw"/>
                             <constraint firstItem="hRW-ux-z45" firstAttribute="top" secondItem="WT1-mU-YRl" secondAttribute="top" constant="4" id="82U-rR-CAu"/>
                             <constraint firstItem="gYb-cE-7x1" firstAttribute="trailing" secondItem="hf6-j5-L2J" secondAttribute="trailingMargin" id="9Fc-a5-4xx"/>
                             <constraint firstAttribute="trailing" secondItem="xEh-AQ-DI2" secondAttribute="trailing" id="AjS-ic-ok5"/>
                             <constraint firstItem="gYb-cE-7x1" firstAttribute="top" secondItem="xEh-AQ-DI2" secondAttribute="bottom" constant="35" id="Atn-oL-C6c"/>
-                            <constraint firstItem="Ene-J9-lnJ" firstAttribute="top" secondItem="eYi-69-TbZ" secondAttribute="bottom" constant="25" id="CsP-bI-36z"/>
+                            <constraint firstItem="Ene-J9-lnJ" firstAttribute="top" secondItem="eYi-69-TbZ" secondAttribute="bottom" constant="17" id="CsP-bI-36z"/>
                             <constraint firstItem="gYb-cE-7x1" firstAttribute="trailing" secondItem="eYi-69-TbZ" secondAttribute="trailing" id="Dao-cZ-JLy"/>
                             <constraint firstItem="auF-LT-Jes" firstAttribute="centerX" secondItem="xEh-AQ-DI2" secondAttribute="centerX" constant="-3" id="Jsh-ZM-XUF"/>
                             <constraint firstItem="auF-LT-Jes" firstAttribute="top" secondItem="rHm-UN-Mw4" secondAttribute="bottom" constant="47" id="Num-P4-X3a"/>
@@ -5285,11 +5289,10 @@ Greego to drive?</string>
                             <constraint firstItem="eYi-69-TbZ" firstAttribute="leading" secondItem="sir-jJ-foO" secondAttribute="leading" id="Sfl-Kc-zY3"/>
                             <constraint firstItem="WT1-mU-YRl" firstAttribute="trailing" secondItem="rHm-UN-Mw4" secondAttribute="trailing" constant="64" id="T8f-RE-T21"/>
                             <constraint firstItem="eYi-69-TbZ" firstAttribute="trailing" secondItem="sir-jJ-foO" secondAttribute="trailing" id="aIt-Wu-r0v"/>
-                            <constraint firstItem="sir-jJ-foO" firstAttribute="top" secondItem="Ene-J9-lnJ" secondAttribute="bottom" constant="23" id="aZs-Y6-j4g"/>
+                            <constraint firstItem="sir-jJ-foO" firstAttribute="top" secondItem="Ene-J9-lnJ" secondAttribute="bottom" constant="16" id="aZs-Y6-j4g"/>
                             <constraint firstItem="WT1-mU-YRl" firstAttribute="bottom" secondItem="HNk-AR-R5r" secondAttribute="bottom" constant="38" id="eH7-yO-V2L"/>
                             <constraint firstItem="xEh-AQ-DI2" firstAttribute="centerX" secondItem="HNk-AR-R5r" secondAttribute="centerX" id="eRs-a5-WZ1"/>
                             <constraint firstItem="xEh-AQ-DI2" firstAttribute="leading" secondItem="hf6-j5-L2J" secondAttribute="leading" id="exC-kI-Sz2"/>
-                            <constraint firstItem="rHm-UN-Mw4" firstAttribute="leading" secondItem="hRW-ux-z45" secondAttribute="trailing" constant="36" id="fbI-bl-KFV"/>
                             <constraint firstItem="HNk-AR-R5r" firstAttribute="leading" secondItem="WT1-mU-YRl" secondAttribute="leading" constant="8" id="lNE-7G-l7o"/>
                             <constraint firstItem="gYb-cE-7x1" firstAttribute="leading" secondItem="eYi-69-TbZ" secondAttribute="leading" id="ltf-g1-eiO"/>
                             <constraint firstItem="rHm-UN-Mw4" firstAttribute="top" secondItem="WT1-mU-YRl" secondAttribute="top" id="pCX-lN-sY3"/>
@@ -5309,10 +5312,16 @@ Greego to drive?</string>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btn1" destination="eYi-69-TbZ" id="3wd-jU-0aO"/>
+                        <outlet property="btn2" destination="Ene-J9-lnJ" id="O1h-w7-c8n"/>
+                        <outlet property="btn3" destination="sir-jJ-foO" id="7sq-0h-Zqh"/>
+                        <outlet property="btn4" destination="HNk-AR-R5r" id="XHX-Pj-gvB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="og1-VN-TfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2526" y="2234"/>
+            <point key="canvasLocation" x="-2527.5" y="2233.0985915492956"/>
         </scene>
         <!--Lost foundVC-->
         <scene sceneID="Nk7-ym-qVO">
@@ -5583,6 +5592,122 @@ Greego to drive?</string>
             </objects>
             <point key="canvasLocation" x="-1695" y="3021"/>
         </scene>
+        <!--Update EmailVC-->
+        <scene sceneID="cEK-5Q-yDA">
+            <objects>
+                <viewController storyboardIdentifier="UpdateEmailVC" id="LKL-oc-jG2" customClass="UpdateEmailVC" customModule="greegotaxiapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6fM-YP-hnk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ycq-xP-eAZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dfe-Tz-Mi7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkG-VG-aWN">
+                                <rect key="frame" x="0.0" y="20" width="320" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-uh-fyR">
+                                        <rect key="frame" x="100.5" y="25" width="119" height="26"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0X-qC-dcs">
+                                        <rect key="frame" x="8" y="21" width="35" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="D0X-qC-dcs" secondAttribute="height" multiplier="35:33" id="fHr-kk-bfD"/>
+                                            <constraint firstAttribute="height" constant="33" id="jPG-9T-1bu"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Back_button"/>
+                                        <connections>
+                                            <action selector="backBtnAcion:" destination="LKL-oc-jG2" eventType="touchUpInside" id="1ok-FH-UJK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="7Dt-0M-A2g"/>
+                                    <constraint firstItem="aRm-uh-fyR" firstAttribute="centerY" secondItem="PkG-VG-aWN" secondAttribute="centerY" id="HrK-S7-Mhb"/>
+                                    <constraint firstItem="D0X-qC-dcs" firstAttribute="leading" secondItem="PkG-VG-aWN" secondAttribute="leadingMargin" id="SbU-bt-lYw"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="TE5-UD-JaJ"/>
+                                    <constraint firstItem="aRm-uh-fyR" firstAttribute="centerX" secondItem="PkG-VG-aWN" secondAttribute="centerX" id="Ua3-Uz-tsJ"/>
+                                    <constraint firstItem="D0X-qC-dcs" firstAttribute="centerY" secondItem="PkG-VG-aWN" secondAttribute="centerY" id="fNR-aM-3by"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="vfR-hJ-w5L"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHG-Ba-8ca">
+                                <rect key="frame" x="32" y="111" width="256" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="xbq-f6-W5K">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="35"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="ohU-QY-8GA">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="Dwj-ua-NcO"/>
+                                                    <constraint firstAttribute="height" constant="35" id="O2w-VU-Z5q"/>
+                                                    <constraint firstAttribute="width" secondItem="ohU-QY-8GA" secondAttribute="height" multiplier="1:1" id="hyR-wS-G3M"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Tn-nF-Rhj">
+                                                <rect key="frame" x="42" y="0.0" width="214" height="35"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xbq-f6-W5K" secondAttribute="trailing" id="AcS-e1-fhi"/>
+                                    <constraint firstItem="xbq-f6-W5K" firstAttribute="leading" secondItem="aHG-Ba-8ca" secondAttribute="leading" id="Nkg-Qj-8FI"/>
+                                    <constraint firstAttribute="height" constant="40" id="Xx3-wP-VN5"/>
+                                    <constraint firstAttribute="bottom" secondItem="xbq-f6-W5K" secondAttribute="bottom" constant="5" id="lNi-m5-kfj"/>
+                                    <constraint firstItem="xbq-f6-W5K" firstAttribute="top" secondItem="aHG-Ba-8ca" secondAttribute="top" id="zXz-Aq-lch"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please confirm your email using link below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCi-hR-8JG">
+                                <rect key="frame" x="32" y="183" width="256" height="45.5"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-EB-uJN">
+                                <rect key="frame" x="60.5" y="262.5" width="205" height="38"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="19"/>
+                                <state key="normal" title="Send confirmation email"/>
+                                <connections>
+                                    <action selector="SendConfirmaion:" destination="LKL-oc-jG2" eventType="touchUpInside" id="eXB-4X-7Y5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aHG-Ba-8ca" firstAttribute="top" secondItem="PkG-VG-aWN" secondAttribute="bottom" constant="16" id="3qy-Za-3r5"/>
+                            <constraint firstItem="ULx-EB-uJN" firstAttribute="top" secondItem="ZCi-hR-8JG" secondAttribute="bottom" constant="34" id="A5v-6a-FEd"/>
+                            <constraint firstItem="PkG-VG-aWN" firstAttribute="top" secondItem="6fM-YP-hnk" secondAttribute="bottom" id="BhE-LT-tfa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZCi-hR-8JG" secondAttribute="trailing" constant="16" id="EwU-sU-xne"/>
+                            <constraint firstItem="ZCi-hR-8JG" firstAttribute="top" secondItem="aHG-Ba-8ca" secondAttribute="bottom" constant="32" id="R5J-hA-HGd"/>
+                            <constraint firstItem="ZCi-hR-8JG" firstAttribute="leading" secondItem="dfe-Tz-Mi7" secondAttribute="leadingMargin" constant="16" id="RSK-Bb-huX"/>
+                            <constraint firstItem="ULx-EB-uJN" firstAttribute="centerX" secondItem="dfe-Tz-Mi7" secondAttribute="centerX" constant="3" id="TtT-Zx-h94"/>
+                            <constraint firstItem="aHG-Ba-8ca" firstAttribute="leading" secondItem="dfe-Tz-Mi7" secondAttribute="leadingMargin" constant="16" id="X3F-RS-HLm"/>
+                            <constraint firstAttribute="trailing" secondItem="PkG-VG-aWN" secondAttribute="trailing" id="Zde-pb-q7n"/>
+                            <constraint firstItem="PkG-VG-aWN" firstAttribute="leading" secondItem="dfe-Tz-Mi7" secondAttribute="leading" id="dbE-en-2Jp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aHG-Ba-8ca" secondAttribute="trailing" constant="16" id="w4s-qi-Jm7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSendConfirmationlink" destination="ULx-EB-uJN" id="NHh-CE-VnY"/>
+                        <outlet property="header" destination="PkG-VG-aWN" id="0EV-Ve-qlS"/>
+                        <outlet property="txtFEmail" destination="2Tn-nF-Rhj" id="Al6-hE-5jf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAz-c0-co7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2417" y="1518"/>
+        </scene>
     </scenes>
     <resources>
         <image name="189792" width="128" height="128"/>
@@ -5608,6 +5733,7 @@ Greego to drive?</string>
         <image name="camera" width="62" height="62"/>
         <image name="contact" width="64" height="64"/>
         <image name="default-user" width="502" height="502"/>
+        <image name="email" width="31" height="31"/>
         <image name="emptyStar" width="510" height="512"/>
         <image name="filledStar" width="475" height="476"/>
         <image name="flag for mobile" width="124" height="68"/>
@@ -5625,6 +5751,6 @@ Greego to drive?</string>
         <image name="taxi-app-background_23-2147561164" width="626" height="626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e8B-7U-Syi"/>
+        <segue reference="mqa-2h-RUf"/>
     </inferredMetricsTieBreakers>
 </document>

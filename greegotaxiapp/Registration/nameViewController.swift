@@ -59,18 +59,15 @@ class nameViewController: UIViewController
        if(txtfirstname.text == "")
        {
         
-        let alert = UIAlertController(title: nil, message: "Please Enter Firstname", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: nil, message: "Please enter firstname", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-        
-        
-        
         
         }
       else  if(txtlastname.text == "")
         {
             
-            let alert = UIAlertController(title: nil, message: "Please Enter Lastname", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Please enter lastname", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             

@@ -67,7 +67,7 @@ class FreetripsViewController: UIViewController {
                 switch(response.result) {
                 case .success(_):
                     if response.result.value != nil{
-                        print(response.result.value!)
+                      //  print(response.result.value!)
                         
                         let dic: NSDictionary =  response.result.value! as! NSDictionary
                         

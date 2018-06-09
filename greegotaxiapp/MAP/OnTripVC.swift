@@ -43,6 +43,8 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json")
             {
                 usemap.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                usemap.settings.myLocationButton = true
+                usemap.isMyLocationEnabled = true
             } else {
                 print("Unable to find style.json")
             }
@@ -138,9 +140,10 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                     
                     bounds = bounds.includingCoordinate(sourceCord)
                     bounds = bounds.includingCoordinate(destCord)
-                    let update = GMSCameraUpdate.fit(bounds, withPadding: 50)
+                    let update = GMSCameraUpdate.fit(bounds, withPadding: 100)
                     self.usemap.animate(with: update)
-                    
+                    //self.usemap.animate(with: GMSCameraUpdate.fit(bounds))
+
                     self.sourceMarker.icon = UIImage(named:"user1")
                     self.sourceMarker.position = CLLocationCoordinate2D(latitude: sourceCord.latitude, longitude:sourceCord.longitude)
                     self.sourceMarker.map = self.usemap
@@ -219,7 +222,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                         let last = driverdic.value(forKey: "lastname") as! String
                         
                         self.lblname.text = first + " " + last
-                        self.lblpromocode.setTitle(driverdic.value(forKey:"promocode") as! String, for: .normal)
+                        self.lblpromocode.setTitle(driverdic.value(forKey:"promocode") as? String, for: .normal)
 
                         let sourcelat = driverlocationdic.value(forKey: "lat") as! NSNumber
                         let sourcelng = driverlocationdic.value(forKey: "lng") as! NSNumber
@@ -281,7 +284,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                 case .success(_):
                    // WebServiceClass().dismissprogress()
                     if response.result.value != nil{
-                        print(response.result.value!)
+                      //  print(response.result.value!)
                         let dic: NSDictionary =  response.result.value! as! NSDictionary
                         
                         if(dic.value(forKey: "error_code") as! NSNumber  == 0)
@@ -374,6 +377,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                 else if(num == "4")
                 {
                   
+                    self.timer.invalidate()
                     let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! TipViewController
                     
                     

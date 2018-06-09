@@ -22,7 +22,6 @@ class mobilenumberViewController: UIViewController ,UITextFieldDelegate{
         backgroundImage.image = UIImage(named: "bg_rectangle")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
-        print("hbjvjjhv")
         
        if let key = UserDefaults.standard.object(forKey: "islogin")
        {
