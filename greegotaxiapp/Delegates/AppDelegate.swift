@@ -125,12 +125,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
    
     
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
-        
-        
-        
+  
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         print(userInfo as! NSDictionary)
         
+        
+        completionHandler(.newData)
         let state:UIApplicationState = application.applicationState
         
         let dic: NSDictionary = userInfo as! NSDictionary
@@ -145,18 +146,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         else if(state == .inactive)
         {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
-
+            
             
         }
         else
         {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
-
+            
             
         }
         
-        
-        
+    }
+   
+ 
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+    
     }
     
   
@@ -179,6 +183,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func applicationDidBecomeActive(_ application: UIApplication)
     {
+        
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 

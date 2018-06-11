@@ -553,7 +553,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
                     WebServiceClass().dismissprogress()
                     if let data = response.result.value{
                      //   print(response.result.value!)
-                        let alert = UIAlertController(title: nil, message: "Suceessfully Updated.", preferredStyle: UIAlertControllerStyle.alert)
+                        let alert = UIAlertController(title: nil, message: "Profile updated suceessfully", preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
                         

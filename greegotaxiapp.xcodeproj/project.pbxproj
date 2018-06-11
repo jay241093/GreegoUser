@@ -33,6 +33,7 @@
 		215B896D20ADA1400064B8EB /* LoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215B896C20ADA13F0064B8EB /* LoaderVC.swift */; };
 		2173C2A6209D8A1800CE7096 /* OnTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173C2A5209D8A1800CE7096 /* OnTripVC.swift */; };
 		2173C2A8209D8CCE00CE7096 /* DriverRatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173C2A7209D8CCE00CE7096 /* DriverRatingVC.swift */; };
+		21C3A74420CE347000C25777 /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C3A74320CE347000C25777 /* CustomAlertVC.swift */; };
 		3B2345CD20853B1C006B1796 /* customTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2345CC20853B1C006B1796 /* customTextField.swift */; };
 		3B2F5925208763C7000DD298 /* AfteraddpromocodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F5920208763C6000DD298 /* AfteraddpromocodeViewController.swift */; };
 		3B2F5927208763C7000DD298 /* Paymentscreen2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F5922208763C6000DD298 /* Paymentscreen2ViewController.swift */; };
@@ -119,6 +120,7 @@
 		215B896C20ADA13F0064B8EB /* LoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderVC.swift; sourceTree = "<group>"; };
 		2173C2A5209D8A1800CE7096 /* OnTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTripVC.swift; sourceTree = "<group>"; };
 		2173C2A7209D8CCE00CE7096 /* DriverRatingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverRatingVC.swift; sourceTree = "<group>"; };
+		21C3A74320CE347000C25777 /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
 		3B2345CC20853B1C006B1796 /* customTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTextField.swift; sourceTree = "<group>"; };
 		3B2F5920208763C6000DD298 /* AfteraddpromocodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AfteraddpromocodeViewController.swift; sourceTree = "<group>"; };
 		3B2F5922208763C6000DD298 /* Paymentscreen2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paymentscreen2ViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				212E2EDB20B2839C0062CDF7 /* iOSDevCenters+GIF.swift */,
+				21C3A74320CE347000C25777 /* CustomAlertVC.swift */,
 				3B2345CC20853B1C006B1796 /* customTextField.swift */,
 				215B896C20ADA13F0064B8EB /* LoaderVC.swift */,
 				734F550B2077408200512886 /* HADropDown.swift */,
@@ -678,6 +681,7 @@
 				3B9246522092B3980011D839 /* VehicleTableViewCell.swift in Sources */,
 				3BDEF7B72085F6CB00447600 /* HelpViewController.swift in Sources */,
 				739807DE209AE10F00D0BE3F /* mobilenumberViewController.swift in Sources */,
+				21C3A74420CE347000C25777 /* CustomAlertVC.swift in Sources */,
 				040A0B4B2078977500CBA6D2 /* SharedClass.swift in Sources */,
 				739807E4209AE10F00D0BE3F /* EmailVC.swift in Sources */,
 				215A6D0B20BD7477006D82B8 /* HelpVC.swift in Sources */,

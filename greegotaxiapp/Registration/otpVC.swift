@@ -142,7 +142,7 @@ else
             WebServiceClass().showprogress()
 
             let parameters = [
-                "contact_number":"+91" + strmobileno!,
+                "contact_number":"+1" + strmobileno!,
                 "is_iphone": "0",
                 "device_id": UserDefaults.standard.value(forKey: "Token") as! String
 
@@ -218,7 +218,7 @@ else
                 case .success(_):
                     WebServiceClass().dismissprogress()
                     if let data = response.result.value{
-                        //print(response.result.value!)
+                        print(response.result.value!)
                       
                         let dic: NSDictionary =  response.result.value! as! NSDictionary
                         
@@ -253,10 +253,10 @@ else
                             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
                             self.navigationController?.pushViewController(nextViewController, animated: true)
                             let user1 = UserDefaults.standard
-                            user1.set(newdic.value(forKey: "email") as! String, forKey: "email")
+                            user1.set(newdic.value(forKey: "email") as? String, forKey: "email")
 
-                            user1.set(newdic.value(forKey: "name") as! String, forKey: "fname")
-                            user1.set(newdic.value(forKey: "lastname") as! String, forKey: "lname")
+                            user1.set(newdic.value(forKey: "name") as? String, forKey: "fname")
+                            user1.set(newdic.value(forKey: "lastname") as? String, forKey: "lname")
                             user1.set(self.strmobileno!, forKey: "mobile")
 
                             //user1.set(newdic.value(forKey: "email") as! String, forKey: "email")

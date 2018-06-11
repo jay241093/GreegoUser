@@ -55,11 +55,15 @@ class sidemenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
             self.imguser.sd_setImage(with: catPictureURL as! URL, placeholderImage: UIImage(named: "default-user"))
             //self.updateprofileimg.image = image
         }
-        let  firstname = UserDefaults.standard.value(forKey: "fname") as! String
-        let  lastname = UserDefaults.standard.value(forKey: "lname") as! String
+     
+        
+        if let  firstname = UserDefaults.standard.value(forKey: "fname") as? String
+        {
+        let  lastname = UserDefaults.standard.value(forKey: "lname") as? String
         
         
-        fname.text = firstname + " " + lastname
+            fname.text = firstname + " " + lastname!
+        }
     }
     
     

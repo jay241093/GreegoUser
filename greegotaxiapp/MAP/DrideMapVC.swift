@@ -15,7 +15,8 @@ import SDWebImage
 import AVFoundation
 
 
-class DrideMapVC: UIViewController, GMSMapViewDelegate {
+class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
+   
 
     @IBOutlet weak var lbllast4: UILabel!
     
@@ -396,7 +397,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                     let points = routeOverviewPolyline?["points"]?.stringValue
                     let path = GMSPath.init(fromEncodedPath: points!)
                     let polyline = GMSPolyline.init(path: path)
-                    polyline.strokeWidth = 6.0
+                    polyline.strokeWidth = 5.0
                     polyline.strokeColor = UIColor.black
                     polyline.map = self.mapView
                     
@@ -417,7 +418,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
                     
                     bounds = bounds.includingCoordinate(self.sourceCord)
                     bounds = bounds.includingCoordinate(self.destCord)
-                    let update = GMSCameraUpdate.fit(bounds, withPadding: 100)
+                    let update = GMSCameraUpdate.fit(bounds, withPadding: 150)
                     self.mapView.animate(with: update)
                     
                     self.sourceMarker.icon = self.drawText(text:self.strDuration as NSString , inImage: #imageLiteral(resourceName: "Ellipse 12"))
@@ -587,23 +588,38 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate {
     
     @IBAction func btnRequestClicked(_ sender: Any)
     {
+        let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "CustomAlertVC") as! CustomAlertVC
+        popOverConfirmVC.delegate = self
+        popOverConfirmVC.StrSource = self.source
+        popOverConfirmVC.StrDestination = self.destination
+        self.addChildViewController(popOverConfirmVC)
+        popOverConfirmVC.view.frame = self.view.frame
+        self.view.center = popOverConfirmVC.view.center
+        self.view.addSubview(popOverConfirmVC.view)
+        popOverConfirmVC.didMove(toParentViewController: self)
         
-        let refreshAlert = UIAlertController(title: nil, message: "Are you sure you want to go from " + source + " to " + destination , preferredStyle: UIAlertControllerStyle.alert)
-        
-        refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
-            self.requestclick()
-            
-        }))
-        
-        refreshAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
-            print("Handle Cancel Logic here")
-        }))
-        
-        present(refreshAlert, animated: true, completion: nil)
-        
+//
+//        let refreshAlert = UIAlertController(title: nil, message: "Are you sure you want to go from " + source + " to " + destination , preferredStyle: UIAlertControllerStyle.alert)
+//
+//        refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+//            self.requestclick()
+//
+//        }))
+//
+//        refreshAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
+//            print("Handle Cancel Logic here")
+//        }))
+//
+//        present(refreshAlert, animated: true, completion: nil)
+//
         
      
     }
+    func yesAction() {
+        self.requestclick()
+    }
+    
+    
     
    func requestclick()
    {

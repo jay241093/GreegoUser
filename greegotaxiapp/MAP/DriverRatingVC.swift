@@ -159,14 +159,10 @@ ratingnew = String(format: "%.2f", rating)
                     
                     if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                     {
-                        let alert = UIAlertController(title: nil, message: dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style:.default, handler: { (Greego) in
-                            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                            
-                            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
-                            self.navigationController?.pushViewController(nextViewController, animated: true)
-                        }))
-                        self.present(alert, animated: true, completion: nil)
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        
+                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+                        self.navigationController?.pushViewController(nextViewController, animated: true)
                         
                     }else{
                        

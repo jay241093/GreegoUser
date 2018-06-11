@@ -38,7 +38,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         
         let myDouble = Double(amount)
-        let doubleStr = String(format: "%.1f", myDouble!)
+        let doubleStr = String(format: "%.2f", myDouble!)
         
   lblamount.text = " Trip Amount $ " +  doubleStr
         

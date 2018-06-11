@@ -118,7 +118,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                     let points = routeOverviewPolyline?["points"]?.stringValue
                     let path = GMSPath.init(fromEncodedPath: points!)
                     let polyline = GMSPolyline.init(path: path)
-                    polyline.strokeWidth = 6.0
+                    polyline.strokeWidth = 5.0
                     polyline.strokeColor = UIColor.black
                     self.usemap.clear()
                     polyline.map = self.usemap
@@ -140,7 +140,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                     
                     bounds = bounds.includingCoordinate(sourceCord)
                     bounds = bounds.includingCoordinate(destCord)
-                    let update = GMSCameraUpdate.fit(bounds, withPadding: 100)
+                    let update = GMSCameraUpdate.fit(bounds, withPadding: 150)
                     self.usemap.animate(with: update)
                     //self.usemap.animate(with: GMSCameraUpdate.fit(bounds))
 
