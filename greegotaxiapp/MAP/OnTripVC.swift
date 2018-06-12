@@ -84,6 +84,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
         imguser.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -193,6 +194,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
             let ID:Int? = Int(tripid) // firstText is UITextField
             
             print(ID!)
+            
             let token = UserDefaults.standard.value(forKey: "devicetoken") as! String
             let headers = ["Accept": "application/json","Authorization": "Bearer "+token]
             let parameters = [

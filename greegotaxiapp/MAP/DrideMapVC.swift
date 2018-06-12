@@ -412,7 +412,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
                     let firstLegDistanceDict = firstLeg["distance"]
                     let firstLegDistance = firstLegDistanceDict["text"]
                     self.strDistance = String(describing: firstLegDistance)
-                    
+                    print(self.strDistance)
                     
                     var bounds = GMSCoordinateBounds()
                     

@@ -142,7 +142,7 @@ else
             WebServiceClass().showprogress()
 
             let parameters = [
-                "contact_number":"+1" + strmobileno!,
+                "contact_number":"+91" + strmobileno!,
                 "is_iphone": "0",
                 "device_id": UserDefaults.standard.value(forKey: "Token") as! String
 

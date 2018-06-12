@@ -271,7 +271,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
     if(cb.checked)
     {
        
-       Finalamount =  0
+       Finalamount =  0.0
         btn10.backgroundColor = UIColor.lightGray
         btn10.titleLabel?.textColor = UIColor.black
         

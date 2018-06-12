@@ -56,12 +56,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             // opened from a push notification when the app is closed
             var userInfo = launchOptions![.remoteNotification] as? [AnyHashable: Any]
             if userInfo != nil {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
-                let initialViewController = storyboard.instantiateViewController(withIdentifier: "DrideMapVC") as! DrideMapVC
-                let dic: NSDictionary = userInfo as! NSDictionary
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+                
+                
+                let dic = userInfo as! NSDictionary
+                if let key = dic.object(forKey: "status")
+                {
+                    
+                    var num = dic.value(forKey: "status") as! String
+                    if(num == "2")
+                    {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+                        let initialViewController = storyboard.instantiateViewController(withIdentifier: "DrideMapVC") as! DrideMapVC
+                        navigationController.pushViewController(initialViewController, animated: true)
+                        self.window?.rootViewController = navigationController
+                        self.window?.makeKeyAndVisible()
+                        let dic: NSDictionary = userInfo as! NSDictionary
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+                        
+                    }
+                    if(num == "3")
+                    {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+                        let initialViewController = storyboard.instantiateViewController(withIdentifier: "OnTripVC") as! OnTripVC
+                        navigationController.pushViewController(initialViewController, animated: true)
+                        self.window?.rootViewController = navigationController
+                        self.window?.makeKeyAndVisible()
+                        let dic: NSDictionary = userInfo as! NSDictionary
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+                        
+                    }
+                    if(num == "4")
+                    {
+                        
+                       
+                    }
+                
+                        
+            
 
+            }
             }
             else
             {
@@ -134,7 +169,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         completionHandler(.newData)
         let state:UIApplicationState = application.applicationState
         
+        
         let dic: NSDictionary = userInfo as! NSDictionary
+        
+        
+        if let key = dic.object(forKey: "status")
+        {
+            print(dic.object(forKey: "status") as! String )
+            
+        }
         if(state == .active)
             
         {
