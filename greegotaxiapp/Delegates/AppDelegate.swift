@@ -72,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                         self.window?.rootViewController = navigationController
                         self.window?.makeKeyAndVisible()
                         let dic: NSDictionary = userInfo as! NSDictionary
-                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+                       //  NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
                         
                     }
                     if(num == "3")
@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                         self.window?.rootViewController = navigationController
                         self.window?.makeKeyAndVisible()
                         let dic: NSDictionary = userInfo as! NSDictionary
-                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+                      // NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
                         
                     }
                     if(num == "4")
@@ -97,11 +97,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             
 
             }
+                else
+                {
+                   // NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+                    
+                }
             }
             else
             {
                
-                
+             
             }
         }
         application.registerForRemoteNotifications()
@@ -194,7 +199,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         else
         {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+           NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
             
             
         }

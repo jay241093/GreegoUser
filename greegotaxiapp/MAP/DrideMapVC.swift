@@ -13,11 +13,13 @@ import SwiftyJSON
 import SANotificationViews
 import SDWebImage
 import AVFoundation
+import CreditCardValidator
 
 
 class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
    
-
+    @IBOutlet weak var imgview: UIImageView!
+    
     @IBOutlet weak var lbllast4: UILabel!
     
     var sourceCord = CLLocationCoordinate2D()
@@ -50,12 +52,11 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
         
         self.navigationController?.popViewController(animated: true)
 
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getData()
+       
         let geocoder = GMSGeocoder()
         geocoder.reverseGeocodeCoordinate(self.sourceCord) { response , error in
             
@@ -127,6 +128,9 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+         getData()
+    }
     
     @objc func AcceptRequest(notification: NSNotification) {
     WebServiceClass().dismissprogress()
@@ -333,7 +337,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
         
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Paymentscreen1ViewController") as! Paymentscreen1ViewController
         nextViewController.isfrom = "1"
-        
+        self.selectecard.removeAllObjects()
         self.navigationController?.pushViewController(nextViewController, animated: true)
         
 
@@ -418,7 +422,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
                     
                     bounds = bounds.includingCoordinate(self.sourceCord)
                     bounds = bounds.includingCoordinate(self.destCord)
-                    let update = GMSCameraUpdate.fit(bounds, withPadding: 150)
+                    let update = GMSCameraUpdate.fit(bounds, withPadding: 130)
                     self.mapView.animate(with: update)
                     
                     self.sourceMarker.icon = self.drawText(text:self.strDuration as NSString , inImage: #imageLiteral(resourceName: "Ellipse 12"))
@@ -555,8 +559,11 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
     func setRate(baseFare: NSDictionary)
     {
        
-        let strDis = strDistance.components(separatedBy: " ").first as! String
-        let distance = Double(strDis)
+        var strDis = strDistance.components(separatedBy: " ").first as! String
+        strDis = strDis.replacingOccurrences(of: ",", with:"", options: NSString.CompareOptions.literal, range: nil)
+
+        let Dis = strDis  as NSString
+        let distance = Dis.doubleValue
         let strDura = strDuration.components(separatedBy: " ").first as! String
 
         let duration = Double(strDura)
@@ -573,11 +580,11 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
 
         
         var tripPrice = Double()
-        if (distance! <= 10.0) {
-            tripPrice = baseFee + (duration! * timeFee) + (distance! * mileFee)
+        if (distance <= 10.0) {
+            tripPrice = baseFee + (duration! * timeFee) + (distance * mileFee)
         } else {
             let tmpFare = baseFee + (duration! * timeFee) + (10 * mileFee)
-            tripPrice = tmpFare + ((distance! - 10) * overMileFee)
+            tripPrice = tmpFare + ((distance - 10) * overMileFee)
         }
         
         self.lblRatePrice.text = "$" +  String(format:"%.2f", tripPrice)
@@ -825,7 +832,20 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
                             let cards = dataDic.value(forKey: "cards") as! NSArray
                             if cards.count == 0
                             {
-                           
+                                let refreshAlert = UIAlertController(title: nil, message: "You have not Slelected any card please select any card to continue.", preferredStyle: UIAlertControllerStyle.alert)
+                                
+                                refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+                                    
+                                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                                    
+                                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Paymentscreen1ViewController") as! Paymentscreen1ViewController
+                                    self.navigationController?.pushViewController(nextViewController, animated: true)
+                                    
+                                    
+                                }))
+                                
+                                
+                                self.present(refreshAlert, animated: true, completion: nil)
                              
                             }
                             else
@@ -840,10 +860,59 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
                                 let decodedData = Data(base64Encoded: dic.value(forKey: "card_number")as! String)!
                                 let decodedString = String(data: decodedData, encoding: .utf8)!
                                   self.selectecard.add(decodedString)
+                                let v = CreditCardValidator()
+                                if let type = v.type(from:decodedString) {
+                                    if(type.name == "Visa")
+                                    {
+                                        self.imgview.image = UIImage(named:"NoVictor_(Visa)")
+                                        
+                                        
+                                    }
+                                    else if(type.name == "MasterCard")
+                                    {
+                                        self.imgview.image = UIImage(named:"mastercard")
+                                        
+                                        
+                                    }
+                                    else if(type.name == "Amex")
+                                    {
+                                        self.imgview.image = UIImage(named:"American")
+                                        
+                                        
+                                    }
+                                    else if(type.name == "Discover")
+                                    {
+                                        self.imgview.image = UIImage(named:"Discovwe")
+                                       
+                                        
+                                    }
+                                    else if(type.name == "Diners Club")
+                                    {
+                                        self.imgview.image = UIImage(named:"Diners")
+                                        
+                                        
+                                        
+                                    }
+                                        
+                                    else if(type.name == "UnionPay")
+                                    {
+                                        self.imgview.image = UIImage(named:"uninonPay")
+                                        
+                                    }
+                                    else if(type.name == "JCB")
+                                    {
+                                        self.imgview.image = UIImage(named:"Jcbb")
+                                        
+                                    }
+                                    
+                                    
+                                    
+                                }
+                              
                                 }
                             }
                            if(self.selectecard.count == 0)
-                           {
+                            {
                             let refreshAlert = UIAlertController(title: nil, message: "You have not Slelected any card please select any card to continue.", preferredStyle: UIAlertControllerStyle.alert)
                             
                             refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
@@ -866,7 +935,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
                             let str = self.selectecard.object(at: 0) as! String
                             let last4 = String(str.characters.suffix(4))
 
-                            self.lbllast4.text = last4
+                           self.lbllast4.text = last4
                           self.cardnum = last4
                             
                                 }

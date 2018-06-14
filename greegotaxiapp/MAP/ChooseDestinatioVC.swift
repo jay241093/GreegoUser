@@ -232,14 +232,19 @@ class ChooseDestinatioVC: UIViewController, CLLocationManagerDelegate, GMSMapVie
         geocoder.reverseGeocodeCoordinate(coordinate) { response , error in
             
             //Add this line
+            
+            if(response != nil)
+            {
             if let address = response!.firstResult() {
                
-                
                 self.txtStartLocation.text = address.lines?.first
+            }
             }
         
         
         }
+        getAddressFromGeocodeCoordinate(coordinate: sourceLocation)
+
         }
        else{
         
@@ -247,13 +252,15 @@ class ChooseDestinatioVC: UIViewController, CLLocationManagerDelegate, GMSMapVie
         geocoder.reverseGeocodeCoordinate(coordinate) { response , error in
             
             //Add this line
+            if(response != nil)
+            {
             if let address = response!.firstResult() {
                 
                 
                 self.txtEndLocation.text = address.lines?.first
             }
             
-            
+            }
         }
         
         }
@@ -355,6 +362,8 @@ class ChooseDestinatioVC: UIViewController, CLLocationManagerDelegate, GMSMapVie
         geocoder.reverseGeocodeCoordinate(coordinate) { response , error in
             
             //Add this line
+            if(response != nil)
+            {
             if let address = response!.firstResult() {
                 if self.isTxtSource == true
                 {
@@ -389,6 +398,8 @@ class ChooseDestinatioVC: UIViewController, CLLocationManagerDelegate, GMSMapVie
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
+            
+                }
             }
         }
     }
@@ -409,10 +420,20 @@ class ChooseDestinatioVC: UIViewController, CLLocationManagerDelegate, GMSMapVie
 extension ChooseDestinatioVC:UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
+        if(currentText != "")
+        {
         placeAutocomplete(text:currentText)
+        }
+        else
+        {
+            self.resultArray.removeAll()
+            self.tblAutoComplete.reloadData()
+        }
+        
         return true
     }
-  
+   
+    
     
     func textFieldDidBeginEditing(_ textField: UITextField)
     {
@@ -443,6 +464,8 @@ extension ChooseDestinatioVC:UITextFieldDelegate {
     }
     func textFieldDidEndEditing(_ textField: UITextField)
     {
+     
+      
         textField.layer.borderColor = UIColor.clear.cgColor
         textField.layer.borderWidth = 0.0
         self.tblAutoComplete.isHidden = true

@@ -23,8 +23,11 @@ class CustomAlertVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        lblsource.numberOfLines = 0
+        lblsource.sizeToFit()
+        lbldestination.numberOfLines = 0
+        lbldestination.sizeToFit()
+
         lblsource.text = StrSource
         
         lbldestination.text = StrDestination

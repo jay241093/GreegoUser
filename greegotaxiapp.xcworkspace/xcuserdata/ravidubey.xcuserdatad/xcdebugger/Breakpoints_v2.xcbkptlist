@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "greegotaxiapp/MAP/DrideMapVC.swift"
-            timestampString = "550491208.585091"
+            timestampString = "550667075.295557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "AcceptRequest(notification:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "greegotaxiapp/MAP/TipViewController.swift"
-            timestampString = "550491208.585204"
+            timestampString = "550655384.402849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "186"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "greegotaxiapp/MAP/TipViewController.swift"
-            timestampString = "550491208.585261"
+            timestampString = "550655384.402923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "185"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "greegotaxiapp/MAP/TipViewController.swift"
-            timestampString = "550491208.5853111"
+            timestampString = "550655384.402984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "316"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "greegotaxiapp/MAP/TipViewController.swift"
-            timestampString = "550491208.585358"
+            timestampString = "550655384.403043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "313"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "greegotaxiapp/MAP/TipViewController.swift"
-            timestampString = "550491208.585405"
+            timestampString = "550655384.403105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "324"
@@ -150,16 +150,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/Delegates/AppDelegate.swift"
-            timestampString = "550491208.585454"
+            filePath = "greegotaxiapp/MAP/DrideMapVC.swift"
+            timestampString = "550667075.296095"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
+            startingLineNumber = "418"
+            endingLineNumber = "418"
+            landmarkName = "drawPath()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -169,13 +169,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/Delegates/AppDelegate.swift"
-            timestampString = "550491208.585951"
+            filePath = "greegotaxiapp/MAP/DrideMapVC.swift"
+            timestampString = "550667075.296316"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
+            startingLineNumber = "569"
+            endingLineNumber = "569"
+            landmarkName = "setRate(baseFare:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -185,13 +185,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "greegotaxiapp/Delegates/AppDelegate.swift"
-            timestampString = "550491208.586229"
+            filePath = "greegotaxiapp/MAP/DrideMapVC.swift"
+            timestampString = "550667075.296484"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
+            startingLineNumber = "570"
+            endingLineNumber = "570"
+            landmarkName = "setRate(baseFare:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "greegotaxiapp/MAP/DrideMapVC.swift"
+            timestampString = "550667075.296683"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "565"
+            endingLineNumber = "565"
+            landmarkName = "setRate(baseFare:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

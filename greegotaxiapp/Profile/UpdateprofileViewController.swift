@@ -374,6 +374,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
     {
         var myPickerController = UIImagePickerController()
         myPickerController.delegate = self;
+        myPickerController.allowsEditing = true
         myPickerController.sourceType = UIImagePickerControllerSourceType.camera
         
         self.present(myPickerController, animated: true, completion: nil)
@@ -410,7 +411,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
     var imgstr = UIImage();
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        var image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        var image = info[UIImagePickerControllerEditedImage] as! UIImage
         WebServiceClass().showprogress()
         imgstr = image
         updateprofileimg.image = image

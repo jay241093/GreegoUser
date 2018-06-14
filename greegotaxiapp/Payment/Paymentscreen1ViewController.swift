@@ -262,7 +262,7 @@ func checkpayment() {
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)
                         {
-                            let alert = UIAlertController(title: nil, message:dic.value(forKey: "message") as! String, preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: nil, message:"Payment card deleted", preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                             self.checkpayment()
