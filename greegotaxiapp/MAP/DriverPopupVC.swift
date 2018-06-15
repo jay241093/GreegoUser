@@ -10,8 +10,18 @@ import UIKit
 import Alamofire
 import SDWebImage
 import SANotificationViews
+import CreditCardValidator
+
+
+
+
+var driverdetaildic : NSDictionary = NSDictionary()
+
 class DriverPopupVC: UIViewController {
 
+    @IBOutlet weak var imgview: UIImageView!
+    
+    
     @IBOutlet weak var lblpromocode: UILabel!
     @IBOutlet weak var lblcardnum: UILabel!
     @IBOutlet weak var lblprice: UILabel!
@@ -32,6 +42,7 @@ class DriverPopupVC: UIViewController {
     
     var tripcost: String = ""
     var cardnum: String = ""
+    var fullcardnum: String = ""
 
     var contct : String = ""
     var tripid : String = ""
@@ -43,6 +54,58 @@ class DriverPopupVC: UIViewController {
         lblprice.text = "$US " + tripcost
 
         lblcardnum.text = "Ending with " + cardnum
+        
+        let v = CreditCardValidator()
+        if let type = v.type(from:fullcardnum) {
+            if(type.name == "")
+            {
+                imgview.image = UIImage(named:"invalidcard")
+                
+            }
+                
+            else if(type.name == "Visa")
+            {
+                imgview.image = UIImage(named:"NoVictor_(Visa)")
+               
+            }
+            else if(type.name == "MasterCard")
+            {
+                imgview.image = UIImage(named:"mastercard")
+              
+                
+            }
+            else if(type.name == "Amex")
+            {
+                imgview.image = UIImage(named:"American")
+              
+            }
+            else if(type.name == "Discover")
+            {
+                imgview.image = UIImage(named:"Discovwe")
+               
+            }
+            else if(type.name == "Diners Club")
+            {
+                imgview.image = UIImage(named:"Diners")
+               
+            }
+                
+            else if(type.name == "UnionPay")
+            {
+                imgview.image = UIImage(named:"uninonPay")
+                
+            }
+            else if(type.name == "JCB")
+            {
+                imgview.image = UIImage(named:"Jcbb")
+              
+            }
+        }
+        
+        
+        
+        
+        
         shadow(view: view1)
         shadow(view: view2)
         shadow(view: view3)
@@ -112,6 +175,7 @@ class DriverPopupVC: UIViewController {
                 if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                 {
                     print(response.result.value!)
+                    driverdetaildic =  dic.value(forKey: "data") as! NSDictionary
                     let newdic : NSDictionary =  dic.value(forKey: "data") as! NSDictionary
                     
                     let driverdic = newdic.value(forKey: "driver") as! NSDictionary

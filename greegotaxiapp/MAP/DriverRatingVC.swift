@@ -33,7 +33,23 @@ class DriverRatingVC: UIViewController,FloatRatingViewDelegate{
     @IBOutlet weak var btnsubmit: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        getdriverdetail()
+      //  getdriverdetail()
+        
+        
+        
+        let driverdic = driverdetaildic.value(forKey: "driver") as! NSDictionary
+        
+        let first = driverdic.value(forKey: "name") as! String
+        let last = driverdic.value(forKey: "lastname") as! String
+        
+        self.lbldrivername.text = "How was your trip with " + first + " " + last + "?"
+        
+        let reqdic: NSDictionary = driverdetaildic.value(forKey:"request") as! NSDictionary
+        self.lbldes.text = reqdic.value(forKey: "to_address") as! String
+        
+        self.imgdriver.sd_setImage(with: URL(string: driverdic.value(forKey: "profile_pic") as! String), placeholderImage: UIImage(named: "default-user"))
+        
+        let price =  reqdic.value(forKey:"total_estimated_trip_cost") as! NSNumber
         imgdriver.layer.borderWidth = 1
         imgdriver.layer.masksToBounds = false
         imgdriver.layer.cornerRadius = imgdriver.frame.height/2

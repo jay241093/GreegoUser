@@ -36,6 +36,31 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let reqdic : NSDictionary = driverdetaildic.value(forKey:"request") as! NSDictionary
+        
+        let driverdic = driverdetaildic.value(forKey: "driver") as! NSDictionary
+        
+        self.driverid = driverdetaildic.value(forKey: "driver_id") as! NSNumber
+        let driverlocationdic : NSDictionary = driverdetaildic.value(forKey:"driver_location") as! NSDictionary
+        
+        let first = driverdic.value(forKey: "name") as! String
+        let last = driverdic.value(forKey: "lastname") as! String
+        
+        self.lblname.text = first + " " + last
+        self.lblpromocode.setTitle(driverdic.value(forKey:"promocode") as? String, for: .normal)
+        
+        let sourcelat = driverlocationdic.value(forKey: "lat") as! NSNumber
+        let sourcelng = driverlocationdic.value(forKey: "lng") as! NSNumber
+        
+        let deslat = reqdic.value(forKey: "to_lat") as! NSNumber
+        let deslng = reqdic.value(forKey: "to_lng") as! NSNumber
+        var source = CLLocationCoordinate2D(latitude: sourcelat.doubleValue, longitude: sourcelng.doubleValue)
+        var destination = CLLocationCoordinate2D(latitude:deslat.doubleValue, longitude: deslng.doubleValue)
+        
+        self.destination = destination
+        self.drawPath(sourceCord: source, destCord: destination)
+        
+        
         NotificationCenter.default.addObserver(self, selector:  #selector(AcceptRequest), name: NSNotification.Name(rawValue: "Acceptnotification"), object: nil)
 
         do {
@@ -53,7 +78,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
         }
         
         
-   getdriverdetail()
+    ///  getdriverdetail()
         let tap2 = UITapGestureRecognizer()
         tap2.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
         imguser.addGestureRecognizer(tap2)

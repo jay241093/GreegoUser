@@ -386,6 +386,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
         
         var myPickerController = UIImagePickerController()
         myPickerController.delegate = self;
+        myPickerController.allowsEditing = true
         myPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
         
         self.present(myPickerController, animated: true, completion: nil)

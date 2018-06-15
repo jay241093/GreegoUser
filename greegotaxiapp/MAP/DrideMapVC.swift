@@ -16,6 +16,7 @@ import AVFoundation
 import CreditCardValidator
 
 
+
 class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
    
     @IBOutlet weak var imgview: UIImageView!
@@ -46,6 +47,8 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
     let destMarker = GMSMarker()
     
     var cardnum : String = ""
+    var fullcardno : String = ""
+
     
     var tripprice : String = ""
     @IBAction func back(_ sender: Any) {
@@ -311,6 +314,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
             popOverConfirmVC.reqid = self.reqid
         popOverConfirmVC.tripcost = self.tripprice
         popOverConfirmVC.cardnum = self.cardnum
+        popOverConfirmVC.fullcardnum = self.fullcardno
 
         
             self.addChildViewController(popOverConfirmVC)
@@ -379,7 +383,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
 
         let origin = "\(sourceCord.latitude),\(sourceCord.longitude)"
         let destination = "\(destCord.latitude),\(destCord.longitude)"
-        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=AIzaSyDuLTaJL-tMzdBoTZtCQfCz4m66iEZ1eQc"
+        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&units=imperial&key=AIzaSyDuLTaJL-tMzdBoTZtCQfCz4m66iEZ1eQc"
         
         Alamofire.request(url).responseJSON { response in
             print(response.request ?? "")  // original URL request
@@ -635,6 +639,9 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
     
     if AppDelegate.hasConnectivity() == true
     {
+        
+        if(tripprice != "")
+        {
         WebServiceClass().showprogress()
         
         let strDis = strDistance.components(separatedBy: " ").first as! String
@@ -714,11 +721,19 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
     }
     else
     {
+        
+        let alert = UIAlertController(title: nil, message:"Cost not found", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+      
+    }
+    }
+    else
+    {
         WebServiceClass().nointernetconnection()
-
+        
         NSLog("No Internet Connection")
     }
-    
     }
     
     
@@ -933,6 +948,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
                            {
                             
                             let str = self.selectecard.object(at: 0) as! String
+                            self.fullcardno = str
                             let last4 = String(str.characters.suffix(4))
 
                            self.lbllast4.text = last4

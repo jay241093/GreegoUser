@@ -29,6 +29,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string></string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>For Greego service, we may collect location data while using an app. This improves pickups,support, and more.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -39,11 +41,16 @@
 	<string>For Greego service, we may collect location data while using an app. This improves pickups,support, and more.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string></string>
-	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Segoe UI.ttf</string>
+		<string>segoe-ui-bold.ttf</string>
+		<string>seguisb.ttf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
+		<string>location</string>
 		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
@@ -64,12 +71,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Segoe UI.ttf</string>
-		<string>segoe-ui-bold.ttf</string>
-		<string>seguisb.ttf</string>
 	</array>
 </dict>
 </plist>

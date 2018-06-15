@@ -136,7 +136,7 @@ func checkpayment() {
             tablevieheight.constant = 200
         }
         else{
-            tablevieheight.constant = 100
+            tablevieheight.constant = 200
         }
         return paymentarray.count
     }

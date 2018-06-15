@@ -191,15 +191,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             
             
         }
-        else if(state == .inactive)
+        else if(state == .background )
         {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
             
             
         }
         else
         {
-           NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
             
             
         }

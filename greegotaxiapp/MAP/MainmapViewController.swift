@@ -98,12 +98,14 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                                 
                             }
                             else{
-                                
+                                self.btnEditVehicle.setTitle("", for: .normal)
+
                             }
                         }
                         
                         
                     }
+                    
                     
                     //   self.vehiclemakearray = vmakearray.mutableCopy() as! NSMutableArray
                     
