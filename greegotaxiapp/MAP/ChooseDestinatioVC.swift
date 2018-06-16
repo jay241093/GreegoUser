@@ -464,9 +464,7 @@ extension ChooseDestinatioVC:UITextFieldDelegate {
     }
     func textFieldDidEndEditing(_ textField: UITextField)
     {
-     
-      
-        textField.layer.borderColor = UIColor.clear.cgColor
+     textField.layer.borderColor = UIColor.clear.cgColor
         textField.layer.borderWidth = 0.0
         self.tblAutoComplete.isHidden = true
         self.resultArray.removeAll()
@@ -474,6 +472,7 @@ extension ChooseDestinatioVC:UITextFieldDelegate {
     }
     
 }
+
 
 
 

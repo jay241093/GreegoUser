@@ -217,6 +217,8 @@ class DriverPopupVC: UIViewController {
             case .failure(_):
                 WebServiceClass().dismissprogress()
 
+                self.getdriverdetail()
+                
                 print(response.result.error ?? "")
                 break
                 

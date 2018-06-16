@@ -11,7 +11,8 @@ import GoogleMaps
 import Alamofire
 import SwiftyJSON
 import SDWebImage
-class OnTripVC: UIViewController ,GMSMapViewDelegate{
+import MapKit
+class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
     @IBOutlet weak var lblname: UILabel!
     @IBOutlet var usemap: GMSMapView!
     
@@ -21,6 +22,8 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
     
     @IBOutlet weak var lblestimatedtime: UILabel!
     
+    var backgroundTaskIdentifier: UIBackgroundTaskIdentifier?
+    var locationManager = CLLocationManager()
     var timer = Timer()
     var contct : String = ""
     var tripid : String = ""
@@ -35,6 +38,11 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
     var destination = CLLocationCoordinate2D()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setLocation()
+        backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
+            UIApplication.shared.endBackgroundTask(self.backgroundTaskIdentifier!)
+        })
         
         let reqdic : NSDictionary = driverdetaildic.value(forKey:"request") as! NSDictionary
         
@@ -115,6 +123,31 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func setLocation()
+    {
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.allowsBackgroundLocationUpdates = true
+
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        print("Error" , Error.self)
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        let userLocation = locations.last
+        let center = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
+        self.drawPath(sourceCord: center, destCord: self.destination)
+        
+    }
+    
+    
+   
     
     func drawPath(sourceCord:CLLocationCoordinate2D,destCord:CLLocationCoordinate2D)
     {
@@ -205,7 +238,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
     }
     func scheduledTimerWithTimeInterval(){
         // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
-        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector:#selector(getDrivers), userInfo: nil, repeats: true)
+       // timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector:#selector(getDrivers), userInfo: nil, repeats: true)
     }
     
   
@@ -319,6 +352,9 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                             let dic: NSDictionary =  response.result.value! as! NSDictionary
                             let data = dic.value(forKey: "data") as! NSArray
 
+                           
+                           if(data.count > 0)
+                           {
                             for var i in 0...data.count-1
                             {
                                 let dic : NSDictionary = data[i] as! NSDictionary
@@ -338,6 +374,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                             let sourclng = self.driverlatlong.value(forKey: "lng") as! NSNumber
                             var source = CLLocationCoordinate2D(latitude: sourclat.doubleValue, longitude: sourclng.doubleValue)
                             self.drawPath(sourceCord: source, destCord: self.destination)
+                            }
                             }
                            
                         }else{
@@ -405,6 +442,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate{
                 {
                   
                     self.timer.invalidate()
+                    self.locationManager.stopUpdatingLocation()
                     let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! TipViewController
                     
                     

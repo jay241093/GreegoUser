@@ -34,6 +34,7 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
     
     @IBOutlet weak var userMapView: GMSMapView!
     var timer = Timer()
+    var backgroundTaskIdentifier: UIBackgroundTaskIdentifier?
 
     
     var lat = CLLocationDegrees()
@@ -131,7 +132,9 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
     {
         super.viewDidLoad()
         
-        
+        backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
+            UIApplication.shared.endBackgroundTask(self.backgroundTaskIdentifier!)
+        })
         
         
         scheduledTimerWithTimeInterval()
