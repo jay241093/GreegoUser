@@ -124,7 +124,7 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
     //MARK: - Delegate Methods\
     func scheduledTimerWithTimeInterval(){
         // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
-        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector:#selector(getDrivers), userInfo: nil, repeats: true)
+    //    timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector:#selector(getDrivers), userInfo: nil, repeats: true)
     }
     
     
@@ -135,7 +135,8 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
             UIApplication.shared.endBackgroundTask(self.backgroundTaskIdentifier!)
         })
-        
+        NotificationCenter.default.addObserver(self, selector:  #selector(AcceptRequest), name: NSNotification.Name(rawValue: "Acceptnotification"), object: nil)
+
         
         scheduledTimerWithTimeInterval()
         
@@ -255,6 +256,8 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
     {
         print("Error" , Error.self)
     }
+    
+var isupdated = 0
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         
@@ -263,9 +266,15 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
     
         lat = (userLocation?.coordinate.latitude)!
         long = (userLocation?.coordinate.longitude)!
+        
+       if(isupdated == 0)
+       {
+        isupdated = 1
         let center = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
         let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude, zoom: 18);
+        
         self.userMapView.camera = camera
+        }
         self.userMapView.isMyLocationEnabled = true
         self.userMapView.settings.myLocationButton = true
 
@@ -281,8 +290,8 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
 //        marker.map = self.userMapView
 //        marker.title = "Current Location"
         
-        locationManager.stopUpdatingLocation()
-        getDrivers()
+       // locationManager.stopUpdatingLocation()
+       getDrivers()
     }
     
     override func didReceiveMemoryWarning()
@@ -299,7 +308,7 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
     {
         let sourceMarker = GMSMarker(position: source.coordinate)
         let destMarker = GMSMarker(position: destination.coordinate)
-        
+        /Users/ravidubey/Desktop/greegotaxiapp 2018-06-20 19-58-41/greegotaxiapp.ipa
         sourceMarker.map = userMapView
         destMarker.map = userMapView
     }
@@ -678,8 +687,32 @@ class MainmapViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         }
     }
     
-  
     
+    @objc func AcceptRequest(notification: NSNotification) {
+    
+        let object = notification.object as! NSDictionary
+
+            if let key = object.object(forKey: "notification")
+            {
+                let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! TipViewController
+                
+                
+                let tripid : String = (object.value(forKey:"trip_id") as? String)!
+                let fees = object.value(forKey: "trip_amount") as! String
+                
+                print(fees)
+                popOverConfirmVC.amount = fees
+                popOverConfirmVC.tripid =  tripid
+                popOverConfirmVC.iffromclonejob = 1
+                self.addChildViewController(popOverConfirmVC)
+                popOverConfirmVC.view.frame = self.view.frame
+                self.view.center = popOverConfirmVC.view.center
+                self.view.addSubview(popOverConfirmVC.view)
+                popOverConfirmVC.didMove(toParentViewController: self)
+                
+            }
+            
+        }
     
 }
 extension UIImage{

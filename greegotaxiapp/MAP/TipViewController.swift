@@ -15,7 +15,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
     var tripid : String = ""
     var Finalamount:Double = 0
 
-
+var iffromclonejob = 0
     var drivername: String = ""
     
     @IBOutlet weak var lblamount: UILabel!
@@ -306,6 +306,11 @@ class TipViewController: UIViewController,UITextFieldDelegate {
     
     func Tipuser()
     {
+       if(iffromclonejob == 1)
+       {
+        removeAnimate()
+        }
+       else{
         if AppDelegate.hasConnectivity() == true
         {
             WebServiceClass().showprogress()
@@ -382,7 +387,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
             
             NSLog("No Internet Connection")
         }
-        
+        }
     }
     
     

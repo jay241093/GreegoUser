@@ -66,6 +66,9 @@ class ChooseDestinatioVC: UIViewController, CLLocationManagerDelegate, GMSMapVie
     {
         super.viewDidLoad()
         
+        txtStartLocation.clearButtonMode = .whileEditing
+        txtEndLocation.clearButtonMode = .whileEditing
+
         
         self.navigationController?.isNavigationBarHidden = true
         self.txtEndLocation.text = ""
@@ -158,7 +161,14 @@ class ChooseDestinatioVC: UIViewController, CLLocationManagerDelegate, GMSMapVie
     @IBAction func textDidChange(_ textField: UITextField)
     {
                 let currentText = textField.text ?? ""
+        parentMapView.isUserInteractionEnabled = false
+        parentMapView.isHidden = true
+        tblAutoComplete.isHidden = false
         if currentText == "" {
+            
+            //self.view.endEditing(true)
+        
+            
             resultArray.removeAll()
             self.tblAutoComplete.reloadData()
             return
@@ -168,8 +178,14 @@ class ChooseDestinatioVC: UIViewController, CLLocationManagerDelegate, GMSMapVie
    
     @IBAction func destTextDidChange(_ textField: UITextField)
     {
+        
+        parentMapView.isUserInteractionEnabled = false
+        parentMapView.isHidden = true
+        tblAutoComplete.isHidden = false
         let currentText = textField.text ?? ""
         if currentText == "" {
+          //  self.view.endEditing(true)
+          
             resultArray.removeAll()
             self.tblAutoComplete.reloadData()
             return
@@ -279,7 +295,7 @@ class ChooseDestinatioVC: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     func placeAutocomplete(text:String) {
         let filter = GMSAutocompleteFilter()
-        filter.type = .noFilter
+        filter.type = .address
         filter.country = "US"
             
         placesClient?.autocompleteQuery(text, bounds: nil, filter: filter, callback: {(results, error) -> Void in   //unable to enter in this block
@@ -446,6 +462,8 @@ extension ChooseDestinatioVC:UITextFieldDelegate {
         
         if(textField == txtStartLocation)
         {
+            
+            
             isTxtSource = true
             isTxtDest = false
            currentTxtField = txtStartLocation

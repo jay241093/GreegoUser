@@ -199,7 +199,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
                     
                     bounds = bounds.includingCoordinate(sourceCord)
                     bounds = bounds.includingCoordinate(destCord)
-                    let update = GMSCameraUpdate.fit(bounds, withPadding: 150)
+                    let update = GMSCameraUpdate.fit(bounds, withPadding: 140)
                     self.usemap.animate(with: update)
                     //self.usemap.animate(with: GMSCameraUpdate.fit(bounds))
 

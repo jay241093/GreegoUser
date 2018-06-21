@@ -355,7 +355,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
     }
     func drawText(text:NSString, inImage:UIImage) -> UIImage? {
     
-    let font = UIFont.systemFont(ofSize: 11)
+    let font = UIFont.systemFont(ofSize: 8)
     let size = inImage.size
     
     UIGraphicsBeginImageContext(size)
@@ -492,8 +492,11 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
                 print(json)
                 let location = json["results"].arrayValue
                 let dicLocation = location[0].dictionaryValue
-                print(location)
                 let dicTmp = dicLocation["address_components"]?.arrayValue
+                
+                print(dicTmp)
+                
+                
                 let stateCode = dicTmp![6].dictionaryValue
                 let state = stateCode["short_name"]?.string
                 print(state ?? "")
@@ -562,12 +565,25 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
   
     func setRate(baseFare: NSDictionary)
     {
-       
+       print(strDistance)
         var strDis = strDistance.components(separatedBy: " ").first as! String
-        strDis = strDis.replacingOccurrences(of: ",", with:"", options: NSString.CompareOptions.literal, range: nil)
-
-        let Dis = strDis  as NSString
-        let distance = Dis.doubleValue
+     var distance = Double()
+        if(strDistance.components(separatedBy: " ")[1] == "ft")
+        {
+            strDis = strDis.replacingOccurrences(of: ",", with:"", options: NSString.CompareOptions.literal, range: nil)
+            
+            let Dis = strDis  as NSString
+             distance = Dis.doubleValue * 0.000189394
+        }
+        else
+        {
+            strDis = strDis.replacingOccurrences(of: ",", with:"", options: NSString.CompareOptions.literal, range: nil)
+            
+            let Dis = strDis  as NSString
+            distance = Dis.doubleValue
+            
+        }
+       
         let strDura = strDuration.components(separatedBy: " ").first as! String
 
         let duration = Double(strDura)
