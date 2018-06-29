@@ -330,7 +330,7 @@ txtzipcode.delegate = self
             print(token)
             let params = [
                 "user_token":token,
-                "email":"rjbarot1241@gmail.com"
+                "email":UserDefaults.standard.value(forKey:"email") as! String
                 ] as [String : Any]
             Alamofire.request(WebServiceClass().BaseURL+"user/add/customer", method: .post, parameters:params, encoding: JSONEncoding.default, headers: headers).responseJSON { (response:DataResponse<Any>) in
                 
@@ -338,7 +338,7 @@ txtzipcode.delegate = self
                 case .success(_):
                     WebServiceClass().dismissprogress()
                     if let data = response.result.value{
-                       // print(response.result.value!)
+                      print(response.result.value!)
                         var dic = response.result.value as! NSDictionary
                         
                         if(dic.value(forKey: "error_code") as! NSNumber == 0)

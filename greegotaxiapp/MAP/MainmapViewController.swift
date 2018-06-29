@@ -308,7 +308,6 @@ var isupdated = 0
     {
         let sourceMarker = GMSMarker(position: source.coordinate)
         let destMarker = GMSMarker(position: destination.coordinate)
-        /Users/ravidubey/Desktop/greegotaxiapp 2018-06-20 19-58-41/greegotaxiapp.ipa
         sourceMarker.map = userMapView
         destMarker.map = userMapView
     }

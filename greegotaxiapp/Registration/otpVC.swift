@@ -157,7 +157,7 @@ else
                     if let data = response.result.value{
                         print(response.result.value!)
                         
-                        
+                        self.count = 60
                         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
                         
                         

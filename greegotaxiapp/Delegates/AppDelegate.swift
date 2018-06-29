@@ -28,13 +28,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
-        
-        
+  
+
         Bugsnag.start(withApiKey: "05f4f3a3580c0c58df6c0b721a34b5b6")
 
-        GMSServices.provideAPIKey("AIzaSyCTYoZFJBLdRwY9QdneWtG4LvwVuzSw_AM")
-        GMSPlacesClient.provideAPIKey("AIzaSyAyvGa8vAvoiFNgAUo8QW7zh8qJbBn8X8o")
-        STPPaymentConfiguration.shared().publishableKey = "pk_test_GF0y48SCqViKdCSA8LwOPFVj"
+        GMSServices.provideAPIKey("AIzaSyDSNE3M1W24PtzNegO8PrHz6fzr_q_C4Ec")
+        GMSPlacesClient.provideAPIKey("AIzaSyAzv2MkDftvd8cpKUl_tTXfCBWVpVaxUPQ")
+        STPPaymentConfiguration.shared().publishableKey = "pk_live_C88eqn44CTqQzJ9FAdwrsYKl"
+        
        IQKeyboardManager.shared.enable = true
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)

@@ -477,9 +477,7 @@ class UpdateprofileViewController: UIViewController,UIImagePickerControllerDeleg
                 
             }
         }
-        
-        
-        
+     
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
