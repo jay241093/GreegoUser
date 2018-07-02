@@ -17,7 +17,8 @@ class TipViewController: UIViewController,UITextFieldDelegate {
 
 var iffromclonejob = 0
     var drivername: String = ""
-    
+    var isfromtrip = 0
+
     @IBOutlet weak var lblamount: UILabel!
     
     
@@ -340,7 +341,8 @@ var iffromclonejob = 0
                        
                         self.removeAnimate()
                         
-                        
+                
+
                         
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "DriverRatingVC") as! DriverRatingVC
                         
@@ -349,6 +351,12 @@ var iffromclonejob = 0
                         
                         vc.amount = String(format: "%.2f", Double(amount1))
                         vc.tripid =  self.tripid
+                        
+                        if(self.isfromtrip == 1)
+                        {
+                          vc.isfromtip = 1
+                        }
+                        
                         self.navigationController?.pushViewController(vc, animated: true)
                         print(self.amount + String(self.Finalamount))
                         

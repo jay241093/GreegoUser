@@ -14,12 +14,13 @@ import Alamofire
 class DriverRatingVC: UIViewController,FloatRatingViewDelegate{
     
     var amount = ""
-
+ var isfromtip = 0
     @IBOutlet weak var lbldrivername: UILabel!
     
     @IBOutlet weak var innerview: UIView!
     
     var tripid : String = ""
+    
     @IBOutlet weak var ratingView: FloatRatingView!
     @IBOutlet weak var lblRatingText: UILabel!
    
@@ -29,40 +30,47 @@ class DriverRatingVC: UIViewController,FloatRatingViewDelegate{
     @IBOutlet weak var lblamount: UILabel!
     
     var ratingnew: String = ""
-    
+    var dic = NSDictionary()
     @IBOutlet weak var btnsubmit: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
       //  getdriverdetail()
-        
-        
-        
-        let driverdic = driverdetaildic.value(forKey: "driver") as! NSDictionary
-        
-        let first = driverdic.value(forKey: "name") as! String
-        let last = driverdic.value(forKey: "lastname") as! String
-        
-        self.lbldrivername.text = "How was your trip with " + first + " " + last + "?"
-        
-        let reqdic: NSDictionary = driverdetaildic.value(forKey:"request") as! NSDictionary
-        self.lbldes.text = reqdic.value(forKey: "to_address") as! String
-        
-        self.imgdriver.sd_setImage(with: URL(string: driverdic.value(forKey: "profile_pic") as! String), placeholderImage: UIImage(named: "default-user"))
-        
-        let price =  reqdic.value(forKey:"total_estimated_trip_cost") as! NSNumber
         imgdriver.layer.borderWidth = 1
         imgdriver.layer.masksToBounds = false
         imgdriver.layer.cornerRadius = imgdriver.frame.height/2
         imgdriver.clipsToBounds = true
-
+        
         innerview.layer.cornerRadius = 8.0
         
         btnsubmit.layer.cornerRadius = 8.0
         
-       
-        
-    lblamount.text = "$ " +  amount
-        
+        if(isfromtip == 1)
+        {
+            getdriverdetail()
+            lblamount.text = "$ " +  amount
+
+
+        }
+        else{
+            let driverdic = driverdetaildic.value(forKey: "driver") as! NSDictionary
+            
+            let first = driverdic.value(forKey: "name") as! String
+            let last = driverdic.value(forKey: "lastname") as! String
+            
+            self.lbldrivername.text = "How was your trip with " + first + " " + last + "?"
+            
+            let reqdic: NSDictionary = driverdetaildic.value(forKey:"request") as! NSDictionary
+            self.lbldes.text = reqdic.value(forKey: "to_address") as! String
+            
+            self.imgdriver.sd_setImage(with: URL(string: driverdic.value(forKey: "profile_pic") as! String), placeholderImage: UIImage(named: "default-user"))
+            
+            let price =  reqdic.value(forKey:"total_estimated_trip_cost") as! NSNumber
+          
+            
+            
+            
+            lblamount.text = "$ " +  amount
+        }
     ratingView.delegate = self
         
     ratingnew = "5.0"
@@ -81,8 +89,8 @@ ratingnew = String(format: "%.2f", rating)
         if AppDelegate.hasConnectivity() == true
         {
             WebServiceClass().showprogress()
-
-            let ID:Int? = Int(tripid) // firstText is UITextField
+            tripid = UserDefaults.standard.string(forKey:"tripid")!
+            let ID:Int? = Int(tripid)
             
             print(ID!)
             let token = UserDefaults.standard.value(forKey: "devicetoken") as! String
@@ -175,6 +183,9 @@ ratingnew = String(format: "%.2f", rating)
                     
                     if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                     {
+                        UserDefaults.standard.removeObject(forKey:"status")
+                        UserDefaults.standard.removeObject(forKey:"userinfo")
+                        UserDefaults.standard.removeObject(forKey:"tripid")
                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                         
                         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController

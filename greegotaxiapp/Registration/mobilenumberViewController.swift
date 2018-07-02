@@ -23,6 +23,85 @@ class mobilenumberViewController: UIViewController ,UITextFieldDelegate{
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         
+        
+      if let key = UserDefaults.standard.object(forKey:"status")
+      {
+        let num = UserDefaults.standard.value(forKey: "status") as! String
+        
+        if(num == "1")
+        {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DrideMapVC") as! DrideMapVC
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+             if let key = UserDefaults.standard.object(forKey:"userinfo")
+             {
+                
+              let dic = UserDefaults.standard.value(forKey:"userinfo") as! NSDictionary
+                print(dic)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+            }
+            nextViewController.isfrommain = 1
+
+        }
+        
+       else if(num == "2")
+        {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DrideMapVC") as! DrideMapVC
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            if let key = UserDefaults.standard.object(forKey:"userinfo")
+            {
+                
+                let dic = UserDefaults.standard.value(forKey:"userinfo") as! NSDictionary
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+            }
+            
+            nextViewController.isfrommain = 1
+
+        }
+        else if(num == "3")
+        {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OnTripVC") as! OnTripVC
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            if let key = UserDefaults.standard.object(forKey:"userinfo")
+            {
+                
+                let dic = UserDefaults.standard.value(forKey:"userinfo") as! NSDictionary
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+            }
+            nextViewController.isfrommain = 1
+
+        }
+        else if(num == "4")
+        {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OnTripVC") as! OnTripVC
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            if let key = UserDefaults.standard.object(forKey:"userinfo")
+            {
+                
+                let dic = UserDefaults.standard.value(forKey:"userinfo") as! NSDictionary
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+            }
+            nextViewController.isfrommain = 1
+
+        }
+        
+        
+        
+        
+        
+        }
+        
+        
+     else
+      {
+        
        if let key = UserDefaults.standard.object(forKey: "islogin")
        {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
@@ -34,7 +113,7 @@ class mobilenumberViewController: UIViewController ,UITextFieldDelegate{
         
         }
         
-        
+        }
         
     }
     

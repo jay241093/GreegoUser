@@ -8,16 +8,32 @@
 
 import UIKit
 import Alamofire
-class addMobileVC: UIViewController,UITextFieldDelegate
+import MapKit
+import SwiftyJSON
+class addMobileVC: UIViewController,UITextFieldDelegate,CLLocationManagerDelegate
 {
     @IBOutlet weak var txtMobileNum: UITextField!
     
-    
+    var  locationManager = CLLocationManager()
+    var sourceCord = CLLocation()
+
 //MARK: - Delegate Methods
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+     
+
+        if((UserDefaults.standard.object(forKey: "Country")) != nil)
+        {
+             txtMobileNum.isEnabled = false
+            showalert()
+        }
+        else
+        {
+
+            setLocation()
+        }
         txtMobileNum.becomeFirstResponder()
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "bg_rectangle")
@@ -27,11 +43,162 @@ class addMobileVC: UIViewController,UITextFieldDelegate
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if((UserDefaults.standard.object(forKey: "Country")) != nil)
+        {
+            
+            showalert()
+        }
+        else
+        {
+            setLocation()
+        }
+    }
+    
+    //MARK: - user define Methods
+    func setLocation()
+    {
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+    }
+    func showalert()
+    {
+        let alertController = UIAlertController(title: nil, message: "Exception : Please contact technical support", preferredStyle: .alert)
+       
+        let openAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+            UIControl().sendAction(#selector(NSXPCConnection.suspend),
+                                   to: UIApplication.shared, for: nil)
+        }
+        alertController.addAction(openAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if (status == CLAuthorizationStatus.denied){
+            showLocationDisabledpopUp()
+        }
+    }
+   
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        print("Error" , Error.self)
+    }
+    
+    var isupdated = 0
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        
+        let userLocation = locations.last
+        sourceCord = locations.last!
+        
+       var lat = (userLocation?.coordinate.latitude)!
+       var long = (userLocation?.coordinate.longitude)!
+      
+        getStateCode()
+        locationManager.stopUpdatingLocation()
+      
+    }
+    func showLocationDisabledpopUp() {
+        let alertController = UIAlertController(title: "Background Location Access  Disabled", message: "We need your location", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        let openAction = UIAlertAction(title: "Open Setting", style: .default) { (action) in
+            if let url = URL(string: UIApplicationOpenSettingsURLString){
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+        alertController.addAction(openAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    func getStateCode()
+    {
+        WebServiceClass().showprogress()
+        let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(sourceCord.coordinate.latitude),\(sourceCord.coordinate.longitude)&key=AIzaSyCQOE9aBk_Zzd6pmX4i394FR1xgO5nLrRk"
+        
+        Alamofire.request(url).responseJSON { response in
+            print(response.request ?? "")  // original URL request
+            print(response.response ?? "") // HTTP URL response
+            print(response.data ?? "")     // server data
+            print(response.result)   // result of response serialization
+            do {
+                WebServiceClass().dismissprogress()
+                
+                let json = try JSON(data: response.data!)
+                let location = json["results"].arrayValue
+                
+                let dicLocation = location[0].dictionaryValue
+                let dicTmp = dicLocation["address_components"]?.arrayValue
+                print(dicTmp)
+
+                let stateCode = dicTmp![(dicTmp?.count)!-1].dictionaryValue
+            if  let state = stateCode["long_name"]?.string
+            {
+                print(state)
+            
+                
+                if(state == "North Korea")
+                {
+                    self.txtMobileNum.isEnabled = false
+                    UserDefaults.standard.set(state, forKey:"Country")
+                    UserDefaults.standard.synchronize()
+                    self.showalert()
+                }
+                if(state == "South Korea")
+                {
+                     self.txtMobileNum.isEnabled = false
+                    UserDefaults.standard.set(state, forKey:"Country")
+                    UserDefaults.standard.synchronize()
+                    self.showalert()
+                }
+            }
+                let stateCode1 = dicTmp![(dicTmp?.count)!-2].dictionaryValue
+                if  let state1 = stateCode1["long_name"]?.string
+                {
+                    print(state1)
+                    
+                    
+                    if(state1 == "North Korea")
+                    {
+                         self.txtMobileNum.isEnabled = false
+                        UserDefaults.standard.set(state1, forKey:"Country")
+                        UserDefaults.standard.synchronize()
+                        self.showalert()
+                    }
+                    if(state1 == "South Korea")
+                    {
+                         self.txtMobileNum.isEnabled = false
+                        UserDefaults.standard.set(state1, forKey:"Country")
+                        UserDefaults.standard.synchronize()
+                        self.showalert()
+                    }
+                }
+                
+                
+            }
+            catch _ {
+                WebServiceClass().dismissprogress()
+                
+                // Error handling
+            }
+            
+            //            if (PFUser.currentUser() != nil) {
+            //                return true
+            //            }
+        }
+    }
+    
+    
+    
+
     
     
     //MARK: - IBAction Methods

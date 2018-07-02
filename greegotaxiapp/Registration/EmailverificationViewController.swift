@@ -19,7 +19,6 @@ class EmailverificationViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "bg_rectangle")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill

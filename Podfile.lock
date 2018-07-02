@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.7.0)
+  - Alamofire (5.0.0.beta.1)
   - Bugsnag (5.15.5)
   - CreditCardValidator (0.4)
   - CTCheckbox (0.0.5)
@@ -55,7 +55,7 @@ PODS:
   - YNDropDownMenu (3.0.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `alamofire5`)
   - Bugsnag
   - CreditCardValidator
   - CTCheckbox
@@ -73,8 +73,18 @@ DEPENDENCIES:
   - SwiftyJSON (~> 4.0)
   - YNDropDownMenu
 
+EXTERNAL SOURCES:
+  Alamofire:
+    :branch: alamofire5
+    :git: https://github.com/Alamofire/Alamofire.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: 32e38a4db9f96a1391c6727044d29676dd0322a2
+    :git: https://github.com/Alamofire/Alamofire.git
+
 SPEC CHECKSUMS:
-  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  Alamofire: 8dc618ab9e6a26d9d77559e4c35e59e56451e69e
   Bugsnag: 82788750cec86630828bb7dd250943f8356c53ea
   CreditCardValidator: 9f0814dd61682c004071a250d89327ca83514a48
   CTCheckbox: fec0e51c635ad555effd230a1fa186105010a382
@@ -98,6 +108,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   YNDropDownMenu: 967ebe0c633ce8f40e8667574525aa230ba24560
 
-PODFILE CHECKSUM: 7264c802d09120b0663e45093c1554d71690a8b3
+PODFILE CHECKSUM: 00b0ca2a629d841785d149b0c5bcf3d0b650f94f
 
 COCOAPODS: 1.4.0

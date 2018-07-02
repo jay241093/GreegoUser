@@ -6,7 +6,7 @@ target 'greegotaxiapp' do
   pod 'GoogleMaps'
   pod 'GooglePlaces', '~> 2.1'
   pod 'YNDropDownMenu'
-  pod 'Alamofire', '~> 4.0’
+  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'alamofire5'
  pod 'CTCheckbox'
  pod 'SwiftyJSON', '~> 4.0'
  pod 'Firebase/Core'

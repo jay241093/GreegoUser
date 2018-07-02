@@ -201,10 +201,10 @@
 			isa = PBXGroup;
 			children = (
 				2173C2A7209D8CCE00CE7096 /* DriverRatingVC.swift */,
+				2173C2A5209D8A1800CE7096 /* OnTripVC.swift */,
 				040A0B542078A97F00CBA6D2 /* ChooseDestinatioVC.swift */,
 				041CF18A20777EB700464B5D /* MainmapViewController.swift */,
 				3BBA890820840C2D0056BFCE /* DrideMapVC.swift */,
-				2173C2A5209D8A1800CE7096 /* OnTripVC.swift */,
 				3BFBCEE1208F3B6600924F04 /* DriverPopupVC.swift */,
 				215A6CF920BD3599006D82B8 /* TipViewController.swift */,
 			);
@@ -882,7 +882,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/greegotaxiapp/sidemenu/greegotaxiapp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -906,7 +906,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/greegotaxiapp/sidemenu/greegotaxiapp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -49,7 +49,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
     var cardnum : String = ""
     var fullcardno : String = ""
 
-    
+    var isfrommain = 0
     var tripprice : String = ""
     @IBAction func back(_ sender: Any) {
         
@@ -59,7 +59,12 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+   
+        if(isfrommain == 1)
+        {
+            gettripdetails()
+        }
+        else{
         let geocoder = GMSGeocoder()
         geocoder.reverseGeocodeCoordinate(self.sourceCord) { response , error in
             
@@ -83,7 +88,7 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
             
             
         }
-        
+        }
         
         do {
             // Set the map style by passing the URL of the local file. Make sure style.json is present in your project
@@ -125,8 +130,15 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
 //            print("The style definition could not be loaded: \(error)")
 //        }
     
-        self.setMarkers()
-        
+        if(isfrommain == 1)
+        {
+            
+        }
+        else
+        {
+            self.setMarkers()
+
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -186,6 +198,8 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
         if(num == "2")
         {
             
+            UserDefaults.standard.set("2", forKey: "status")
+            UserDefaults.standard.synchronize()
             AudioServicesPlayAlertSound(SystemSoundID(1322))
 
             var imageview = UIImageView()
@@ -213,6 +227,8 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
         }
         if(num == "3")
         {
+            UserDefaults.standard.set("3", forKey: "status")
+            UserDefaults.standard.synchronize()
             
             var imageview = UIImageView()
             AudioServicesPlayAlertSound(SystemSoundID(1322))
@@ -234,6 +250,8 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
         
         else if(num == "4")
         {
+            UserDefaults.standard.set("4", forKey: "status")
+            UserDefaults.standard.synchronize()
             AudioServicesPlayAlertSound(SystemSoundID(1322))
 
             var imageview = UIImageView()
@@ -303,6 +321,11 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
       {
         AudioServicesPlayAlertSound(SystemSoundID(1322))
 
+        
+        
+        UserDefaults.standard.set("1", forKey: "status")
+        UserDefaults.standard.synchronize()
+        
             self.debitCardView.isHidden = true
             
             let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "DriverPopupVC") as! DriverPopupVC
@@ -310,6 +333,8 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
             let tripid : String = (object.value(forKey:"trip_id") as? String)!
             print(tripid)
             popOverConfirmVC.tripid =  tripid
+          UserDefaults.standard.set(tripid, forKey: "tripid")
+         UserDefaults.standard.synchronize()
             
             popOverConfirmVC.reqid = self.reqid
         popOverConfirmVC.tripcost = self.tripprice
@@ -322,11 +347,242 @@ class DrideMapVC: UIViewController, GMSMapViewDelegate,Confrimrequest {
             self.view.center = popOverConfirmVC.view.center
             self.view.addSubview(popOverConfirmVC.view)
             popOverConfirmVC.didMove(toParentViewController: self)
+        
+       
+
             
         }
         }
     }
-    
+    func gettripdetails() {
+        WebServiceClass().dismissprogress()
+        
+        if let key = UserDefaults.standard.object(forKey:"userinfo")
+        {
+            
+            let dic = UserDefaults.standard.value(forKey:"userinfo") as! NSDictionary
+        if let key = dic.object(forKey: "payment_status")
+        {
+            if(dic.value(forKey: "payment_status") as! String == "1")
+            {
+                
+                AudioServicesPlayAlertSound(SystemSoundID(1322))
+                
+                var imageview = UIImageView()
+                
+                imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
+                
+                if(imageview.image != nil)
+                {
+                    SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Transaction Success", image: imageview.image!,  showTime: 5)
+                    
+                }
+                //
+                //            self.debitCardView.isHidden = true
+                //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "DriverRatingVC") as! DriverRatingVC
+                //
+                //            let tripid : String = (object.value(forKey:"trip_id") as? String)!
+                //            let fees = object.value(forKey: "total_amount") as! String
+                //
+                //            print(fees)
+                //            vc.amount = fees
+                //            vc.tripid =  tripid
+                //            self.navigationController?.pushViewController(vc, animated: true)
+                //
+             
+                
+            }
+            
+            
+            
+        }
+            
+            
+        else{
+            
+            if let key = dic.object(forKey: "status")
+            {
+                
+                var num = dic.value(forKey: "status") as! String
+                if(num == "2")
+                {
+                    
+                    self.debitCardView.isHidden = true
+                    
+                    let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "DriverPopupVC") as! DriverPopupVC
+                    
+                    let tripid : String = (dic.value(forKey:"trip_id") as? String)!
+                    print(tripid)
+                    popOverConfirmVC.tripid =  tripid
+                    
+                    popOverConfirmVC.reqid = self.reqid
+                    popOverConfirmVC.tripcost = self.tripprice
+                    popOverConfirmVC.cardnum = self.cardnum
+                    popOverConfirmVC.fullcardnum = self.fullcardno
+                    
+                    
+                    self.addChildViewController(popOverConfirmVC)
+                    popOverConfirmVC.view.frame = self.view.frame
+                    self.view.center = popOverConfirmVC.view.center
+                    self.view.addSubview(popOverConfirmVC.view)
+                    popOverConfirmVC.didMove(toParentViewController: self)
+                    
+                    
+                    UserDefaults.standard.set("2", forKey: "status")
+                    UserDefaults.standard.synchronize()
+                    AudioServicesPlayAlertSound(SystemSoundID(1322))
+                    
+                    var imageview = UIImageView()
+                    
+                    imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
+                    
+                    if(imageview.image != nil)
+                    {
+                        SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver is reached at your location", image: imageview.image!,  showTime: 5)
+                        
+                    }
+                    //
+                    //            let newdic: String = ((object.value(forKey:"aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! String
+                    //
+                    //
+                    //            let alert = UIAlertController(title: nil, message:newdic, preferredStyle: UIAlertControllerStyle.alert)
+                    //
+                    //            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (Greego) in
+                    //
+                    //
+                    //            }))
+                    //
+                    //            self.present(alert, animated: true, completion: nil)
+                    
+                }
+                if(num == "3")
+                {
+                    UserDefaults.standard.set("3", forKey: "status")
+                    UserDefaults.standard.synchronize()
+                    
+                    var imageview = UIImageView()
+                    AudioServicesPlayAlertSound(SystemSoundID(1322))
+                    
+                    imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
+                    if(imageview.image != nil)
+                    {
+                        SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver On trip", image: imageview.image!,  showTime: 5)
+                    }
+                    self.debitCardView.isHidden = true
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnTripVC") as! OnTripVC
+                    
+                    let tripid : String = (dic.value(forKey:"trip_id") as? String)!
+                    print(tripid)
+                    vc.tripid =  tripid
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    
+                }
+                    
+                else if(num == "4")
+                {
+                    UserDefaults.standard.set("4", forKey: "status")
+                    UserDefaults.standard.synchronize()
+                    AudioServicesPlayAlertSound(SystemSoundID(1322))
+                    
+                    var imageview = UIImageView()
+                    
+                    imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
+                    if(imageview.image != nil)
+                    {
+                        SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver has drop you off", image: imageview.image!,  showTime: 5)
+                    }
+                    
+                    //            let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! TipViewController
+                    //
+                    //
+                    //            let tripid : String = (object.value(forKey:"trip_id") as? String)!
+                    //            let fees = object.value(forKey: "trip_amount") as! String
+                    //
+                    //            print(fees)
+                    //            popOverConfirmVC.amount = fees
+                    //            popOverConfirmVC.tripid =  tripid
+                    //            self.addChildViewController(popOverConfirmVC)
+                    //            popOverConfirmVC.view.frame = self.view.frame
+                    //            self.view.center = popOverConfirmVC.view.center
+                    //            self.view.addSubview(popOverConfirmVC.view)
+                    //            popOverConfirmVC.didMove(toParentViewController: self)
+                    
+                    
+                }
+                else if(num == "5")
+                {
+                    
+                    AudioServicesPlayAlertSound(SystemSoundID(1322))
+                    
+                    
+                    let newdic: String = ((dic.value(forKey:"aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! String
+                    
+                    
+                    let alert = UIAlertController(title: nil, message:newdic, preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (Greego) in
+                        
+                        self.debitCardView.isHidden = true
+                        
+                        self.debitCardView.isHidden = true
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DriverRatingVC") as! DriverRatingVC
+                        
+                        let tripid : String = (dic.value(forKey:"trip_id") as? String)!
+                        
+                        vc.tripid =  tripid
+                        self.navigationController?.pushViewController(vc, animated: true)
+                        
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    
+                    
+                    
+                    
+                }
+                else
+                {
+                    
+                    
+                }
+                
+            }
+            else
+            {
+                AudioServicesPlayAlertSound(SystemSoundID(1322))
+                
+                
+                
+                UserDefaults.standard.set("1", forKey: "status")
+                UserDefaults.standard.synchronize()
+                
+                self.debitCardView.isHidden = true
+                
+                let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "DriverPopupVC") as! DriverPopupVC
+                
+                let tripid : String = (dic.value(forKey:"trip_id") as? String)!
+                print(tripid)
+                popOverConfirmVC.tripid =  tripid
+                
+                popOverConfirmVC.reqid = self.reqid
+                popOverConfirmVC.tripcost = self.tripprice
+                popOverConfirmVC.cardnum = self.cardnum
+                popOverConfirmVC.fullcardnum = self.fullcardno
+                
+                
+                self.addChildViewController(popOverConfirmVC)
+                popOverConfirmVC.view.frame = self.view.frame
+                self.view.center = popOverConfirmVC.view.center
+                self.view.addSubview(popOverConfirmVC.view)
+                popOverConfirmVC.didMove(toParentViewController: self)
+                
+                
+                
+                
+            }
+        }
+      }
+    }
     
     @IBAction func btnBackCliked(_ sender: Any)
     {

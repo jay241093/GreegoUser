@@ -1,7 +1,7 @@
 //
 //  Request.swift
 //
-//  Copyright (c) 2014-2017 Alamofire Software Foundation (http://alamofire.org/)
+//  Copyright (c) 2014-2018 Alamofire Software Foundation (http://alamofire.org/)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -88,14 +88,8 @@ open class Request {
 
     /// The delegate for the underlying task.
     open internal(set) var delegate: TaskDelegate {
-        get {
-            taskDelegateLock.lock() ; defer { taskDelegateLock.unlock() }
-            return taskDelegate
-        }
-        set {
-            taskDelegateLock.lock() ; defer { taskDelegateLock.unlock() }
-            taskDelegate = newValue
-        }
+        get { return protectedDelegate.directValue }
+        set { protectedDelegate.directValue = newValue }
     }
 
     /// The underlying task.
@@ -120,8 +114,7 @@ open class Request {
 
     var validations: [() -> Void] = []
 
-    private var taskDelegate: TaskDelegate
-    private var taskDelegateLock = NSLock()
+    private var protectedDelegate: Protector<TaskDelegate>
 
     // MARK: Lifecycle
 
@@ -130,16 +123,16 @@ open class Request {
 
         switch requestTask {
         case .data(let originalTask, let task):
-            taskDelegate = DataTaskDelegate(task: task)
+            protectedDelegate = Protector(DataTaskDelegate(task: task))
             self.originalTask = originalTask
         case .download(let originalTask, let task):
-            taskDelegate = DownloadTaskDelegate(task: task)
+            protectedDelegate = Protector(DownloadTaskDelegate(task: task))
             self.originalTask = originalTask
         case .upload(let originalTask, let task):
-            taskDelegate = UploadTaskDelegate(task: task)
+            protectedDelegate = Protector(UploadTaskDelegate(task: task))
             self.originalTask = originalTask
         case .stream(let originalTask, let task):
-            taskDelegate = TaskDelegate(task: task)
+            protectedDelegate = Protector(TaskDelegate(task: task))
             self.originalTask = originalTask
         }
 
@@ -333,7 +326,8 @@ extension Request: CustomDebugStringConvertible {
         }
 
         for (field, value) in headers {
-            components.append("-H \"\(field): \(value)\"")
+            let escapedValue = String(describing: value).replacingOccurrences(of: "\"", with: "\\\"")
+            components.append("-H \"\(field): \(escapedValue)\"")
         }
 
         if let httpBodyData = request.httpBody, let httpBody = String(data: httpBodyData, encoding: .utf8) {
@@ -457,7 +451,7 @@ open class DownloadRequest: Request {
     enum Downloadable: TaskConvertible {
         case request(URLRequest)
         case resumeData(Data)
-
+        // TODO: Ask about this use of queue. Perhaps just to protect session and adapter?
         func task(session: URLSession, adapter: RequestAdapter?, queue: DispatchQueue) throws -> URLSessionTask {
             do {
                 let task: URLSessionTask
@@ -629,7 +623,6 @@ open class UploadRequest: DataRequest {
 #if !os(watchOS)
 
 /// Specific type of `Request` that manages an underlying `URLSessionStreamTask`.
-@available(iOS 9.0, macOS 10.11, tvOS 9.0, *)
 open class StreamRequest: Request {
     enum Streamable: TaskConvertible {
         case stream(hostName: String, port: Int)

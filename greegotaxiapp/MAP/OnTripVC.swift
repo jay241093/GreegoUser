@@ -12,6 +12,8 @@ import Alamofire
 import SwiftyJSON
 import SDWebImage
 import MapKit
+import SANotificationViews
+import AVKit
 class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
     @IBOutlet weak var lblname: UILabel!
     @IBOutlet var usemap: GMSMapView!
@@ -22,6 +24,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
     
     @IBOutlet weak var lblestimatedtime: UILabel!
     
+    var isfrommain = 0
     var backgroundTaskIdentifier: UIBackgroundTaskIdentifier?
     var locationManager = CLLocationManager()
     var timer = Timer()
@@ -38,12 +41,33 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
     var destination = CLLocationCoordinate2D()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     
         setLocation()
+        
+        do {
+            // Set the map style by passing the URL of the local file. Make sure style.json is present in your project
+            if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json")
+            {
+                usemap.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                usemap.settings.myLocationButton = true
+                usemap.isMyLocationEnabled = true
+            } else {
+                print("Unable to find style.json")
+            }
+        } catch {
+            print("The style definition could not be loaded: \(error)")
+        }
         backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
             UIApplication.shared.endBackgroundTask(self.backgroundTaskIdentifier!)
         })
-        
+        if(isfrommain == 1)
+        {
+            getdriverdetail()
+            gettripdetails()
+            imguser.isUserInteractionEnabled = false
+
+        }
+        else{
         let reqdic : NSDictionary = driverdetaildic.value(forKey:"request") as! NSDictionary
         
         let driverdic = driverdetaildic.value(forKey: "driver") as! NSDictionary
@@ -71,27 +95,15 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
         
         NotificationCenter.default.addObserver(self, selector:  #selector(AcceptRequest), name: NSNotification.Name(rawValue: "Acceptnotification"), object: nil)
 
-        do {
-            // Set the map style by passing the URL of the local file. Make sure style.json is present in your project
-            if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json")
-            {
-                usemap.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
-                usemap.settings.myLocationButton = true
-                usemap.isMyLocationEnabled = true
-            } else {
-                print("Unable to find style.json")
-            }
-        } catch {
-            print("The style definition could not be loaded: \(error)")
+            imguser.isUserInteractionEnabled = true
+
         }
-        
-        
+        NotificationCenter.default.addObserver(self, selector:  #selector(AcceptRequest), name: NSNotification.Name(rawValue: "Acceptnotification"), object: nil)
+
     ///  getdriverdetail()
         let tap2 = UITapGestureRecognizer()
         tap2.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
         imguser.addGestureRecognizer(tap2)
-        imguser.isUserInteractionEnabled = true
-        imguser.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         
         if let key = UserDefaults.standard.object(forKey: "profile_pic"){
@@ -244,11 +256,11 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
   
     func getdriverdetail()
     {
-        
         if AppDelegate.hasConnectivity() == true
         {
             WebServiceClass().showprogress()
 
+            tripid = UserDefaults.standard.string(forKey:"tripid")!
             let ID:Int? = Int(tripid) // firstText is UITextField
             
             print(ID!)
@@ -268,6 +280,7 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
 
                     let dic: NSDictionary =  response.result.value! as! NSDictionary
                     
+                    driverdetaildic = dic
                     if(dic.value(forKey: "error_code") as! NSNumber  == 0)
                     {
                         let newdic : NSDictionary =  dic.value(forKey: "data") as! NSDictionary
@@ -441,6 +454,8 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
                 else if(num == "4")
                 {
                   
+                    
+                    
                     self.timer.invalidate()
                     self.locationManager.stopUpdatingLocation()
                     let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! TipViewController
@@ -450,6 +465,10 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
                     let fees = object.value(forKey: "trip_amount") as! String
                     
                     print(fees)
+                    if(isfrommain == 1)
+                    {
+                    popOverConfirmVC.isfromtrip = 1
+                    }
                     popOverConfirmVC.amount = fees
                     popOverConfirmVC.tripid =  tripid
                     self.addChildViewController(popOverConfirmVC)
@@ -478,6 +497,100 @@ class OnTripVC: UIViewController ,GMSMapViewDelegate,CLLocationManagerDelegate{
                 
             }
         }
+    }
+    
+ 
+    func gettripdetails() {
+        WebServiceClass().dismissprogress()
+        
+        if let key = UserDefaults.standard.object(forKey:"userinfo")
+        {
+            
+            let object = UserDefaults.standard.value(forKey:"userinfo") as! NSDictionary
+        
+            
+        if let key = object.object(forKey: "payment_status")
+        {
+            if(object.value(forKey: "payment_status") as! String == "1")
+            {
+                
+                
+                
+            }
+            
+            
+            
+        }
+            
+            
+        else{
+            
+            if let key = object.object(forKey: "status")
+            {
+                
+                var num = object.value(forKey: "status") as! String
+                if(num == "2")
+                {
+                    
+                    
+                }
+                if(num == "3")
+                {
+                    
+                }
+                    
+                else if(num == "4")
+                {
+                    
+                    AudioServicesPlayAlertSound(SystemSoundID(1322))
+                    
+                    var imageview = UIImageView()
+                    
+                    imageview.sd_setImage(with: URL(string:UserDefaults.standard.value(forKey:"DriverImg") as! String), placeholderImage: UIImage(named: "default-user"))
+                    if(imageview.image != nil)
+                    {
+                        SANotificationView.showSABanner(title: UserDefaults.standard.value(forKey: "Drivername") as! String, message: "Driver has drop you off", image: imageview.image!,  showTime: 5)
+                    }
+                    self.timer.invalidate()
+                    self.locationManager.stopUpdatingLocation()
+                    let popOverConfirmVC = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! TipViewController
+                    
+                    
+                    let tripid : String = (object.value(forKey:"trip_id") as? String)!
+                    let fees = object.value(forKey: "trip_amount") as! String
+                    
+                    
+                    print(fees)
+                    popOverConfirmVC.amount = fees
+                    popOverConfirmVC.tripid =  tripid
+                    popOverConfirmVC.isfromtrip = 1
+                    self.addChildViewController(popOverConfirmVC)
+                    popOverConfirmVC.view.frame = self.view.frame
+                    self.view.center = popOverConfirmVC.view.center
+                    self.view.addSubview(popOverConfirmVC.view)
+                    popOverConfirmVC.didMove(toParentViewController: self)
+                    
+                    
+                }
+                else if(num == "5")
+                {
+                    
+                    
+                }
+                else
+                {
+                    
+                    
+                }
+                
+            }
+            else
+            {
+                
+                
+            }
+        }
+     }
     }
     
     

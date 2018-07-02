@@ -1,7 +1,7 @@
 //
 //  SessionManager.swift
 //
-//  Copyright (c) 2014-2017 Alamofire Software Foundation (http://alamofire.org/)
+//  Copyright (c) 2014-2018 Alamofire Software Foundation (http://alamofire.org/)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -55,7 +55,19 @@ open class SessionManager {
     /// Creates default values for the "Accept-Encoding", "Accept-Language" and "User-Agent" headers.
     open static let defaultHTTPHeaders: HTTPHeaders = {
         // Accept-Encoding HTTP Header; see https://tools.ietf.org/html/rfc7230#section-4.2.3
-        let acceptEncoding: String = "gzip;q=1.0, compress;q=0.5"
+        let acceptEncoding: String = {
+            let encodings: [String]
+            if #available(iOS 11.0, macOS 10.13, tvOS 11.0, watchOS 4.0, *) {
+                encodings = ["br", "gzip", "deflate"]
+            } else {
+                encodings = ["gzip", "deflate"]
+            }
+
+            return encodings.enumerated().map { (index, encoding) in
+                let quality = 1.0 - (Double(index) * 0.1)
+                return "\(encoding);q=\(quality)"
+                }.joined(separator: ", ")
+        }()
 
         // Accept-Language HTTP Header; see https://tools.ietf.org/html/rfc7231#section-5.3.5
         let acceptLanguage = Locale.preferredLanguages.prefix(6).enumerated().map { index, languageCode in
@@ -153,50 +165,50 @@ open class SessionManager {
 
     // MARK: - Lifecycle
 
-    /// Creates an instance with the specified `configuration`, `delegate` and `serverTrustPolicyManager`.
+    /// Creates an instance with the specified `configuration`, `delegate` and `serverTrustManager`.
     ///
     /// - parameter configuration:            The configuration used to construct the managed session.
     ///                                       `URLSessionConfiguration.default` by default.
     /// - parameter delegate:                 The delegate used when initializing the session. `SessionDelegate()` by
     ///                                       default.
-    /// - parameter serverTrustPolicyManager: The server trust policy manager to use for evaluating all server trust
+    /// - parameter serverTrustManager: The server trust policy manager to use for evaluating all server trust
     ///                                       challenges. `nil` by default.
     ///
     /// - returns: The new `SessionManager` instance.
     public init(
         configuration: URLSessionConfiguration = URLSessionConfiguration.default,
         delegate: SessionDelegate = SessionDelegate(),
-        serverTrustPolicyManager: ServerTrustPolicyManager? = nil)
+        serverTrustManager: ServerTrustManager? = nil)
     {
         self.delegate = delegate
         self.session = URLSession(configuration: configuration, delegate: delegate, delegateQueue: nil)
 
-        commonInit(serverTrustPolicyManager: serverTrustPolicyManager)
+        commonInit(serverTrustManager: serverTrustManager)
     }
 
-    /// Creates an instance with the specified `session`, `delegate` and `serverTrustPolicyManager`.
+    /// Creates an instance with the specified `session`, `delegate` and `serverTrustManager`.
     ///
     /// - parameter session:                  The URL session.
     /// - parameter delegate:                 The delegate of the URL session. Must equal the URL session's delegate.
-    /// - parameter serverTrustPolicyManager: The server trust policy manager to use for evaluating all server trust
+    /// - parameter serverTrustManager: The server trust policy manager to use for evaluating all server trust
     ///                                       challenges. `nil` by default.
     ///
     /// - returns: The new `SessionManager` instance if the URL session's delegate matches; `nil` otherwise.
     public init?(
         session: URLSession,
         delegate: SessionDelegate,
-        serverTrustPolicyManager: ServerTrustPolicyManager? = nil)
+        serverTrustManager: ServerTrustManager? = nil)
     {
         guard delegate === session.delegate else { return nil }
 
         self.delegate = delegate
         self.session = session
 
-        commonInit(serverTrustPolicyManager: serverTrustPolicyManager)
+        commonInit(serverTrustManager: serverTrustManager)
     }
 
-    private func commonInit(serverTrustPolicyManager: ServerTrustPolicyManager?) {
-        session.serverTrustPolicyManager = serverTrustPolicyManager
+    private func commonInit(serverTrustManager: ServerTrustManager?) {
+        session.serverTrustManager = serverTrustManager
 
         delegate.sessionManager = self
 
@@ -793,7 +805,6 @@ open class SessionManager {
     ///
     /// - returns: The created `StreamRequest`.
     @discardableResult
-    @available(iOS 9.0, macOS 10.11, tvOS 9.0, *)
     open func stream(withHostName hostName: String, port: Int) -> StreamRequest {
         return stream(.stream(hostName: hostName, port: port))
     }
@@ -808,14 +819,12 @@ open class SessionManager {
     ///
     /// - returns: The created `StreamRequest`.
     @discardableResult
-    @available(iOS 9.0, macOS 10.11, tvOS 9.0, *)
     open func stream(with netService: NetService) -> StreamRequest {
         return stream(.netService(netService))
     }
 
     // MARK: Private - Stream Implementation
 
-    @available(iOS 9.0, macOS 10.11, tvOS 9.0, *)
     private func stream(_ streamable: StreamRequest.Streamable) -> StreamRequest {
         do {
             let task = try streamable.task(session: session, adapter: adapter, queue: queue)
@@ -831,7 +840,6 @@ open class SessionManager {
         }
     }
 
-    @available(iOS 9.0, macOS 10.11, tvOS 9.0, *)
     private func stream(failedWith error: Error) -> StreamRequest {
         let stream = StreamRequest(session: session, requestTask: .stream(nil, nil), error: error)
         if startRequestsImmediately { stream.resume() }
@@ -847,6 +855,10 @@ open class SessionManager {
 
         do {
             let task = try originalTask.task(session: session, adapter: adapter, queue: queue)
+
+            if let originalTask = request.task {
+                delegate[originalTask] = nil // removes the old request to avoid endless growth
+            }
 
             request.delegate.task = task // resets all task delegate data
 

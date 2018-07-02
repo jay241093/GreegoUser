@@ -20,16 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 {
     
     var window: UIWindow?
-   
-    
-  
   var bgtask = UIBackgroundTaskIdentifier(0)
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
-  
-
+        
+        
         Bugsnag.start(withApiKey: "05f4f3a3580c0c58df6c0b721a34b5b6")
 
         GMSServices.provideAPIKey("AIzaSyDSNE3M1W24PtzNegO8PrHz6fzr_q_C4Ec")
@@ -37,24 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         STPPaymentConfiguration.shared().publishableKey = "pk_live_C88eqn44CTqQzJ9FAdwrsYKl"
         
        IQKeyboardManager.shared.enable = true
-        if #available(iOS 10.0, *) {
-            // For iOS 10 display notification (sent via APNS)
-            UNUserNotificationCenter.current().delegate = self
-            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-            UNUserNotificationCenter.current().requestAuthorization(
-                options: authOptions,
-                completionHandler: {_, _ in })
-            // For iOS 10 data message (sent via FCM
-            Messaging.messaging().delegate = self
-        } else {
-            let settings: UIUserNotificationSettings =
-                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-            application.registerUserNotificationSettings(settings)
-            Messaging.messaging().delegate = self
-
-        }
         
-        
+      
         if launchOptions != nil {
             // opened from a push notification when the app is closed
             var userInfo = launchOptions![.remoteNotification] as? [AnyHashable: Any]
@@ -75,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                         self.window?.rootViewController = navigationController
                         self.window?.makeKeyAndVisible()
                         let dic: NSDictionary = userInfo as! NSDictionary
-                       //  NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
                         
                     }
                     if(num == "3")
@@ -87,12 +68,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                         self.window?.rootViewController = navigationController
                         self.window?.makeKeyAndVisible()
                         let dic: NSDictionary = userInfo as! NSDictionary
-                      // NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+                      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
                         
                     }
                     if(num == "4")
                     {
-                        
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+                        let initialViewController = storyboard.instantiateViewController(withIdentifier: "OnTripVC") as! OnTripVC
+                        navigationController.pushViewController(initialViewController, animated: true)
+                        self.window?.rootViewController = navigationController
+                        self.window?.makeKeyAndVisible()
+                        let dic: NSDictionary = userInfo as! NSDictionary
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
                        
                     }
                 
@@ -102,7 +90,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
                 else
                 {
-                   // NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+                    let initialViewController = storyboard.instantiateViewController(withIdentifier: "DrideMapVC") as! DrideMapVC
+                    navigationController.pushViewController(initialViewController, animated: true)
+                    self.window?.rootViewController = navigationController
+                    self.window?.makeKeyAndVisible()
+                    let dic: NSDictionary = userInfo as! NSDictionary
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
                     
                 }
             }
@@ -115,6 +110,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         application.registerForRemoteNotifications()
         
         FirebaseApp.configure()
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+            // For iOS 10 data message (sent via FCM
+            Messaging.messaging().delegate = self
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+            Messaging.messaging().delegate = self
+            
+        }
+        
+        
         
 //        if UserDefaults.standard.bool(forKey: "isLoggedIn")
 //        {
@@ -180,28 +193,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         let dic: NSDictionary = userInfo as! NSDictionary
         
+        UserDefaults.standard.set(dic, forKey: "userinfo")
+        UserDefaults.standard.synchronize()
+        
         
         if let key = dic.object(forKey: "status")
         {
-            print(dic.object(forKey: "status") as! String )
             
-        }
-        if(state == .active)
-            
-        {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
-            
-            
-            
-        }
-        else if(state == .background )
-        {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+            var num = dic.value(forKey: "status") as! String
+            if(num == "2")
+            {
+                UserDefaults.standard.set("2", forKey: "status")
+                UserDefaults.standard.synchronize()
+            }
+            else if(num == "3")
+            {
+                UserDefaults.standard.set("3", forKey: "status")
+                UserDefaults.standard.synchronize()
+            }
+            else if(num == "4")
+            {
+                UserDefaults.standard.set("4", forKey: "status")
+                UserDefaults.standard.synchronize()
+            }
             
         }
         else
         {
-      //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+            UserDefaults.standard.set("1", forKey: "status")
+            UserDefaults.standard.synchronize()
+            
+            
+        }
+
+        if(state == .active)
+            
+        {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+
+        }
+        else if(state == .background )
+        {
+         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
+            
+        }
+        else
+        {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Acceptnotification"), object: dic)
             
         }
         
